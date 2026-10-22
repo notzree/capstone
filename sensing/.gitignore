@@ -1,0 +1,4 @@
+/target
+
+/firmware/target
+/bench/**/original-flash.bin

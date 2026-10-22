@@ -1,0 +1,18 @@
+esptool v5.6.0
+Serial port /dev/cu.usbserial-0001:
+NOTE: Pre-connection option "no-reset" was selected. Connection may fail if the chip is not in bootloader or flasher stub mode.
+Connecting...
+Connected to ESP32 on /dev/cu.usbserial-0001:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+WARNING: Detected crystal freq 79.95 MHz is quite different to normalized freq 48 MHz. Unsupported crystal in use?
+Crystal frequency:  48MHz
+MAC:                b0:b2:1c:0b:07:1c
+
+Stub flasher is already running. No upload is necessary.
+
+Configuring flash size...
+Verifying 0x400000 (4194304) bytes at 0x00000000 in flash against 'sensing/bench/2026-10-21/boards/b0b21c0b071c/original-flash.bin'...
+Verification successful (digest matched).
+
+Hard resetting via RTS pin...

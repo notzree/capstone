@@ -1,0 +1,122 @@
+[
+  {
+    "condition": "star-a-10",
+    "mode": "star-a",
+    "target_hz": 10,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "star-a-10-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "star-a-10-b"
+      }
+    }
+  },
+  {
+    "condition": "star-b-10",
+    "mode": "star-b",
+    "target_hz": 10,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "star-b-10-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "star-b-10-b"
+      }
+    }
+  },
+  {
+    "condition": "independent-10",
+    "mode": "independent",
+    "target_hz": 10,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "independent-10-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "independent-10-b"
+      }
+    }
+  },
+  {
+    "condition": "pair-10",
+    "mode": "pair",
+    "target_hz": 10,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "pair-10-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "pair-10-b"
+      }
+    }
+  },
+  {
+    "condition": "star-a-50",
+    "mode": "star-a",
+    "target_hz": 50,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "star-a-50-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "star-a-50-b"
+      }
+    }
+  },
+  {
+    "condition": "star-b-50",
+    "mode": "star-b",
+    "target_hz": 50,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "star-b-50-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "star-b-50-b"
+      }
+    }
+  },
+  {
+    "condition": "independent-50",
+    "mode": "independent",
+    "target_hz": 50,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "independent-50-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "independent-50-b"
+      }
+    }
+  },
+  {
+    "condition": "pair-50",
+    "mode": "pair",
+    "target_hz": 50,
+    "nodes": {
+      "a": {
+        "mac": "a0:b7:65:dd:e9:3c",
+        "image_role": "pair-50-a"
+      },
+      "b": {
+        "mac": "b0:b2:1c:0b:07:1c",
+        "image_role": "pair-50-b"
+      }
+    }
+  }
+]

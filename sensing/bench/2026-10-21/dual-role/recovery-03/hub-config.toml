@@ -1,0 +1,14 @@
+queue_capacity = 8192
+clock_sample_capacity = 300000
+stale_ms = 2000
+reconnect_ms = 500
+echo_interval_ms = 1000
+status_interval_ms = 1000
+clock_window_ms = 60000
+clock_step_ms = 10000
+
+[[sources]]
+name = "pair-follower-b0b21c0b071c"
+kind = "serial"
+path = "/dev/cu.usbserial-0001"
+baud = 921600

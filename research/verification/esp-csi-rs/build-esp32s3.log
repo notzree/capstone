@@ -1,0 +1,137 @@
+   Compiling compiler_builtins v0.1.160 (/private/tmp/capstone-rust-verification/rustup/toolchains/esp/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins)
+   Compiling core v0.0.0 (/private/tmp/capstone-rust-verification/rustup/toolchains/esp/lib/rustlib/src/rust/library/core)
+   Compiling esp-metadata-generated v0.5.3
+   Compiling esp32s3 v0.36.0
+   Compiling object v0.37.3
+   Compiling memchr v2.8.3
+   Compiling esp32s3 v0.37.0
+   Compiling esp-wifi-sys-esp32s3 v0.3.0
+   Compiling esp-csi-rs v0.13.0 (/private/tmp/esp-csi-rs-verification-20261019)
+   Compiling esp-config v0.8.0
+   Compiling esp-rom-sys v0.1.5
+   Compiling esp-sync v0.3.0
+   Compiling esp-println v0.18.0
+   Compiling esp-storage v0.10.0
+   Compiling embedded-io-async v0.6.1
+   Compiling heapless v0.9.3
+   Compiling heapless v0.8.0
+   Compiling embassy-sync v0.8.0
+   Compiling portable-atomic v1.15.0
+   Compiling embassy-sync v0.7.2
+   Compiling embedded-hal-async v1.0.0
+   Compiling embassy-sync v0.6.2
+   Compiling embassy-time-driver v0.2.2
+   Compiling generic-array v0.14.7
+   Compiling xtensa-lx-rt v0.23.0
+   Compiling num-traits v0.2.19
+   Compiling embassy-hal-internal v0.4.0
+   Compiling serde_core v1.0.229
+   Compiling thiserror v2.0.20
+   Compiling embassy-time-queue-utils v0.3.2
+   Compiling esp-hal-procmacros v0.23.0
+   Compiling serde v1.0.229
+   Compiling heapless v0.7.17
+   Compiling xarxa-driver v0.1.0
+   Compiling smoltcp v0.12.0
+   Compiling embassy-executor v0.10.0
+   Compiling zerocopy v0.8.56
+   Compiling esp-hal v1.2.2
+   Compiling esp-alloc v0.11.0
+   Compiling esp-phy v0.3.0
+   Compiling esp-backtrace v0.20.0
+   Compiling esp-radio v1.0.0-beta.1
+   Compiling esp-rtos v0.4.0
+   Compiling esp-bootloader-esp-idf v0.6.0
+   Compiling alloc v0.0.0 (/private/tmp/capstone-rust-verification/rustup/toolchains/esp/lib/rustlib/src/rust/library/alloc)
+   Compiling stable_deref_trait v1.2.1
+   Compiling byteorder v1.5.0
+   Compiling cfg-if v1.0.4
+   Compiling critical-section v1.2.0
+   Compiling futures-core v0.3.34
+   Compiling embedded-io v0.6.1
+   Compiling futures-sink v0.3.34
+   Compiling embedded-io v0.7.1
+   Compiling nb v1.1.0
+   Compiling typenum v1.20.1
+   Compiling pin-project-lite v0.2.17
+   Compiling futures-task v0.3.34
+   Compiling embedded-hal v1.0.0
+   Compiling xtensa-lx v0.13.0
+   Compiling nb v0.1.3
+   Compiling embedded-io-async v0.7.0
+   Compiling futures-util v0.3.34
+   Compiling void v1.0.2
+   Compiling as-slice v0.2.1
+   Compiling hash32 v0.3.1
+   Compiling embedded-hal v0.2.7
+   Compiling vcell v0.1.3
+   Compiling aligned v0.4.3
+   Compiling embedded-storage v0.3.1
+   Compiling embassy-usb-driver v0.2.2
+   Compiling block-device-driver v0.2.0
+   Compiling embassy-time v0.5.1
+   Compiling embedded-storage-async v0.4.1
+   Compiling enumset v1.1.14
+   Compiling gcd v2.3.0
+   Compiling embassy-futures v0.1.2
+   Compiling sdio v0.5.1
+   Compiling fugit v0.5.0
+   Compiling static_cell v2.1.1
+   Compiling embedded-can v0.4.1
+   Compiling bitfield v0.19.5
+   Compiling ufmt-write v0.1.0
+   Compiling rand_core v0.9.5
+   Compiling strum v0.27.2
+   Compiling rand_core v0.6.4
+   Compiling rand_core v0.10.1
+   Compiling bytemuck v1.25.2
+   Compiling const-default v1.0.0
+   Compiling hybrid-array v0.4.15
+   Compiling rlsf v0.2.3
+   Compiling embassy-executor-timer-queue v0.1.0
+   Compiling allocator-api2 v0.3.1
+   Compiling linked_list_allocator v0.10.6
+   Compiling hash32 v0.2.1
+   Compiling embedded-nal v0.9.0
+   Compiling embassy-net-driver v0.2.0
+   Compiling bitflags v1.3.2
+   Compiling cordyceps v0.3.5
+   Compiling managed v0.8.0
+   Compiling embedded-nal-async v0.8.0
+   Compiling cobs v0.3.0
+   Compiling portable_atomic_enum v0.3.1
+   Compiling docsplay v0.1.3
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling log v0.4.34
+   Compiling digest v0.10.7
+   Compiling embassy-embedded-hal v0.6.0
+   Compiling embassy-usb-synopsys-otg v0.4.0
+   Compiling esp-radio-rtos-driver v0.4.2
+   Compiling digest v0.11.3
+   Compiling sha2 v0.11.0
+   Compiling embassy-net v0.7.1
+   Compiling postcard v1.1.3
+warning: linker stderr: /private/tmp/capstone-rust-verification/rustup/toolchains/esp/xtensa-esp-elf/esp-16.2.0_20260914/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.2.0/../../../../xtensa-esp-elf/bin/ld: /private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/esp_now_simplex-5051578d9f206898 has a LOAD segment with RWX permissions
+  |
+  = note: `#[warn(linker_messages)]` on by default
+
+warning: `esp-csi-rs` (example "esp_now_simplex") generated 1 warning
+warning: linker stderr: /private/tmp/capstone-rust-verification/rustup/toolchains/esp/xtensa-esp-elf/esp-16.2.0_20260914/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.2.0/../../../../xtensa-esp-elf/bin/ld: /private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/hw_check-bd1c5c4516acd791 has a LOAD segment with RWX permissions
+  |
+  = note: `#[warn(linker_messages)]` on by default
+
+warning: `esp-csi-rs` (example "hw_check") generated 1 warning
+warning: linker stderr: /private/tmp/capstone-rust-verification/rustup/toolchains/esp/xtensa-esp-elf/esp-16.2.0_20260914/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.2.0/../../../../xtensa-esp-elf/bin/ld: /private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/sniffer-d326756984772e7d has a LOAD segment with RWX permissions
+  |
+  = note: `#[warn(linker_messages)]` on by default
+
+warning: `esp-csi-rs` (example "sniffer") generated 1 warning
+warning: linker stderr: /private/tmp/capstone-rust-verification/rustup/toolchains/esp/xtensa-esp-elf/esp-16.2.0_20260914/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/16.2.0/../../../../xtensa-esp-elf/bin/ld: /private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/emitter-210d1564b11f6fdd has a LOAD segment with RWX permissions
+  |
+  = note: `#[warn(linker_messages)]` on by default
+
+warning: `esp-csi-rs` (example "emitter") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 17.00s

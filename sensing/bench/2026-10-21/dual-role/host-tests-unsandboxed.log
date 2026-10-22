@@ -1,0 +1,219 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.07s
+     Running unittests src/main.rs (target/debug/deps/csi-6c12a5f6590fc9b5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cli.rs (target/debug/deps/cli-f9590b028da906ca)
+
+running 6 tests
+test rejects_bad_arguments ... ok
+test hub_sigterm_drains_and_seals ... ok
+test hub_duration_seals_session_and_archives_config ... ok
+test rejects_unrepresentable_clock_intervals_without_replacing_the_fit ... ok
+test geometry_is_copied_checked_and_carried_through_replay ... ok
+test record_inspect_and_rerecord ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.86s
+
+     Running unittests src/lib.rs (target/debug/deps/csi_host-7b005f4c9a792d46)
+
+running 19 tests
+test clock::tests::composition_matches_applying_both_maps ... ok
+test histogram::tests::exact_below_linear_range ... ok
+test clock::regression_tests::regression_idle_eviction_never_reuses_reference_clock_identity ... ok
+test clock::tests::unwrap_is_exact_across_the_32_bit_wrap ... ok
+test seq::regression_tests::regression_large_jump_across_wrap_preserves_window_and_gap_timestamp ... ok
+test seq::tests::gaps_finalize_once_out_of_window ... ok
+test seq::regression_tests::regression_large_jump_expires_prefix_but_keeps_boundary_late ... ok
+test seq::tests::in_order_and_gaps ... ok
+test seq::tests::duplicates_and_stale ... ok
+test histogram::tests::relative_error_is_bounded ... ok
+test seq::tests::large_gap_keeps_one_pending_range_and_finalizes_in_two_parts ... ok
+test seq::tests::late_arrivals_fill_gaps ... ok
+test seq::tests::split_gaps_keep_when_they_were_seen ... ok
+test histogram::tests::buckets_tile_the_range ... ok
+test seq::tests::wraps_around_u32 ... ok
+test clock::tests::line_fit_ignores_outliers ... ok
+test live::time_sync::tests::echo_fit_recovers_host_time_and_rejects_invalid_turnaround ... ok
+test clock::regression_tests::regression_idle_readmission_rejoins_a_surviving_receivers_timeline ... ok
+test live::regression_tests::regression_completed_status_finalizes_frames_captures_probes_and_events ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/clock.rs (target/debug/deps/clock-562a293c854a35fb)
+
+running 7 tests
+test live_fit_caps_samples_streams_history_and_expires_idle_clocks ... ok
+test unwraps_the_32_bit_radio_timer ... ok
+test chains_receivers_that_share_no_probes_with_the_reference ... ok
+test recovers_each_receivers_offset_and_drift ... ok
+test candidate_windows_meet_the_bars ... ok
+test fit_is_deterministic_and_survives_its_file ... ok
+test reboots_start_new_mappings_and_the_timeline_carries_on ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.47s
+
+     Running tests/compat.rs (target/debug/deps/compat-ac316f782ede75b1)
+
+running 2 tests
+test m2_session_inspects_with_the_counts_it_was_recorded_with ... ok
+test m2_session_rerecords_byte_identically ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+     Running tests/geometry.rs (target/debug/deps/geometry-21ea2e45bc1ec9c2)
+
+running 6 tests
+test sessions_without_geometry_report_none ... ok
+test invalid_geometry_is_rejected ... ok
+test valid_geometry_parses ... ok
+test invalid_geometry_creates_no_session ... ok
+test edited_geometry_no_longer_matches_the_manifest ... ok
+test session_copies_the_file_and_references_its_revision_and_hash ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/inspect.rs (target/debug/deps/inspect-a9a3e28f9474b9ed)
+
+running 4 tests
+test regression_radio_reset_keeps_gain_and_interval_accounting_running ... ok
+test clean_session_reports_configured_rates_and_no_losses ... ok
+test injected_faults_are_detected_exactly ... ok
+test fault_accounting_holds_across_seeds ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.35s
+
+     Running tests/live.rs (target/debug/deps/live-fcfab6e2f09f60a1)
+
+running 7 tests
+test bind_failure_creates_no_session ... ok
+test config_validates_toml_and_limits ... ok
+test recorder_failure_is_propagated_and_never_seals_session ... ok
+test udp_stale_restart_foreign_bad_frames_and_unsolicited_echo ... ok
+test serial::unplug_reconnect_resets_partial_frame_and_tracks_epoch ... ok
+test udp_3000_csi_per_second_records_before_lossy_delivery_and_maps_host_time ... ok
+test serial::pty_3000_csi_per_second_with_echo_and_clock_fit ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.47s
+
+     Running tests/replay.rs (target/debug/deps/replay-2865fd97e9f17c91)
+
+running 4 tests
+test unpaced_replay_never_waits ... ok
+test pacing_follows_recorded_spacing_divided_by_speed ... ok
+test synthetic_output_is_determined_by_its_config ... ok
+test rerecording_a_replay_is_byte_identical ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+
+     Running tests/session.rs (target/debug/deps/session-b774c83925b59cf3)
+
+running 7 tests
+test refuses_existing_directories_and_unknown_sources ... ok
+test unknown_record_kinds_pass_through ... ok
+test unfinished_session_keeps_its_records_and_reports_a_torn_tail ... ok
+test corrupt_record_header_stops_that_segment_only ... ok
+test tampering_and_missing_segments_are_reported ... ok
+test roundtrip_with_size_rotation ... ok
+test duration_rotation_uses_record_time ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.41s
+
+     Running unittests src/lib.rs (target/debug/deps/csi_node-f753907c8d7ea0da)
+
+running 13 tests
+test tests::adaptive_timeout_bounds_zero_and_maximum_integer_samples ... ok
+test tests::adaptive_timeout_backs_off_on_loss_and_resumes_after_matching_response ... ok
+test tests::foreign_inputs_cannot_consume_a_valid_round ... ok
+test tests::impossible_guard_never_returns_an_entitlement ... ok
+test tests::adaptive_timeout_tracks_slowdown_and_recovers_without_unbounded_deadlines ... ok
+test tests::mac_parser_is_strict_and_case_insensitive ... ok
+test tests::reboot_accepts_zero_and_rejects_four_retired_epochs ... ok
+test tests::response_uses_local_receive_time_and_lost_rounds_do_not_block ... ok
+test tests::stale_future_and_unrepresentable_times_do_not_change_identity ... ok
+test tests::sequence_wrap_is_forward_but_half_range_is_ambiguous ... ok
+test tests::turn_response_matches_only_the_exact_outstanding_round ... ok
+test tests::turn_tag_golden_bytes_and_existing_probe_stay_compatible ... ok
+test tests::turn_tag_rejects_malformed_candidates_and_finds_later_valid_tag ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/csi_protocol-2633144fabbf4cbe)
+
+running 24 tests
+test cobs::tests::rejects_malformed ... ok
+test crc::tests::standard_check_value ... ok
+test frame::tests::roundtrip_and_crc_check ... ok
+test frame::tests::needs_room_for_crc ... ok
+test cobs::tests::reference_vectors ... ok
+test message::tests::body_lengths_match_documentation ... ok
+test message::tests::decodes_version_1_without_gain ... ok
+test cobs::tests::reports_small_buffer ... ok
+test cobs::tests::long_runs ... ok
+test message::tests::every_prefix_is_truncated_and_extra_bytes_are_rejected ... ok
+test message::tests::gain_roundtrips ... ok
+test message::tests::layout_matches_documentation ... ok
+test message::tests::node_id_formats_and_parses_as_mac ... ok
+test message::tests::rejects_oversized_csi ... ok
+test message::tests::rejects_reserved_bits_and_stray_probe_bytes ... ok
+test message::tests::rejects_unknown_chip ... ok
+test message::tests::rejects_unknown_version_and_kind ... ok
+test probe::tests::found_after_other_bytes ... ok
+test probe::tests::rejects_wrong_magic_and_version ... ok
+test probe::tests::roundtrip_with_padding ... ok
+test stream::tests::frames_split_across_reads ... ok
+test stream::tests::oversized_frame_is_reported_once_then_recovers ... ok
+test stream::tests::skips_empty_frames_and_resyncs_after_garbage ... ok
+test stream::tests::largest_frame_fits ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/golden.rs (target/debug/deps/golden-5f1f7e5c4904c6da)
+
+running 9 tests
+test counters_v2 ... ok
+test time_probe_v2 ... ok
+test csi_stream_frame_v2 ... ok
+test time_echo_v2 ... ok
+test csi_with_gain_v2 ... ok
+test csi_without_gain_v2 ... ok
+test over_air_probe ... ok
+test hello_v2 ... ok
+test version_1_frames_still_decode ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/properties.rs (target/debug/deps/properties-5d90e28160c14b83)
+
+running 8 tests
+test probe_roundtrip ... ok
+test decoders_accept_mutated_valid_frames ... ok
+test any_bit_flip_fails_the_crc ... ok
+test version_1_frames_decode_without_gain ... ok
+test frame_roundtrip ... ok
+test stream_roundtrip_with_arbitrary_chunking ... ok
+test cobs_roundtrip ... ok
+test decoders_accept_arbitrary_bytes_without_panicking ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.12s
+
+   Doc-tests csi_host
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests csi_node
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests csi_protocol
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

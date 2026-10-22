@@ -1,0 +1,23 @@
+{"type":"header","schema":"csi-clock-fit/1","session_id":"01a16126-fc21-712f-aa26-98f6e8380e43","fitter":"csi-host 0.1.0","options":{"window_ns":60000000000,"step_ns":10000000000,"min_pairs":20,"radio_reset_us":250000,"outlier_sigmas":5.0},"clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}
+{"type":"checkpoint","clocks":[],"unwrap_rejects":0,"radio_restarts":0}

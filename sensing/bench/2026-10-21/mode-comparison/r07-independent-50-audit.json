@@ -1,0 +1,963 @@
+{
+  "health": {
+    "clock": {
+      "handovers": 0,
+      "radio_restarts": 0,
+      "receivers": [
+        {
+          "clock": "a0:b7:65:dd:e9:3c epoch 1ff679e4",
+          "drift_ppm_range": [
+            0.0,
+            0.0
+          ],
+          "fits": 5,
+          "latest": {
+            "drift_ppm": 0.0,
+            "fitted_at_mono_ns": 44993729875,
+            "hops": 0,
+            "map": {
+              "mapped_pivot_us": 5292873.0,
+              "pivot_us": 5292873,
+              "slope": 1.0
+            },
+            "offset_us": 0.0,
+            "outliers": 0,
+            "pairs": 0,
+            "parent": null,
+            "receiver": {
+              "epoch": 536246756,
+              "node": "a0:b7:65:dd:e9:3c",
+              "radio": 0
+            },
+            "residual_us": null,
+            "timeline": 0,
+            "version": 5,
+            "window_mono_ns": [
+              0,
+              44993729875
+            ]
+          },
+          "worst_p99_us": null
+        },
+        {
+          "clock": "b0:b2:1c:0b:07:1c epoch 87500c1b",
+          "drift_ppm_range": null,
+          "fits": 0,
+          "latest": null,
+          "worst_p99_us": null
+        }
+      ],
+      "reference": "a0:b7:65:dd:e9:3c epoch 1ff679e4",
+      "step_s": 10.0,
+      "timeline_restarts": 0,
+      "unwrap_rejects": 0,
+      "window_s": 60.0
+    },
+    "event_counts": {
+      "node_epoch": 2,
+      "stream_error": 2
+    },
+    "events": [],
+    "events_omitted": 4,
+    "nodes": [
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 3808,
+              "csi_captured": 2435,
+              "csi_filtered": 1373,
+              "export_bytes": 832171,
+              "export_drops": 0,
+              "node_time_us": 50094139,
+              "pool_drops": 0,
+              "pool_high_water": 1,
+              "tx_accepted": 2487,
+              "tx_requested": 2487
+            },
+            "epoch": 536246756,
+            "first_s": 0.008443292,
+            "frames": 2335,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 0,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "0000000000000000",
+              "firmware_version": "0.2.2",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": true
+            },
+            "kinds": {
+              "counters": 45,
+              "csi": 2201,
+              "hello": 45,
+              "time_echo": 44
+            },
+            "last_s": 44.862646042,
+            "links": [
+              {
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gap_threshold_ms": 100.0,
+                "gaps_over_threshold": 0,
+                "interval_us": {
+                  "max": 80819,
+                  "p50": 20159,
+                  "p95": 24511,
+                  "p99": 38527
+                },
+                "last_host_mono_ns": 44993729875,
+                "layouts": [
+                  {
+                    "cwb": 0,
+                    "first_word_invalid": true,
+                    "len": 256,
+                    "records": 2201,
+                    "secondary_channel": 0,
+                    "sig_mode": 1,
+                    "stbc": 0
+                  }
+                ],
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "probes_missing": 31,
+                "radio_restarts": 0,
+                "rate_hz": 49.048599849750765,
+                "records": 2201,
+                "stale": false,
+                "tx": "b0:b2:1c:0b:07:1c",
+                "tx_epochs": 1
+              }
+            ],
+            "min_rtt_us": 1851.958,
+            "time_echoes": 44,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "a0:b7:65:dd:e9:3c"
+      },
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 3823,
+              "csi_captured": 2398,
+              "csi_filtered": 1425,
+              "export_bytes": 819528,
+              "export_drops": 0,
+              "node_time_us": 49093434,
+              "pool_drops": 0,
+              "pool_high_water": 1,
+              "tx_accepted": 2437,
+              "tx_requested": 2437
+            },
+            "epoch": 2270170139,
+            "first_s": 0.003506917,
+            "frames": 2330,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 0,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "0000000000000000",
+              "firmware_version": "0.2.2",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": true
+            },
+            "kinds": {
+              "counters": 45,
+              "csi": 2195,
+              "hello": 45,
+              "time_echo": 45
+            },
+            "last_s": 44.854691875,
+            "links": [
+              {
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gap_threshold_ms": 100.0,
+                "gaps_over_threshold": 0,
+                "interval_us": {
+                  "max": 45789,
+                  "p50": 20159,
+                  "p95": 24255,
+                  "p99": 39039
+                },
+                "last_host_mono_ns": 44985775708,
+                "layouts": [
+                  {
+                    "cwb": 0,
+                    "first_word_invalid": true,
+                    "len": 256,
+                    "records": 2195,
+                    "secondary_channel": 0,
+                    "sig_mode": 1,
+                    "stbc": 0
+                  }
+                ],
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "probes_missing": 36,
+                "radio_restarts": 0,
+                "rate_hz": 48.93420345811369,
+                "records": 2195,
+                "stale": false,
+                "tx": "a0:b7:65:dd:e9:3c",
+                "tx_epochs": 1
+              }
+            ],
+            "min_rtt_us": 1794.291,
+            "time_echoes": 45,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "b0:b2:1c:0b:07:1c"
+      }
+    ],
+    "records": 4667,
+    "sources": [
+      {
+        "decode_errors": {},
+        "frames": 2330,
+        "index": 0,
+        "records": 2331,
+        "stream_errors": {
+          "bad_cobs": 1
+        },
+        "unknown_records": 0,
+        "versions": {
+          "2": 2330
+        }
+      },
+      {
+        "decode_errors": {},
+        "frames": 2335,
+        "index": 1,
+        "records": 2336,
+        "stream_errors": {
+          "bad_cobs": 1
+        },
+        "unknown_records": 0,
+        "versions": {
+          "2": 2335
+        }
+      }
+    ],
+    "span_s": 44.862646042
+  },
+  "host_to_node_exported_frames": 0,
+  "links": [
+    {
+      "distinct_raw_csi_sha256": 2201,
+      "first_node_time_us": 5369791,
+      "first_probe_seq": 247,
+      "interarrival_node_us": {
+        "count": 2200,
+        "max": 80957.0,
+        "mean": 20387.904545454545,
+        "min": 8785.0,
+        "p50": 20118.0,
+        "p95": 24506.0,
+        "p99": 38398.0,
+        "stddev": 3473.0113679338174
+      },
+      "last_node_time_us": 50223181,
+      "last_probe_seq": 2478,
+      "layouts": {
+        "sig_mode=1 mcs=0 cwb=0 sgi=false stbc=0 channel=6 len=256 first_word_invalid=true gain=None": 2201
+      },
+      "node_timestamp_regressions": 0,
+      "noise_floor_dbm": {
+        "count": 2201,
+        "max": -97.0,
+        "mean": -97.0,
+        "min": -97.0,
+        "p50": -97.0,
+        "p95": -97.0,
+        "p99": -97.0,
+        "stddev": 0.0
+      },
+      "probes_duplicate": 0,
+      "probes_late": 0,
+      "probes_missing": 31,
+      "probes_stale": 0,
+      "probes_unique": 2201,
+      "rate_hz": 49.04868951934291,
+      "records": 2201,
+      "rssi_dbm": {
+        "count": 2201,
+        "max": -56.0,
+        "mean": -65.39027714675147,
+        "min": -83.0,
+        "p50": -65.0,
+        "p95": -58.0,
+        "p99": -57.0,
+        "stddev": 5.581975598435263
+      },
+      "rx": "a0:b7:65:dd:e9:3c",
+      "rx_epoch": 536246756,
+      "schedule": 0,
+      "timestamp_samples_first_32": [
+        {
+          "capture_seq": 241,
+          "host_mono_ns": 139527125,
+          "node_time_us": 5369791,
+          "probe_seq": 247,
+          "radio_time_us": 5292873
+        },
+        {
+          "capture_seq": 242,
+          "host_mono_ns": 159516875,
+          "node_time_us": 5390196,
+          "probe_seq": 248,
+          "radio_time_us": 5313538
+        },
+        {
+          "capture_seq": 243,
+          "host_mono_ns": 180545208,
+          "node_time_us": 5411450,
+          "probe_seq": 249,
+          "radio_time_us": 5334661
+        },
+        {
+          "capture_seq": 244,
+          "host_mono_ns": 200601500,
+          "node_time_us": 5431442,
+          "probe_seq": 250,
+          "radio_time_us": 5354609
+        },
+        {
+          "capture_seq": 245,
+          "host_mono_ns": 220557833,
+          "node_time_us": 5450522,
+          "probe_seq": 251,
+          "radio_time_us": 5373686
+        },
+        {
+          "capture_seq": 246,
+          "host_mono_ns": 239543875,
+          "node_time_us": 5469878,
+          "probe_seq": 252,
+          "radio_time_us": 5393149
+        },
+        {
+          "capture_seq": 247,
+          "host_mono_ns": 258533375,
+          "node_time_us": 5489199,
+          "probe_seq": 253,
+          "radio_time_us": 5412371
+        },
+        {
+          "capture_seq": 248,
+          "host_mono_ns": 280504583,
+          "node_time_us": 5511227,
+          "probe_seq": 254,
+          "radio_time_us": 5434569
+        },
+        {
+          "capture_seq": 249,
+          "host_mono_ns": 300524041,
+          "node_time_us": 5530827,
+          "probe_seq": 255,
+          "radio_time_us": 5453999
+        },
+        {
+          "capture_seq": 250,
+          "host_mono_ns": 321536791,
+          "node_time_us": 5551951,
+          "probe_seq": 256,
+          "radio_time_us": 5475112
+        },
+        {
+          "capture_seq": 251,
+          "host_mono_ns": 339561833,
+          "node_time_us": 5569843,
+          "probe_seq": 257,
+          "radio_time_us": 5493016
+        },
+        {
+          "capture_seq": 252,
+          "host_mono_ns": 360576208,
+          "node_time_us": 5590960,
+          "probe_seq": 258,
+          "radio_time_us": 5514117
+        },
+        {
+          "capture_seq": 253,
+          "host_mono_ns": 386565333,
+          "node_time_us": 5616633,
+          "probe_seq": 259,
+          "radio_time_us": 5539840
+        },
+        {
+          "capture_seq": 254,
+          "host_mono_ns": 399503500,
+          "node_time_us": 5629900,
+          "probe_seq": 260,
+          "radio_time_us": 5553250
+        },
+        {
+          "capture_seq": 255,
+          "host_mono_ns": 420553875,
+          "node_time_us": 5650855,
+          "probe_seq": 261,
+          "radio_time_us": 5574011
+        },
+        {
+          "capture_seq": 256,
+          "host_mono_ns": 440536708,
+          "node_time_us": 5671345,
+          "probe_seq": 262,
+          "radio_time_us": 5594513
+        },
+        {
+          "capture_seq": 257,
+          "host_mono_ns": 464572125,
+          "node_time_us": 5694457,
+          "probe_seq": 263,
+          "radio_time_us": 5617800
+        },
+        {
+          "capture_seq": 258,
+          "host_mono_ns": 480467666,
+          "node_time_us": 5710789,
+          "probe_seq": 264,
+          "radio_time_us": 5633997
+        },
+        {
+          "capture_seq": 259,
+          "host_mono_ns": 502722833,
+          "node_time_us": 5733272,
+          "probe_seq": 265,
+          "radio_time_us": 5656622
+        },
+        {
+          "capture_seq": 260,
+          "host_mono_ns": 521568333,
+          "node_time_us": 5752119,
+          "probe_seq": 266,
+          "radio_time_us": 5675272
+        },
+        {
+          "capture_seq": 261,
+          "host_mono_ns": 541471916,
+          "node_time_us": 5771518,
+          "probe_seq": 267,
+          "radio_time_us": 5694691
+        },
+        {
+          "capture_seq": 262,
+          "host_mono_ns": 572474333,
+          "node_time_us": 5802508,
+          "probe_seq": 268,
+          "radio_time_us": 5725778
+        },
+        {
+          "capture_seq": 263,
+          "host_mono_ns": 580567000,
+          "node_time_us": 5811293,
+          "probe_seq": 269,
+          "radio_time_us": 5734457
+        },
+        {
+          "capture_seq": 264,
+          "host_mono_ns": 600488750,
+          "node_time_us": 5830673,
+          "probe_seq": 270,
+          "radio_time_us": 5754024
+        },
+        {
+          "capture_seq": 265,
+          "host_mono_ns": 622612458,
+          "node_time_us": 5853458,
+          "probe_seq": 271,
+          "radio_time_us": 5776800
+        },
+        {
+          "capture_seq": 266,
+          "host_mono_ns": 642510250,
+          "node_time_us": 5872514,
+          "probe_seq": 272,
+          "radio_time_us": 5795682
+        },
+        {
+          "capture_seq": 267,
+          "host_mono_ns": 664461833,
+          "node_time_us": 5894498,
+          "probe_seq": 273,
+          "radio_time_us": 5817654
+        },
+        {
+          "capture_seq": 268,
+          "host_mono_ns": 683518541,
+          "node_time_us": 5913582,
+          "probe_seq": 274,
+          "radio_time_us": 5836924
+        },
+        {
+          "capture_seq": 269,
+          "host_mono_ns": 703244000,
+          "node_time_us": 5931510,
+          "probe_seq": 275,
+          "radio_time_us": 5854682
+        },
+        {
+          "capture_seq": 270,
+          "host_mono_ns": 721496875,
+          "node_time_us": 5951665,
+          "probe_seq": 276,
+          "radio_time_us": 5874826
+        },
+        {
+          "capture_seq": 271,
+          "host_mono_ns": 741556125,
+          "node_time_us": 5971652,
+          "probe_seq": 277,
+          "radio_time_us": 5894821
+        },
+        {
+          "capture_seq": 272,
+          "host_mono_ns": 762609041,
+          "node_time_us": 5993325,
+          "probe_seq": 278,
+          "radio_time_us": 5916488
+        }
+      ],
+      "tx": "b0:b2:1c:0b:07:1c",
+      "tx_epoch": 2270170139
+    },
+    {
+      "distinct_raw_csi_sha256": 2195,
+      "first_node_time_us": 5083322,
+      "first_probe_seq": 262,
+      "interarrival_node_us": {
+        "count": 2194,
+        "max": 45781.0,
+        "mean": 20435.605287146765,
+        "min": 6295.0,
+        "p50": 20120.0,
+        "p95": 24235.0,
+        "p99": 39221.0,
+        "stddev": 3419.7243813210675
+      },
+      "last_node_time_us": 49919040,
+      "last_probe_seq": 2492,
+      "layouts": {
+        "sig_mode=1 mcs=0 cwb=0 sgi=false stbc=0 channel=6 len=256 first_word_invalid=true gain=None": 2195
+      },
+      "node_timestamp_regressions": 0,
+      "noise_floor_dbm": {
+        "count": 2195,
+        "max": -96.0,
+        "mean": -96.0,
+        "min": -96.0,
+        "p50": -96.0,
+        "p95": -96.0,
+        "p99": -96.0,
+        "stddev": 0.0
+      },
+      "probes_duplicate": 0,
+      "probes_late": 0,
+      "probes_missing": 36,
+      "probes_stale": 0,
+      "probes_unique": 2195,
+      "rate_hz": 48.93420018388018,
+      "records": 2195,
+      "rssi_dbm": {
+        "count": 2195,
+        "max": -57.0,
+        "mean": -65.58132118451024,
+        "min": -84.0,
+        "p50": -65.0,
+        "p95": -58.0,
+        "p99": -57.0,
+        "stddev": 5.515942277724785
+      },
+      "rx": "b0:b2:1c:0b:07:1c",
+      "rx_epoch": 2270170139,
+      "schedule": 0,
+      "timestamp_samples_first_32": [
+        {
+          "capture_seq": 244,
+          "host_mono_ns": 149523875,
+          "node_time_us": 5083322,
+          "probe_seq": 262,
+          "radio_time_us": 5006226
+        },
+        {
+          "capture_seq": 245,
+          "host_mono_ns": 171594000,
+          "node_time_us": 5104843,
+          "probe_seq": 263,
+          "radio_time_us": 5027863
+        },
+        {
+          "capture_seq": 246,
+          "host_mono_ns": 189498791,
+          "node_time_us": 5123312,
+          "probe_seq": 264,
+          "radio_time_us": 5046216
+        },
+        {
+          "capture_seq": 247,
+          "host_mono_ns": 206631958,
+          "node_time_us": 5140419,
+          "probe_seq": 265,
+          "radio_time_us": 5063319
+        },
+        {
+          "capture_seq": 248,
+          "host_mono_ns": 228506500,
+          "node_time_us": 5161430,
+          "probe_seq": 266,
+          "radio_time_us": 5084335
+        },
+        {
+          "capture_seq": 249,
+          "host_mono_ns": 249448833,
+          "node_time_us": 5183296,
+          "probe_seq": 267,
+          "radio_time_us": 5106193
+        },
+        {
+          "capture_seq": 250,
+          "host_mono_ns": 269515958,
+          "node_time_us": 5202712,
+          "probe_seq": 268,
+          "radio_time_us": 5125799
+        },
+        {
+          "capture_seq": 251,
+          "host_mono_ns": 288507750,
+          "node_time_us": 5221609,
+          "probe_seq": 269,
+          "radio_time_us": 5144573
+        },
+        {
+          "capture_seq": 252,
+          "host_mono_ns": 310519125,
+          "node_time_us": 5243583,
+          "probe_seq": 270,
+          "radio_time_us": 5166496
+        },
+        {
+          "capture_seq": 253,
+          "host_mono_ns": 329566041,
+          "node_time_us": 5263016,
+          "probe_seq": 271,
+          "radio_time_us": 5185917
+        },
+        {
+          "capture_seq": 254,
+          "host_mono_ns": 349597916,
+          "node_time_us": 5283379,
+          "probe_seq": 272,
+          "radio_time_us": 5206466
+        },
+        {
+          "capture_seq": 255,
+          "host_mono_ns": 371324416,
+          "node_time_us": 5305203,
+          "probe_seq": 273,
+          "radio_time_us": 5228281
+        },
+        {
+          "capture_seq": 256,
+          "host_mono_ns": 390505708,
+          "node_time_us": 5323700,
+          "probe_seq": 274,
+          "radio_time_us": 5246614
+        },
+        {
+          "capture_seq": 257,
+          "host_mono_ns": 408521291,
+          "node_time_us": 5342121,
+          "probe_seq": 275,
+          "radio_time_us": 5265027
+        },
+        {
+          "capture_seq": 258,
+          "host_mono_ns": 431558125,
+          "node_time_us": 5365273,
+          "probe_seq": 276,
+          "radio_time_us": 5288182
+        },
+        {
+          "capture_seq": 259,
+          "host_mono_ns": 449552083,
+          "node_time_us": 5382942,
+          "probe_seq": 277,
+          "radio_time_us": 5305846
+        },
+        {
+          "capture_seq": 260,
+          "host_mono_ns": 469567166,
+          "node_time_us": 5402933,
+          "probe_seq": 278,
+          "radio_time_us": 5325980
+        },
+        {
+          "capture_seq": 261,
+          "host_mono_ns": 488576041,
+          "node_time_us": 5422288,
+          "probe_seq": 279,
+          "radio_time_us": 5345184
+        },
+        {
+          "capture_seq": 262,
+          "host_mono_ns": 509519458,
+          "node_time_us": 5442588,
+          "probe_seq": 280,
+          "radio_time_us": 5365674
+        },
+        {
+          "capture_seq": 263,
+          "host_mono_ns": 531615458,
+          "node_time_us": 5465187,
+          "probe_seq": 281,
+          "radio_time_us": 5388093
+        },
+        {
+          "capture_seq": 264,
+          "host_mono_ns": 550521750,
+          "node_time_us": 5483995,
+          "probe_seq": 282,
+          "radio_time_us": 5406905
+        },
+        {
+          "capture_seq": 265,
+          "host_mono_ns": 570531791,
+          "node_time_us": 5504072,
+          "probe_seq": 283,
+          "radio_time_us": 5427152
+        },
+        {
+          "capture_seq": 266,
+          "host_mono_ns": 589527958,
+          "node_time_us": 5523247,
+          "probe_seq": 284,
+          "radio_time_us": 5446164
+        },
+        {
+          "capture_seq": 267,
+          "host_mono_ns": 610550958,
+          "node_time_us": 5544195,
+          "probe_seq": 285,
+          "radio_time_us": 5467275
+        },
+        {
+          "capture_seq": 268,
+          "host_mono_ns": 630647833,
+          "node_time_us": 5564486,
+          "probe_seq": 286,
+          "radio_time_us": 5487391
+        },
+        {
+          "capture_seq": 269,
+          "host_mono_ns": 654484500,
+          "node_time_us": 5587609,
+          "probe_seq": 287,
+          "radio_time_us": 5510509
+        },
+        {
+          "capture_seq": 270,
+          "host_mono_ns": 671521458,
+          "node_time_us": 5604812,
+          "probe_seq": 288,
+          "radio_time_us": 5527854
+        },
+        {
+          "capture_seq": 271,
+          "host_mono_ns": 691617083,
+          "node_time_us": 5625386,
+          "probe_seq": 289,
+          "radio_time_us": 5548346
+        },
+        {
+          "capture_seq": 272,
+          "host_mono_ns": 710497708,
+          "node_time_us": 5643687,
+          "probe_seq": 290,
+          "radio_time_us": 5566599
+        },
+        {
+          "capture_seq": 273,
+          "host_mono_ns": 732670458,
+          "node_time_us": 5666376,
+          "probe_seq": 291,
+          "radio_time_us": 5589455
+        },
+        {
+          "capture_seq": 274,
+          "host_mono_ns": 752756166,
+          "node_time_us": 5686048,
+          "probe_seq": 292,
+          "radio_time_us": 5608957
+        },
+        {
+          "capture_seq": 275,
+          "host_mono_ns": 773437625,
+          "node_time_us": 5706171,
+          "probe_seq": 293,
+          "radio_time_us": 5629068
+        }
+      ],
+      "tx": "a0:b7:65:dd:e9:3c",
+      "tx_epoch": 536246756
+    }
+  ],
+  "nodes": [
+    {
+      "counter_delta": {
+        "csi_callbacks": 3383,
+        "csi_captured": 2158,
+        "csi_filtered": 1225,
+        "export_bytes": 737632,
+        "export_drops": 0,
+        "node_time_us": 44007724,
+        "pool_drops": 0,
+        "tx_accepted": 2189,
+        "tx_requested": 2189
+      },
+      "counter_snapshots": 45,
+      "epoch": 536246756,
+      "first_counters": {
+        "csi_callbacks": 425,
+        "csi_captured": 277,
+        "csi_filtered": 148,
+        "export_bytes": 94539,
+        "export_drops": 0,
+        "node_time_us": 6086415,
+        "pool_drops": 0,
+        "pool_high_water": 1,
+        "tx_accepted": 298,
+        "tx_requested": 298
+      },
+      "last_counters": {
+        "csi_callbacks": 3808,
+        "csi_captured": 2435,
+        "csi_filtered": 1373,
+        "export_bytes": 832171,
+        "export_drops": 0,
+        "node_time_us": 50094139,
+        "pool_drops": 0,
+        "pool_high_water": 1,
+        "tx_accepted": 2487,
+        "tx_requested": 2487
+      },
+      "node": "a0:b7:65:dd:e9:3c",
+      "roles": {
+        "rx": true,
+        "tx": true
+      },
+      "sources": [
+        1
+      ]
+    },
+    {
+      "counter_delta": {
+        "csi_callbacks": 3451,
+        "csi_captured": 2153,
+        "csi_filtered": 1298,
+        "export_bytes": 735942,
+        "export_drops": 0,
+        "node_time_us": 44006068,
+        "pool_drops": 0,
+        "tx_accepted": 2189,
+        "tx_requested": 2189
+      },
+      "counter_snapshots": 45,
+      "epoch": 2270170139,
+      "first_counters": {
+        "csi_callbacks": 372,
+        "csi_captured": 245,
+        "csi_filtered": 127,
+        "export_bytes": 83586,
+        "export_drops": 0,
+        "node_time_us": 5087366,
+        "pool_drops": 0,
+        "pool_high_water": 1,
+        "tx_accepted": 248,
+        "tx_requested": 248
+      },
+      "last_counters": {
+        "csi_callbacks": 3823,
+        "csi_captured": 2398,
+        "csi_filtered": 1425,
+        "export_bytes": 819528,
+        "export_drops": 0,
+        "node_time_us": 49093434,
+        "pool_drops": 0,
+        "pool_high_water": 1,
+        "tx_accepted": 2437,
+        "tx_requested": 2437
+      },
+      "node": "b0:b2:1c:0b:07:1c",
+      "roles": {
+        "rx": true,
+        "tx": true
+      },
+      "sources": [
+        0
+      ]
+    }
+  ],
+  "notes": [
+    "Probe missing counts cover observed sequence interiors only, not recording boundaries.",
+    "Counter deltas cover first-to-last reports only; null means a counter decreased.",
+    "Interarrival uses receiver node timestamps; exact nearest-rank quantiles and population standard deviation include observed missing-probe gaps. Negative deltas are counted separately.",
+    "CSI uniqueness compares SHA-256 digests of native bytes, including any invalid first word.",
+    "Per-link timestamp samples retain only the first 32 records; they do not prove collision freedom."
+  ],
+  "probe_source_mac_mismatches": 0,
+  "segment_checks": [
+    {
+      "bytes": 1605316,
+      "file": "segment-000000.bin",
+      "integrity": {
+        "status": "verified"
+      },
+      "records": 4667,
+      "sealed": true
+    }
+  ],
+  "self_captures": 0,
+  "session": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r07-independent-50",
+  "stream_or_decode_error_samples_first_32": [
+    {
+      "error": "StreamError:[2]",
+      "host_mono_ns": 131083833,
+      "source": 0
+    },
+    {
+      "error": "StreamError:[2]",
+      "host_mono_ns": 133547875,
+      "source": 1
+    }
+  ],
+  "stream_or_decode_errors": {
+    "StreamError:[2]": 2
+  },
+  "stream_or_decode_errors_after_first_second": 0,
+  "stream_or_decode_errors_first_second": 2,
+  "unattributed_csi": 0
+}

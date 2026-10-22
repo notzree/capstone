@@ -1,0 +1,86 @@
+{
+  "format": "csi-session/1",
+  "session_id": "01a157c7-266f-7374-b4d2-ed1285b52d31",
+  "created_wall_ns": 1792474031727915000,
+  "closed_wall_ns": 1792474031771257000,
+  "complete": true,
+  "recorder": "csi-host 0.1.0",
+  "protocol_version": 1,
+  "derived_from": null,
+  "rotation": {
+    "max_bytes": 268435456,
+    "max_duration_ns": 600000000000
+  },
+  "sources": [
+    {
+      "name": "synthetic-rx-0",
+      "kind": "synthetic",
+      "details": {
+        "config": {
+          "csi_len": 64,
+          "faults": {
+            "air_loss": 0.05,
+            "corrupt": 0.01,
+            "duplicate": 0.01,
+            "export_drop": 0.001,
+            "outage_ms": 500.0,
+            "outages": 1,
+            "pool_drop": 0.002,
+            "reboots": 1,
+            "reorder": 0.01,
+            "stream_error": 0.0005,
+            "truncate": 0.0005
+          },
+          "rate_hz": 60.0,
+          "receivers": 2,
+          "seconds": 3.0,
+          "seed": 5,
+          "start_wall_ns": 1789000000000000000,
+          "transmitters": 2
+        },
+        "node": "02:52:58:00:00:00",
+        "receiver": 0
+      }
+    },
+    {
+      "name": "synthetic-rx-1",
+      "kind": "synthetic",
+      "details": {
+        "config": {
+          "csi_len": 64,
+          "faults": {
+            "air_loss": 0.05,
+            "corrupt": 0.01,
+            "duplicate": 0.01,
+            "export_drop": 0.001,
+            "outage_ms": 500.0,
+            "outages": 1,
+            "pool_drop": 0.002,
+            "reboots": 1,
+            "reorder": 0.01,
+            "stream_error": 0.0005,
+            "truncate": 0.0005
+          },
+          "rate_hz": 60.0,
+          "receivers": 2,
+          "seconds": 3.0,
+          "seed": 5,
+          "start_wall_ns": 1789000000000000000,
+          "transmitters": 2
+        },
+        "node": "02:52:58:00:00:01",
+        "receiver": 1
+      }
+    }
+  ],
+  "segments": [
+    {
+      "file": "segment-000000.bin",
+      "records": 512,
+      "bytes": 83928,
+      "sha256": "5bd3e24a6a94681c8b0a8d788d0b0f823392df3015b7e5920a981b4de7cac3b9",
+      "first_mono_ns": 2346144,
+      "last_mono_ns": 3000624083
+    }
+  ]
+}

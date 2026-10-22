@@ -1,0 +1,206 @@
+[
+  {
+    "session": "chest-01",
+    "synthetic": false,
+    "condition": "seated",
+    "frames": 4157,
+    "device_span_s": 62.240462000000065,
+    "suspect_clock_restart": false,
+    "accepted_frames_per_s": 66.77328327029443,
+    "duplicate_timestamps": 0,
+    "gap_ms": {
+      "median": 11.013,
+      "p95": 32.848,
+      "p99": 63.036499999999975,
+      "max": 330.568
+    },
+    "gaps_over_100ms": 14,
+    "first_word_invalid_frames": 4157,
+    "layouts_iqbytes_channel_sigmode_bandwidth_rxformat": [
+      [
+        384,
+        "11",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "serial": {
+      "raw_csi_lines": 4157,
+      "mean_record_bytes": 1238.0673562665384,
+      "ideal_records_per_s_at_default_921600_8N1": 74.43859942960911,
+      "assumption": "Default baud only; actual session baud is unrecorded."
+    },
+    "note": "Accepted log records, not transmitted-packet loss or fall accuracy."
+  },
+  {
+    "session": "chest-02",
+    "synthetic": false,
+    "condition": "chest-taped",
+    "frames": 7895,
+    "device_span_s": 114.93876999999989,
+    "suspect_clock_restart": false,
+    "accepted_frames_per_s": 68.68004590618125,
+    "duplicate_timestamps": 0,
+    "gap_ms": {
+      "median": 11.015,
+      "p95": 30.424799999999998,
+      "p99": 51.896039999999864,
+      "max": 913.788
+    },
+    "gaps_over_100ms": 21,
+    "first_word_invalid_frames": 7895,
+    "layouts_iqbytes_channel_sigmode_bandwidth_rxformat": [
+      [
+        384,
+        "11",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "serial": {
+      "raw_csi_lines": 7895,
+      "mean_record_bytes": 1289.6436985433818,
+      "ideal_records_per_s_at_default_921600_8N1": 71.46159835006542,
+      "assumption": "Default baud only; actual session baud is unrecorded."
+    },
+    "note": "Accepted log records, not transmitted-packet loss or fall accuracy."
+  },
+  {
+    "session": "chest-03",
+    "synthetic": false,
+    "condition": "chest-taped",
+    "frames": 12793,
+    "device_span_s": 179.89354300000042,
+    "suspect_clock_restart": false,
+    "accepted_frames_per_s": 71.10872234030084,
+    "duplicate_timestamps": 0,
+    "gap_ms": {
+      "median": 11.05,
+      "p95": 29.000949999999964,
+      "p99": 44.00518,
+      "max": 374.056
+    },
+    "gaps_over_100ms": 9,
+    "first_word_invalid_frames": 12793,
+    "layouts_iqbytes_channel_sigmode_bandwidth_rxformat": [
+      [
+        384,
+        "11",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "serial": {
+      "raw_csi_lines": 12794,
+      "mean_record_bytes": 1278.8828357042364,
+      "ideal_records_per_s_at_default_921600_8N1": 72.06289538576118,
+      "assumption": "Default baud only; actual session baud is unrecorded."
+    },
+    "note": "Accepted log records, not transmitted-packet loss or fall accuracy."
+  },
+  {
+    "session": "empty-01",
+    "synthetic": false,
+    "condition": "empty",
+    "frames": 12470,
+    "device_span_s": 179.92647600000012,
+    "suspect_clock_restart": false,
+    "accepted_frames_per_s": 69.3005291783739,
+    "duplicate_timestamps": 0,
+    "gap_ms": {
+      "median": 11.028,
+      "p95": 30.97779999999996,
+      "p99": 44.008320000000005,
+      "max": 121.631
+    },
+    "gaps_over_100ms": 2,
+    "first_word_invalid_frames": 12470,
+    "layouts_iqbytes_channel_sigmode_bandwidth_rxformat": [
+      [
+        384,
+        "11",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "serial": {
+      "raw_csi_lines": 12470,
+      "mean_record_bytes": 1247.6755412991179,
+      "ideal_records_per_s_at_default_921600_8N1": 73.86535757849369,
+      "assumption": "Default baud only; actual session baud is unrecorded."
+    },
+    "note": "Accepted log records, not transmitted-packet loss or fall accuracy."
+  },
+  {
+    "session": "seated-01",
+    "synthetic": false,
+    "condition": "seated",
+    "frames": 12779,
+    "device_span_s": 179.90450299999978,
+    "suspect_clock_restart": false,
+    "accepted_frames_per_s": 71.02657124707999,
+    "duplicate_timestamps": 0,
+    "gap_ms": {
+      "median": 11.021,
+      "p95": 30.061799999999995,
+      "p99": 43.96984,
+      "max": 104.783
+    },
+    "gaps_over_100ms": 1,
+    "first_word_invalid_frames": 12779,
+    "layouts_iqbytes_channel_sigmode_bandwidth_rxformat": [
+      [
+        384,
+        "11",
+        "1",
+        "1",
+        "1"
+      ]
+    ],
+    "serial": {
+      "raw_csi_lines": 12783,
+      "mean_record_bytes": 1296.0176797308925,
+      "ideal_records_per_s_at_default_921600_8N1": 71.11014104308845,
+      "assumption": "Default baud only; actual session baud is unrecorded."
+    },
+    "note": "Accepted log records, not transmitted-packet loss or fall accuracy."
+  },
+  {
+    "session": "synthetic",
+    "synthetic": true,
+    "condition": "synthetic_72_bpm",
+    "frames": 3250,
+    "device_span_s": 64.98,
+    "suspect_clock_restart": false,
+    "accepted_frames_per_s": 50.0,
+    "duplicate_timestamps": 0,
+    "gap_ms": {
+      "median": 20.0,
+      "p95": 20.0,
+      "p99": 20.0,
+      "max": 20.0
+    },
+    "gaps_over_100ms": 0,
+    "first_word_invalid_frames": 0,
+    "layouts_iqbytes_channel_sigmode_bandwidth_rxformat": [
+      [
+        64,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "serial": {
+      "raw_csi_lines": 0,
+      "mean_record_bytes": null,
+      "ideal_records_per_s_at_default_921600_8N1": null,
+      "assumption": "Default baud only; actual session baud is unrecorded."
+    },
+    "note": "Accepted log records, not transmitted-packet loss or fall accuracy."
+  }
+]

@@ -1,0 +1,3 @@
+hub recording to /Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r10-independent-50
+2026-10-22T03:19:05.689652Z  INFO csi_host::live: hub stopped and session sealed records=4685
+recorded 4685 records; session sealed; status: /Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r10-independent-50/hub-status.json

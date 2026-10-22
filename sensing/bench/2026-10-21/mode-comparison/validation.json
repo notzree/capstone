@@ -1,0 +1,22 @@
+{
+  "trials_complete": 16,
+  "conditions": 8,
+  "repeats_per_condition": 2,
+  "seconds_per_trial": 45,
+  "total_recording_seconds": 720,
+  "csi_records": 31482,
+  "epochs_per_node_per_trial": 1,
+  "expected_directions_and_roles_verified": true,
+  "all_segment_hashes_verified": true,
+  "errors_first_second": 12,
+  "errors_after_first_second": 0,
+  "frames_missing": 0,
+  "captures_missing": 0,
+  "pool_drops": 0,
+  "export_drops": 0,
+  "max_rx_queue_high_water": 1,
+  "self_captures": 0,
+  "probe_source_mismatches": 0,
+  "timestamp_regressions": 0,
+  "phy_and_layout_verified": true
+}

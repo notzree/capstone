@@ -1,0 +1,6 @@
+# Record follower continuously; leave leader UART free for its controlled EN reset.
+[[sources]]
+name = "pair-follower-b0b21c0b071c"
+kind = "serial"
+path = "/dev/cu.usbserial-0001"
+baud = 921600

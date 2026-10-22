@@ -1,0 +1,1121 @@
+{
+  "total_count": 11,
+  "jobs": [
+    {
+      "id": 114600173698,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrPggg",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600173698",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600173698",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:29Z",
+      "started_at": "2026-10-11T23:10:31Z",
+      "completed_at": "2026-10-11T23:10:36Z",
+      "name": "Discover chip features",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:10:32Z",
+          "completed_at": "2026-10-11T23:10:32Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:10:32Z",
+          "completed_at": "2026-10-11T23:10:33Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:10:33Z",
+          "completed_at": "2026-10-11T23:10:34Z"
+        },
+        {
+          "name": "Discover chip feature matrix",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:10:34Z",
+          "completed_at": "2026-10-11T23:10:35Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-11T23:10:35Z",
+          "completed_at": "2026-10-11T23:10:35Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-11T23:10:35Z",
+          "completed_at": "2026-10-11T23:10:35Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600173698",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001286,
+      "runner_name": "GitHub Actions 1000001286",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196044,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ3zA",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196044",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196044",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:10:38Z",
+      "completed_at": "2026-10-11T23:17:44Z",
+      "name": "build (defmt, esp32)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:10:39Z",
+          "completed_at": "2026-10-11T23:10:39Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:10:39Z",
+          "completed_at": "2026-10-11T23:10:40Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:10:40Z",
+          "completed_at": "2026-10-11T23:10:41Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:10:41Z",
+          "completed_at": "2026-10-11T23:10:41Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:10:41Z",
+          "completed_at": "2026-10-11T23:13:57Z"
+        },
+        {
+          "name": "Build with defmt feature stack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:13:57Z",
+          "completed_at": "2026-10-11T23:17:42Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-11T23:17:42Z",
+          "completed_at": "2026-10-11T23:17:42Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-11T23:17:42Z",
+          "completed_at": "2026-10-11T23:17:42Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:17:42Z",
+          "completed_at": "2026-10-11T23:17:42Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196044",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001288,
+      "runner_name": "GitHub Actions 1000001288",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196052,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ31A",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196052",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196052",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:10:38Z",
+      "completed_at": "2026-10-11T23:18:04Z",
+      "name": "cargo-hack (esp32)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:10:39Z",
+          "completed_at": "2026-10-11T23:10:42Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:10:42Z",
+          "completed_at": "2026-10-11T23:10:43Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:10:43Z",
+          "completed_at": "2026-10-11T23:10:43Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:10:43Z",
+          "completed_at": "2026-10-11T23:10:44Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:10:44Z",
+          "completed_at": "2026-10-11T23:13:32Z"
+        },
+        {
+          "name": "Install cargo-hack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:13:32Z",
+          "completed_at": "2026-10-11T23:13:32Z"
+        },
+        {
+          "name": "Run cargo-hack checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-11T23:13:32Z",
+          "completed_at": "2026-10-11T23:18:01Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:18:01Z",
+          "completed_at": "2026-10-11T23:18:01Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-11T23:18:01Z",
+          "completed_at": "2026-10-11T23:18:01Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-11T23:18:01Z",
+          "completed_at": "2026-10-11T23:18:01Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196052",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001289,
+      "runner_name": "GitHub Actions 1000001289",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196066,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ34g",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196066",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196066",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:10:38Z",
+      "completed_at": "2026-10-11T23:16:20Z",
+      "name": "build (defmt, esp32c3)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:10:39Z",
+          "completed_at": "2026-10-11T23:10:41Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:10:41Z",
+          "completed_at": "2026-10-11T23:10:42Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:10:42Z",
+          "completed_at": "2026-10-11T23:10:43Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:10:43Z",
+          "completed_at": "2026-10-11T23:10:43Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:10:43Z",
+          "completed_at": "2026-10-11T23:13:33Z"
+        },
+        {
+          "name": "Build with defmt feature stack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:13:33Z",
+          "completed_at": "2026-10-11T23:16:18Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-11T23:16:18Z",
+          "completed_at": "2026-10-11T23:16:18Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-11T23:16:18Z",
+          "completed_at": "2026-10-11T23:16:18Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:16:18Z",
+          "completed_at": "2026-10-11T23:16:18Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196066",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001290,
+      "runner_name": "GitHub Actions 1000001290",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196088,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ3-A",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196088",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196088",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:18:06Z",
+      "completed_at": "2026-10-11T23:26:05Z",
+      "name": "cargo-hack (esp32c6)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:18:06Z",
+          "completed_at": "2026-10-11T23:18:08Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:18:08Z",
+          "completed_at": "2026-10-11T23:18:09Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:18:09Z",
+          "completed_at": "2026-10-11T23:18:12Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:18:12Z",
+          "completed_at": "2026-10-11T23:18:12Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:18:12Z",
+          "completed_at": "2026-10-11T23:21:14Z"
+        },
+        {
+          "name": "Install cargo-hack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:21:14Z",
+          "completed_at": "2026-10-11T23:21:14Z"
+        },
+        {
+          "name": "Run cargo-hack checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-11T23:21:14Z",
+          "completed_at": "2026-10-11T23:26:02Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:26:02Z",
+          "completed_at": "2026-10-11T23:26:02Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-11T23:26:02Z",
+          "completed_at": "2026-10-11T23:26:03Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-11T23:26:03Z",
+          "completed_at": "2026-10-11T23:26:03Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196088",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001307,
+      "runner_name": "GitHub Actions 1000001307",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196093,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ3_Q",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196093",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196093",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:26:07Z",
+      "completed_at": "2026-10-11T23:33:38Z",
+      "name": "cargo-hack (esp32s3)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:26:08Z",
+          "completed_at": "2026-10-11T23:26:10Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:26:10Z",
+          "completed_at": "2026-10-11T23:26:11Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:26:11Z",
+          "completed_at": "2026-10-11T23:26:12Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:26:12Z",
+          "completed_at": "2026-10-11T23:26:12Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:26:12Z",
+          "completed_at": "2026-10-11T23:29:04Z"
+        },
+        {
+          "name": "Install cargo-hack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:29:04Z",
+          "completed_at": "2026-10-11T23:29:04Z"
+        },
+        {
+          "name": "Run cargo-hack checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-11T23:29:04Z",
+          "completed_at": "2026-10-11T23:33:35Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:33:35Z",
+          "completed_at": "2026-10-11T23:33:35Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-11T23:33:35Z",
+          "completed_at": "2026-10-11T23:33:35Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-11T23:33:35Z",
+          "completed_at": "2026-10-11T23:33:35Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196093",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001309,
+      "runner_name": "GitHub Actions 1000001309",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196096,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ4AA",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196096",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196096",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:22:08Z",
+      "completed_at": "2026-10-11T23:29:25Z",
+      "name": "build (defmt, esp32s3)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:22:08Z",
+          "completed_at": "2026-10-11T23:22:09Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:22:09Z",
+          "completed_at": "2026-10-11T23:22:10Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:22:10Z",
+          "completed_at": "2026-10-11T23:22:11Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:22:11Z",
+          "completed_at": "2026-10-11T23:22:11Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:22:11Z",
+          "completed_at": "2026-10-11T23:25:34Z"
+        },
+        {
+          "name": "Build with defmt feature stack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:25:34Z",
+          "completed_at": "2026-10-11T23:29:23Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-11T23:29:23Z",
+          "completed_at": "2026-10-11T23:29:23Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-11T23:29:23Z",
+          "completed_at": "2026-10-11T23:29:24Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:29:24Z",
+          "completed_at": "2026-10-11T23:29:24Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196096",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001308,
+      "runner_name": "GitHub Actions 1000001308",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196109,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ4DQ",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196109",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196109",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:17:48Z",
+      "completed_at": "2026-10-11T23:27:26Z",
+      "name": "cargo-hack (esp32c5)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:17:49Z",
+          "completed_at": "2026-10-11T23:17:51Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:17:51Z",
+          "completed_at": "2026-10-11T23:17:51Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:17:51Z",
+          "completed_at": "2026-10-11T23:17:52Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:17:52Z",
+          "completed_at": "2026-10-11T23:17:52Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:17:52Z",
+          "completed_at": "2026-10-11T23:21:15Z"
+        },
+        {
+          "name": "Install cargo-hack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:21:15Z",
+          "completed_at": "2026-10-11T23:21:15Z"
+        },
+        {
+          "name": "Run cargo-hack checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-11T23:21:15Z",
+          "completed_at": "2026-10-11T23:27:24Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:27:24Z",
+          "completed_at": "2026-10-11T23:27:24Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-11T23:27:24Z",
+          "completed_at": "2026-10-11T23:27:24Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-11T23:27:24Z",
+          "completed_at": "2026-10-11T23:27:24Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196109",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001306,
+      "runner_name": "GitHub Actions 1000001306",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196116,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ4FA",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196116",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196116",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:10:38Z",
+      "completed_at": "2026-10-11T23:17:47Z",
+      "name": "cargo-hack (esp32c3)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:10:39Z",
+          "completed_at": "2026-10-11T23:10:41Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:10:41Z",
+          "completed_at": "2026-10-11T23:10:42Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:10:42Z",
+          "completed_at": "2026-10-11T23:10:43Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:10:43Z",
+          "completed_at": "2026-10-11T23:10:43Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:10:43Z",
+          "completed_at": "2026-10-11T23:13:26Z"
+        },
+        {
+          "name": "Install cargo-hack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:13:26Z",
+          "completed_at": "2026-10-11T23:13:27Z"
+        },
+        {
+          "name": "Run cargo-hack checks",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-11T23:13:27Z",
+          "completed_at": "2026-10-11T23:17:43Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:17:43Z",
+          "completed_at": "2026-10-11T23:17:43Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-11T23:17:43Z",
+          "completed_at": "2026-10-11T23:17:44Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-11T23:17:44Z",
+          "completed_at": "2026-10-11T23:17:44Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196116",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001291,
+      "runner_name": "GitHub Actions 1000001291",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196132,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ4JA",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196132",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196132",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:17:45Z",
+      "completed_at": "2026-10-11T23:22:44Z",
+      "name": "build (defmt, esp32c6)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:17:46Z",
+          "completed_at": "2026-10-11T23:17:47Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:17:48Z",
+          "completed_at": "2026-10-11T23:17:49Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:17:49Z",
+          "completed_at": "2026-10-11T23:17:49Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:17:49Z",
+          "completed_at": "2026-10-11T23:17:49Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:17:49Z",
+          "completed_at": "2026-10-11T23:20:22Z"
+        },
+        {
+          "name": "Build with defmt feature stack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:20:22Z",
+          "completed_at": "2026-10-11T23:22:41Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-11T23:22:41Z",
+          "completed_at": "2026-10-11T23:22:42Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-11T23:22:42Z",
+          "completed_at": "2026-10-11T23:22:42Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:22:42Z",
+          "completed_at": "2026-10-11T23:22:42Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196132",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001305,
+      "runner_name": "GitHub Actions 1000001305",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 114600196167,
+      "run_id": 38183278906,
+      "workflow_name": "Cargo Hack Compile",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/runs/38183278906",
+      "run_attempt": 1,
+      "node_id": "CR_kwDONR5WpM8AAAAarrQ4Rw",
+      "head_sha": "72cb565826d211a7cddd3a48cdbefb4f62b8f623",
+      "url": "https://api.github.com/repos/csi-rs/esp-csi-rs/actions/jobs/114600196167",
+      "html_url": "https://github.com/csi-rs/esp-csi-rs/actions/runs/38183278906/job/114600196167",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-11T23:10:36Z",
+      "started_at": "2026-10-11T23:16:22Z",
+      "completed_at": "2026-10-11T23:22:06Z",
+      "name": "build (defmt, esp32c5)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-11T23:16:23Z",
+          "completed_at": "2026-10-11T23:16:24Z"
+        },
+        {
+          "name": "Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-11T23:16:24Z",
+          "completed_at": "2026-10-11T23:16:25Z"
+        },
+        {
+          "name": "Install Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-11T23:16:25Z",
+          "completed_at": "2026-10-11T23:16:26Z"
+        },
+        {
+          "name": "Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-11T23:16:26Z",
+          "completed_at": "2026-10-11T23:16:26Z"
+        },
+        {
+          "name": "Install ESP Rust toolchain",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-11T23:16:26Z",
+          "completed_at": "2026-10-11T23:19:15Z"
+        },
+        {
+          "name": "Build with defmt feature stack",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-11T23:19:15Z",
+          "completed_at": "2026-10-11T23:22:04Z"
+        },
+        {
+          "name": "Post Cache cargo artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-11T23:22:04Z",
+          "completed_at": "2026-10-11T23:22:04Z"
+        },
+        {
+          "name": "Post Checkout",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-11T23:22:04Z",
+          "completed_at": "2026-10-11T23:22:04Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-11T23:22:04Z",
+          "completed_at": "2026-10-11T23:22:04Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/csi-rs/esp-csi-rs/check-runs/114600196167",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000001304,
+      "runner_name": "GitHub Actions 1000001304",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

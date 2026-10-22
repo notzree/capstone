@@ -1,0 +1,16 @@
+{
+  "csi_records": 5845,
+  "distinct_raw_csi": 5845,
+  "layouts": {
+    "sig_mode=1 mcs=0 cwb=0 sgi=false stbc=0 channel=6 len=256 first_word_invalid=true gain=None": 5845
+  },
+  "stream_errors": [
+    {
+      "kind": "StreamError",
+      "mono_ns": 132138375,
+      "payload": [
+        2
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "reboots": 1,
+    "air_losses": 18,
+    "pool_drops": 0,
+    "export_drops": 0,
+    "outage_losses": 57,
+    "corrupted": 2,
+    "truncated": 0,
+    "duplicated": 4,
+    "reordered": 2,
+    "stream_errors": 0,
+    "frames_missing": 59,
+    "captures_missing": 58,
+    "probes_missing": 75,
+    "reported_pool_drops": 0,
+    "reported_export_drops": 0
+  },
+  {
+    "reboots": 1,
+    "air_losses": 22,
+    "pool_drops": 0,
+    "export_drops": 0,
+    "outage_losses": 60,
+    "corrupted": 1,
+    "truncated": 0,
+    "duplicated": 2,
+    "reordered": 1,
+    "stream_errors": 0,
+    "frames_missing": 61,
+    "captures_missing": 60,
+    "probes_missing": 82,
+    "reported_pool_drops": 0,
+    "reported_export_drops": 0
+  }
+]

@@ -1,0 +1,5 @@
+{"connected":true,"error":null,"mono_ns":136261625,"source":0,"type":"source_connection"}
+{"connected":true,"error":null,"mono_ns":136335250,"source":1,"type":"source_connection"}
+{"epoch":2070587040,"mono_ns":138442917,"new_epoch":false,"node":"a0:b7:65:dd:e9:3c","source":1,"type":"source_active"}
+{"type":"node_epoch","mono_ns":138442917,"node":"a0:b7:65:dd:e9:3c","epoch":2070587040,"previous":null}
+{"mono_ns":3001641000,"source":0,"type":"source_stale"}

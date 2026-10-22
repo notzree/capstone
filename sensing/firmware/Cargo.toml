@@ -1,0 +1,9 @@
+[workspace]
+resolver = "3"
+members = ["csi-esp"]
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+opt-level = 3
+panic = "abort"

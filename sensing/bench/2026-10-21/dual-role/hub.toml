@@ -1,0 +1,12 @@
+# Both boards have TX and RX enabled. a0 is the pair leader; b0 responds.
+[[sources]]
+name = "pair-b0b21c0b071c"
+kind = "serial"
+path = "/dev/cu.usbserial-0001"
+baud = 921600
+
+[[sources]]
+name = "pair-a0b765dde93c"
+kind = "serial"
+path = "/dev/cu.usbserial-3"
+baud = 921600

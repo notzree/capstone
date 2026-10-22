@@ -1,0 +1,12 @@
+# Both serial endpoints are recorded; only RX emits CSI.
+[[sources]]
+name = "bench-tx-b0b21c0b071c"
+kind = "serial"
+path = "/dev/cu.usbserial-0001"
+baud = 921600
+
+[[sources]]
+name = "bench-rx-a0b765dde93c"
+kind = "serial"
+path = "/dev/cu.usbserial-3"
+baud = 921600

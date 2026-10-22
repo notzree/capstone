@@ -1,0 +1,8 @@
+{"connected":true,"error":null,"mono_ns":131889750,"source":1,"type":"source_connection"}
+{"connected":true,"error":null,"mono_ns":132077416,"source":0,"type":"source_connection"}
+{"epoch":2757752047,"mono_ns":134861375,"new_epoch":false,"node":"a0:b7:65:dd:e9:3c","source":1,"type":"source_active"}
+{"epoch":3583582973,"mono_ns":139876625,"new_epoch":false,"node":"b0:b2:1c:0b:07:1c","source":0,"type":"source_active"}
+{"type":"stream_error","mono_ns":133830333,"source":1,"error":"bad_cobs"}
+{"type":"node_epoch","mono_ns":134861375,"node":"a0:b7:65:dd:e9:3c","epoch":2757752047,"previous":null}
+{"type":"decode_error","mono_ns":134867625,"source":0,"error":"bad_crc"}
+{"type":"node_epoch","mono_ns":139876625,"node":"b0:b2:1c:0b:07:1c","epoch":3583582973,"previous":null}

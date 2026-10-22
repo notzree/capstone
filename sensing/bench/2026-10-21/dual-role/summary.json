@@ -1,0 +1,180 @@
+{
+  "placement": {
+    "separation_m_approx": 0.7,
+    "same_plane_approx": true,
+    "surface": "desk",
+    "source": "user",
+    "activity_labels": null
+  },
+  "firmware_version": "0.2.1",
+  "runs": {
+    "smoke-01": {
+      "session_id": "01a16165-2d3f-72bd-8fff-a251914f6987",
+      "records": 764,
+      "sources": 2,
+      "links": [
+        {
+          "rx": "a0:b7:65:dd:e9:3c",
+          "rx_epoch": 4166852009,
+          "tx": "b0:b2:1c:0b:07:1c",
+          "tx_epoch": 2313927871,
+          "records": 289,
+          "rate_hz": 9.65489774859853,
+          "probes_missing": 6,
+          "first_probe_seq": 178,
+          "last_probe_seq": 472,
+          "first_node_time_us": 19856290,
+          "last_node_time_us": 49685710
+        },
+        {
+          "rx": "b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2313927871,
+          "tx": "a0:b7:65:dd:e9:3c",
+          "tx_epoch": 4166852009,
+          "records": 295,
+          "rate_hz": 9.856564193489318,
+          "probes_missing": 4,
+          "first_probe_seq": 186,
+          "last_probe_seq": 484,
+          "first_node_time_us": 18972318,
+          "last_node_time_us": 48800156
+        }
+      ],
+      "errors": {},
+      "self_captures": 0,
+      "sealed_and_integrity_verified": true
+    },
+    "baseline-02": {
+      "session_id": "01a1616c-76c1-70e0-9360-4b2dfb577a0e",
+      "records": 1521,
+      "sources": 2,
+      "links": [
+        {
+          "rx": "a0:b7:65:dd:e9:3c",
+          "rx_epoch": 876912938,
+          "tx": "b0:b2:1c:0b:07:1c",
+          "tx_epoch": 2463175849,
+          "records": 575,
+          "rate_hz": 9.605922228445431,
+          "probes_missing": 11,
+          "first_probe_seq": 199,
+          "last_probe_seq": 784,
+          "first_node_time_us": 22767363,
+          "last_node_time_us": 82522167
+        },
+        {
+          "rx": "b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2463175849,
+          "tx": "a0:b7:65:dd:e9:3c",
+          "tx_epoch": 876912938,
+          "records": 586,
+          "rate_hz": 9.788652288145997,
+          "probes_missing": 12,
+          "first_probe_seq": 207,
+          "last_probe_seq": 804,
+          "first_node_time_us": 20474547,
+          "last_node_time_us": 80237626
+        }
+      ],
+      "errors": {},
+      "self_captures": 0,
+      "sealed_and_integrity_verified": true
+    },
+    "recovery-03": {
+      "session_id": "01a1616d-d2b4-77f4-b296-8fe290a0e3be",
+      "records": 1155,
+      "sources": 1,
+      "links": [
+        {
+          "rx": "b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2463175849,
+          "tx": "a0:b7:65:dd:e9:3c",
+          "tx_epoch": 876912938,
+          "records": 275,
+          "rate_hz": 9.988716395989465,
+          "probes_missing": 0,
+          "first_probe_seq": 1097,
+          "last_probe_seq": 1371,
+          "first_node_time_us": 109565031,
+          "last_node_time_us": 136995983
+        },
+        {
+          "rx": "b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2463175849,
+          "tx": "a0:b7:65:dd:e9:3c",
+          "tx_epoch": 2475717287,
+          "records": 610,
+          "rate_hz": 9.860177821264022,
+          "probes_missing": 8,
+          "first_probe_seq": 0,
+          "last_probe_seq": 617,
+          "first_node_time_us": 137619906,
+          "last_node_time_us": 199383498
+        }
+      ],
+      "errors": {},
+      "self_captures": 0,
+      "sealed_and_integrity_verified": true
+    },
+    "post-recovery-04": {
+      "session_id": "01a1616f-5f5a-717e-b42a-461f637096f7",
+      "records": 758,
+      "sources": 2,
+      "links": [
+        {
+          "rx": "a0:b7:65:dd:e9:3c",
+          "rx_epoch": 2475717287,
+          "tx": "b0:b2:1c:0b:07:1c",
+          "tx_epoch": 2463175849,
+          "records": 285,
+          "rate_hz": 9.55252218875999,
+          "probes_missing": 7,
+          "first_probe_seq": 2072,
+          "last_probe_seq": 2363,
+          "first_node_time_us": 73663552,
+          "last_node_time_us": 103393920
+        },
+        {
+          "rx": "b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2463175849,
+          "tx": "a0:b7:65:dd:e9:3c",
+          "tx_epoch": 2475717287,
+          "records": 293,
+          "rate_hz": 9.789170107012392,
+          "probes_missing": 6,
+          "first_probe_seq": 734,
+          "last_probe_seq": 1032,
+          "first_node_time_us": 211092028,
+          "last_node_time_us": 240920910
+        }
+      ],
+      "errors": {},
+      "self_captures": 0,
+      "sealed_and_integrity_verified": true
+    }
+  },
+  "leader_restart_recovery": {
+    "old_tx_epoch": 876912938,
+    "new_tx_epoch": 2475717287,
+    "follower_epoch": 2463175849,
+    "capture_gap_us": 623923,
+    "new_leader_first_probe_seq": 0,
+    "follower_rebooted": false
+  },
+  "workspace_tests_passed": 117,
+  "policy_tests_passed": 14,
+  "capability_builds": [
+    "tx",
+    "rx",
+    "tx,rx",
+    "pair"
+  ],
+  "limitations": [
+    "known pair only; no arbitrary-N scheduling",
+    "turn synchronization, not shared-clock alignment",
+    "turn tag and RTT timeout not exported to saved CSI; exact correlation/adaptation policy-tested",
+    "2s missing-completion reset reviewed but not fault-injected",
+    "gain unknown; first4 CSI bytes invalid",
+    "no controlled motion or sustained wrap validation"
+  ]
+}

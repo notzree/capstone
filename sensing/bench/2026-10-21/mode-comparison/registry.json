@@ -1,0 +1,192 @@
+{
+  "schema": "csi-mode-trials/1",
+  "placement": "user-reported ~70cm apart on desk, same plane",
+  "notes": [
+    "Acquisition pilot; two repetitions per condition; no activity labels inferred.",
+    "Forward/reverse profile order; target rates are per transmitter, achieved load reported separately."
+  ],
+  "trials": [
+    {
+      "condition": "star-a-10",
+      "mode": "star-a",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "r01-star-a-10-audit.json",
+      "session": "r01-star-a-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:08:15.955373+00:00"
+    },
+    {
+      "condition": "star-b-10",
+      "mode": "star-b",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "r02-star-b-10-audit.json",
+      "session": "r02-star-b-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:09:28.762687+00:00"
+    },
+    {
+      "condition": "independent-10",
+      "mode": "independent",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "r03-independent-10-audit.json",
+      "session": "r03-independent-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:10:41.108168+00:00"
+    },
+    {
+      "condition": "pair-10",
+      "mode": "pair",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "r04-pair-10-audit.json",
+      "session": "r04-pair-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:11:51.646440+00:00"
+    },
+    {
+      "condition": "star-a-50",
+      "mode": "star-a",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "r05-star-a-50-audit.json",
+      "session": "r05-star-a-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:13:03.552739+00:00"
+    },
+    {
+      "condition": "star-b-50",
+      "mode": "star-b",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "r06-star-b-50-audit.json",
+      "session": "r06-star-b-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:14:17.159647+00:00"
+    },
+    {
+      "condition": "independent-50",
+      "mode": "independent",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "r07-independent-50-audit.json",
+      "session": "r07-independent-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:15:29.658935+00:00"
+    },
+    {
+      "condition": "pair-50",
+      "mode": "pair",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "r08-pair-50-audit.json",
+      "session": "r08-pair-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:16:41.498448+00:00"
+    },
+    {
+      "condition": "pair-50",
+      "mode": "pair",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "r09-pair-50-audit.json",
+      "session": "r09-pair-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:17:54.953821+00:00"
+    },
+    {
+      "condition": "independent-50",
+      "mode": "independent",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "r10-independent-50-audit.json",
+      "session": "r10-independent-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:19:05.854542+00:00"
+    },
+    {
+      "condition": "star-b-50",
+      "mode": "star-b",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "r11-star-b-50-audit.json",
+      "session": "r11-star-b-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:20:17.425923+00:00"
+    },
+    {
+      "condition": "star-a-50",
+      "mode": "star-a",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "r12-star-a-50-audit.json",
+      "session": "r12-star-a-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:21:28.012008+00:00"
+    },
+    {
+      "condition": "pair-10",
+      "mode": "pair",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "r13-pair-10-audit.json",
+      "session": "r13-pair-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:22:39.968253+00:00"
+    },
+    {
+      "condition": "independent-10",
+      "mode": "independent",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "r14-independent-10-audit.json",
+      "session": "r14-independent-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:23:51.713190+00:00"
+    },
+    {
+      "condition": "star-b-10",
+      "mode": "star-b",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "r15-star-b-10-audit.json",
+      "session": "r15-star-b-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:25:02.251479+00:00"
+    },
+    {
+      "condition": "star-a-10",
+      "mode": "star-a",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "r16-star-a-10-audit.json",
+      "session": "r16-star-a-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:26:15.393531+00:00"
+    }
+  ],
+  "restored_profile": {
+    "condition": "pair-50",
+    "mode": "pair",
+    "target_hz": 50,
+    "repeat": null,
+    "audit": "restored-pair-50-audit.json",
+    "session": "restored-pair-50",
+    "seconds": 30,
+    "utc": "2026-10-22T03:28:46.852868+00:00"
+  },
+  "restoration_history": [
+    {
+      "condition": "pair-10",
+      "mode": "pair",
+      "target_hz": 10,
+      "repeat": null,
+      "audit": "restored-pair-10-audit.json",
+      "session": "restored-pair-10",
+      "seconds": 30,
+      "utc": "2026-10-22T03:27:11.674560+00:00"
+    }
+  ]
+}

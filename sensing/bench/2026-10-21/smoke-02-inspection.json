@@ -1,0 +1,414 @@
+{
+  "manifest": {
+    "format": "csi-session/1",
+    "session_id": "01a1612a-363f-7498-9519-8e6951e72677",
+    "created_wall_ns": 1792631518783545000,
+    "closed_wall_ns": 1792631578937165000,
+    "complete": true,
+    "recorder": "csi-host 0.1.0",
+    "protocol_version": 2,
+    "derived_from": null,
+    "geometry": null,
+    "rotation": {
+      "max_bytes": 268435456,
+      "max_duration_ns": 600000000000
+    },
+    "sources": [
+      {
+        "name": "bench-tx-b0b21c0b071c",
+        "kind": "serial",
+        "details": {
+          "baud": 921600,
+          "kind": "serial",
+          "path": "/dev/cu.usbserial-0001"
+        }
+      },
+      {
+        "name": "bench-rx-a0b765dde93c",
+        "kind": "serial",
+        "details": {
+          "baud": 921600,
+          "kind": "serial",
+          "path": "/dev/cu.usbserial-3"
+        }
+      }
+    ],
+    "segments": [
+      {
+        "file": "segment-000000.bin",
+        "records": 6206,
+        "bytes": 2134593,
+        "sha256": "6a5b73ebc3bd042f6cd559f24a965e2797f4c388285f2736537f3fbdc5a98960",
+        "first_mono_ns": 131186375,
+        "last_mono_ns": 59992440667
+      }
+    ]
+  },
+  "segments": [
+    {
+      "file": "segment-000000.bin",
+      "sealed": true,
+      "records": 6206,
+      "bytes": 2134593,
+      "integrity": {
+        "status": "verified"
+      }
+    }
+  ],
+  "geometry": {
+    "status": "none",
+    "room": null,
+    "revision": null,
+    "nodes": 0,
+    "error": null,
+    "missing": [
+      "a0:b7:65:dd:e9:3c",
+      "b0:b2:1c:0b:07:1c"
+    ],
+    "unobserved": []
+  },
+  "stored_clock_fit": "clock-fit.jsonl: 6 mappings",
+  "report": {
+    "records": 6206,
+    "span_s": 59.861254292,
+    "sources": [
+      {
+        "index": 0,
+        "records": 180,
+        "frames": 180,
+        "versions": {
+          "2": 180
+        },
+        "decode_errors": {},
+        "stream_errors": {},
+        "unknown_records": 0
+      },
+      {
+        "index": 1,
+        "records": 6026,
+        "frames": 6025,
+        "versions": {
+          "2": 6025
+        },
+        "decode_errors": {},
+        "stream_errors": {
+          "bad_cobs": 1
+        },
+        "unknown_records": 0
+      }
+    ],
+    "nodes": [
+      {
+        "node": "a0:b7:65:dd:e9:3c",
+        "epochs": [
+          {
+            "epoch": 470109993,
+            "first_s": 0.000954417,
+            "last_s": 59.861254292,
+            "frames": 6025,
+            "kinds": {
+              "counters": 60,
+              "csi": 5845,
+              "hello": 60,
+              "time_echo": 60
+            },
+            "frames_missing": 0,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_stale": 0,
+            "captures_missing": 0,
+            "hello": {
+              "chip": "Esp32",
+              "tx": false,
+              "rx": true,
+              "firmware_version": "0.1.0",
+              "firmware_commit": "0000000000000000",
+              "channel": 6,
+              "secondary_channel": 0,
+              "csi_config": "lltf+htltf shift 0",
+              "pool_capacity": 32
+            },
+            "counters": {
+              "node_time_us": 67090744,
+              "tx_requested": 0,
+              "tx_accepted": 0,
+              "csi_callbacks": 8594,
+              "csi_filtered": 2051,
+              "csi_captured": 6543,
+              "pool_drops": 0,
+              "export_drops": 0,
+              "export_bytes": 2223754,
+              "pool_high_water": 2
+            },
+            "clock_backwards": 0,
+            "time_echoes": 60,
+            "min_rtt_us": 1793.625,
+            "unattributed_csi": 0,
+            "links": [
+              {
+                "tx": "b0:b2:1c:0b:07:1c",
+                "last_host_mono_ns": 59992440667,
+                "stale": false,
+                "records": 5845,
+                "radio_restarts": 0,
+                "rate_hz": 97.64521643202575,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "probes_missing": 141,
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "tx_epochs": 1,
+                "interval_us": {
+                  "p50": 10015,
+                  "p95": 15647,
+                  "p99": 22335,
+                  "max": 39518
+                },
+                "gaps_over_threshold": 0,
+                "gap_threshold_ms": 100.0,
+                "layouts": [
+                  {
+                    "sig_mode": 1,
+                    "cwb": 0,
+                    "secondary_channel": 0,
+                    "stbc": 0,
+                    "len": 256,
+                    "first_word_invalid": true,
+                    "records": 5845
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "node": "b0:b2:1c:0b:07:1c",
+        "epochs": [
+          {
+            "epoch": 83262687,
+            "first_s": 0.0,
+            "last_s": 59.746164667,
+            "frames": 180,
+            "kinds": {
+              "counters": 60,
+              "hello": 60,
+              "time_echo": 60
+            },
+            "frames_missing": 0,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_stale": 0,
+            "captures_missing": 0,
+            "hello": {
+              "chip": "Esp32",
+              "tx": true,
+              "rx": false,
+              "firmware_version": "0.1.0",
+              "firmware_commit": "0000000000000000",
+              "channel": 6,
+              "secondary_channel": 0,
+              "csi_config": "lltf+htltf shift 0",
+              "pool_capacity": 32
+            },
+            "counters": {
+              "node_time_us": 70092463,
+              "tx_requested": 7000,
+              "tx_accepted": 7000,
+              "csi_callbacks": 0,
+              "csi_filtered": 0,
+              "csi_captured": 0,
+              "pool_drops": 0,
+              "export_drops": 0,
+              "export_bytes": 12631,
+              "pool_high_water": 0
+            },
+            "clock_backwards": 0,
+            "time_echoes": 60,
+            "min_rtt_us": 1818.917,
+            "unattributed_csi": 0,
+            "links": []
+          }
+        ]
+      }
+    ],
+    "event_counts": {
+      "node_epoch": 2,
+      "silence": 119,
+      "stream_error": 1
+    },
+    "events": [
+      {
+        "type": "node_epoch",
+        "mono_ns": 131186375,
+        "node": "b0:b2:1c:0b:07:1c",
+        "epoch": 83262687,
+        "previous": null
+      },
+      {
+        "type": "stream_error",
+        "mono_ns": 132138375,
+        "source": 1,
+        "error": "bad_cobs"
+      },
+      {
+        "type": "node_epoch",
+        "mono_ns": 132140792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "epoch": 470109993,
+        "previous": null
+      },
+      {
+        "type": "silence",
+        "mono_ns": 868871334,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 737.684959
+      },
+      {
+        "type": "silence",
+        "mono_ns": 1004267042,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 134.129042
+      },
+      {
+        "type": "silence",
+        "mono_ns": 1868784834,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 864.517792
+      },
+      {
+        "type": "silence",
+        "mono_ns": 2004223792,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 134.066167
+      },
+      {
+        "type": "silence",
+        "mono_ns": 2868998750,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 864.774958
+      },
+      {
+        "type": "silence",
+        "mono_ns": 3004158750,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 133.981666
+      },
+      {
+        "type": "silence",
+        "mono_ns": 3869568125,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 865.409375
+      },
+      {
+        "type": "silence",
+        "mono_ns": 4003270084,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 132.982334
+      },
+      {
+        "type": "silence",
+        "mono_ns": 4869184250,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 865.914166
+      },
+      {
+        "type": "silence",
+        "mono_ns": 5003113959,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 132.818917
+      },
+      {
+        "type": "silence",
+        "mono_ns": 5869793709,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 866.67975
+      },
+      {
+        "type": "silence",
+        "mono_ns": 6003121875,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 132.0105
+      },
+      {
+        "type": "silence",
+        "mono_ns": 6869902667,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 866.780792
+      },
+      {
+        "type": "silence",
+        "mono_ns": 7003186000,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 132.037875
+      },
+      {
+        "type": "silence",
+        "mono_ns": 7869816500,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 866.6305
+      },
+      {
+        "type": "silence",
+        "mono_ns": 8003219917,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 132.0415
+      },
+      {
+        "type": "silence",
+        "mono_ns": 8870101625,
+        "node": "b0:b2:1c:0b:07:1c",
+        "silent_ms": 866.881708
+      }
+    ],
+    "events_omitted": 102,
+    "clock": {
+      "window_s": 60.0,
+      "step_s": 10.0,
+      "reference": "a0:b7:65:dd:e9:3c epoch 1c054f29",
+      "handovers": 0,
+      "timeline_restarts": 0,
+      "unwrap_rejects": 0,
+      "radio_restarts": 0,
+      "receivers": [
+        {
+          "clock": "a0:b7:65:dd:e9:3c epoch 1c054f29",
+          "fits": 6,
+          "latest": {
+            "receiver": {
+              "node": "a0:b7:65:dd:e9:3c",
+              "epoch": 470109993,
+              "radio": 0
+            },
+            "version": 6,
+            "timeline": 0,
+            "fitted_at_mono_ns": 59992440667,
+            "window_mono_ns": [
+              0,
+              59992440667
+            ],
+            "parent": null,
+            "hops": 0,
+            "map": {
+              "pivot_us": 7667186,
+              "mapped_pivot_us": 7667186.0,
+              "slope": 1.0
+            },
+            "drift_ppm": 0.0,
+            "offset_us": 0.0,
+            "pairs": 0,
+            "outliers": 0,
+            "residual_us": null
+          },
+          "drift_ppm_range": [
+            0.0,
+            0.0
+          ],
+          "worst_p99_us": null
+        }
+      ]
+    }
+  }
+}

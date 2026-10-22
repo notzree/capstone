@@ -1,0 +1,4117 @@
+{
+  "trials": [
+    {
+      "condition": "star-a-10",
+      "mode": "star-a",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r01-star-a-10-audit.json",
+      "session": "r01-star-a-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:08:15.955373+00:00",
+      "span_s": 44.827197959,
+      "links": [
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2204756239,
+          "tx_epoch": 3637731749,
+          "schedule": 0,
+          "records": 440,
+          "rate_hz": 9.81274883504901,
+          "probes_unique": 440,
+          "transmitter_requested_hz": 9.998653204666013,
+          "transmitter_accepted_hz": 9.998653204666013,
+          "transmitter_counter_span_s": 43.005792,
+          "probes_missing": 8,
+          "interior_missing_fraction": 0.017857142857142856,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 439,
+            "max": 200736.0,
+            "mean": 101908.2437357631,
+            "min": 88739.0,
+            "p50": 100166.0,
+            "p95": 104679.0,
+            "p99": 199041.0,
+            "stddev": 13463.221514934043
+          },
+          "rssi_dbm": {
+            "count": 440,
+            "max": -68.0,
+            "mean": -69.0340909090909,
+            "min": -73.0,
+            "p50": -69.0,
+            "p95": -69.0,
+            "p99": -68.0,
+            "stddev": 0.32504767609619706
+          },
+          "noise_floor_dbm": {
+            "count": 440,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8041,
+            "export_drops": 0,
+            "node_time_us": 43005792,
+            "pool_drops": 0,
+            "tx_accepted": 430,
+            "tx_requested": 430
+          },
+          "counter_snapshots": 44,
+          "epoch": 3637731749,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 963,
+            "export_drops": 0,
+            "node_time_us": 6087513,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 59,
+            "tx_requested": 59
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9004,
+            "export_drops": 0,
+            "node_time_us": 49093305,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 1860,
+            "csi_captured": 431,
+            "csi_filtered": 1429,
+            "export_bytes": 153906,
+            "export_drops": 0,
+            "node_time_us": 44009725,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 45,
+          "epoch": 2204756239,
+          "first_counters": {
+            "csi_callbacks": 240,
+            "csi_captured": 51,
+            "csi_filtered": 189,
+            "export_bytes": 18151,
+            "export_drops": 0,
+            "node_time_us": 6081872,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 2100,
+            "csi_captured": 482,
+            "csi_filtered": 1618,
+            "export_bytes": 172057,
+            "export_drops": 0,
+            "node_time_us": 50091597,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "star-b-10",
+      "mode": "star-b",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r02-star-b-10-audit.json",
+      "session": "r02-star-b-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:09:28.762687+00:00",
+      "span_s": 44.84825175,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 631564568,
+          "tx_epoch": 2136304844,
+          "schedule": 0,
+          "records": 435,
+          "rate_hz": 9.702325499875435,
+          "probes_unique": 435,
+          "transmitter_requested_hz": 9.998636322350672,
+          "transmitter_accepted_hz": 9.998636322350672,
+          "transmitter_counter_span_s": 44.006001,
+          "probes_missing": 13,
+          "interior_missing_fraction": 0.029017857142857144,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 434,
+            "max": 299928.0,
+            "mean": 103068.0737327189,
+            "min": 94124.0,
+            "p50": 100103.0,
+            "p95": 104319.0,
+            "p99": 202523.0,
+            "stddev": 18633.102486092765
+          },
+          "rssi_dbm": {
+            "count": 435,
+            "max": -70.0,
+            "mean": -70.83218390804598,
+            "min": -71.0,
+            "p50": -71.0,
+            "p95": -70.0,
+            "p99": -70.0,
+            "stddev": 0.37370289166034293
+          },
+          "noise_floor_dbm": {
+            "count": 435,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 1777,
+            "csi_captured": 427,
+            "csi_filtered": 1350,
+            "export_bytes": 152554,
+            "export_drops": 0,
+            "node_time_us": 44009728,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 45,
+          "epoch": 631564568,
+          "first_counters": {
+            "csi_callbacks": 252,
+            "csi_captured": 52,
+            "csi_filtered": 200,
+            "export_bytes": 18489,
+            "export_drops": 0,
+            "node_time_us": 6082711,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 2029,
+            "csi_captured": 479,
+            "csi_filtered": 1550,
+            "export_bytes": 171043,
+            "export_drops": 0,
+            "node_time_us": 50092439,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44006001,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 2136304844,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 776,
+            "export_drops": 0,
+            "node_time_us": 5087142,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 49,
+            "tx_requested": 49
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9004,
+            "export_drops": 0,
+            "node_time_us": 49093143,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "independent-10",
+      "mode": "independent",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r03-independent-10-audit.json",
+      "session": "r03-independent-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:10:41.108168+00:00",
+      "span_s": 44.859381292,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 2448565161,
+          "tx_epoch": 1039655315,
+          "schedule": 0,
+          "records": 434,
+          "rate_hz": 9.677763985039473,
+          "probes_unique": 434,
+          "transmitter_requested_hz": 9.998522718268376,
+          "transmitter_accepted_hz": 9.998522718268376,
+          "transmitter_counter_span_s": 44.006501,
+          "probes_missing": 14,
+          "interior_missing_fraction": 0.03125,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 433,
+            "max": 305045.0,
+            "mean": 103329.65357967667,
+            "min": 89386.0,
+            "p50": 100127.0,
+            "p95": 105971.0,
+            "p99": 201067.0,
+            "stddev": 19259.061982440977
+          },
+          "rssi_dbm": {
+            "count": 434,
+            "max": -67.0,
+            "mean": -68.97695852534562,
+            "min": -69.0,
+            "p50": -69.0,
+            "p95": -69.0,
+            "p99": -68.0,
+            "stddev": 0.16467804963323168
+          },
+          "noise_floor_dbm": {
+            "count": 434,
+            "max": -97.0,
+            "mean": -97.0,
+            "min": -97.0,
+            "p50": -97.0,
+            "p95": -97.0,
+            "p99": -97.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 1039655315,
+          "tx_epoch": 2448565161,
+          "schedule": 0,
+          "records": 445,
+          "rate_hz": 9.900475470334463,
+          "probes_unique": 445,
+          "transmitter_requested_hz": 9.99873924987822,
+          "transmitter_accepted_hz": 9.99873924987822,
+          "transmitter_counter_span_s": 44.005548,
+          "probes_missing": 4,
+          "interior_missing_fraction": 0.008908685968819599,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 444,
+            "max": 300549.0,
+            "mean": 101005.25,
+            "min": 91270.0,
+            "p50": 100109.0,
+            "p95": 104426.0,
+            "p99": 108781.0,
+            "stddev": 11840.419308420276
+          },
+          "rssi_dbm": {
+            "count": 445,
+            "max": -68.0,
+            "mean": -68.99325842696629,
+            "min": -70.0,
+            "p50": -69.0,
+            "p95": -69.0,
+            "p99": -69.0,
+            "stddev": 0.10578518917698695
+          },
+          "noise_floor_dbm": {
+            "count": 445,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 1,
+        "stream_or_decode_first_second": 1,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 1716,
+            "csi_captured": 425,
+            "csi_filtered": 1291,
+            "export_bytes": 151928,
+            "export_drops": 0,
+            "node_time_us": 44005548,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 2448565161,
+          "first_counters": {
+            "csi_callbacks": 232,
+            "csi_captured": 50,
+            "csi_filtered": 182,
+            "export_bytes": 17626,
+            "export_drops": 0,
+            "node_time_us": 5086583,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 49,
+            "tx_requested": 49
+          },
+          "last_counters": {
+            "csi_callbacks": 1948,
+            "csi_captured": 475,
+            "csi_filtered": 1473,
+            "export_bytes": 169554,
+            "export_drops": 0,
+            "node_time_us": 49092131,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 1860,
+            "csi_captured": 436,
+            "csi_filtered": 1424,
+            "export_bytes": 155596,
+            "export_drops": 0,
+            "node_time_us": 44006501,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 1039655315,
+          "first_counters": {
+            "csi_callbacks": 304,
+            "csi_captured": 53,
+            "csi_filtered": 251,
+            "export_bytes": 18964,
+            "export_drops": 0,
+            "node_time_us": 7085878,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 69,
+            "tx_requested": 69
+          },
+          "last_counters": {
+            "csi_callbacks": 2164,
+            "csi_captured": 489,
+            "csi_filtered": 1675,
+            "export_bytes": 174560,
+            "export_drops": 0,
+            "node_time_us": 51092379,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 509,
+            "tx_requested": 509
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 134042833,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "condition": "pair-10",
+      "mode": "pair",
+      "target_hz": 10,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r04-pair-10-audit.json",
+      "session": "r04-pair-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:11:51.646440+00:00",
+      "span_s": 44.852133292,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 1600428592,
+          "tx_epoch": 1983241068,
+          "schedule": 1,
+          "records": 436,
+          "rate_hz": 9.700184035905398,
+          "probes_unique": 436,
+          "transmitter_requested_hz": 9.905491841850871,
+          "transmitter_accepted_hz": 9.905491841850871,
+          "transmitter_counter_span_s": 43.006446,
+          "probes_missing": 9,
+          "interior_missing_fraction": 0.020224719101123594,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 435,
+            "max": 212294.0,
+            "mean": 103090.8275862069,
+            "min": 91201.0,
+            "p50": 100167.0,
+            "p95": 106157.0,
+            "p99": 200901.0,
+            "stddev": 17393.593773139182
+          },
+          "rssi_dbm": {
+            "count": 436,
+            "max": -70.0,
+            "mean": -70.21559633027523,
+            "min": -71.0,
+            "p50": -70.0,
+            "p95": -70.0,
+            "p99": -70.0,
+            "stddev": 0.41123539809588583
+          },
+          "noise_floor_dbm": {
+            "count": 436,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 1983241068,
+          "tx_epoch": 1600428592,
+          "schedule": 1,
+          "records": 444,
+          "rate_hz": 9.900531837350309,
+          "probes_unique": 444,
+          "transmitter_requested_hz": 9.998513941799953,
+          "transmitter_accepted_hz": 9.998513941799953,
+          "transmitter_counter_span_s": 43.006391,
+          "probes_missing": 4,
+          "interior_missing_fraction": 0.008928571428571428,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 443,
+            "max": 202667.0,
+            "mean": 101004.67494356658,
+            "min": 93320.0,
+            "p50": 100137.0,
+            "p95": 104068.0,
+            "p99": 107289.0,
+            "stddev": 9612.945574885738
+          },
+          "rssi_dbm": {
+            "count": 444,
+            "max": -68.0,
+            "mean": -68.63963963963964,
+            "min": -69.0,
+            "p50": -69.0,
+            "p95": -68.0,
+            "p99": -68.0,
+            "stddev": 0.4801049583594326
+          },
+          "noise_floor_dbm": {
+            "count": 444,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 1,
+        "stream_or_decode_first_second": 1,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 1,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 2083,
+            "csi_captured": 417,
+            "csi_filtered": 1666,
+            "export_bytes": 148987,
+            "export_drops": 0,
+            "node_time_us": 43006391,
+            "pool_drops": 0,
+            "tx_accepted": 430,
+            "tx_requested": 430
+          },
+          "counter_snapshots": 44,
+          "epoch": 1600428592,
+          "first_counters": {
+            "csi_callbacks": 238,
+            "csi_captured": 57,
+            "csi_filtered": 181,
+            "export_bytes": 20229,
+            "export_drops": 0,
+            "node_time_us": 6083808,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 59,
+            "tx_requested": 59
+          },
+          "last_counters": {
+            "csi_callbacks": 2321,
+            "csi_captured": 474,
+            "csi_filtered": 1847,
+            "export_bytes": 169216,
+            "export_drops": 0,
+            "node_time_us": 49090199,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 2232,
+            "csi_captured": 426,
+            "csi_filtered": 1806,
+            "export_bytes": 152029,
+            "export_drops": 0,
+            "node_time_us": 43006446,
+            "pool_drops": 0,
+            "tx_accepted": 426,
+            "tx_requested": 426
+          },
+          "counter_snapshots": 44,
+          "epoch": 1983241068,
+          "first_counters": {
+            "csi_callbacks": 243,
+            "csi_captured": 59,
+            "csi_filtered": 184,
+            "export_bytes": 20905,
+            "export_drops": 0,
+            "node_time_us": 6086033,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 59,
+            "tx_requested": 59
+          },
+          "last_counters": {
+            "csi_callbacks": 2475,
+            "csi_captured": 485,
+            "csi_filtered": 1990,
+            "export_bytes": 172934,
+            "export_drops": 0,
+            "node_time_us": 49092479,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 485,
+            "tx_requested": 485
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "decode:BadCrc",
+          "host_mono_ns": 137428417,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "condition": "star-a-50",
+      "mode": "star-a",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r05-star-a-50-audit.json",
+      "session": "r05-star-a-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:13:03.552739+00:00",
+      "span_s": 44.8631665,
+      "links": [
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2849653942,
+          "tx_epoch": 1929610881,
+          "schedule": 0,
+          "records": 2132,
+          "rate_hz": 47.51317046802502,
+          "probes_unique": 2132,
+          "transmitter_requested_hz": 49.78849999725038,
+          "transmitter_accepted_hz": 49.78849999725038,
+          "transmitter_counter_span_s": 44.006146,
+          "probes_missing": 102,
+          "interior_missing_fraction": 0.045658012533572066,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2131,
+            "max": 63742.0,
+            "mean": 21046.79587048334,
+            "min": 4444.0,
+            "p50": 20146.0,
+            "p95": 27008.0,
+            "p99": 42511.0,
+            "stddev": 5173.925187622618
+          },
+          "rssi_dbm": {
+            "count": 2132,
+            "max": -59.0,
+            "mean": -70.79221388367729,
+            "min": -87.0,
+            "p50": -70.0,
+            "p95": -61.0,
+            "p99": -60.0,
+            "stddev": 5.495305464951675
+          },
+          "noise_floor_dbm": {
+            "count": 2132,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44006146,
+            "pool_drops": 0,
+            "tx_accepted": 2191,
+            "tx_requested": 2191
+          },
+          "counter_snapshots": 45,
+          "epoch": 1929610881,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 776,
+            "export_drops": 0,
+            "node_time_us": 5086119,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9004,
+            "export_drops": 0,
+            "node_time_us": 49092265,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 2439,
+            "tx_requested": 2439
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 3508,
+            "csi_captured": 2089,
+            "csi_filtered": 1419,
+            "export_bytes": 714310,
+            "export_drops": 0,
+            "node_time_us": 44009059,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 45,
+          "epoch": 2849653942,
+          "first_counters": {
+            "csi_callbacks": 471,
+            "csi_captured": 275,
+            "csi_filtered": 196,
+            "export_bytes": 94000,
+            "export_drops": 0,
+            "node_time_us": 7081668,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 3979,
+            "csi_captured": 2364,
+            "csi_filtered": 1615,
+            "export_bytes": 808310,
+            "export_drops": 0,
+            "node_time_us": 51090727,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "star-b-50",
+      "mode": "star-b",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r06-star-b-50-audit.json",
+      "session": "r06-star-b-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:14:17.159647+00:00",
+      "span_s": 44.872796208,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 2299752449,
+          "tx_epoch": 901232681,
+          "schedule": 0,
+          "records": 2154,
+          "rate_hz": 48.02348453228918,
+          "probes_unique": 2154,
+          "transmitter_requested_hz": 49.787206842030194,
+          "transmitter_accepted_hz": 49.787206842030194,
+          "transmitter_counter_span_s": 44.007289,
+          "probes_missing": 79,
+          "interior_missing_fraction": 0.03537841468875952,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2153,
+            "max": 61724.0,
+            "mean": 20823.14537854157,
+            "min": 9818.0,
+            "p50": 20204.0,
+            "p95": 25188.0,
+            "p99": 41026.0,
+            "stddev": 4582.866389137457
+          },
+          "rssi_dbm": {
+            "count": 2154,
+            "max": -66.0,
+            "mean": -73.41643454038997,
+            "min": -81.0,
+            "p50": -74.0,
+            "p95": -68.0,
+            "p99": -67.0,
+            "stddev": 3.566808860740612
+          },
+          "noise_floor_dbm": {
+            "count": 2154,
+            "max": -97.0,
+            "mean": -97.0,
+            "min": -97.0,
+            "p50": -97.0,
+            "p95": -97.0,
+            "p99": -97.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 2,
+        "stream_or_decode_first_second": 2,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 1,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 3288,
+            "csi_captured": 2067,
+            "csi_filtered": 1221,
+            "export_bytes": 706687,
+            "export_drops": 0,
+            "node_time_us": 43009916,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 44,
+          "epoch": 2299752449,
+          "first_counters": {
+            "csi_callbacks": 479,
+            "csi_captured": 283,
+            "csi_filtered": 196,
+            "export_bytes": 96617,
+            "export_drops": 0,
+            "node_time_us": 6081426,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 3767,
+            "csi_captured": 2350,
+            "csi_filtered": 1417,
+            "export_bytes": 803304,
+            "export_drops": 0,
+            "node_time_us": 49091342,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44007289,
+            "pool_drops": 0,
+            "tx_accepted": 2191,
+            "tx_requested": 2191
+          },
+          "counter_snapshots": 45,
+          "epoch": 901232681,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 1187,
+            "export_drops": 0,
+            "node_time_us": 8086985,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 398,
+            "tx_requested": 398
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9415,
+            "export_drops": 0,
+            "node_time_us": 52094274,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 2589,
+            "tx_requested": 2589
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 132276875,
+          "source": 1
+        },
+        {
+          "error": "decode:BadCrc",
+          "host_mono_ns": 133908958,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "condition": "independent-50",
+      "mode": "independent",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r07-independent-50-audit.json",
+      "session": "r07-independent-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:15:29.658935+00:00",
+      "span_s": 44.862646042,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 536246756,
+          "tx_epoch": 2270170139,
+          "schedule": 0,
+          "records": 2201,
+          "rate_hz": 49.04868951934291,
+          "probes_unique": 2201,
+          "transmitter_requested_hz": 49.74313996878794,
+          "transmitter_accepted_hz": 49.74313996878794,
+          "transmitter_counter_span_s": 44.006068,
+          "probes_missing": 31,
+          "interior_missing_fraction": 0.013888888888888888,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2200,
+            "max": 80957.0,
+            "mean": 20387.904545454545,
+            "min": 8785.0,
+            "p50": 20118.0,
+            "p95": 24506.0,
+            "p99": 38398.0,
+            "stddev": 3473.0113679338174
+          },
+          "rssi_dbm": {
+            "count": 2201,
+            "max": -56.0,
+            "mean": -65.39027714675147,
+            "min": -83.0,
+            "p50": -65.0,
+            "p95": -58.0,
+            "p99": -57.0,
+            "stddev": 5.581975598435263
+          },
+          "noise_floor_dbm": {
+            "count": 2201,
+            "max": -97.0,
+            "mean": -97.0,
+            "min": -97.0,
+            "p50": -97.0,
+            "p95": -97.0,
+            "p99": -97.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2270170139,
+          "tx_epoch": 536246756,
+          "schedule": 0,
+          "records": 2195,
+          "rate_hz": 48.93420018388018,
+          "probes_unique": 2195,
+          "transmitter_requested_hz": 49.74126814647356,
+          "transmitter_accepted_hz": 49.74126814647356,
+          "transmitter_counter_span_s": 44.007724,
+          "probes_missing": 36,
+          "interior_missing_fraction": 0.016136261766024205,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2194,
+            "max": 45781.0,
+            "mean": 20435.605287146765,
+            "min": 6295.0,
+            "p50": 20120.0,
+            "p95": 24235.0,
+            "p99": 39221.0,
+            "stddev": 3419.7243813210675
+          },
+          "rssi_dbm": {
+            "count": 2195,
+            "max": -57.0,
+            "mean": -65.58132118451024,
+            "min": -84.0,
+            "p50": -65.0,
+            "p95": -58.0,
+            "p99": -57.0,
+            "stddev": 5.515942277724785
+          },
+          "noise_floor_dbm": {
+            "count": 2195,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 2,
+        "stream_or_decode_first_second": 2,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 2,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 3383,
+            "csi_captured": 2158,
+            "csi_filtered": 1225,
+            "export_bytes": 737632,
+            "export_drops": 0,
+            "node_time_us": 44007724,
+            "pool_drops": 0,
+            "tx_accepted": 2189,
+            "tx_requested": 2189
+          },
+          "counter_snapshots": 45,
+          "epoch": 536246756,
+          "first_counters": {
+            "csi_callbacks": 425,
+            "csi_captured": 277,
+            "csi_filtered": 148,
+            "export_bytes": 94539,
+            "export_drops": 0,
+            "node_time_us": 6086415,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 298,
+            "tx_requested": 298
+          },
+          "last_counters": {
+            "csi_callbacks": 3808,
+            "csi_captured": 2435,
+            "csi_filtered": 1373,
+            "export_bytes": 832171,
+            "export_drops": 0,
+            "node_time_us": 50094139,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2487,
+            "tx_requested": 2487
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 3451,
+            "csi_captured": 2153,
+            "csi_filtered": 1298,
+            "export_bytes": 735942,
+            "export_drops": 0,
+            "node_time_us": 44006068,
+            "pool_drops": 0,
+            "tx_accepted": 2189,
+            "tx_requested": 2189
+          },
+          "counter_snapshots": 45,
+          "epoch": 2270170139,
+          "first_counters": {
+            "csi_callbacks": 372,
+            "csi_captured": 245,
+            "csi_filtered": 127,
+            "export_bytes": 83586,
+            "export_drops": 0,
+            "node_time_us": 5087366,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 3823,
+            "csi_captured": 2398,
+            "csi_filtered": 1425,
+            "export_bytes": 819528,
+            "export_drops": 0,
+            "node_time_us": 49093434,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2437,
+            "tx_requested": 2437
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 131083833,
+          "source": 0
+        },
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 133547875,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "condition": "pair-50",
+      "mode": "pair",
+      "target_hz": 50,
+      "repeat": 1,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r08-pair-50-audit.json",
+      "session": "r08-pair-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:16:41.498448+00:00",
+      "span_s": 44.861214,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 2195983596,
+          "tx_epoch": 722260397,
+          "schedule": 1,
+          "records": 2191,
+          "rate_hz": 48.83467858006861,
+          "probes_unique": 2191,
+          "transmitter_requested_hz": 49.122350369503685,
+          "transmitter_accepted_hz": 49.122350369503685,
+          "transmitter_counter_span_s": 44.012552,
+          "probes_missing": 14,
+          "interior_missing_fraction": 0.006349206349206349,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2190,
+            "max": 114305.0,
+            "mean": 20477.251598173516,
+            "min": 6952.0,
+            "p50": 20164.0,
+            "p95": 25621.0,
+            "p99": 46761.0,
+            "stddev": 4893.250362930954
+          },
+          "rssi_dbm": {
+            "count": 2191,
+            "max": -58.0,
+            "mean": -59.48105887722501,
+            "min": -61.0,
+            "p50": -60.0,
+            "p95": -59.0,
+            "p99": -58.0,
+            "stddev": 0.6128712023228129
+          },
+          "noise_floor_dbm": {
+            "count": 2191,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 722260397,
+          "tx_epoch": 2195983596,
+          "schedule": 1,
+          "records": 2205,
+          "rate_hz": 49.14362550095728,
+          "probes_unique": 2205,
+          "transmitter_requested_hz": 49.417442198633125,
+          "transmitter_accepted_hz": 49.417442198633125,
+          "transmitter_counter_span_s": 44.0128,
+          "probes_missing": 13,
+          "interior_missing_fraction": 0.005861136158701533,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2204,
+            "max": 113789.0,
+            "mean": 20348.519056261342,
+            "min": 7943.0,
+            "p50": 20080.0,
+            "p95": 23929.0,
+            "p99": 29281.0,
+            "stddev": 3746.6116496222467
+          },
+          "rssi_dbm": {
+            "count": 2205,
+            "max": -57.0,
+            "mean": -58.366893424036284,
+            "min": -62.0,
+            "p50": -58.0,
+            "p95": -57.0,
+            "p99": -57.0,
+            "stddev": 0.604661866474599
+          },
+          "noise_floor_dbm": {
+            "count": 2205,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 1,
+        "stream_or_decode_first_second": 1,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 3199,
+            "csi_captured": 2149,
+            "csi_filtered": 1050,
+            "export_bytes": 734590,
+            "export_drops": 0,
+            "node_time_us": 44012800,
+            "pool_drops": 0,
+            "tx_accepted": 2175,
+            "tx_requested": 2175
+          },
+          "counter_snapshots": 45,
+          "epoch": 2195983596,
+          "first_counters": {
+            "csi_callbacks": 384,
+            "csi_captured": 272,
+            "csi_filtered": 112,
+            "export_bytes": 92849,
+            "export_drops": 0,
+            "node_time_us": 6085119,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 277,
+            "tx_requested": 277
+          },
+          "last_counters": {
+            "csi_callbacks": 3583,
+            "csi_captured": 2421,
+            "csi_filtered": 1162,
+            "export_bytes": 827439,
+            "export_drops": 0,
+            "node_time_us": 50097919,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2452,
+            "tx_requested": 2452
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 3383,
+            "csi_captured": 2162,
+            "csi_filtered": 1221,
+            "export_bytes": 738984,
+            "export_drops": 0,
+            "node_time_us": 44012552,
+            "pool_drops": 0,
+            "tx_accepted": 2162,
+            "tx_requested": 2162
+          },
+          "counter_snapshots": 45,
+          "epoch": 722260397,
+          "first_counters": {
+            "csi_callbacks": 339,
+            "csi_captured": 248,
+            "csi_filtered": 91,
+            "export_bytes": 84600,
+            "export_drops": 0,
+            "node_time_us": 5087329,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 3722,
+            "csi_captured": 2410,
+            "csi_filtered": 1312,
+            "export_bytes": 823584,
+            "export_drops": 0,
+            "node_time_us": 49099881,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2410,
+            "tx_requested": 2410
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 136401458,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "condition": "pair-50",
+      "mode": "pair",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r09-pair-50-audit.json",
+      "session": "r09-pair-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:17:54.953821+00:00",
+      "span_s": 44.861261625,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 2757752047,
+          "tx_epoch": 3583582973,
+          "schedule": 1,
+          "records": 2170,
+          "rate_hz": 48.36976066178574,
+          "probes_unique": 2170,
+          "transmitter_requested_hz": 48.73336530878244,
+          "transmitter_accepted_hz": 48.73336530878244,
+          "transmitter_counter_span_s": 44.015019,
+          "probes_missing": 17,
+          "interior_missing_fraction": 0.007773205304069501,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2169,
+            "max": 59046.0,
+            "mean": 20674.073766712772,
+            "min": 6934.0,
+            "p50": 20197.0,
+            "p95": 26550.0,
+            "p99": 50146.0,
+            "stddev": 5448.777570985221
+          },
+          "rssi_dbm": {
+            "count": 2170,
+            "max": -59.0,
+            "mean": -59.724884792626725,
+            "min": -61.0,
+            "p50": -60.0,
+            "p95": -59.0,
+            "p99": -59.0,
+            "stddev": 0.4476030485054868
+          },
+          "noise_floor_dbm": {
+            "count": 2170,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 3583582973,
+          "tx_epoch": 2757752047,
+          "schedule": 1,
+          "records": 2187,
+          "rate_hz": 48.74752532719379,
+          "probes_unique": 2187,
+          "transmitter_requested_hz": 49.23519810907757,
+          "transmitter_accepted_hz": 49.23519810907757,
+          "transmitter_counter_span_s": 44.013228,
+          "probes_missing": 23,
+          "interior_missing_fraction": 0.010407239819004524,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2186,
+            "max": 54471.0,
+            "mean": 20513.861848124427,
+            "min": 10503.0,
+            "p50": 20156.0,
+            "p95": 24454.0,
+            "p99": 48596.0,
+            "stddev": 4021.598060911943
+          },
+          "rssi_dbm": {
+            "count": 2187,
+            "max": -57.0,
+            "mean": -58.24462734339278,
+            "min": -59.0,
+            "p50": -58.0,
+            "p95": -58.0,
+            "p99": -58.0,
+            "stddev": 0.43933501901426764
+          },
+          "noise_floor_dbm": {
+            "count": 2187,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 2,
+        "stream_or_decode_first_second": 2,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 1,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 3560,
+            "csi_captured": 2128,
+            "csi_filtered": 1432,
+            "export_bytes": 727492,
+            "export_drops": 0,
+            "node_time_us": 44013228,
+            "pool_drops": 0,
+            "tx_accepted": 2167,
+            "tx_requested": 2167
+          },
+          "counter_snapshots": 45,
+          "epoch": 2757752047,
+          "first_counters": {
+            "csi_callbacks": 534,
+            "csi_captured": 266,
+            "csi_filtered": 268,
+            "export_bytes": 90821,
+            "export_drops": 0,
+            "node_time_us": 6084256,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 275,
+            "tx_requested": 275
+          },
+          "last_counters": {
+            "csi_callbacks": 4094,
+            "csi_captured": 2394,
+            "csi_filtered": 1700,
+            "export_bytes": 818313,
+            "export_drops": 0,
+            "node_time_us": 50097484,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2442,
+            "tx_requested": 2442
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 3687,
+            "csi_captured": 2145,
+            "csi_filtered": 1542,
+            "export_bytes": 733238,
+            "export_drops": 0,
+            "node_time_us": 44015019,
+            "pool_drops": 0,
+            "tx_accepted": 2145,
+            "tx_requested": 2145
+          },
+          "counter_snapshots": 45,
+          "epoch": 3583582973,
+          "first_counters": {
+            "csi_callbacks": 474,
+            "csi_captured": 240,
+            "csi_filtered": 234,
+            "export_bytes": 81896,
+            "export_drops": 0,
+            "node_time_us": 5086112,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 240,
+            "tx_requested": 240
+          },
+          "last_counters": {
+            "csi_callbacks": 4161,
+            "csi_captured": 2385,
+            "csi_filtered": 1776,
+            "export_bytes": 815134,
+            "export_drops": 0,
+            "node_time_us": 49101131,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2385,
+            "tx_requested": 2385
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 133830333,
+          "source": 1
+        },
+        {
+          "error": "decode:BadCrc",
+          "host_mono_ns": 134867625,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "condition": "independent-50",
+      "mode": "independent",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r10-independent-50-audit.json",
+      "session": "r10-independent-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:19:05.854542+00:00",
+      "span_s": 44.8662075,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 392372341,
+          "tx_epoch": 3528208733,
+          "schedule": 0,
+          "records": 2216,
+          "rate_hz": 49.39476361985344,
+          "probes_unique": 2216,
+          "transmitter_requested_hz": 49.73921676389294,
+          "transmitter_accepted_hz": 49.73921676389294,
+          "transmitter_counter_span_s": 44.009539,
+          "probes_missing": 15,
+          "interior_missing_fraction": 0.006723442402510085,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2215,
+            "max": 44526.0,
+            "mean": 20245.060948081264,
+            "min": 7500.0,
+            "p50": 20164.0,
+            "p95": 24310.0,
+            "p99": 27967.0,
+            "stddev": 3014.1406817046545
+          },
+          "rssi_dbm": {
+            "count": 2216,
+            "max": -56.0,
+            "mean": -58.37996389891697,
+            "min": -60.0,
+            "p50": -58.0,
+            "p95": -57.0,
+            "p99": -56.0,
+            "stddev": 0.6804617237886853
+          },
+          "noise_floor_dbm": {
+            "count": 2216,
+            "max": -97.0,
+            "mean": -97.0,
+            "min": -97.0,
+            "p50": -97.0,
+            "p95": -97.0,
+            "p99": -97.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 3528208733,
+          "tx_epoch": 392372341,
+          "schedule": 0,
+          "records": 2199,
+          "rate_hz": 48.9980096509137,
+          "probes_unique": 2199,
+          "transmitter_requested_hz": 49.73469866782122,
+          "transmitter_accepted_hz": 49.73469866782122,
+          "transmitter_counter_span_s": 44.013537,
+          "probes_missing": 33,
+          "interior_missing_fraction": 0.01478494623655914,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2198,
+            "max": 63990.0,
+            "mean": 20408.992265696088,
+            "min": 6284.0,
+            "p50": 20120.0,
+            "p95": 24670.0,
+            "p99": 38974.0,
+            "stddev": 3511.737038905739
+          },
+          "rssi_dbm": {
+            "count": 2199,
+            "max": -56.0,
+            "mean": -58.565711687130516,
+            "min": -60.0,
+            "p50": -59.0,
+            "p95": -58.0,
+            "p99": -57.0,
+            "stddev": 0.6040091390976831
+          },
+          "noise_floor_dbm": {
+            "count": 2199,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 1,
+        "stream_or_decode_first_second": 1,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 3911,
+            "csi_captured": 2174,
+            "csi_filtered": 1737,
+            "export_bytes": 743040,
+            "export_drops": 0,
+            "node_time_us": 44013537,
+            "pool_drops": 0,
+            "tx_accepted": 2189,
+            "tx_requested": 2189
+          },
+          "counter_snapshots": 45,
+          "epoch": 392372341,
+          "first_counters": {
+            "csi_callbacks": 400,
+            "csi_captured": 247,
+            "csi_filtered": 153,
+            "export_bytes": 84262,
+            "export_drops": 0,
+            "node_time_us": 5089406,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 4311,
+            "csi_captured": 2421,
+            "csi_filtered": 1890,
+            "export_bytes": 827302,
+            "export_drops": 0,
+            "node_time_us": 49102943,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2437,
+            "tx_requested": 2437
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 3946,
+            "csi_captured": 2155,
+            "csi_filtered": 1791,
+            "export_bytes": 736618,
+            "export_drops": 0,
+            "node_time_us": 44009539,
+            "pool_drops": 0,
+            "tx_accepted": 2189,
+            "tx_requested": 2189
+          },
+          "counter_snapshots": 45,
+          "epoch": 3528208733,
+          "first_counters": {
+            "csi_callbacks": 401,
+            "csi_captured": 244,
+            "csi_filtered": 157,
+            "export_bytes": 83248,
+            "export_drops": 0,
+            "node_time_us": 5086926,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 4347,
+            "csi_captured": 2399,
+            "csi_filtered": 1948,
+            "export_bytes": 819866,
+            "export_drops": 0,
+            "node_time_us": 49096465,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 2437,
+            "tx_requested": 2437
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 134426750,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "condition": "star-b-50",
+      "mode": "star-b",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r11-star-b-50-audit.json",
+      "session": "r11-star-b-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:20:17.425923+00:00",
+      "span_s": 44.850253583,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 3129598597,
+          "tx_epoch": 2802453887,
+          "schedule": 0,
+          "records": 2196,
+          "rate_hz": 48.95708800831704,
+          "probes_unique": 2196,
+          "transmitter_requested_hz": 49.78841627388128,
+          "transmitter_accepted_hz": 49.78841627388128,
+          "transmitter_counter_span_s": 44.00622,
+          "probes_missing": 37,
+          "interior_missing_fraction": 0.016569637259292433,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2195,
+            "max": 51455.0,
+            "mean": 20426.051480637812,
+            "min": 5076.0,
+            "p50": 20125.0,
+            "p95": 24204.0,
+            "p99": 40242.0,
+            "stddev": 3599.666620553423
+          },
+          "rssi_dbm": {
+            "count": 2196,
+            "max": -57.0,
+            "mean": -57.46402550091074,
+            "min": -59.0,
+            "p50": -57.0,
+            "p95": -57.0,
+            "p99": -57.0,
+            "stddev": 0.5166437570154212
+          },
+          "noise_floor_dbm": {
+            "count": 2196,
+            "max": -97.0,
+            "mean": -97.0,
+            "min": -97.0,
+            "p50": -97.0,
+            "p95": -97.0,
+            "p99": -97.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 1,
+        "stream_or_decode_first_second": 1,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 3508,
+            "csi_captured": 2154,
+            "csi_filtered": 1354,
+            "export_bytes": 736280,
+            "export_drops": 0,
+            "node_time_us": 44008594,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 45,
+          "epoch": 3129598597,
+          "first_counters": {
+            "csi_callbacks": 511,
+            "csi_captured": 288,
+            "csi_filtered": 223,
+            "export_bytes": 98394,
+            "export_drops": 0,
+            "node_time_us": 7084897,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 4019,
+            "csi_captured": 2442,
+            "csi_filtered": 1577,
+            "export_bytes": 834674,
+            "export_drops": 0,
+            "node_time_us": 51093491,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44006220,
+            "pool_drops": 0,
+            "tx_accepted": 2191,
+            "tx_requested": 2191
+          },
+          "counter_snapshots": 45,
+          "epoch": 2802453887,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 776,
+            "export_drops": 0,
+            "node_time_us": 5088180,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9004,
+            "export_drops": 0,
+            "node_time_us": 49094400,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 2439,
+            "tx_requested": 2439
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 135472750,
+          "source": 1
+        }
+      ]
+    },
+    {
+      "condition": "star-a-50",
+      "mode": "star-a",
+      "target_hz": 50,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r12-star-a-50-audit.json",
+      "session": "r12-star-a-50",
+      "seconds": 45,
+      "utc": "2026-10-22T03:21:28.012008+00:00",
+      "span_s": 44.853115084,
+      "links": [
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 1294840339,
+          "tx_epoch": 1675141546,
+          "schedule": 0,
+          "records": 2171,
+          "rate_hz": 48.405880587287804,
+          "probes_unique": 2171,
+          "transmitter_requested_hz": 49.81066040846014,
+          "transmitter_accepted_hz": 49.81066040846014,
+          "transmitter_counter_span_s": 44.006644,
+          "probes_missing": 62,
+          "interior_missing_fraction": 0.027765338110165697,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 2170,
+            "max": 63035.0,
+            "mean": 20658.647004608294,
+            "min": 1388.0,
+            "p50": 20150.0,
+            "p95": 24855.0,
+            "p99": 40836.0,
+            "stddev": 4222.350446372745
+          },
+          "rssi_dbm": {
+            "count": 2171,
+            "max": -56.0,
+            "mean": -57.2169507139567,
+            "min": -62.0,
+            "p50": -57.0,
+            "p95": -57.0,
+            "p99": -57.0,
+            "stddev": 0.4307482877403301
+          },
+          "noise_floor_dbm": {
+            "count": 2171,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44006644,
+            "pool_drops": 0,
+            "tx_accepted": 2192,
+            "tx_requested": 2192
+          },
+          "counter_snapshots": 45,
+          "epoch": 1675141546,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 776,
+            "export_drops": 0,
+            "node_time_us": 5086677,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 248,
+            "tx_requested": 248
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9004,
+            "export_drops": 0,
+            "node_time_us": 49093321,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 2440,
+            "tx_requested": 2440
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 3591,
+            "csi_captured": 2131,
+            "csi_filtered": 1460,
+            "export_bytes": 728506,
+            "export_drops": 0,
+            "node_time_us": 44009848,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 45,
+          "epoch": 1294840339,
+          "first_counters": {
+            "csi_callbacks": 492,
+            "csi_captured": 268,
+            "csi_filtered": 224,
+            "export_bytes": 91497,
+            "export_drops": 0,
+            "node_time_us": 6082096,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 4083,
+            "csi_captured": 2399,
+            "csi_filtered": 1684,
+            "export_bytes": 820003,
+            "export_drops": 0,
+            "node_time_us": 50091944,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "pair-10",
+      "mode": "pair",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r13-pair-10-audit.json",
+      "session": "r13-pair-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:22:39.968253+00:00",
+      "span_s": 44.862171041,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 3435391548,
+          "tx_epoch": 3607832359,
+          "schedule": 1,
+          "records": 433,
+          "rate_hz": 9.654711102325523,
+          "probes_unique": 433,
+          "transmitter_requested_hz": 9.771349290401206,
+          "transmitter_accepted_hz": 9.771349290401206,
+          "transmitter_counter_span_s": 44.006205,
+          "probes_missing": 5,
+          "interior_missing_fraction": 0.01141552511415525,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 432,
+            "max": 298748.0,
+            "mean": 103576.37731481482,
+            "min": 85292.0,
+            "p50": 100259.0,
+            "p95": 107562.0,
+            "p99": 200161.0,
+            "stddev": 19656.93759478619
+          },
+          "rssi_dbm": {
+            "count": 433,
+            "max": -57.0,
+            "mean": -57.99769053117783,
+            "min": -58.0,
+            "p50": -58.0,
+            "p95": -58.0,
+            "p99": -58.0,
+            "stddev": 0.04800140806195503
+          },
+          "noise_floor_dbm": {
+            "count": 433,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 3607832359,
+          "tx_epoch": 3435391548,
+          "schedule": 1,
+          "records": 439,
+          "rate_hz": 9.767478266803352,
+          "probes_unique": 439,
+          "transmitter_requested_hz": 9.998508631542073,
+          "transmitter_accepted_hz": 9.998508631542073,
+          "transmitter_counter_span_s": 44.006563,
+          "probes_missing": 10,
+          "interior_missing_fraction": 0.022271714922048998,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 438,
+            "max": 201799.0,
+            "mean": 102380.57077625571,
+            "min": 91742.0,
+            "p50": 100167.0,
+            "p95": 104673.0,
+            "p99": 199279.0,
+            "stddev": 14952.40394038995
+          },
+          "rssi_dbm": {
+            "count": 439,
+            "max": -56.0,
+            "mean": -57.00227790432802,
+            "min": -58.0,
+            "p50": -57.0,
+            "p95": -57.0,
+            "p99": -57.0,
+            "stddev": 0.08263488449757206
+          },
+          "noise_floor_dbm": {
+            "count": 439,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 1888,
+            "csi_captured": 425,
+            "csi_filtered": 1463,
+            "export_bytes": 151878,
+            "export_drops": 0,
+            "node_time_us": 44006563,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 3435391548,
+          "first_counters": {
+            "csi_callbacks": 249,
+            "csi_captured": 47,
+            "csi_filtered": 202,
+            "export_bytes": 16662,
+            "export_drops": 0,
+            "node_time_us": 5086154,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 49,
+            "tx_requested": 49
+          },
+          "last_counters": {
+            "csi_callbacks": 2137,
+            "csi_captured": 472,
+            "csi_filtered": 1665,
+            "export_bytes": 168540,
+            "export_drops": 0,
+            "node_time_us": 49092717,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 1987,
+            "csi_captured": 430,
+            "csi_filtered": 1557,
+            "export_bytes": 153568,
+            "export_drops": 0,
+            "node_time_us": 44006205,
+            "pool_drops": 0,
+            "tx_accepted": 430,
+            "tx_requested": 430
+          },
+          "counter_snapshots": 45,
+          "epoch": 3607832359,
+          "first_counters": {
+            "csi_callbacks": 296,
+            "csi_captured": 54,
+            "csi_filtered": 242,
+            "export_bytes": 19165,
+            "export_drops": 0,
+            "node_time_us": 6085508,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 54,
+            "tx_requested": 54
+          },
+          "last_counters": {
+            "csi_callbacks": 2283,
+            "csi_captured": 484,
+            "csi_filtered": 1799,
+            "export_bytes": 172733,
+            "export_drops": 0,
+            "node_time_us": 50091713,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 484,
+            "tx_requested": 484
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "independent-10",
+      "mode": "independent",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r14-independent-10-audit.json",
+      "session": "r14-independent-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:23:51.713190+00:00",
+      "span_s": 44.864056625,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 4170910820,
+          "tx_epoch": 1771993406,
+          "schedule": 0,
+          "records": 444,
+          "rate_hz": 9.877461946241723,
+          "probes_unique": 444,
+          "transmitter_requested_hz": 9.997908164941672,
+          "transmitter_accepted_hz": 9.997908164941672,
+          "transmitter_counter_span_s": 44.009206,
+          "probes_missing": 5,
+          "interior_missing_fraction": 0.011135857461024499,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 443,
+            "max": 204318.0,
+            "mean": 101240.58239277653,
+            "min": 90932.0,
+            "p50": 100102.0,
+            "p95": 104151.0,
+            "p99": 195988.0,
+            "stddev": 10740.896985732144
+          },
+          "rssi_dbm": {
+            "count": 444,
+            "max": -57.0,
+            "mean": -58.06981981981982,
+            "min": -66.0,
+            "p50": -58.0,
+            "p95": -58.0,
+            "p99": -58.0,
+            "stddev": 0.47180787428550475
+          },
+          "noise_floor_dbm": {
+            "count": 444,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        },
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 1771993406,
+          "tx_epoch": 4170910820,
+          "schedule": 0,
+          "records": 436,
+          "rate_hz": 9.720592843538656,
+          "probes_unique": 436,
+          "transmitter_requested_hz": 9.998481821430705,
+          "transmitter_accepted_hz": 9.998481821430705,
+          "transmitter_counter_span_s": 44.006681,
+          "probes_missing": 12,
+          "interior_missing_fraction": 0.026785714285714284,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 435,
+            "max": 203128.0,
+            "mean": 102874.38390804597,
+            "min": 92838.0,
+            "p50": 100069.0,
+            "p95": 104828.0,
+            "p99": 201784.0,
+            "stddev": 16665.43694430388
+          },
+          "rssi_dbm": {
+            "count": 436,
+            "max": -56.0,
+            "mean": -57.01605504587156,
+            "min": -58.0,
+            "p50": -57.0,
+            "p95": -57.0,
+            "p99": -56.0,
+            "stddev": 0.22911684591064901
+          },
+          "noise_floor_dbm": {
+            "count": 436,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 1732,
+            "csi_captured": 435,
+            "csi_filtered": 1297,
+            "export_bytes": 155258,
+            "export_drops": 0,
+            "node_time_us": 44006681,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 4170910820,
+          "first_counters": {
+            "csi_callbacks": 270,
+            "csi_captured": 50,
+            "csi_filtered": 220,
+            "export_bytes": 17813,
+            "export_drops": 0,
+            "node_time_us": 6086558,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 59,
+            "tx_requested": 59
+          },
+          "last_counters": {
+            "csi_callbacks": 2002,
+            "csi_captured": 485,
+            "csi_filtered": 1517,
+            "export_bytes": 173071,
+            "export_drops": 0,
+            "node_time_us": 50093239,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 499,
+            "tx_requested": 499
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 1772,
+            "csi_captured": 428,
+            "csi_filtered": 1344,
+            "export_bytes": 152892,
+            "export_drops": 0,
+            "node_time_us": 44009206,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 1771993406,
+          "first_counters": {
+            "csi_callbacks": 234,
+            "csi_captured": 48,
+            "csi_filtered": 186,
+            "export_bytes": 17000,
+            "export_drops": 0,
+            "node_time_us": 5086159,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 49,
+            "tx_requested": 49
+          },
+          "last_counters": {
+            "csi_callbacks": 2006,
+            "csi_captured": 476,
+            "csi_filtered": 1530,
+            "export_bytes": 169892,
+            "export_drops": 0,
+            "node_time_us": 49095365,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "star-b-10",
+      "mode": "star-b",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r15-star-b-10-audit.json",
+      "session": "r15-star-b-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:25:02.251479+00:00",
+      "span_s": 44.765250041,
+      "links": [
+        {
+          "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+          "rx_epoch": 895840297,
+          "tx_epoch": 3901690586,
+          "schedule": 0,
+          "records": 440,
+          "rate_hz": 9.81306864245986,
+          "probes_unique": 440,
+          "transmitter_requested_hz": 9.998639730513027,
+          "transmitter_accepted_hz": 9.998639730513027,
+          "transmitter_counter_span_s": 44.005986,
+          "probes_missing": 8,
+          "interior_missing_fraction": 0.017857142857142856,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 439,
+            "max": 203450.0,
+            "mean": 101904.92255125285,
+            "min": 83084.0,
+            "p50": 100172.0,
+            "p95": 104236.0,
+            "p99": 199625.0,
+            "stddev": 13626.63503682415
+          },
+          "rssi_dbm": {
+            "count": 440,
+            "max": -56.0,
+            "mean": -57.10227272727273,
+            "min": -58.0,
+            "p50": -57.0,
+            "p95": -57.0,
+            "p99": -56.0,
+            "stddev": 0.36431045474707063
+          },
+          "noise_floor_dbm": {
+            "count": 440,
+            "max": -97.0,
+            "mean": -97.0,
+            "min": -97.0,
+            "p50": -97.0,
+            "p95": -97.0,
+            "p99": -97.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 0,
+        "stream_or_decode_first_second": 0,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 0,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 2041,
+            "csi_captured": 433,
+            "csi_filtered": 1608,
+            "export_bytes": 154582,
+            "export_drops": 0,
+            "node_time_us": 44009235,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 45,
+          "epoch": 895840297,
+          "first_counters": {
+            "csi_callbacks": 241,
+            "csi_captured": 49,
+            "csi_filtered": 192,
+            "export_bytes": 17338,
+            "export_drops": 0,
+            "node_time_us": 5084742,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 2282,
+            "csi_captured": 482,
+            "csi_filtered": 1800,
+            "export_bytes": 171920,
+            "export_drops": 0,
+            "node_time_us": 49093977,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44005986,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 3901690586,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 776,
+            "export_drops": 0,
+            "node_time_us": 5086677,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 49,
+            "tx_requested": 49
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9004,
+            "export_drops": 0,
+            "node_time_us": 49092663,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 489,
+            "tx_requested": 489
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": []
+    },
+    {
+      "condition": "star-a-10",
+      "mode": "star-a",
+      "target_hz": 10,
+      "repeat": 2,
+      "audit": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/r16-star-a-10-audit.json",
+      "session": "r16-star-a-10",
+      "seconds": 45,
+      "utc": "2026-10-22T03:26:15.393531+00:00",
+      "span_s": 44.843903375,
+      "links": [
+        {
+          "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+          "rx_epoch": 2127393022,
+          "tx_epoch": 2158904234,
+          "schedule": 0,
+          "records": 439,
+          "rate_hz": 9.769455569653609,
+          "probes_unique": 439,
+          "transmitter_requested_hz": 9.998699714550758,
+          "transmitter_accepted_hz": 9.998699714550758,
+          "transmitter_counter_span_s": 44.005722,
+          "probes_missing": 10,
+          "interior_missing_fraction": 0.022271714922048998,
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_stale": 0,
+          "interarrival_node_us": {
+            "count": 438,
+            "max": 201677.0,
+            "mean": 102359.8493150685,
+            "min": 89816.0,
+            "p50": 100174.0,
+            "p95": 105733.0,
+            "p99": 200444.0,
+            "stddev": 15128.024101472636
+          },
+          "rssi_dbm": {
+            "count": 439,
+            "max": -57.0,
+            "mean": -57.21184510250569,
+            "min": -59.0,
+            "p50": -57.0,
+            "p95": -57.0,
+            "p99": -57.0,
+            "stddev": 0.41415282650983326
+          },
+          "noise_floor_dbm": {
+            "count": 439,
+            "max": -96.0,
+            "mean": -96.0,
+            "min": -96.0,
+            "p50": -96.0,
+            "p95": -96.0,
+            "p99": -96.0,
+            "stddev": 0.0
+          },
+          "node_timestamp_regressions": 0,
+          "receiver_frames_missing": 0,
+          "receiver_captures_missing": 0,
+          "receiver_pool_drops": 0,
+          "receiver_export_drops": 0
+        }
+      ],
+      "errors": {
+        "stream_or_decode": 1,
+        "stream_or_decode_first_second": 1,
+        "stream_or_decode_after_first_second": 0,
+        "frames_missing": 0,
+        "captures_missing": 0,
+        "pool_drops": 0,
+        "export_drops": 0,
+        "frame_decode": 0,
+        "stream": 1,
+        "self_captures": 0,
+        "probe_source_mac_mismatches": 0
+      },
+      "missing_expected_directions": [],
+      "sealed_integrity_verified": true,
+      "nodes": [
+        {
+          "counter_delta": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 8228,
+            "export_drops": 0,
+            "node_time_us": 44005722,
+            "pool_drops": 0,
+            "tx_accepted": 440,
+            "tx_requested": 440
+          },
+          "counter_snapshots": 45,
+          "epoch": 2158904234,
+          "first_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 1187,
+            "export_drops": 0,
+            "node_time_us": 8088238,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 79,
+            "tx_requested": 79
+          },
+          "last_counters": {
+            "csi_callbacks": 0,
+            "csi_captured": 0,
+            "csi_filtered": 0,
+            "export_bytes": 9415,
+            "export_drops": 0,
+            "node_time_us": 52093960,
+            "pool_drops": 0,
+            "pool_high_water": 0,
+            "tx_accepted": 519,
+            "tx_requested": 519
+          },
+          "node": "a0:b7:65:dd:e9:3c",
+          "roles": {
+            "rx": false,
+            "tx": true
+          },
+          "sources": [
+            1
+          ]
+        },
+        {
+          "counter_delta": {
+            "csi_callbacks": 1792,
+            "csi_captured": 421,
+            "csi_filtered": 1371,
+            "export_bytes": 150339,
+            "export_drops": 0,
+            "node_time_us": 43009146,
+            "pool_drops": 0,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "counter_snapshots": 44,
+          "epoch": 2127393022,
+          "first_counters": {
+            "csi_callbacks": 218,
+            "csi_captured": 60,
+            "csi_filtered": 158,
+            "export_bytes": 21243,
+            "export_drops": 0,
+            "node_time_us": 6082942,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "last_counters": {
+            "csi_callbacks": 2010,
+            "csi_captured": 481,
+            "csi_filtered": 1529,
+            "export_bytes": 171582,
+            "export_drops": 0,
+            "node_time_us": 49092088,
+            "pool_drops": 0,
+            "pool_high_water": 1,
+            "tx_accepted": 0,
+            "tx_requested": 0
+          },
+          "node": "b0:b2:1c:0b:07:1c",
+          "roles": {
+            "rx": true,
+            "tx": false
+          },
+          "sources": [
+            0
+          ]
+        }
+      ],
+      "error_samples_first_32": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 134742959,
+          "source": 0
+        }
+      ]
+    }
+  ],
+  "aggregates": [
+    {
+      "condition": "independent-10",
+      "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+      "mode": "independent",
+      "target_hz": 10,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 9.810534156936559,
+        "min": 9.720592843538656,
+        "max": 9.900475470334463
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 9.998610535654462,
+        "min": 9.998481821430705,
+        "max": 9.99873924987822
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 9.998610535654462,
+        "min": 9.998481821430705,
+        "max": 9.99873924987822
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.01784720012726694,
+        "min": 0.008908685968819599,
+        "max": 0.026785714285714284
+      },
+      "pooled_interior_missing_fraction": 0.017837235228539576,
+      "probes_unique": 881,
+      "probes_missing": 16,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 104627.0,
+        "min": 104426.0,
+        "max": 104828.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 155282.5,
+        "min": 108781.0,
+        "max": 201784.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 251838.5,
+        "min": 203128.0,
+        "max": 300549.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 14252.92812636208,
+        "min": 11840.419308420276,
+        "max": 16665.43694430388
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -63.00465673641892,
+        "min": -68.99325842696629,
+        "max": -57.01605504587156
+      }
+    },
+    {
+      "condition": "independent-10",
+      "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+      "mode": "independent",
+      "target_hz": 10,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 9.777612965640598,
+        "min": 9.677763985039473,
+        "max": 9.877461946241723
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 9.998215441605023,
+        "min": 9.997908164941672,
+        "max": 9.998522718268376
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 9.998215441605023,
+        "min": 9.997908164941672,
+        "max": 9.998522718268376
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.021192928730512248,
+        "min": 0.011135857461024499,
+        "max": 0.03125
+      },
+      "pooled_interior_missing_fraction": 0.021181716833890748,
+      "probes_unique": 878,
+      "probes_missing": 19,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 105061.0,
+        "min": 104151.0,
+        "max": 105971.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 198527.5,
+        "min": 195988.0,
+        "max": 201067.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 254681.5,
+        "min": 204318.0,
+        "max": 305045.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 14999.979484086562,
+        "min": 10740.896985732144,
+        "max": 19259.061982440977
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -63.523389172582725,
+        "min": -68.97695852534562,
+        "max": -58.06981981981982
+      }
+    },
+    {
+      "condition": "independent-50",
+      "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+      "mode": "independent",
+      "target_hz": 50,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 48.96610491739694,
+        "min": 48.93420018388018,
+        "max": 48.9980096509137
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 49.73798340714739,
+        "min": 49.73469866782122,
+        "max": 49.74126814647356
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 49.73798340714739,
+        "min": 49.73469866782122,
+        "max": 49.74126814647356
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.015460604001291673,
+        "min": 0.01478494623655914,
+        "max": 0.016136261766024205
+      },
+      "pooled_interior_missing_fraction": 0.01546045261035178,
+      "probes_unique": 4394,
+      "probes_missing": 69,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 24452.5,
+        "min": 24235.0,
+        "max": 24670.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 39097.5,
+        "min": 38974.0,
+        "max": 39221.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 54885.5,
+        "min": 45781.0,
+        "max": 63990.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 3465.7307101134033,
+        "min": 3419.7243813210675,
+        "max": 3511.737038905739
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -62.07351643582038,
+        "min": -65.58132118451024,
+        "max": -58.565711687130516
+      }
+    },
+    {
+      "condition": "independent-50",
+      "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+      "mode": "independent",
+      "target_hz": 50,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 49.221726569598175,
+        "min": 49.04868951934291,
+        "max": 49.39476361985344
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 49.74117836634044,
+        "min": 49.73921676389294,
+        "max": 49.74313996878794
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 49.74117836634044,
+        "min": 49.73921676389294,
+        "max": 49.74313996878794
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.010306165645699486,
+        "min": 0.006723442402510085,
+        "max": 0.013888888888888888
+      },
+      "pooled_interior_missing_fraction": 0.010306968406901188,
+      "probes_unique": 4417,
+      "probes_missing": 46,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 24408.0,
+        "min": 24310.0,
+        "max": 24506.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 33182.5,
+        "min": 27967.0,
+        "max": 38398.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 62741.5,
+        "min": 44526.0,
+        "max": 80957.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 3243.576024819236,
+        "min": 3014.1406817046545,
+        "max": 3473.0113679338174
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -61.88512052283422,
+        "min": -65.39027714675147,
+        "max": -58.37996389891697
+      }
+    },
+    {
+      "condition": "pair-10",
+      "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+      "mode": "pair",
+      "target_hz": 10,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 9.83400505207683,
+        "min": 9.767478266803352,
+        "max": 9.900531837350309
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 9.998511286671013,
+        "min": 9.998508631542073,
+        "max": 9.998513941799953
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 9.998511286671013,
+        "min": 9.998508631542073,
+        "max": 9.998513941799953
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.015600143175310213,
+        "min": 0.008928571428571428,
+        "max": 0.022271714922048998
+      },
+      "pooled_interior_missing_fraction": 0.01560758082497213,
+      "probes_unique": 883,
+      "probes_missing": 14,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 104370.5,
+        "min": 104068.0,
+        "max": 104673.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 153284.0,
+        "min": 107289.0,
+        "max": 199279.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 202233.0,
+        "min": 201799.0,
+        "max": 202667.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 12282.674757637844,
+        "min": 9612.945574885738,
+        "max": 14952.40394038995
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -62.820958771983825,
+        "min": -68.63963963963964,
+        "max": -57.00227790432802
+      }
+    },
+    {
+      "condition": "pair-10",
+      "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+      "mode": "pair",
+      "target_hz": 10,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 9.677447569115461,
+        "min": 9.654711102325523,
+        "max": 9.700184035905398
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 9.83842056612604,
+        "min": 9.771349290401206,
+        "max": 9.905491841850871
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 9.83842056612604,
+        "min": 9.771349290401206,
+        "max": 9.905491841850871
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.015820122107639424,
+        "min": 0.01141552511415525,
+        "max": 0.020224719101123594
+      },
+      "pooled_interior_missing_fraction": 0.015855039637599093,
+      "probes_unique": 869,
+      "probes_missing": 14,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 106859.5,
+        "min": 106157.0,
+        "max": 107562.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 200531.0,
+        "min": 200161.0,
+        "max": 200901.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 255521.0,
+        "min": 212294.0,
+        "max": 298748.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 18525.265683962687,
+        "min": 17393.593773139182,
+        "max": 19656.93759478619
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -64.10664343072654,
+        "min": -70.21559633027523,
+        "max": -57.99769053117783
+      }
+    },
+    {
+      "condition": "pair-50",
+      "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+      "mode": "pair",
+      "target_hz": 50,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 48.945575414075535,
+        "min": 48.74752532719379,
+        "max": 49.14362550095728
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 49.32632015385535,
+        "min": 49.23519810907757,
+        "max": 49.417442198633125
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 49.32632015385535,
+        "min": 49.23519810907757,
+        "max": 49.417442198633125
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.008134187988853028,
+        "min": 0.005861136158701533,
+        "max": 0.010407239819004524
+      },
+      "pooled_interior_missing_fraction": 0.008130081300813009,
+      "probes_unique": 4392,
+      "probes_missing": 36,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 24191.5,
+        "min": 23929.0,
+        "max": 24454.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 38938.5,
+        "min": 29281.0,
+        "max": 48596.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 84130.0,
+        "min": 54471.0,
+        "max": 113789.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 3884.1048552670945,
+        "min": 3746.6116496222467,
+        "max": 4021.598060911943
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -58.30576038371453,
+        "min": -58.366893424036284,
+        "max": -58.24462734339278
+      }
+    },
+    {
+      "condition": "pair-50",
+      "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+      "mode": "pair",
+      "target_hz": 50,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 48.60221962092717,
+        "min": 48.36976066178574,
+        "max": 48.83467858006861
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 48.92785783914306,
+        "min": 48.73336530878244,
+        "max": 49.122350369503685
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 48.92785783914306,
+        "min": 48.73336530878244,
+        "max": 49.122350369503685
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.007061205826637926,
+        "min": 0.006349206349206349,
+        "max": 0.007773205304069501
+      },
+      "pooled_interior_missing_fraction": 0.007058287795992714,
+      "probes_unique": 4361,
+      "probes_missing": 31,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 26085.5,
+        "min": 25621.0,
+        "max": 26550.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 48453.5,
+        "min": 46761.0,
+        "max": 50146.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 86675.5,
+        "min": 59046.0,
+        "max": 114305.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 5171.013966958088,
+        "min": 4893.250362930954,
+        "max": 5448.777570985221
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -59.60297183492587,
+        "min": -59.724884792626725,
+        "max": -59.48105887722501
+      }
+    },
+    {
+      "condition": "star-a-10",
+      "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+      "mode": "star-a",
+      "target_hz": 10,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 9.79110220235131,
+        "min": 9.769455569653609,
+        "max": 9.81274883504901
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 9.998676459608387,
+        "min": 9.998653204666013,
+        "max": 9.998699714550758
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 9.998676459608387,
+        "min": 9.998653204666013,
+        "max": 9.998699714550758
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.020064428889595927,
+        "min": 0.017857142857142856,
+        "max": 0.022271714922048998
+      },
+      "pooled_interior_missing_fraction": 0.020066889632107024,
+      "probes_unique": 879,
+      "probes_missing": 18,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 105206.0,
+        "min": 104679.0,
+        "max": 105733.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 199742.5,
+        "min": 199041.0,
+        "max": 200444.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 201206.5,
+        "min": 200736.0,
+        "max": 201677.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 14295.62280820334,
+        "min": 13463.221514934043,
+        "max": 15128.024101472636
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -63.1229680057983,
+        "min": -69.0340909090909,
+        "max": -57.21184510250569
+      }
+    },
+    {
+      "condition": "star-a-50",
+      "direction": "a0:b7:65:dd:e9:3c -> b0:b2:1c:0b:07:1c",
+      "mode": "star-a",
+      "target_hz": 50,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 47.95952552765641,
+        "min": 47.51317046802502,
+        "max": 48.405880587287804
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 49.79958020285526,
+        "min": 49.78849999725038,
+        "max": 49.81066040846014
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 49.79958020285526,
+        "min": 49.78849999725038,
+        "max": 49.81066040846014
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.03671167532186888,
+        "min": 0.027765338110165697,
+        "max": 0.045658012533572066
+      },
+      "pooled_interior_missing_fraction": 0.036713678083725096,
+      "probes_unique": 4303,
+      "probes_missing": 164,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 25931.5,
+        "min": 24855.0,
+        "max": 27008.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 41673.5,
+        "min": 40836.0,
+        "max": 42511.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 63388.5,
+        "min": 63035.0,
+        "max": 63742.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 4698.1378169976815,
+        "min": 4222.350446372745,
+        "max": 5173.925187622618
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -64.004582298817,
+        "min": -70.79221388367729,
+        "max": -57.2169507139567
+      }
+    },
+    {
+      "condition": "star-b-10",
+      "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+      "mode": "star-b",
+      "target_hz": 10,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 9.757697071167648,
+        "min": 9.702325499875435,
+        "max": 9.81306864245986
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 9.998638026431848,
+        "min": 9.998636322350672,
+        "max": 9.998639730513027
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 9.998638026431848,
+        "min": 9.998636322350672,
+        "max": 9.998639730513027
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.0234375,
+        "min": 0.017857142857142856,
+        "max": 0.029017857142857144
+      },
+      "pooled_interior_missing_fraction": 0.0234375,
+      "probes_unique": 875,
+      "probes_missing": 21,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 104277.5,
+        "min": 104236.0,
+        "max": 104319.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 201074.0,
+        "min": 199625.0,
+        "max": 202523.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 251689.0,
+        "min": 203450.0,
+        "max": 299928.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 16129.868761458456,
+        "min": 13626.63503682415,
+        "max": 18633.102486092765
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -63.96722831765935,
+        "min": -70.83218390804598,
+        "max": -57.10227272727273
+      }
+    },
+    {
+      "condition": "star-b-50",
+      "direction": "b0:b2:1c:0b:07:1c -> a0:b7:65:dd:e9:3c",
+      "mode": "star-b",
+      "target_hz": 50,
+      "trial_count": 2,
+      "link_runs": 2,
+      "rate_hz": {
+        "n": 2,
+        "mean": 48.49028627030311,
+        "min": 48.02348453228918,
+        "max": 48.95708800831704
+      },
+      "transmitter_requested_hz": {
+        "n": 2,
+        "mean": 49.787811557955735,
+        "min": 49.787206842030194,
+        "max": 49.78841627388128
+      },
+      "transmitter_accepted_hz": {
+        "n": 2,
+        "mean": 49.787811557955735,
+        "min": 49.787206842030194,
+        "max": 49.78841627388128
+      },
+      "interior_missing_fraction": {
+        "n": 2,
+        "mean": 0.025974025974025976,
+        "min": 0.016569637259292433,
+        "max": 0.03537841468875952
+      },
+      "pooled_interior_missing_fraction": 0.025974025974025976,
+      "probes_unique": 4350,
+      "probes_missing": 116,
+      "interarrival_p95_us": {
+        "n": 2,
+        "mean": 24696.0,
+        "min": 24204.0,
+        "max": 25188.0
+      },
+      "interarrival_p99_us": {
+        "n": 2,
+        "mean": 40634.0,
+        "min": 40242.0,
+        "max": 41026.0
+      },
+      "interarrival_max_us": {
+        "n": 2,
+        "mean": 56589.5,
+        "min": 51455.0,
+        "max": 61724.0
+      },
+      "interarrival_stddev_us": {
+        "n": 2,
+        "mean": 4091.26650484544,
+        "min": 3599.666620553423,
+        "max": 4582.866389137457
+      },
+      "rssi_mean_dbm": {
+        "n": 2,
+        "mean": -65.44023002065036,
+        "min": -73.41643454038997,
+        "max": -57.46402550091074
+      }
+    }
+  ],
+  "notes": [
+    "Acquisition pilot; two repetitions per condition; no activity labels inferred.",
+    "Forward/reverse profile order; target rates are per transmitter, achieved load reported separately.",
+    "Descriptive pilot only; repeated windows on the same desk are not independent room/person/day trials.",
+    "Compare modes at the same per-node offered rate. Bidirectional modes expose two sensing links; star exposes one.",
+    "Probe missing fraction uses observed sequence interiors only; excludes recording boundaries and cannot attribute causes to RF collision.",
+    "Counter deltas cover first-to-last counters reports; UART/frame/capture errors are reported separately.",
+    "Transmitter requested/accepted rates use that transmitter epoch and its own counter interval. Driver acceptance is not proof of over-the-air delivery.",
+    "Pair follower transmission is conditional on receiving leader requests. Its sequence increments only when it attempts a response, so a low reverse missing fraction alone cannot establish better sampling coverage.",
+    "Timing uses receiver node timestamps, not UART arrival times. Interval statistics include loss gaps.",
+    "First-second stream/decode errors are separated from later errors; attaching to an active UART can start mid-frame, but timing alone does not prove an error cause.",
+    "No motion labels are supplied. Results do not measure sensing accuracy, presence, or fall detection.",
+    "Aggregate timing statistics summarize per-run quantiles; they are not quantiles of pooled intervals."
+  ]
+}

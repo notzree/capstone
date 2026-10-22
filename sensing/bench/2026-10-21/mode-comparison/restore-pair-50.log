@@ -1,0 +1,4 @@
+FLASH restore-pair-50 pair-50
+RECORD restored-pair-50 30 seconds
+RESULT restored-pair-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 1417, "hz": 47.454, "missing": 7}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 1424, "hz": 47.685, "missing": 39}] errors {'StreamError:[2]': 2}
+RESTORED pair-50 ; ports released

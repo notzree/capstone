@@ -1,0 +1,132 @@
+   Compiling csi-host v0.1.0 (/Users/notzree/code/capstone/sensing/server/csi-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.59s
+     Running unittests src/main.rs (target/debug/deps/csi-6c12a5f6590fc9b5)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cli.rs (target/debug/deps/cli-f9590b028da906ca)
+
+running 6 tests
+test rejects_bad_arguments ... ok
+test hub_sigterm_drains_and_seals ... ok
+test hub_duration_seals_session_and_archives_config ... ok
+test rejects_unrepresentable_clock_intervals_without_replacing_the_fit ... ok
+test geometry_is_copied_checked_and_carried_through_replay ... ok
+test record_inspect_and_rerecord ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.22s
+
+     Running unittests src/lib.rs (target/debug/deps/csi_host-7b005f4c9a792d46)
+
+running 19 tests
+test clock::tests::unwrap_is_exact_across_the_32_bit_wrap ... ok
+test histogram::tests::buckets_tile_the_range ... ok
+test clock::tests::composition_matches_applying_both_maps ... ok
+test seq::tests::duplicates_and_stale ... ok
+test histogram::tests::exact_below_linear_range ... ok
+test histogram::tests::relative_error_is_bounded ... ok
+test seq::tests::wraps_around_u32 ... ok
+test seq::tests::in_order_and_gaps ... ok
+test seq::regression_tests::regression_large_jump_expires_prefix_but_keeps_boundary_late ... ok
+test seq::tests::late_arrivals_fill_gaps ... ok
+test seq::tests::large_gap_keeps_one_pending_range_and_finalizes_in_two_parts ... ok
+test seq::regression_tests::regression_large_jump_across_wrap_preserves_window_and_gap_timestamp ... ok
+test seq::tests::split_gaps_keep_when_they_were_seen ... ok
+test seq::tests::gaps_finalize_once_out_of_window ... ok
+test clock::regression_tests::regression_idle_eviction_never_reuses_reference_clock_identity ... ok
+test clock::tests::line_fit_ignores_outliers ... ok
+test live::time_sync::tests::echo_fit_recovers_host_time_and_rejects_invalid_turnaround ... ok
+test clock::regression_tests::regression_idle_readmission_rejoins_a_surviving_receivers_timeline ... ok
+test live::regression_tests::regression_completed_status_finalizes_frames_captures_probes_and_events ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/clock.rs (target/debug/deps/clock-562a293c854a35fb)
+
+running 7 tests
+test live_fit_caps_samples_streams_history_and_expires_idle_clocks ... ok
+test unwraps_the_32_bit_radio_timer ... ok
+test chains_receivers_that_share_no_probes_with_the_reference ... ok
+test recovers_each_receivers_offset_and_drift ... ok
+test candidate_windows_meet_the_bars ... ok
+test fit_is_deterministic_and_survives_its_file ... ok
+test reboots_start_new_mappings_and_the_timeline_carries_on ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.47s
+
+     Running tests/compat.rs (target/debug/deps/compat-ac316f782ede75b1)
+
+running 2 tests
+test m2_session_inspects_with_the_counts_it_was_recorded_with ... ok
+test m2_session_rerecords_byte_identically ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/geometry.rs (target/debug/deps/geometry-21ea2e45bc1ec9c2)
+
+running 6 tests
+test invalid_geometry_creates_no_session ... ok
+test valid_geometry_parses ... ok
+test sessions_without_geometry_report_none ... ok
+test invalid_geometry_is_rejected ... ok
+test session_copies_the_file_and_references_its_revision_and_hash ... ok
+test edited_geometry_no_longer_matches_the_manifest ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+     Running tests/inspect.rs (target/debug/deps/inspect-a9a3e28f9474b9ed)
+
+running 4 tests
+test regression_radio_reset_keeps_gain_and_interval_accounting_running ... ok
+test clean_session_reports_configured_rates_and_no_losses ... ok
+test injected_faults_are_detected_exactly ... ok
+test fault_accounting_holds_across_seeds ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.36s
+
+     Running tests/live.rs (target/debug/deps/live-fcfab6e2f09f60a1)
+
+running 7 tests
+test bind_failure_creates_no_session ... FAILED
+test recorder_failure_is_propagated_and_never_seals_session ... FAILED
+test udp_stale_restart_foreign_bad_frames_and_unsolicited_echo ... FAILED
+test udp_3000_csi_per_second_records_before_lossy_delivery_and_maps_host_time ... FAILED
+test config_validates_toml_and_limits ... ok
+test serial::unplug_reconnect_resets_partial_frame_and_tracks_epoch ... ok
+test serial::pty_3000_csi_per_second_with_echo_and_clock_fit ... ok
+
+failures:
+
+---- bind_failure_creates_no_session stdout ----
+
+thread 'bind_failure_creates_no_session' (3416968) panicked at server/csi-host/tests/live.rs:117:50:
+called `Result::unwrap()` on an `Err` value: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }
+
+---- recorder_failure_is_propagated_and_never_seals_session stdout ----
+
+thread 'recorder_failure_is_propagated_and_never_seals_session' (3416970) panicked at server/csi-host/tests/live.rs:117:50:
+called `Result::unwrap()` on an `Err` value: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }
+
+---- udp_stale_restart_foreign_bad_frames_and_unsolicited_echo stdout ----
+
+thread 'udp_stale_restart_foreign_bad_frames_and_unsolicited_echo' (3416974) panicked at server/csi-host/tests/live.rs:117:50:
+called `Result::unwrap()` on an `Err` value: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- udp_3000_csi_per_second_records_before_lossy_delivery_and_maps_host_time stdout ----
+
+thread 'udp_3000_csi_per_second_records_before_lossy_delivery_and_maps_host_time' (3416973) panicked at server/csi-host/tests/live.rs:117:50:
+called `Result::unwrap()` on an `Err` value: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }
+
+
+failures:
+    bind_failure_creates_no_session
+    recorder_failure_is_propagated_and_never_seals_session
+    udp_3000_csi_per_second_records_before_lossy_delivery_and_maps_host_time
+    udp_stale_restart_foreign_bad_frames_and_unsolicited_echo
+
+test result: FAILED. 3 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.43s
+
+error: test failed, to rerun pass `-p csi-host --test live`

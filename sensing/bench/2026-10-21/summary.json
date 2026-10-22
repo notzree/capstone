@@ -1,0 +1,55 @@
+{
+  "date_local": "2026-10-21",
+  "scope": "uncontrolled one-TX/one-RX bring-up; placement and activity not labelled",
+  "session": "smoke-02",
+  "session_id": "01a1612a-363f-7498-9519-8e6951e72677",
+  "session_complete": true,
+  "segment_integrity": [
+    {
+      "file": "segment-000000.bin",
+      "sealed": true,
+      "records": 6206,
+      "bytes": 2134593,
+      "integrity": {
+        "status": "verified"
+      }
+    }
+  ],
+  "configured_seconds": 60,
+  "csi_records": 5845,
+  "received_rate_hz": 97.64521643202575,
+  "probe_sequence_missing": 141,
+  "missing_fraction_between_observed_probes": 0.02355496157701303,
+  "capture_sequence_missing": 0,
+  "frame_sequence_missing": 0,
+  "pool_drops": 0,
+  "export_drops": 0,
+  "time_echoes_by_node": {
+    "a0:b7:65:dd:e9:3c": 60,
+    "b0:b2:1c:0b:07:1c": 60
+  },
+  "raw_audit": {
+    "csi_records": 5845,
+    "distinct_raw_csi": 5845,
+    "layouts": {
+      "sig_mode=1 mcs=0 cwb=0 sgi=false stbc=0 channel=6 len=256 first_word_invalid=true gain=None": 5845
+    },
+    "stream_errors": [
+      {
+        "kind": "StreamError",
+        "mono_ns": 132138375,
+        "payload": [
+          2
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "one receiver: cross-receiver alignment untested",
+    "gain absent",
+    "no controlled still/walking labels",
+    "no sustained/wrap/reboot acceptance test",
+    "TX acceptance is not proof of over-air delivery",
+    "one bad_cobs at initial attachment (0.132138375 s); none later"
+  ]
+}

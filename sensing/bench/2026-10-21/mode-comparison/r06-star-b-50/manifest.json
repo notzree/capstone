@@ -1,0 +1,45 @@
+{
+  "format": "csi-session/1",
+  "session_id": "01a16199-7f03-7148-9740-8f4af3c9cefa",
+  "created_wall_ns": 1792638811907051000,
+  "closed_wall_ns": 1792638857066664000,
+  "complete": true,
+  "recorder": "csi-host 0.1.0",
+  "protocol_version": 2,
+  "derived_from": null,
+  "geometry": null,
+  "rotation": {
+    "max_bytes": 268435456,
+    "max_duration_ns": 600000000000
+  },
+  "sources": [
+    {
+      "name": "pair-b0b21c0b071c",
+      "kind": "serial",
+      "details": {
+        "baud": 921600,
+        "kind": "serial",
+        "path": "/dev/cu.usbserial-0001"
+      }
+    },
+    {
+      "name": "pair-a0b765dde93c",
+      "kind": "serial",
+      "details": {
+        "baud": 921600,
+        "kind": "serial",
+        "path": "/dev/cu.usbserial-3"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "file": "segment-000000.bin",
+      "records": 2426,
+      "bytes": 798332,
+      "sha256": "32348a7b870aa6aec61f2874530419e528ca3befb386d3959fe0f3506592cc5a",
+      "first_mono_ns": 132276875,
+      "last_mono_ns": 45005073083
+    }
+  ]
+}

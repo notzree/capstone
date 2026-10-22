@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-19",
+  "repository": "https://github.com/csi-rs/esp-csi-rs",
+  "commit": "6cfbd6b73472c73696683b288b833c1910097061",
+  "crate_version": "0.13.0",
+  "firmware_lock_sha256": "c6a5c3238b8b353db54ca78b11c8508be1530f61c36a39c6a04b1543930c8c23",
+  "host_rustc": "1.97.1 (8bab26f4f 2026-07-14)",
+  "embedded_rustc": "1.97.0-nightly (8ea53bcd7 2026-07-08) (1.97.0.0)",
+  "espup": "0.18.0",
+  "host_tests": {
+    "passed": 24,
+    "failed": 0,
+    "target": "aarch64-apple-darwin"
+  },
+  "firmware_features": "chip,statistics + default no-std,println,auto",
+  "monitor_baud": 921600,
+  "artifacts": [
+    {
+      "chip": "esp32",
+      "example": "sniffer",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32-none-elf/release/examples/sniffer",
+      "bytes": 1196368,
+      "sha256": "50896277e7c33618d1fa0eefd5f8fea6fc7afebe2484e50ce9d9e4c2d09d4689"
+    },
+    {
+      "chip": "esp32",
+      "example": "emitter",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32-none-elf/release/examples/emitter",
+      "bytes": 1192548,
+      "sha256": "b9ee92ac32ad67c6c0fe43f299a71b9ac2fff2a012ac61994f544348b86981cc"
+    },
+    {
+      "chip": "esp32",
+      "example": "esp_now_simplex",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32-none-elf/release/examples/esp_now_simplex",
+      "bytes": 1193036,
+      "sha256": "890c9c4074672bdbf1c8e78d2eba70762d5ad06069b3eba7a6867f1ca457fc82"
+    },
+    {
+      "chip": "esp32",
+      "example": "hw_check",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32-none-elf/release/examples/hw_check",
+      "bytes": 1238276,
+      "sha256": "70df36afe524b5d27d2efd15eac8d62ce91e97a801287310d96c353473574618"
+    },
+    {
+      "chip": "esp32",
+      "example": "csi_callback",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32-none-elf/release/examples/csi_callback",
+      "bytes": 1203092,
+      "sha256": "655a2dd60d8925a74aae0a09519b302a195a2ca90fd39917129c54c02985a5f5"
+    },
+    {
+      "chip": "esp32s3",
+      "example": "sniffer",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/sniffer",
+      "bytes": 1396080,
+      "sha256": "598fa5850d2d18b3eba96614982250ee2e98885f7907c789d90869e5ebee3f87"
+    },
+    {
+      "chip": "esp32s3",
+      "example": "emitter",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/emitter",
+      "bytes": 1392240,
+      "sha256": "a5bbfda00acd33e46b16d071bf9eb363225ae8fdf83f4e640bbab561ea6dd371"
+    },
+    {
+      "chip": "esp32s3",
+      "example": "esp_now_simplex",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/esp_now_simplex",
+      "bytes": 1391824,
+      "sha256": "769815678a167723c24dc13716c9f187b4c9d2fde67cc97e8f92f902707748a1"
+    },
+    {
+      "chip": "esp32s3",
+      "example": "hw_check",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/hw_check",
+      "bytes": 1398368,
+      "sha256": "29953304211e891b8e5a8170cf52a6e24bfab0324693f47b7b1b27995461bc80"
+    },
+    {
+      "chip": "esp32s3",
+      "example": "csi_callback",
+      "elf_path": "/private/tmp/esp-csi-rs-verification-20261019/target/xtensa-esp32s3-none-elf/release/examples/csi_callback",
+      "bytes": 1402124,
+      "sha256": "92d6d45c1e121a0cb9a4bfaed3ab24ca905238e2e535e3d20b7fd1f88b553b59"
+    }
+  ],
+  "runtime_status": "NOT TESTED: no ESP32 USB serial device visible; no flash performed",
+  "s3_linker_warning": "LOAD segment with RWX permissions; link completed; runtime not tested"
+}

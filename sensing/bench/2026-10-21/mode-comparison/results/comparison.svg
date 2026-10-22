@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="544" viewBox="0 0 1200 544">
+<rect width="1200" height="100%" fill="white"/>
+<g font-family="sans-serif" font-size="12" fill="#18212c">
+<text x="15" y="22" font-size="17">Desk pilot: mean with observed min–max across repeats</text>
+<text x="485" y="49">Captured CSI / second</text><text x="885" y="49">Missing probes / observed sequence interior (%)</text>
+<text x="15" y="84">independent-10 | a0:b7:65:dd:e9:3c -&gt; b0:b2:1c:0b:07:1c</text>
+<line x1="485" x2="705" y1="80" y2="80" stroke="#e2e5e8"/>
+<line x1="524.36" x2="525.09" y1="80" y2="80" stroke="#176b94" stroke-width="2"/>
+<circle cx="524.72" cy="80" r="4" fill="#176b94"/>
+<text x="715" y="84">9.81</text>
+<line x1="885" x2="1105" y1="80" y2="80" stroke="#e2e5e8"/>
+<line x1="924.02" x2="1002.33" y1="80" y2="80" stroke="#ad4227" stroke-width="2"/>
+<circle cx="963.18" cy="80" r="4" fill="#ad4227"/>
+<text x="1115" y="84">1.78</text>
+<text x="15" y="121">independent-10 | b0:b2:1c:0b:07:1c -&gt; a0:b7:65:dd:e9:3c</text>
+<line x1="485" x2="705" y1="117" y2="117" stroke="#e2e5e8"/>
+<line x1="524.19" x2="524.99" y1="117" y2="117" stroke="#176b94" stroke-width="2"/>
+<circle cx="524.59" cy="117" r="4" fill="#176b94"/>
+<text x="715" y="121">9.78</text>
+<line x1="885" x2="1105" y1="117" y2="117" stroke="#e2e5e8"/>
+<line x1="933.78" x2="1021.89" y1="117" y2="117" stroke="#ad4227" stroke-width="2"/>
+<circle cx="977.83" cy="117" r="4" fill="#ad4227"/>
+<text x="1115" y="121">2.12</text>
+<text x="15" y="158">independent-50 | a0:b7:65:dd:e9:3c -&gt; b0:b2:1c:0b:07:1c</text>
+<line x1="485" x2="705" y1="154" y2="154" stroke="#e2e5e8"/>
+<line x1="683.14" x2="683.39" y1="154" y2="154" stroke="#176b94" stroke-width="2"/>
+<circle cx="683.26" cy="154" r="4" fill="#176b94"/>
+<text x="715" y="158">48.97</text>
+<line x1="885" x2="1105" y1="154" y2="154" stroke="#e2e5e8"/>
+<line x1="949.76" x2="955.68" y1="154" y2="154" stroke="#ad4227" stroke-width="2"/>
+<circle cx="952.72" cy="154" r="4" fill="#ad4227"/>
+<text x="1115" y="158">1.55</text>
+<text x="15" y="195">independent-50 | b0:b2:1c:0b:07:1c -&gt; a0:b7:65:dd:e9:3c</text>
+<line x1="485" x2="705" y1="191" y2="191" stroke="#e2e5e8"/>
+<line x1="683.60" x2="685.00" y1="191" y2="191" stroke="#176b94" stroke-width="2"/>
+<circle cx="684.30" cy="191" r="4" fill="#176b94"/>
+<text x="715" y="195">49.22</text>
+<line x1="885" x2="1105" y1="191" y2="191" stroke="#e2e5e8"/>
+<line x1="914.45" x2="945.84" y1="191" y2="191" stroke="#ad4227" stroke-width="2"/>
+<circle cx="930.15" cy="191" r="4" fill="#ad4227"/>
+<text x="1115" y="195">1.03</text>
+<text x="15" y="232">pair-10 | a0:b7:65:dd:e9:3c -&gt; b0:b2:1c:0b:07:1c</text>
+<line x1="485" x2="705" y1="228" y2="228" stroke="#e2e5e8"/>
+<line x1="524.55" x2="525.09" y1="228" y2="228" stroke="#176b94" stroke-width="2"/>
+<circle cx="524.82" cy="228" r="4" fill="#176b94"/>
+<text x="715" y="232">9.83</text>
+<line x1="885" x2="1105" y1="228" y2="228" stroke="#e2e5e8"/>
+<line x1="924.11" x2="982.56" y1="228" y2="228" stroke="#ad4227" stroke-width="2"/>
+<circle cx="953.33" cy="228" r="4" fill="#ad4227"/>
+<text x="1115" y="232">1.56</text>
+<text x="15" y="269">pair-10 | b0:b2:1c:0b:07:1c -&gt; a0:b7:65:dd:e9:3c</text>
+<line x1="485" x2="705" y1="265" y2="265" stroke="#e2e5e8"/>
+<line x1="524.09" x2="524.28" y1="265" y2="265" stroke="#176b94" stroke-width="2"/>
+<circle cx="524.18" cy="265" r="4" fill="#176b94"/>
+<text x="715" y="269">9.68</text>
+<line x1="885" x2="1105" y1="265" y2="265" stroke="#e2e5e8"/>
+<line x1="935.00" x2="973.59" y1="265" y2="265" stroke="#ad4227" stroke-width="2"/>
+<circle cx="954.30" cy="265" r="4" fill="#ad4227"/>
+<text x="1115" y="269">1.58</text>
+<text x="15" y="306">pair-50 | a0:b7:65:dd:e9:3c -&gt; b0:b2:1c:0b:07:1c</text>
+<line x1="485" x2="705" y1="302" y2="302" stroke="#e2e5e8"/>
+<line x1="682.38" x2="683.98" y1="302" y2="302" stroke="#176b94" stroke-width="2"/>
+<circle cx="683.18" cy="302" r="4" fill="#176b94"/>
+<text x="715" y="306">48.95</text>
+<line x1="885" x2="1105" y1="302" y2="302" stroke="#e2e5e8"/>
+<line x1="910.67" x2="930.59" y1="302" y2="302" stroke="#ad4227" stroke-width="2"/>
+<circle cx="920.63" cy="302" r="4" fill="#ad4227"/>
+<text x="1115" y="306">0.81</text>
+<text x="15" y="343">pair-50 | b0:b2:1c:0b:07:1c -&gt; a0:b7:65:dd:e9:3c</text>
+<line x1="485" x2="705" y1="339" y2="339" stroke="#e2e5e8"/>
+<line x1="680.85" x2="682.73" y1="339" y2="339" stroke="#176b94" stroke-width="2"/>
+<circle cx="681.79" cy="339" r="4" fill="#176b94"/>
+<text x="715" y="343">48.60</text>
+<line x1="885" x2="1105" y1="339" y2="339" stroke="#e2e5e8"/>
+<line x1="912.81" x2="919.05" y1="339" y2="339" stroke="#ad4227" stroke-width="2"/>
+<circle cx="915.93" cy="339" r="4" fill="#ad4227"/>
+<text x="1115" y="343">0.71</text>
+<text x="15" y="380">star-a-10 | a0:b7:65:dd:e9:3c -&gt; b0:b2:1c:0b:07:1c</text>
+<line x1="485" x2="705" y1="376" y2="376" stroke="#e2e5e8"/>
+<line x1="524.56" x2="524.73" y1="376" y2="376" stroke="#176b94" stroke-width="2"/>
+<circle cx="524.64" cy="376" r="4" fill="#176b94"/>
+<text x="715" y="380">9.79</text>
+<line x1="885" x2="1105" y1="376" y2="376" stroke="#e2e5e8"/>
+<line x1="963.22" x2="982.56" y1="376" y2="376" stroke="#ad4227" stroke-width="2"/>
+<circle cx="972.89" cy="376" r="4" fill="#ad4227"/>
+<text x="1115" y="380">2.01</text>
+<text x="15" y="417">star-a-50 | a0:b7:65:dd:e9:3c -&gt; b0:b2:1c:0b:07:1c</text>
+<line x1="485" x2="705" y1="413" y2="413" stroke="#e2e5e8"/>
+<line x1="677.38" x2="681.00" y1="413" y2="413" stroke="#176b94" stroke-width="2"/>
+<circle cx="679.19" cy="413" r="4" fill="#176b94"/>
+<text x="715" y="417">47.96</text>
+<line x1="885" x2="1105" y1="413" y2="413" stroke="#e2e5e8"/>
+<line x1="1006.62" x2="1085.00" y1="413" y2="413" stroke="#ad4227" stroke-width="2"/>
+<circle cx="1045.81" cy="413" r="4" fill="#ad4227"/>
+<text x="1115" y="417">3.67</text>
+<text x="15" y="454">star-b-10 | b0:b2:1c:0b:07:1c -&gt; a0:b7:65:dd:e9:3c</text>
+<line x1="485" x2="705" y1="450" y2="450" stroke="#e2e5e8"/>
+<line x1="524.28" x2="524.73" y1="450" y2="450" stroke="#176b94" stroke-width="2"/>
+<circle cx="524.51" cy="450" r="4" fill="#176b94"/>
+<text x="715" y="454">9.76</text>
+<line x1="885" x2="1105" y1="450" y2="450" stroke="#e2e5e8"/>
+<line x1="963.22" x2="1012.11" y1="450" y2="450" stroke="#ad4227" stroke-width="2"/>
+<circle cx="987.67" cy="450" r="4" fill="#ad4227"/>
+<text x="1115" y="454">2.34</text>
+<text x="15" y="491">star-b-50 | b0:b2:1c:0b:07:1c -&gt; a0:b7:65:dd:e9:3c</text>
+<line x1="485" x2="705" y1="487" y2="487" stroke="#e2e5e8"/>
+<line x1="679.45" x2="683.23" y1="487" y2="487" stroke="#176b94" stroke-width="2"/>
+<circle cx="681.34" cy="487" r="4" fill="#176b94"/>
+<text x="715" y="491">48.49</text>
+<line x1="885" x2="1105" y1="487" y2="487" stroke="#e2e5e8"/>
+<line x1="957.58" x2="1039.97" y1="487" y2="487" stroke="#ad4227" stroke-width="2"/>
+<circle cx="998.78" cy="487" r="4" fill="#ad4227"/>
+<text x="1115" y="491">2.60</text>
+</g></svg>

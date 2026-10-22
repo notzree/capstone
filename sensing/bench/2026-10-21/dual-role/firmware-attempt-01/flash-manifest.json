@@ -1,0 +1,102 @@
+{
+  "bootloader_provenance": {
+    "repository": "https://github.com/espressif/esp-csi.git",
+    "revision": "8633d67152db2808f141cc1595970aa9cf406045",
+    "idf_image_digest": "espressif/idf@sha256:05cbfc42ed2e987b8026722c15bf1d8523d3e4fd1b4ac04d2e4056f5e0918b99",
+    "generated_offsets_from": "demo/vendor/esp-csi/examples/get-started/csi_recv/build/flasher_args.json"
+  },
+  "settings": {
+    "flash_mode": "dio",
+    "flash_freq": "40m",
+    "flash_size": "4MB"
+  },
+  "roles": {
+    "pair-a0b765dde93c": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "peer_mac": "b0:b2:1c:0b:07:1c",
+      "features": [
+        "pair",
+        "tx",
+        "rx"
+      ],
+      "leader": true,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730",
+          "bytes": 26320
+        },
+        {
+          "offset": "0x20000",
+          "file": "peer-b0b21c0b071c.bin",
+          "sha256": "47bf5444d81d1c87deafc5432adfc8565599383aab36dffd3547f24444ecaa93",
+          "bytes": 562560
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5",
+          "bytes": 3072
+        }
+      ]
+    },
+    "pair-b0b21c0b071c": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "peer_mac": "a0:b7:65:dd:e9:3c",
+      "features": [
+        "pair",
+        "tx",
+        "rx"
+      ],
+      "leader": false,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730",
+          "bytes": 26320
+        },
+        {
+          "offset": "0x20000",
+          "file": "peer-a0b765dde93c.bin",
+          "sha256": "3a391af29031a54f1ef98fe6a3d34d227e46b05a437e802cb7140d2cfe054ff6",
+          "bytes": 562560
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5",
+          "bytes": 3072
+        }
+      ]
+    }
+  },
+  "protocol_version": 2,
+  "source_sha256": "a3e18961b6a64ae0601ddd948f5ac974f1aa293f1ba5f8bdd6a33207cecf2807",
+  "channel": 6,
+  "tx_probe_rate_hz": 10,
+  "uart_baud": 921600,
+  "phy": "HT20/MCS0 long GI",
+  "gain": "absent; extraction not yet verified",
+  "source_files_sha256": {
+    "sensing/firmware/csi-esp/src/main.rs": "a3e18961b6a64ae0601ddd948f5ac974f1aa293f1ba5f8bdd6a33207cecf2807",
+    "sensing/firmware/csi-esp/build.rs": "695f367d41c95956ba73ac104eb3395b02e7a4910a2e503db53e2de42bfbe14e",
+    "sensing/firmware/csi-esp/Cargo.toml": "3fe3b5e10a5b8accb4b30a5d4c84908efac5eac16f24b450228e902139aab935",
+    "sensing/crates/csi-node/src/lib.rs": "e21284c6ed018c98411dc2daae52e6683f09897a05ec6900aefde48618cfbc39",
+    "sensing/firmware/Cargo.lock": "66504f11b6870598f2b212f2ee1cb0304989dd8c659c715ead6463c282a00473"
+  },
+  "schedule": {
+    "id": 1,
+    "kind": "known-pair request/response",
+    "leader_period_us": 100000,
+    "guard_us": 0,
+    "response_max_age_us": 500000,
+    "initial_timeout_us": 150000,
+    "min_timeout_us": 30000,
+    "max_timeout_us": 500000,
+    "adaptation": "EWMA RTT plus 4 deviations, bounded doubling on timeout",
+    "turn_tag_version": 1
+  },
+  "build_command": "CSI_PEER_MAC=<peer> cargo +esp build --offline --release --features pair (Xtensa ESP32)"
+}

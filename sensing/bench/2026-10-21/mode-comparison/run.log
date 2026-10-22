@@ -1,0 +1,52 @@
+FLASH r01-star-a-10 star-a-10
+RECORD r01-star-a-10 45 seconds
+RESULT r01-star-a-10 [{"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 440, "hz": 9.813, "missing": 8}] errors {}
+FLASH r02-star-b-10 star-b-10
+RECORD r02-star-b-10 45 seconds
+RESULT r02-star-b-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 435, "hz": 9.702, "missing": 13}] errors {}
+FLASH r03-independent-10 independent-10
+RECORD r03-independent-10 45 seconds
+RESULT r03-independent-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 434, "hz": 9.678, "missing": 14}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 445, "hz": 9.9, "missing": 4}] errors {'StreamError:[2]': 1}
+FLASH r04-pair-10 pair-10
+RECORD r04-pair-10 45 seconds
+RESULT r04-pair-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 436, "hz": 9.7, "missing": 9}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 444, "hz": 9.901, "missing": 4}] errors {'decode:BadCrc': 1}
+FLASH r05-star-a-50 star-a-50
+RECORD r05-star-a-50 45 seconds
+RESULT r05-star-a-50 [{"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 2132, "hz": 47.513, "missing": 102}] errors {}
+FLASH r06-star-b-50 star-b-50
+RECORD r06-star-b-50 45 seconds
+RESULT r06-star-b-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 2154, "hz": 48.023, "missing": 79}] errors {'StreamError:[2]': 1, 'decode:BadCrc': 1}
+FLASH r07-independent-50 independent-50
+RECORD r07-independent-50 45 seconds
+RESULT r07-independent-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 2201, "hz": 49.049, "missing": 31}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 2195, "hz": 48.934, "missing": 36}] errors {'StreamError:[2]': 2}
+FLASH r08-pair-50 pair-50
+RECORD r08-pair-50 45 seconds
+RESULT r08-pair-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 2191, "hz": 48.835, "missing": 14}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 2205, "hz": 49.144, "missing": 13}] errors {'StreamError:[2]': 1}
+FLASH r09-pair-50 pair-50
+RECORD r09-pair-50 45 seconds
+RESULT r09-pair-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 2170, "hz": 48.37, "missing": 17}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 2187, "hz": 48.748, "missing": 23}] errors {'StreamError:[2]': 1, 'decode:BadCrc': 1}
+FLASH r10-independent-50 independent-50
+RECORD r10-independent-50 45 seconds
+RESULT r10-independent-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 2216, "hz": 49.395, "missing": 15}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 2199, "hz": 48.998, "missing": 33}] errors {'StreamError:[2]': 1}
+FLASH r11-star-b-50 star-b-50
+RECORD r11-star-b-50 45 seconds
+RESULT r11-star-b-50 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 2196, "hz": 48.957, "missing": 37}] errors {'StreamError:[2]': 1}
+FLASH r12-star-a-50 star-a-50
+RECORD r12-star-a-50 45 seconds
+RESULT r12-star-a-50 [{"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 2171, "hz": 48.406, "missing": 62}] errors {}
+FLASH r13-pair-10 pair-10
+RECORD r13-pair-10 45 seconds
+RESULT r13-pair-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 433, "hz": 9.655, "missing": 5}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 439, "hz": 9.767, "missing": 10}] errors {}
+FLASH r14-independent-10 independent-10
+RECORD r14-independent-10 45 seconds
+RESULT r14-independent-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 444, "hz": 9.877, "missing": 5}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 436, "hz": 9.721, "missing": 12}] errors {}
+FLASH r15-star-b-10 star-b-10
+RECORD r15-star-b-10 45 seconds
+RESULT r15-star-b-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 440, "hz": 9.813, "missing": 8}] errors {}
+FLASH r16-star-a-10 star-a-10
+RECORD r16-star-a-10 45 seconds
+RESULT r16-star-a-10 [{"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 439, "hz": 9.769, "missing": 10}] errors {'StreamError:[2]': 1}
+FLASH restore-pair-10 pair-10
+RECORD restored-pair-10 30 seconds
+RESULT restored-pair-10 [{"tx": "b0:b2:1c:0b:07:1c", "rx": "a0:b7:65:dd:e9:3c", "csi": 297, "hz": 9.924, "missing": 0}, {"tx": "a0:b7:65:dd:e9:3c", "rx": "b0:b2:1c:0b:07:1c", "csi": 297, "hz": 9.923, "missing": 2}] errors {}
+RESTORED pair-10; ports released

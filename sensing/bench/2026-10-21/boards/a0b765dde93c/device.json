@@ -1,0 +1,20 @@
+{
+  "role": "rx",
+  "mac": "a0:b7:65:dd:e9:3c",
+  "port_at_preparation": "/dev/cu.usbserial-3",
+  "usb_bridge": "CP2102",
+  "usb_vid_pid": "10c4:ea60",
+  "usb_location": "2-1.4",
+  "chip": "ESP32-D0WD-V3",
+  "revision": "3.1",
+  "flash_bytes": 4194304,
+  "crystal_mhz": 40,
+  "identity_verified": "2026-10-21",
+  "backup_status": "verified",
+  "backup_sha256": "3eb17c4366e51d3e793fbe260a9a447991441b664e6e01edd0ca0d16cc844019",
+  "backup_verification": "esptool full-flash device digest matched",
+  "firmware_status": "flashed_and_verified",
+  "firmware_role": "pair-50-a",
+  "firmware_manifest_sha256": "8075ec431786706cbfdebf62485c0f68aef06c3165c2c75442a816d9a47988c7",
+  "flashed_at_utc": "2026-10-22T03:28:11.240207+00:00"
+}

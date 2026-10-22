@@ -1,0 +1,66 @@
+{
+  "bootloader_provenance": {
+    "repository": "https://github.com/espressif/esp-csi.git",
+    "revision": "8633d67152db2808f141cc1595970aa9cf406045",
+    "idf_image_digest": "espressif/idf@sha256:05cbfc42ed2e987b8026722c15bf1d8523d3e4fd1b4ac04d2e4056f5e0918b99",
+    "generated_offsets_from": "demo/vendor/esp-csi/examples/get-started/csi_recv/build/flasher_args.json"
+  },
+  "settings": {
+    "flash_mode": "dio",
+    "flash_freq": "40m",
+    "flash_size": "4MB"
+  },
+  "roles": {
+    "tx": {
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730",
+          "bytes": 26320
+        },
+        {
+          "offset": "0x20000",
+          "file": "tx.bin",
+          "sha256": "503a8480737afe7b1ed14a5e89ad0420940e722123e2bc52a714f475b9752c52",
+          "bytes": 547312
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5",
+          "bytes": 3072
+        }
+      ]
+    },
+    "rx": {
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730",
+          "bytes": 26320
+        },
+        {
+          "offset": "0x20000",
+          "file": "rx.bin",
+          "sha256": "61ae1c44c40653371cea11cb1b66c424c241e98a1b42342cf04775be90607b4b",
+          "bytes": 537552
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5",
+          "bytes": 3072
+        }
+      ]
+    }
+  },
+  "protocol_version": 2,
+  "source_sha256": "cf84056da638b933f48c4b26e256a65fbdae48d3dc373159fe630e2c8705d0c0",
+  "channel": 6,
+  "tx_probe_rate_hz": 100,
+  "uart_baud": 921600,
+  "phy": "HT20/MCS0 long GI",
+  "gain": "absent; extraction not yet verified"
+}

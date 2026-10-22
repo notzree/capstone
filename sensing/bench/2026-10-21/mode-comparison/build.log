@@ -1,0 +1,82 @@
+BUILD rx
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 2.56s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.68s
+BUILD tx-10
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.51s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.51s
+BUILD independent-10
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.52s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.51s
+BUILD pair-a-10
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.53s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.53s
+BUILD pair-b-10
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.46s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.43s
+BUILD tx-50
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.37s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.62s
+BUILD independent-50
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.39s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.39s
+BUILD pair-a-50
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.54s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.39s
+BUILD pair-b-50
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 1.42s
+esptool v5.6.0
+Creating ESP32 image...
+Merged 4 ELF sections.
+Successfully created ESP32 image.
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Finished `release` profile [optimized] target(s) in 0.45s
+BUILT 9 images and 8 profiles

@@ -1,0 +1,45 @@
+{
+  "repository": "https://github.com/espressif/esp-csi.git",
+  "revision": "8633d67152db2808f141cc1595970aa9cf406045",
+  "idf_image": "espressif/idf:v5.5.2",
+  "target": "esp32",
+  "receiver_schema": "25 columns; column 21 is rx_format, not rx_state",
+  "build_status": "send and recv compiled successfully for esp32; not flashed or hardware-tested",
+  "idf_image_digest": "espressif/idf@sha256:05cbfc42ed2e987b8026722c15bf1d8523d3e4fd1b4ac04d2e4056f5e0918b99",
+  "artifacts": {
+    "send": [
+      {
+        "offset": "0x1000",
+        "file": "bootloader/bootloader.bin",
+        "sha256": "d9499cae6cbdefa46f37fb2bf041addb9112db4a7af146cf8feb68425fddb0d0"
+      },
+      {
+        "offset": "0x20000",
+        "file": "csi_send.bin",
+        "sha256": "9a40c0b0a6317aec2217e8232e81bccc2704e47aaf38e22c7cf7518f05d24224"
+      },
+      {
+        "offset": "0xa000",
+        "file": "partition_table/partition-table.bin",
+        "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+      }
+    ],
+    "recv": [
+      {
+        "offset": "0x1000",
+        "file": "bootloader/bootloader.bin",
+        "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+      },
+      {
+        "offset": "0x20000",
+        "file": "csi_recv.bin",
+        "sha256": "47bd84737186e2ef990b6253062cc437b05dc6952a1faae6330e510f209f706a"
+      },
+      {
+        "offset": "0xa000",
+        "file": "partition_table/partition-table.bin",
+        "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+      }
+    ]
+  }
+}
