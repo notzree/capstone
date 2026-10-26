@@ -393,3 +393,11 @@ Expanded the existing [sensing/PLAN.md](sensing/PLAN.md) into a complete propose
 The plan includes file-only, genuine stream-only and file+UDS output, explicit Arrow framing/session identity, consumer readiness, bounded backpressure and stream-only stop-on-primary-failure. A file descriptor abstraction does not erase the difference between a raw archive and decoded Arrow, or between file durability and socket loss. Current host code always creates a recorder directory and writes publisher status there; stream-only needs a refactor. Current trial validation also assumes one physical input source per node; the kit instead needs one RX input source and separate remote TX participants.
 
 Specified proposed CLI/REPL/JSON control, raw star-control journaling, firmware feature boundaries, conservative rates and serial admission, physical placement/label limitations, staged P0–P6 implementation and deterministic/integration/physical acceptance tests. Defaults are five TXs at 10 requested probes/s each, pending RF validation; five × 50 Hz would approach the current 921600-baud serial limit. No new firmware/control/output feature is claimed as implemented by this planning task. Updated roadmap links and collection guidance; retained older evidence and mesh acceptance backlog.
+
+
+# 22: 2026-10-26 : USB ESP32 star kit implementation and testing
+## content
+
+Implemented and flashed reusable star TX/RX firmware: ESP-NOW discovery, acknowledged measurement start/stop, grant scheduling and failure leases, with one USB receiver at the MacBook. The `csi star` client supports file recording, live Arrow/UDS to Python, or both, without a router or Wi-Fi credentials.
+
+Validation passed 151 Rust and seven Python tests. Two-board trials verified repeated start/stop, EOF/disconnect recovery and host-lease expiry; a ten-second file+stream run captured 97 of 100 opportunities with matching live/offline data and no capture/export queue drops. Five-TX scaling and the 90-minute wrap test remain pending. See the [usage guide](sensing/STAR.md) and [bench evidence](sensing/bench/2026-10-26/star/README.md).
