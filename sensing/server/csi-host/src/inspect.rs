@@ -167,6 +167,10 @@ struct SourceStats {
     decode_errors: BTreeMap<&'static str, u64>,
     stream_errors: BTreeMap<&'static str, u64>,
     unknown_records: u64,
+    wireless_batches: u64,
+    piggyback_batches: u64,
+    export_only_batches: u64,
+    last_relay_drops: u64,
 }
 
 #[derive(Default)]
@@ -277,6 +281,47 @@ impl Inspector {
         self.last_mono_ns = self.last_mono_ns.max(record.mono_ns);
         let source = self.sources.entry(record.source).or_default();
         source.records += 1;
+        if record.kind == RecordKind::WirelessBatch {
+            match record.observations() {
+                Ok(observations) => {
+                    let batch = csi_protocol::wireless::Batch::decode(&record.payload).unwrap();
+                    source.wireless_batches += 1;
+                    if batch.count > 0 {
+                        if batch.carrier.sensing {
+                            source.piggyback_batches += 1;
+                        } else {
+                            source.export_only_batches += 1;
+                        }
+                    }
+                    source.last_relay_drops = batch.carrier.relay_drops;
+                    for observation in observations {
+                        // Batch decoder validates every original frame before yielding any.
+                        if let Ok((header, message)) = frame::decode(&observation.payload) {
+                            let source = self.sources.entry(record.source).or_default();
+                            source.frames += 1;
+                            *source.versions.entry(observation.payload[0]).or_default() += 1;
+                            self.on_message(record.mono_ns, header, &message);
+                        }
+                    }
+                }
+                Err(e) => {
+                    let error = decode_error_name(e);
+                    *self
+                        .sources
+                        .entry(record.source)
+                        .or_default()
+                        .decode_errors
+                        .entry(error)
+                        .or_default() += 1;
+                    self.event(HealthEvent::DecodeError {
+                        mono_ns: record.mono_ns,
+                        source: record.source,
+                        error,
+                    });
+                }
+            }
+            return;
+        }
         match record.kind {
             RecordKind::Frame => match frame::decode(&record.payload) {
                 Ok((header, message)) => {
@@ -307,7 +352,8 @@ impl Inspector {
                     error,
                 });
             }
-            RecordKind::Unknown(_) => source.unknown_records += 1,
+            RecordKind::Unknown(_) | RecordKind::StarControl => source.unknown_records += 1,
+            RecordKind::WirelessBatch => unreachable!("wireless handled above"),
         }
     }
 
@@ -481,6 +527,10 @@ impl Inspector {
                     decode_errors: s.decode_errors.clone(),
                     stream_errors: s.stream_errors.clone(),
                     unknown_records: s.unknown_records,
+                    wireless_batches: s.wireless_batches,
+                    piggyback_batches: s.piggyback_batches,
+                    export_only_batches: s.export_only_batches,
+                    last_relay_drops: s.last_relay_drops,
                 })
                 .collect(),
             nodes: self
@@ -759,6 +809,11 @@ pub struct SourceReport {
     pub decode_errors: BTreeMap<&'static str, u64>,
     pub stream_errors: BTreeMap<&'static str, u64>,
     pub unknown_records: u64,
+    pub wireless_batches: u64,
+    pub piggyback_batches: u64,
+    pub export_only_batches: u64,
+    /// Latest carrier counter from this origin; gateway counts remote records lost while relaying.
+    pub last_relay_drops: u64,
 }
 
 #[derive(Debug, Clone, Serialize)]

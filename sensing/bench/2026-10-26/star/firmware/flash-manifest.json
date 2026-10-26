@@ -1,0 +1,62 @@
+{
+  "schema": "csi-flash/1",
+  "settings": {
+    "flash_mode": "dio",
+    "flash_freq": "40m",
+    "flash_size": "4MB"
+  },
+  "kit_id": 1,
+  "channel": 6,
+  "roles": {
+    "star-rx": {
+      "features": "star-rx",
+      "kit_id": 1,
+      "channel": 6,
+      "files": [
+        {
+          "file": "bootloader.bin",
+          "offset": "0x1000",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "file": "partition-table.bin",
+          "offset": "0xa000",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        },
+        {
+          "file": "star-rx.bin",
+          "offset": "0x20000",
+          "bytes": 598560,
+          "sha256": "347186cf6fa7f8b843dc4b8b649414031e78470a2361a9b473b3354db04c1eb5"
+        }
+      ]
+    },
+    "star-tx": {
+      "features": "star-tx",
+      "kit_id": 1,
+      "channel": 6,
+      "files": [
+        {
+          "file": "bootloader.bin",
+          "offset": "0x1000",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "file": "partition-table.bin",
+          "offset": "0xa000",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        },
+        {
+          "file": "star-tx.bin",
+          "offset": "0x20000",
+          "bytes": 548032,
+          "sha256": "ecc24748824f760b8a3a90855e5cefb3efb6b8778f2646dddd9a995a0255e2b6"
+        }
+      ]
+    }
+  }
+}

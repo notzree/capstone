@@ -1,0 +1,6 @@
+{
+  "schema": "csi-live-hardware-test/1",
+  "started_utc": "2026-10-23T05:14:50.692974+00:00",
+  "purpose": "Verify the two connected boards and real CSI through live Python UDS; no physical activity labels inferred.",
+  "firmware_action": "none"
+}

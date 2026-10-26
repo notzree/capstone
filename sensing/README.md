@@ -1,8 +1,12 @@
 # Sensing host
 
-Rust acquisition, raw session recording/replay, health accounting and clock alignment. CSI bytes remain unchanged; this workspace does no DSP or classification. M0–M3 are implemented and tested on the host. An initial original-ESP32 UART bench adapter is available in [firmware/](firmware/README.md); full M5 hardware acceptance and the Python Arrow boundary remain pending.
+USB star discovery, radio start/stop and file/stream/both output: [star kit guide](STAR.md).
 
-Proposed next validation: [signal preservation and acquisition metrics](SIGNAL_VALIDATION.md) and the [implementation plan](SIGNAL_VALIDATION_PLAN.md), including short-event coverage, known-signal distortion, timing, multi-link freshness and six-node UART capacity. These tests have not yet been implemented or passed.
+Rust acquisition, raw session recording/replay, health accounting and clock alignment. CSI bytes remain unchanged; this workspace does no DSP or classification. M0–M3 and the initial M4 Arrow/Parquet/Python handoff are implemented. See [the Python handoff guide](EXPORT.md) for `csi export`, the reader and `hub --arrow-socket`. The initial decoder covers original ESP32 HT20; unsupported layouts remain raw-only. An original-ESP32 UART bench adapter and initial [wireless batch/gateway transport](WIRELESS.md) are available in [firmware/](firmware/README.md); wireless RF acceptance and full M5 hardware acceptance remain pending.
+
+Current priority: [the USB ESP32 star kit](PLAN.md#active-delivery-scope-usb-esp32-star-kit-2026-10-26): powered ESP32 transmitters, one ESP32 receiver plugged into the MacBook, ten-second discovery and hub start/stop control. Reuse the existing USB → Rust → Python path; native Mac/Pi CSI drivers are deferred. Discovery/control and genuine file/stream/both run modes are planned, not implemented. Existing mesh/piggyback work remains available for later. The current [labelled-trial workflow](COLLECTION.md) and Arrow handoff remain usable with existing configured firmware.
+
+Supporting validation: [signal preservation and acquisition metrics](SIGNAL_VALIDATION.md) and the [test implementation plan](SIGNAL_VALIDATION_PLAN.md), including short-event coverage, known-signal distortion, timing, multi-link freshness and six-node UART capacity. These tests have not yet been implemented or passed.
 
 ## Run the live hub
 
@@ -19,6 +23,7 @@ Edit [examples/hub.toml](examples/hub.toml) to match your endpoints. Output must
 Each `[[sources]]` has a unique `name` and either:
 
 - `kind = "udp"`, `bind = "HOST:PORT"`, `peer = "NODE:PORT"`. Bind uses a numeric IP address. One frame+CRC per datagram. Each configured source has its own listening socket and fixed peer address; foreign peers are counted and ignored. `bind` port zero chooses a free port printed at startup. The peer's address is also where the hub sends time probes.
+- `kind = "wireless"`, `bind = "0.0.0.0:9001"`, `node = "aa:bb:cc:dd:ee:ff"`. Receives CRC-validated batches for the configured original node; learns the gateway reply endpoint from valid data. See [WIRELESS.md](WIRELESS.md).
 - `kind = "serial"`, `path = "/dev/..."`, `baud = 921600`. Serial uses 8N1, no flow control, COBS+zero-delimited frames. The hub retries missing/unplugged ports, discards partial framing state on reconnect and preserves DTR rather than explicitly toggling it. For Unix pseudo-terminal simulation, use `baud = 0` to skip hardware-specific baud/DTR ioctls; this is not a physical UART rate.
 
 The host sends `TimeProbe` on the same connection, with host node id all-zero, epoch zero and a request sequence. A node replies with its own header and `TimeEcho` body, returning the exact `probe_id` and `host_time` and stamping `node_rx_us`/`node_tx_us`. Only outstanding requests on that source can contribute to host-time fitting. Replies without a matching request remain in the raw recording and increment `unmatched_echoes`.
@@ -45,7 +50,7 @@ Host maps need a shared-probe fit and at least three correlated echoes. They use
 
 ## Queue and memory behavior
 
-One async task handles each source. A bounded queue feeds a dedicated recorder thread. The recorder writes a raw record before inspecting it or offering it to consumers. Live subscriber queues use `try_send`; each has its own drop counter. A slow subscriber never blocks recording. The `csi-host::live::subscription` API exposes these queues for the M4 publisher; Arrow/socket delivery itself is not implemented yet.
+One async task handles each source. A bounded queue feeds a dedicated recorder thread. The recorder writes a raw record before inspecting it or offering it to consumers. Live subscriber queues use `try_send`; each has its own drop counter. A slow subscriber never blocks recording. The `csi-host::live::subscription` API feeds the Arrow publisher; `--arrow-socket` exposes the same decoded schema used by offline export, with bounded per-client queues and drop/disconnect counters.
 
 A full recorder queue backpressures source reads. There is no intentional recorder-queue drop. Physical UART buffers or the UDP kernel receive buffer may overflow if storage cannot keep up; frame/capture/probe sequence gaps expose resulting loss where sender counters allow it. Graceful shutdown stops reads, hands off already acquired records, drains the queue, finalizes pending frame/capture/probe gaps, flushes derived files and seals the session. Completed status and final loss events therefore include gaps that were still open in live snapshots. Recorder/source failures propagate and leave an incomplete manifest.
 
@@ -64,3 +69,5 @@ cargo fmt --check
 ```
 
 Live integration tests open loopback UDP sockets and Unix pseudo-terminals; run them with those local OS permissions available. Each throughput test sends three receivers × 1,000 CSI records/s for three seconds, plus echo traffic, with 384-byte CSI payloads. They assert exact CSI recording counts, segment integrity, recovered receiver drift/residuals, host timing and bounded counters. The UDP test stalls a consumer and asserts every downstream drop is counted. Other tests cover stale/resumed UDP peers, serial unplug/reconnect, split/corrupt framing, epoch changes, foreign/oversized UDP, unmatched echoes, recorder failures and clean shutdown. These establish host behavior; a pseudo-terminal does not validate USB bridges, physical baud throughput or RF sensing.
+
+Wireless node export is implemented as bounded ESP-NOW piggyback batches plus a Wi-Fi/UDP gateway; see [WIRELESS.md](WIRELESS.md). The initial physical test is blocked at AP association, so wireless delivery/rate acceptance remains pending.

@@ -1,0 +1,12 @@
+# Example original-ESP32 USB source mapping. Confirm paths/MACs on this machine.
+[[sources]]
+name = "desk-a"
+kind = "serial"
+path = "/dev/cu.usbserial-3"
+baud = 921600
+
+[[sources]]
+name = "desk-b"
+kind = "serial"
+path = "/dev/cu.usbserial-0001"
+baud = 921600

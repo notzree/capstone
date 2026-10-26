@@ -1,0 +1,10 @@
+   Compiling csi-host v0.1.0 (/Users/notzree/code/capstone/sensing/server/csi-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.60s
+     Running tests/wireless.rs (target/debug/deps/wireless-4af3b62948b01314)
+
+running 2 tests
+test corrupt_batch_is_recorded_without_learning_a_reply_endpoint ... ok
+test wireless_datagram_is_raw_preserved_expanded_and_echo_targets_expected_node ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.27s
+

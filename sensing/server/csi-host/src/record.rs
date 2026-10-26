@@ -1,4 +1,5 @@
-use csi_protocol::DecodeError;
+use csi_protocol::{DecodeError, wireless};
+use std::borrow::Cow;
 
 /// One unit received from a source, stamped with host time on arrival.
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -14,6 +15,20 @@ pub struct Record {
 }
 
 impl Record {
+    /// Preserve the raw datagram on disk; interpret its original inner frames at
+    /// the same host arrival time for health, fitting and Python delivery.
+    pub fn observations(&self) -> Result<Observations<'_>, DecodeError> {
+        let frames = if self.kind == RecordKind::WirelessBatch {
+            Some(wireless::Batch::decode(&self.payload)?.frames())
+        } else {
+            None
+        };
+        Ok(Observations {
+            record: self,
+            frames,
+            single: self.kind != RecordKind::WirelessBatch,
+        })
+    }
     pub fn stream_error(mono_ns: u64, wall_ns: u64, source: u16, error: StreamError) -> Self {
         Self {
             mono_ns,
@@ -31,6 +46,10 @@ pub enum RecordKind {
     Frame,
     /// A byte-stream framing failure; the payload is one [`StreamError`] code.
     StreamError,
+    /// Exact csi-wireless/1 carrier datagram, including probe/tag and batch CRC.
+    WirelessBatch,
+    /// Exact CSIs/1 USB control envelope, separate from acquisition frames.
+    StarControl,
     /// Written by a newer recorder; readers count and skip it.
     Unknown(u8),
 }
@@ -40,6 +59,8 @@ impl RecordKind {
         match self {
             Self::Frame => 1,
             Self::StreamError => 2,
+            Self::WirelessBatch => 3,
+            Self::StarControl => 4,
             Self::Unknown(code) => code,
         }
     }
@@ -48,8 +69,36 @@ impl RecordKind {
         match code {
             1 => Self::Frame,
             2 => Self::StreamError,
+            3 => Self::WirelessBatch,
+            4 => Self::StarControl,
             code => Self::Unknown(code),
         }
+    }
+}
+
+pub struct Observations<'a> {
+    record: &'a Record,
+    frames: Option<wireless::Frames<'a>>,
+    single: bool,
+}
+impl<'a> Iterator for Observations<'a> {
+    type Item = Cow<'a, Record>;
+    fn next(&mut self) -> Option<Self::Item> {
+        if let Some(frames) = &mut self.frames {
+            let bytes = frames.next()?;
+            return Some(Cow::Owned(Record {
+                mono_ns: self.record.mono_ns,
+                wall_ns: self.record.wall_ns,
+                source: self.record.source,
+                kind: RecordKind::Frame,
+                payload: bytes.to_vec(),
+            }));
+        }
+        if !self.single {
+            return None;
+        }
+        self.single = false;
+        Some(Cow::Borrowed(self.record))
     }
 }
 

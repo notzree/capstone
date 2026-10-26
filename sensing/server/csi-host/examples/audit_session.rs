@@ -127,87 +127,96 @@ fn run() -> Result<(), Box<dyn Error>> {
     for item in reader.by_ref() {
         let record = item?;
         inspector.push(&record);
-        if record.kind != RecordKind::Frame {
-            note_error(
-                format!("{:?}:{:?}", record.kind, record.payload),
-                record.mono_ns,
-                record.source,
-            );
-            continue;
-        }
-        let (header, message) = match frame::decode(&record.payload) {
-            Ok(decoded) => decoded,
+        let observations = match record.observations() {
+            Ok(observations) => observations,
             Err(error) => {
-                note_error(format!("decode:{error:?}"), record.mono_ns, record.source);
+                note_error(format!("batch:{error:?}"), record.mono_ns, record.source);
                 continue;
             }
         };
-        let node = nodes.entry((header.node, header.epoch)).or_default();
-        node.sources.insert(record.source);
-        match message {
-            Message::Hello(hello) => {
-                node.roles = Some(json!({"tx": hello.roles.tx, "rx": hello.roles.rx}))
-            }
-            Message::Counters(c) => {
-                node.first.get_or_insert(c);
-                node.last = Some(c);
-                node.snapshots += 1;
-            }
-            Message::TimeProbe(_) => host_to_node_exports += 1,
-            Message::TimeEcho(_) => {}
-            Message::Csi(c) => {
-                if c.source_mac == header.node.0 {
-                    self_captures += 1;
-                }
-                let Some(probe) = c.probe else {
-                    unattributed_csi += 1;
-                    continue;
-                };
-                if probe.tx.0 != c.source_mac {
-                    mac_probe_mismatch += 1;
-                }
-                let link = links
-                    .entry((
-                        header.node,
-                        header.epoch,
-                        probe.tx,
-                        probe.epoch,
-                        probe.schedule,
-                    ))
-                    .or_default();
-                link.records += 1;
-                link.first_seq.get_or_insert(probe.seq);
-                link.last_seq = Some(probe.seq);
-                link.first_node_us.get_or_insert(c.node_time_us);
-                if let Some(previous) = link.last_node_us {
-                    if let Some(interval) = c.node_time_us.checked_sub(previous) {
-                        link.intervals_us.push(interval as f64);
-                    } else {
-                        link.timestamp_regressions += 1;
-                    }
-                }
-                link.last_node_us = Some(c.node_time_us);
-                link.rssi_dbm.push(f64::from(c.rx.rssi));
-                link.noise_floor_dbm.push(f64::from(c.rx.noise_floor));
-                link.probes.push(probe.seq, record.mono_ns);
-                link.raw.insert(Sha256::digest(c.data).into());
-                let layout = format!(
-                    "sig_mode={} mcs={} cwb={} sgi={} stbc={} channel={} len={} first_word_invalid={} gain={:?}",
-                    c.rx.sig_mode,
-                    c.rx.mcs,
-                    c.rx.cwb,
-                    c.rx.sgi,
-                    c.rx.stbc,
-                    c.rx.channel,
-                    c.data.len(),
-                    c.first_word_invalid,
-                    c.rx.gain
+        for record in observations {
+            if record.kind != RecordKind::Frame {
+                note_error(
+                    format!("{:?}:{:?}", record.kind, record.payload),
+                    record.mono_ns,
+                    record.source,
                 );
-                *link.layouts.entry(layout).or_default() += 1;
-                // Bounded diagnostic samples retain timestamps for external schedule analysis.
-                if link.samples.len() < 32 {
-                    link.samples.push(json!({"host_mono_ns":record.mono_ns,"node_time_us":c.node_time_us,
+                continue;
+            }
+            let (header, message) = match frame::decode(&record.payload) {
+                Ok(decoded) => decoded,
+                Err(error) => {
+                    note_error(format!("decode:{error:?}"), record.mono_ns, record.source);
+                    continue;
+                }
+            };
+            let node = nodes.entry((header.node, header.epoch)).or_default();
+            node.sources.insert(record.source);
+            match message {
+                Message::Hello(hello) => {
+                    node.roles = Some(json!({"tx": hello.roles.tx, "rx": hello.roles.rx}))
+                }
+                Message::Counters(c) => {
+                    node.first.get_or_insert(c);
+                    node.last = Some(c);
+                    node.snapshots += 1;
+                }
+                Message::TimeProbe(_) => host_to_node_exports += 1,
+                Message::TimeEcho(_) => {}
+                Message::Csi(c) => {
+                    if c.source_mac == header.node.0 {
+                        self_captures += 1;
+                    }
+                    let Some(probe) = c.probe else {
+                        unattributed_csi += 1;
+                        continue;
+                    };
+                    if probe.tx.0 != c.source_mac {
+                        mac_probe_mismatch += 1;
+                    }
+                    let link = links
+                        .entry((
+                            header.node,
+                            header.epoch,
+                            probe.tx,
+                            probe.epoch,
+                            probe.schedule,
+                        ))
+                        .or_default();
+                    link.records += 1;
+                    link.first_seq.get_or_insert(probe.seq);
+                    link.last_seq = Some(probe.seq);
+                    link.first_node_us.get_or_insert(c.node_time_us);
+                    if let Some(previous) = link.last_node_us {
+                        if let Some(interval) = c.node_time_us.checked_sub(previous) {
+                            link.intervals_us.push(interval as f64);
+                        } else {
+                            link.timestamp_regressions += 1;
+                        }
+                    }
+                    link.last_node_us = Some(c.node_time_us);
+                    link.rssi_dbm.push(f64::from(c.rx.rssi));
+                    link.noise_floor_dbm.push(f64::from(c.rx.noise_floor));
+                    link.probes.push(probe.seq, record.mono_ns);
+                    link.raw.insert(Sha256::digest(c.data).into());
+                    let layout = format!(
+                        "sig_mode={} mcs={} cwb={} sgi={} stbc={} channel={} len={} first_word_invalid={} gain={:?}",
+                        c.rx.sig_mode,
+                        c.rx.mcs,
+                        c.rx.cwb,
+                        c.rx.sgi,
+                        c.rx.stbc,
+                        c.rx.channel,
+                        c.data.len(),
+                        c.first_word_invalid,
+                        c.rx.gain
+                    );
+                    *link.layouts.entry(layout).or_default() += 1;
+                    // Bounded diagnostic samples retain timestamps for external schedule analysis.
+                    if link.samples.len() < 32 {
+                        link.samples.push(json!({"host_mono_ns":record.mono_ns,"node_time_us":c.node_time_us,
                         "radio_time_us":c.rx_timestamp_us,"capture_seq":c.capture_seq,"probe_seq":probe.seq}));
+                    }
                 }
             }
         }

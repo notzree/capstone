@@ -1,0 +1,25 @@
+{
+  "rust_passed": 134,
+  "rust_failed": 0,
+  "python_6_passed": true,
+  "gateway_scan": {
+    "visible_ap_count": 18,
+    "exact_target_matches": 0,
+    "association_reason": "NoAccessPointFound"
+  },
+  "computer_channel": 40,
+  "computer_band_ghz": 5,
+  "physical_udp_records": 0,
+  "physical_acceptance": "pending: accessible target 2.4 GHz AP",
+  "clippy": "passed: all targets, warnings denied",
+  "nostd": "passed",
+  "host_format": "passed",
+  "firmware_format": "passed",
+  "firmware_release_builds": [
+    "pair,gateway",
+    "pair,wireless",
+    "pair"
+  ],
+  "duplicate_echo_regression": "failed before fix; passed after single-use correlation",
+  "final_flash_verification": "both board image digests and manifest references match"
+}

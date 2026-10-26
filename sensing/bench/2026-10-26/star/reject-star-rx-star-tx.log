@@ -1,0 +1,167 @@
+   Compiling compiler_builtins v0.1.160 (/private/tmp/capstone-rust-verification/rustup/toolchains/esp-wireless/lib/rustlib/src/rust/library/compiler-builtins/compiler-builtins)
+   Compiling core v0.0.0 (/private/tmp/capstone-rust-verification/rustup/toolchains/esp-wireless/lib/rustlib/src/rust/library/core)
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling esp-metadata-generated v0.5.3
+   Compiling litrs v1.0.0
+   Compiling hashbrown v0.17.1
+   Compiling equivalent v1.0.2
+   Compiling serde_core v1.0.229
+   Compiling serde v1.0.229
+   Compiling somni-parser v0.3.1
+   Compiling ryu v1.0.23
+   Compiling itoa v1.0.18
+   Compiling unsafe-libyaml v0.2.11
+   Compiling ident_case v1.0.1
+   Compiling fnv v1.0.7
+   Compiling heapless v0.9.3
+   Compiling embedded-io-async v0.6.1
+   Compiling heapless v0.8.0
+   Compiling strsim v0.11.1
+   Compiling embassy-sync v0.8.0
+   Compiling esp-rom-sys v0.1.5
+   Compiling indexmap v2.14.0
+   Compiling embassy-sync v0.7.2
+   Compiling embassy-sync v0.6.2
+   Compiling document-features v0.2.12
+   Compiling esp-sync v0.3.0
+   Compiling version_check v0.9.5
+   Compiling autocfg v1.5.1
+   Compiling portable-atomic v1.15.0
+   Compiling embedded-hal-async v1.0.0
+   Compiling winnow v1.0.4
+   Compiling xtensa-lx-rt v0.23.0
+   Compiling generic-array v0.14.7
+   Compiling somni-expr v0.3.2
+   Compiling esp32 v0.41.0
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling embassy-hal-internal v0.4.0
+   Compiling syn v3.0.4
+   Compiling syn v2.0.119
+   Compiling num-traits v0.2.19
+   Compiling heck v0.5.0
+   Compiling paste v1.0.15
+   Compiling instability v0.3.13
+   Compiling indoc v2.0.7
+   Compiling termcolor v1.4.1
+   Compiling rustversion v1.0.23
+   Compiling somni-template v0.3.2
+   Compiling log v0.4.34
+   Compiling esp-println v0.18.0
+   Compiling toml_parser v1.1.3+spec-1.1.0
+   Compiling embassy-time-driver v0.2.2
+   Compiling jiff-core v0.1.0
+   Compiling darling_core v0.24.1
+   Compiling darling_core v0.21.3
+   Compiling toml_edit v0.25.13+spec-1.1.0
+   Compiling proc-macro-crate v3.5.0
+   Compiling serde_derive v1.0.229
+   Compiling bitfield-macros v0.19.5
+   Compiling xtensa-lx-rt-proc-macros v0.5.0
+   Compiling strum_macros v0.27.2
+   Compiling esp-hal-procmacros v0.23.0
+   Compiling delegate v0.13.5
+   Compiling darling_core v0.20.11
+   Compiling darling_macro v0.24.1
+   Compiling darling_macro v0.21.3
+   Compiling embassy-time-queue-utils v0.3.2
+   Compiling esp-wifi-sys-esp32 v0.3.0
+   Compiling darling v0.24.1
+   Compiling darling v0.21.3
+   Compiling esp32 v0.42.0
+   Compiling jiff v0.2.35
+   Compiling esp-storage v0.10.0
+   Compiling alloc v0.0.0 (/private/tmp/capstone-rust-verification/rustup/toolchains/esp-wireless/lib/rustlib/src/rust/library/alloc)
+   Compiling embassy-executor v0.10.0
+   Compiling xarxa-driver v0.1.0
+   Compiling darling_macro v0.20.11
+   Compiling portable_atomic_enum_macros v0.2.1
+   Compiling docsplay-macros v0.1.2
+   Compiling darling v0.20.11
+   Compiling num-derive v0.4.2
+   Compiling enumset_derive v0.15.0
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Checking critical-section v1.2.0
+    Checking stable_deref_trait v1.2.1
+    Checking byteorder v1.5.0
+    Checking cfg-if v1.0.4
+    Checking futures-core v0.3.34
+    Checking typenum v1.20.1
+    Checking futures-sink v0.3.34
+    Checking hash32 v0.3.1
+    Checking embedded-io v0.6.1
+    Checking embedded-io v0.7.1
+    Checking embedded-io-async v0.7.0
+    Checking pin-project-lite v0.2.17
+    Checking futures-task v0.3.34
+    Checking xtensa-lx v0.13.0
+    Checking futures-util v0.3.34
+    Checking nb v1.1.0
+    Checking embedded-hal v1.0.0
+    Checking nb v0.1.3
+    Checking as-slice v0.2.1
+    Checking void v1.0.2
+    Checking vcell v0.1.3
+    Checking embedded-hal v0.2.7
+    Checking aligned v0.4.3
+    Checking hybrid-array v0.4.15
+    Checking embedded-storage v0.3.1
+    Checking block-device-driver v0.2.0
+    Checking embedded-storage-async v0.4.1
+    Checking enumset v1.1.14
+    Checking gcd v2.3.0
+    Checking embassy-futures v0.1.2
+    Checking esp-config v0.8.0
+    Checking fugit v0.5.0
+    Checking sdio v0.5.1
+    Checking static_cell v2.1.1
+    Checking block-buffer v0.12.1
+    Checking crypto-common v0.2.2
+    Checking block-buffer v0.10.4
+   Compiling serde_yaml v0.9.34+deprecated
+    Checking crypto-common v0.1.7
+    Checking embedded-can v0.4.1
+    Checking embassy-embedded-hal v0.6.0
+    Checking digest v0.10.7
+    Checking strum v0.27.2
+    Checking embassy-net-driver v0.2.0
+    Checking ufmt-write v0.1.0
+    Checking rand_core v0.9.5
+    Checking rand_core v0.6.4
+    Checking bytemuck v1.25.2
+    Checking bitfield v0.19.5
+    Checking rand_core v0.10.1
+    Checking const-default v1.0.0
+    Checking linked_list_allocator v0.10.6
+    Checking digest v0.11.3
+    Checking rlsf v0.2.3
+    Checking allocator-api2 v0.3.1
+    Checking embassy-executor-timer-queue v0.1.0
+    Checking esp-radio-rtos-driver v0.4.2
+    Checking sha1 v0.11.0
+    Checking sha2 v0.11.0
+    Checking cordyceps v0.3.5
+    Checking portable_atomic_enum v0.3.1
+   Compiling embassy-executor-macros v0.8.0
+    Checking csi-protocol v0.1.0 (/Users/notzree/code/capstone/sensing/crates/csi-protocol)
+    Checking docsplay v0.1.3
+    Checking csi-node v0.1.0 (/Users/notzree/code/capstone/sensing/crates/csi-node)
+    Checking embassy-time v0.5.1
+   Compiling esp-hal v1.2.2
+   Compiling esp-alloc v0.11.0
+   Compiling esp-phy v0.3.0
+   Compiling esp-rtos v0.4.0
+   Compiling esp-radio v1.0.0-beta.1
+   Compiling esp-bootloader-esp-idf v0.6.0
+   Compiling esp-backtrace v0.20.0
+error: failed to run custom build command for `csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)`
+
+Caused by:
+  process didn't exit successfully: `/Users/notzree/code/capstone/sensing/firmware/target/debug/build/csi-esp-0310d134f89f9c10/build-script-build` (exit status: 101)
+  --- stderr
+
+  thread 'main' (8990061) panicked at csi-esp/build.rs:5:9:
+  star-rx and star-tx are mutually exclusive
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...

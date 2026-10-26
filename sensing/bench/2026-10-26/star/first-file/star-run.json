@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "delivery": null,
+  "drain": null,
+  "duration_seconds": 5,
+  "file_mode": true,
+  "frozen_roster": [
+    {
+      "build_id": "0bb666e32a1018b5",
+      "capabilities": 1,
+      "channel": 6,
+      "epoch": 3015166811,
+      "id": "b0:b2:1c:0b:07:1c",
+      "owner": "00:00:00:00:00:00",
+      "owner_epoch": 0,
+      "protocol": 1,
+      "run": 0,
+      "state": "Idle"
+    }
+  ],
+  "host_run_uuid": "01a17904-b204-72e7-8e07-54caf4cee5ab",
+  "kit_id": 1,
+  "label_time_basis": "host_arrival_proxy",
+  "receiver": {
+    "build_id": "93547dee451a93dc",
+    "capabilities": 2,
+    "channel": 6,
+    "epoch": 3662842339,
+    "id": "a0:b7:65:dd:e9:3c",
+    "owner": "00:00:00:00:00:00",
+    "owner_epoch": 0,
+    "protocol": 1,
+    "run": 0,
+    "state": "Ready"
+  },
+  "requested_per_tx_hz": 10,
+  "schema": "csi-star-run/1",
+  "session_id": "01a17904-b204-72e7-8e07-54cbc5f7eea3",
+  "sink_input_drops": 0,
+  "stop_confirmed": false,
+  "stop_reason": "drain_timeout; TX lease fallback, unconfirmed stop",
+  "stream_mode": false
+}

@@ -7,34 +7,53 @@
 compile_error!("enable at least one capability: tx, rx, or pair");
 
 extern crate alloc;
+#[cfg(any(feature = "star-rx", feature = "star-tx"))]
+mod star;
+include!(concat!(env!("OUT_DIR"), "/build_id.rs"));
+#[cfg(feature = "wireless")]
+mod wireless;
+use csi_protocol::NodeId;
+#[cfg(not(feature = "star-tx"))]
 use csi_protocol::{
-    Chip, Counters, Csi, CsiConfig, Header, Hello, Message, NodeId, Probe, Roles, RxMeta, TimeEcho,
-    frame, stream,
+    Chip, Counters, Csi, CsiConfig, Header, Hello, Message, Probe, Roles, RxMeta, TimeEcho, frame,
+    stream,
 };
 use embassy_executor::Spawner;
 use embassy_futures::select::{Either, select};
 use embassy_sync::{blocking_mutex::raw::CriticalSectionRawMutex, channel::Channel};
-#[cfg(feature = "tx")]
+#[cfg(any(all(feature = "tx", not(feature = "star-tx")), feature = "wireless"))]
 use embassy_time::Duration;
 use embassy_time::Timer;
+#[cfg(not(any(feature = "wireless", feature = "star-tx")))]
+use esp_hal::uart::Uart;
+#[cfg(not(feature = "star-tx"))]
 use esp_hal::{
     Async,
-    clock::CpuClock,
-    time::Instant,
-    timer::timg::TimerGroup,
-    uart::{Uart, UartRx, UartTx},
+    uart::{UartRx, UartTx},
 };
+use esp_hal::{clock::CpuClock, time::Instant, timer::timg::TimerGroup};
 use esp_radio::wifi::{
     Config, PowerSaveMode, SecondaryChannel, WifiController, sta::StationConfig,
 };
-use portable_atomic::{AtomicU32, AtomicU64, Ordering};
+#[cfg(not(feature = "star-tx"))]
+use portable_atomic::{AtomicU8, AtomicU32};
+use portable_atomic::{AtomicU64, Ordering};
 use {esp_backtrace as _, esp_println as _};
 
 esp_bootloader_esp_idf::esp_app_desc!();
+#[cfg(not(any(feature = "star-rx", feature = "star-tx")))]
 const CHANNEL: u8 = 6;
+#[cfg(any(feature = "star-rx", feature = "star-tx"))]
+const CHANNEL: u8 = star::channel();
+#[cfg(not(feature = "star-tx"))]
+static RADIO_CHANNEL: AtomicU8 = AtomicU8::new(CHANNEL);
+#[cfg(not(any(feature = "wireless", feature = "star-tx")))]
 const BAUD: u32 = 921600;
+#[cfg(not(feature = "star-tx"))]
 const POOL: usize = 32;
+#[cfg(not(feature = "star-tx"))]
 const TX_ROLE: bool = cfg!(feature = "tx");
+#[cfg(not(feature = "star-tx"))]
 const RX_ROLE: bool = cfg!(feature = "rx");
 #[cfg(feature = "pair")]
 const SCHEDULE: u32 = 1;
@@ -53,6 +72,7 @@ static OWN_MAC: AtomicU64 = AtomicU64::new(0);
 fn mac_key(mac: [u8; 6]) -> u64 {
     u64::from_le_bytes([mac[0], mac[1], mac[2], mac[3], mac[4], mac[5], 0, 0])
 }
+#[cfg(not(feature = "star-tx"))]
 const CSI_CONFIG: CsiConfig = CsiConfig {
     lltf: true,
     htltf: true,
@@ -63,6 +83,7 @@ const CSI_CONFIG: CsiConfig = CsiConfig {
     shift: 0,
 };
 
+#[cfg(not(feature = "star-tx"))]
 struct Capture {
     seq: u32,
     node_us: u64,
@@ -73,20 +94,36 @@ struct Capture {
     rx: RxMeta,
     len: usize,
     data: [u8; csi_protocol::MAX_CSI_LEN],
+    #[cfg(feature = "star-rx")]
+    tag: csi_protocol::star::ProbeTag,
 }
+#[cfg(not(feature = "star-tx"))]
 static CAPTURES: Channel<CriticalSectionRawMutex, Capture, POOL> = Channel::new();
+#[cfg(not(feature = "star-tx"))]
 enum Control {
     Hello,
     Counters,
     Echo(TimeEcho),
+    #[cfg(feature = "star-rx")]
+    Star(csi_protocol::star::Packet),
+    #[cfg(feature = "star-rx")]
+    Drain(csi_protocol::star::Packet),
 }
-static CONTROL: Channel<CriticalSectionRawMutex, Control, 8> = Channel::new();
+#[cfg(not(feature = "star-tx"))]
+static CONTROL: Channel<CriticalSectionRawMutex, Control, 32> = Channel::new();
+#[cfg(not(feature = "star-tx"))]
 static CALLBACKS: AtomicU64 = AtomicU64::new(0);
+#[cfg(not(feature = "star-tx"))]
 static FILTERED: AtomicU64 = AtomicU64::new(0);
+#[cfg(not(feature = "star-tx"))]
 static CAPTURED: AtomicU64 = AtomicU64::new(0);
+#[cfg(not(feature = "star-tx"))]
 static POOL_DROPS: AtomicU64 = AtomicU64::new(0);
+#[cfg(not(feature = "star-tx"))]
 static EXPORT_DROPS: AtomicU64 = AtomicU64::new(0);
+#[cfg(not(feature = "star-tx"))]
 static EXPORT_BYTES: AtomicU64 = AtomicU64::new(0);
+#[cfg(not(feature = "star-tx"))]
 static HIGH_WATER: AtomicU32 = AtomicU32::new(0);
 static TX_REQUESTED: AtomicU64 = AtomicU64::new(0);
 static TX_ACCEPTED: AtomicU64 = AtomicU64::new(0);
@@ -94,17 +131,41 @@ fn now_us() -> u64 {
     Instant::now().duration_since_epoch().as_micros()
 }
 
+#[cfg(not(feature = "star-tx"))]
+fn firmware_version() -> [u8; 3] {
+    if cfg!(any(feature = "star-rx", feature = "star-tx")) {
+        [0, 4, 0]
+    } else if cfg!(feature = "wireless") {
+        [0, 3, 1]
+    } else {
+        [0, 2, 2]
+    }
+}
+
 #[cfg(feature = "rx")]
 fn capture(info: esp_radio::wifi::csi::WifiCsiInfo<'_>) {
     CALLBACKS.fetch_add(1, Ordering::Relaxed);
     let node_us = now_us();
-    let Some(probe) = Probe::find(info.payload()) else {
+    // Direct ESP-NOW action frames only; exclude AP-forwarded IP traffic.
+    if info.header().first().map(|b| b & 0xfc) != Some(0xd0)
+        || info.header().get(1).map(|b| b & 3) != Some(0)
+    {
+        FILTERED.fetch_add(1, Ordering::Relaxed);
+        return;
+    }
+    #[cfg(feature = "star-rx")]
+    let Some((probe, tag)) = csi_protocol::star::ProbeTag::sensing(info.payload()) else {
+        FILTERED.fetch_add(1, Ordering::Relaxed);
+        return;
+    };
+    #[cfg(not(feature = "star-rx"))]
+    let Some(probe) = csi_protocol::wireless::sensing_probe(info.payload()) else {
         FILTERED.fetch_add(1, Ordering::Relaxed);
         return;
     };
     if mac_key(probe.tx.0) == OWN_MAC.load(Ordering::Relaxed)
         || probe.tx.0 != *info.mac()
-        || info.channel() != CHANNEL
+        || info.channel() != RADIO_CHANNEL.load(Ordering::Relaxed)
         || info.buf().len() > csi_protocol::MAX_CSI_LEN
     {
         FILTERED.fetch_add(1, Ordering::Relaxed);
@@ -117,9 +178,14 @@ fn capture(info: esp_radio::wifi::csi::WifiCsiInfo<'_>) {
     {
         PEER_PROBES.signal((probe, turn, node_us));
     }
+    #[cfg(not(feature = "star-rx"))]
     let seq = CAPTURED.fetch_add(1, Ordering::Relaxed) as u32;
+    #[cfg(feature = "star-rx")]
+    let seq = 0;
     let mut record = Capture {
         seq,
+        #[cfg(feature = "star-rx")]
+        tag,
         node_us,
         radio_us: info.timestamp().duration_since_epoch().as_micros() as u32,
         mac: *info.mac(),
@@ -163,6 +229,7 @@ fn capture(info: esp_radio::wifi::csi::WifiCsiInfo<'_>) {
     }
 }
 
+#[cfg(not(feature = "star-tx"))]
 fn counters() -> Counters {
     Counters {
         node_time_us: now_us(),
@@ -178,14 +245,70 @@ fn counters() -> Counters {
     }
 }
 
+#[cfg(not(feature = "star-tx"))]
 #[embassy_executor::task]
 async fn export(mut uart: UartTx<'static, Async>, node: NodeId, epoch: u32) {
     let mut encoder = stream::Encoder::new();
     let mut seq = 0u32;
+    #[cfg(feature = "star-rx")]
+    let mut drain: Option<csi_protocol::star::Packet> = None;
+    #[cfg(feature = "star-rx")]
+    let mut exported = 0u64;
     // Terminate ROM/bootloader console output so the host can resynchronize.
     uart.write_async(&[0]).await.ok();
     loop {
+        #[cfg(not(feature = "star-rx"))]
         let item = select(CONTROL.receive(), CAPTURES.receive()).await;
+        #[cfg(feature = "star-rx")]
+        let item = if let Some(mut p) = drain.take() {
+            match star::OUTPUT.try_receive() {
+                Ok(c) => {
+                    drain = Some(p);
+                    Either::Second(c)
+                }
+                Err(_) => {
+                    if let csi_protocol::star::Body::DrainComplete {
+                        export,
+                        exported: total,
+                        ..
+                    } = &mut p.body
+                    {
+                        *export = seq.wrapping_sub(1);
+                        *total = exported;
+                    }
+                    let mut bytes = [0; 254];
+                    let n = p.encode_stream(&mut bytes).unwrap();
+                    uart_write(&mut uart, &bytes[..n]).await;
+                    star::DRAINED.signal(());
+                    continue;
+                }
+            }
+        } else {
+            select(CONTROL.receive(), star::OUTPUT.receive()).await
+        };
+        #[cfg(feature = "star-rx")]
+        match &item {
+            Either::First(Control::Star(p)) => {
+                if matches!(
+                    p.body,
+                    csi_protocol::star::Body::RunState {
+                        state: csi_protocol::star::State::Starting,
+                        ..
+                    }
+                ) {
+                    exported = 0;
+                }
+                let mut bytes = [0; 254];
+                let n = p.encode_stream(&mut bytes).unwrap();
+                uart_write(&mut uart, &bytes[..n]).await;
+                continue;
+            }
+            Either::First(Control::Drain(p)) => {
+                drain = Some(*p);
+                continue;
+            }
+            _ => {}
+        }
         let message = match &item {
             Either::First(Control::Hello) => Message::Hello(Hello {
                 chip: Chip::Esp32,
@@ -193,9 +316,9 @@ async fn export(mut uart: UartTx<'static, Async>, node: NodeId, epoch: u32) {
                     tx: TX_ROLE,
                     rx: RX_ROLE,
                 },
-                firmware_version: [0, 2, 2],
-                firmware_commit: [0; 8],
-                channel: CHANNEL,
+                firmware_version: firmware_version(),
+                firmware_commit: BUILD_ID,
+                channel: RADIO_CHANNEL.load(Ordering::Relaxed),
                 secondary_channel: 0,
                 csi_config: CSI_CONFIG,
                 pool_capacity: POOL as u16,
@@ -205,6 +328,8 @@ async fn export(mut uart: UartTx<'static, Async>, node: NodeId, epoch: u32) {
                 node_tx_us: now_us(),
                 ..*echo
             }),
+            #[cfg(feature = "star-rx")]
+            Either::First(Control::Star(_) | Control::Drain(_)) => unreachable!(),
             Either::Second(c) => Message::Csi(Csi {
                 capture_seq: c.seq,
                 node_time_us: c.node_us,
@@ -220,23 +345,40 @@ async fn export(mut uart: UartTx<'static, Async>, node: NodeId, epoch: u32) {
             .encode(&Header { node, epoch, seq }, &message)
             .expect("bounded protocol frame");
         seq = seq.wrapping_add(1);
-        let mut sent = 0;
-        while sent < bytes.len() {
-            match uart.write_async(&bytes[sent..]).await {
-                Ok(n) if n > 0 => {
-                    sent += n;
-                    EXPORT_BYTES.fetch_add(n as u64, Ordering::Relaxed);
-                }
-                _ => {
-                    EXPORT_DROPS.fetch_add(1, Ordering::Relaxed);
-                    uart.write_async(&[0]).await.ok();
-                    break;
-                }
-            }
+        let success = uart_write(&mut uart, bytes).await;
+        #[cfg(feature = "star-rx")]
+        if success && matches!(item, Either::Second(_)) {
+            exported += 1;
         }
+        #[cfg(not(feature = "star-rx"))]
+        let _ = success;
     }
 }
 
+#[cfg(not(feature = "star-tx"))]
+async fn uart_write(uart: &mut UartTx<'static, Async>, bytes: &[u8]) -> bool {
+    let mut sent = 0;
+    while sent < bytes.len() {
+        match embassy_time::with_timeout(
+            embassy_time::Duration::from_millis(250),
+            uart.write_async(&bytes[sent..]),
+        )
+        .await
+        {
+            Ok(Ok(n)) if n > 0 => {
+                sent += n;
+                EXPORT_BYTES.fetch_add(n as u64, Ordering::Relaxed);
+            }
+            _ => {
+                EXPORT_DROPS.fetch_add(1, Ordering::Relaxed);
+                return false;
+            }
+        }
+    }
+    true
+}
+
+#[cfg(not(feature = "star-tx"))]
 #[embassy_executor::task]
 async fn requests(mut uart: UartRx<'static, Async>) {
     let mut deframer = stream::Deframer::new();
@@ -246,6 +388,15 @@ async fn requests(mut uart: UartRx<'static, Async>) {
             Ok(n) => {
                 let mut input = &bytes[..n];
                 while let Some(result) = deframer.push(&mut input) {
+                    #[cfg(feature = "star-rx")]
+                    if let Ok(raw) = result
+                        && raw.starts_with(csi_protocol::star::MAGIC)
+                    {
+                        if let Ok(p) = csi_protocol::star::Packet::decode(raw) {
+                            star::HOST.try_send(p).ok();
+                        }
+                        continue;
+                    }
                     if let Ok(raw) = result
                         && let Ok((_, Message::TimeProbe(probe))) = frame::decode(raw)
                     {
@@ -268,6 +419,7 @@ async fn requests(mut uart: UartRx<'static, Async>) {
     }
 }
 
+#[cfg(not(feature = "star-tx"))]
 #[embassy_executor::task]
 async fn announcements() {
     loop {
@@ -277,7 +429,7 @@ async fn announcements() {
     }
 }
 
-#[cfg(feature = "rx")]
+#[cfg(any(feature = "rx", feature = "star-tx"))]
 #[embassy_executor::task]
 async fn keep_sniffer(sniffer: esp_radio::wifi::sniffer::Sniffer) {
     loop {
@@ -286,7 +438,7 @@ async fn keep_sniffer(sniffer: esp_radio::wifi::sniffer::Sniffer) {
     }
 }
 
-#[cfg(feature = "tx")]
+#[cfg(any(all(feature = "tx", not(feature = "star-tx")), feature = "wireless"))]
 async fn wait_periodic(next_us: &mut u64, period_us: u64) {
     let now = now_us();
     if *next_us > now {
@@ -296,7 +448,7 @@ async fn wait_periodic(next_us: &mut u64, period_us: u64) {
     *next_us = now_us().saturating_add(period_us);
 }
 
-#[cfg(feature = "tx")]
+#[cfg(all(feature = "tx", not(any(feature = "wireless", feature = "star-tx"))))]
 #[embassy_executor::task]
 async fn drain_esp_now(mut receiver: esp_radio::esp_now::EspNowReceiver) {
     // CSI is handled independently in capture(). Drain the driver's additional
@@ -306,23 +458,33 @@ async fn drain_esp_now(mut receiver: esp_radio::esp_now::EspNowReceiver) {
     }
 }
 
-#[cfg(feature = "tx")]
-async fn send_probe(sender: &mut esp_radio::esp_now::EspNowSender, body: &[u8]) {
+#[cfg(any(feature = "tx", feature = "wireless", feature = "star-rx"))]
+async fn send_probe(sender: &mut esp_radio::esp_now::EspNowSender, body: &[u8]) -> bool {
     TX_REQUESTED.fetch_add(1, Ordering::Relaxed);
     // Keep the pending future alive to completion, as required by this driver.
     let mut sending = core::pin::pin!(sender.send_async(&[0xff; 6], body));
     let first =
         core::future::poll_fn(|cx| core::task::Poll::Ready(sending.as_mut().poll(cx))).await;
     match first {
-        core::task::Poll::Ready(Err(_)) => {}
+        core::task::Poll::Ready(Err(_)) => false,
         core::task::Poll::Ready(Ok(())) => {
             TX_ACCEPTED.fetch_add(1, Ordering::Relaxed);
+            true
         }
         core::task::Poll::Pending => {
             TX_ACCEPTED.fetch_add(1, Ordering::Relaxed);
             // Broadcast completion does not establish peer delivery.
-            match select(sending.as_mut(), Timer::after_secs(2)).await {
-                Either::First(_) => {}
+            match select(
+                sending.as_mut(),
+                Timer::after_millis(if cfg!(any(feature = "star-rx", feature = "star-tx")) {
+                    250
+                } else {
+                    2000
+                }),
+            )
+            .await
+            {
+                Either::First(result) => result.is_ok(),
                 // Keep the pending future alive until the whole radio is reset;
                 // a missing completion callback must not freeze this node forever.
                 Either::Second(_) => esp_hal::system::software_reset(),
@@ -352,7 +514,7 @@ async fn wait_response(
     }
 }
 
-#[cfg(feature = "tx")]
+#[cfg(all(feature = "tx", not(any(feature = "wireless", feature = "star-tx"))))]
 #[embassy_executor::task]
 async fn transmit(mut sender: esp_radio::esp_now::EspNowSender, node: NodeId, epoch: u32) {
     #[cfg(feature = "pair")]
@@ -436,16 +598,22 @@ async fn transmit(mut sender: esp_radio::esp_now::EspNowSender, node: NodeId, ep
 async fn main(spawner: Spawner) -> ! {
     let p = esp_hal::init(esp_hal::Config::default().with_cpu_clock(CpuClock::max()));
     esp_alloc::heap_allocator!(#[esp_hal::ram(reclaimed)] size: 65536);
+    #[cfg(feature = "gateway")]
+    esp_alloc::heap_allocator!(size: 32768);
     let timg = TimerGroup::new(p.TIMG0);
     esp_rtos::start(timg.timer0, p.FROM_CPU_INTR0);
+    #[cfg(not(any(feature = "wireless", feature = "star-tx")))]
     let uart = Uart::new(
         p.UART0,
-        esp_hal::uart::Config::default().with_baudrate(BAUD),
+        esp_hal::uart::Config::default()
+            .with_baudrate(BAUD)
+            .with_rx(esp_hal::uart::RxConfig::default().with_fifo_full_threshold(32)),
     )
     .expect("UART0")
     .with_tx(p.GPIO1)
     .with_rx(p.GPIO3)
     .into_async();
+    #[cfg(not(any(feature = "wireless", feature = "star-tx")))]
     let (uart_rx, uart_tx) = uart.split();
     let mut controller = WifiController::new(p.WIFI, Default::default()).expect("Wi-Fi init");
     controller
@@ -454,6 +622,7 @@ async fn main(spawner: Spawner) -> ! {
     controller
         .set_power_saving(PowerSaveMode::None)
         .expect("disable modem sleep");
+    #[cfg(not(feature = "wireless"))]
     controller
         .set_channel(CHANNEL, SecondaryChannel::None)
         .expect("fixed channel");
@@ -470,14 +639,27 @@ async fn main(spawner: Spawner) -> ! {
         assert_ne!(node, peer, "peer must be another node");
         PEER_MAC.store(mac_key(peer.0), Ordering::Relaxed);
     }
-    let epoch = esp_hal::rng::Rng::new().random();
-    spawner.spawn(export(uart_tx, node, epoch).unwrap());
-    spawner.spawn(requests(uart_rx).unwrap());
-    spawner.spawn(announcements().unwrap());
-    #[cfg(feature = "rx")]
+    let epoch = esp_hal::rng::Rng::new().random().max(1);
+    #[cfg(not(any(feature = "wireless", feature = "star-tx")))]
     {
-        let sniffer = controller.sniffer();
+        spawner.spawn(export(uart_tx, node, epoch).unwrap());
+        spawner.spawn(requests(uart_rx).unwrap());
+    }
+    #[cfg(feature = "wireless")]
+    {
+        wireless::configure(&mut controller);
+        spawner.spawn(wireless::batch(node, epoch).unwrap());
+    }
+    #[cfg(not(feature = "star-tx"))]
+    spawner.spawn(announcements().unwrap());
+    #[cfg(any(feature = "rx", feature = "star-tx"))]
+    {
+        #[allow(unused_mut)]
+        let mut sniffer = controller.sniffer();
+        #[cfg(any(feature = "star-rx", feature = "star-tx"))]
+        sniffer.set_receive_cb(star::control_callback);
         sniffer.set_promiscuous_mode(true).expect("promiscuous RX");
+        #[cfg(feature = "rx")]
         controller
             .set_csi(
                 esp_radio::wifi::csi::CsiConfig {
@@ -496,7 +678,7 @@ async fn main(spawner: Spawner) -> ! {
         // Move the guard into a keeper task so TX can run with CSI still enabled.
         spawner.spawn(keep_sniffer(sniffer).unwrap());
     }
-    #[cfg(feature = "tx")]
+    #[cfg(any(feature = "tx", feature = "wireless", feature = "star-rx"))]
     {
         use esp_radio::esp_now::{EspNowWifiInterface, PeerInfo, PhyMode, RateConfig, WifiPhyRate};
         let radio = controller.esp_now();
@@ -504,7 +686,11 @@ async fn main(spawner: Spawner) -> ! {
             radio
                 .add_peer(PeerInfo {
                     peer_address: [0xff; 6],
-                    channel: Some(CHANNEL),
+                    channel: if cfg!(feature = "wireless") {
+                        None
+                    } else {
+                        Some(CHANNEL)
+                    },
                     lmk: None,
                     encrypt: false,
                     interface: EspNowWifiInterface::Station,
@@ -523,15 +709,34 @@ async fn main(spawner: Spawner) -> ! {
             )
             .expect("force HT20 MCS0");
         let (manager, sender, receiver) = radio.split();
-        spawner.spawn(drain_esp_now(receiver).unwrap());
-        spawner.spawn(transmit(sender, node, epoch).unwrap());
+        #[cfg(not(any(feature = "wireless", feature = "star-rx", feature = "star-tx")))]
+        {
+            spawner.spawn(drain_esp_now(receiver).unwrap());
+            spawner.spawn(transmit(sender, node, epoch).unwrap());
+        }
+        #[cfg(any(feature = "star-rx", feature = "star-tx"))]
+        {
+            spawner.spawn(star::receive(receiver).unwrap());
+            spawner.spawn(star::radio(sender, node, epoch).unwrap());
+        }
+        #[cfg(feature = "wireless")]
+        {
+            spawner.spawn(wireless::receive(receiver, node).unwrap());
+            spawner.spawn(wireless::radio(sender, node, epoch).unwrap());
+            #[cfg(feature = "gateway")]
+            wireless::start_network(spawner, node);
+            #[cfg(feature = "gateway")]
+            spawner.spawn(wireless::connection(controller).unwrap());
+        }
         // Retain the manager guard while the sender/receiver tasks run.
         loop {
             Timer::after_secs(60).await;
             core::hint::black_box(&manager);
+            #[cfg(all(feature = "wireless", not(feature = "gateway")))]
+            core::hint::black_box(&controller);
         }
     }
-    #[cfg(not(feature = "tx"))]
+    #[cfg(not(any(feature = "tx", feature = "wireless", feature = "star-rx")))]
     loop {
         Timer::after_secs(60).await;
         core::hint::black_box(&controller);

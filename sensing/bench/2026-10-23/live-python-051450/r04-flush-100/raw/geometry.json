@@ -1,0 +1,24 @@
+{
+  "schema": "csi-geometry/1",
+  "room": "unsurveyed-transport-bench",
+  "revision": "unsurveyed-transport-20261023",
+  "units": "m",
+  "origin": "UNSURVEYED placeholder coordinates; acquisition/transport test only.",
+  "notes": "Current physical placement has not been surveyed. All coordinates/orientations are placeholders, not observations.",
+  "nodes": [
+    {
+      "id": "a0:b7:65:dd:e9:3c",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "tier": "upper"
+    },
+    {
+      "id": "b0:b2:1c:0b:07:1c",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "tier": "upper"
+    }
+  ]
+}

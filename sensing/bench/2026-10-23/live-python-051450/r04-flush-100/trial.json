@@ -1,0 +1,96 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1447,
+      "file": "provenance/plan.json",
+      "sha256": "424c0ee6616b15453c8f77b327e033f33c39cfae7e63b6c8d86acb861735334c"
+    },
+    {
+      "bytes": 259,
+      "file": "provenance/hub-config.toml",
+      "sha256": "73d4043f9b67086266aa0f37d1ea95ec1a4d92b9195310b7dc7e87796b4b872c"
+    },
+    {
+      "bytes": 598,
+      "file": "provenance/geometry.json",
+      "sha256": "c49ee1d25ec8cd74dfaf9b10bd1c65d7de17cbc5c8233ab77bc4ca96b9a2a9fc"
+    },
+    {
+      "bytes": 1254,
+      "file": "provenance/plan-normalized.json",
+      "sha256": "73f77ead65372973dee5d206023442b26ce4ec9a3925362816172041b6a2c2d6"
+    },
+    {
+      "bytes": 563120,
+      "file": "provenance/node-0-image.bin",
+      "sha256": "1a0bac5d319248e59006000ecbcfc4c8f04a6a07e335b307e3b8823f7331b6e7"
+    },
+    {
+      "bytes": 14261,
+      "file": "provenance/node-0-build.json",
+      "sha256": "8075ec431786706cbfdebf62485c0f68aef06c3165c2c75442a816d9a47988c7"
+    },
+    {
+      "bytes": 563120,
+      "file": "provenance/node-1-image.bin",
+      "sha256": "749cb0c4478cf6616ab37ddf5172d1f30b3a62e313d50b6d7cd5805143b6e89f"
+    },
+    {
+      "bytes": 14261,
+      "file": "provenance/node-1-build.json",
+      "sha256": "8075ec431786706cbfdebf62485c0f68aef06c3165c2c75442a816d9a47988c7"
+    }
+  ],
+  "complete": true,
+  "export_dir": "export",
+  "firmware_provenance": "operator_declared_image_and_build; not an on-device flash verification",
+  "geometry": {
+    "file": "geometry.json",
+    "revision": "unsurveyed-transport-20261023",
+    "room": "unsurveyed-transport-bench",
+    "sha256": "c49ee1d25ec8cd74dfaf9b10bd1c65d7de17cbc5c8233ab77bc4ca96b9a2a9fc"
+  },
+  "label_timebase": "host_mono_ns",
+  "labels_file": "labels.jsonl",
+  "labels_sha256": "3797618cc4d99fe33f12bffe9b0598e571c5923bfbc4669ae673d17aab5bfc96",
+  "plan": {
+    "activities": [
+      "transport_test"
+    ],
+    "day_id": "2026-10-23",
+    "geometry_revision": "unsurveyed-transport-20261023",
+    "label_uncertainty_ms": 500,
+    "nodes": [
+      {
+        "build_manifest": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/firmware/flash-manifest.json",
+        "channel": 6,
+        "id": "a0:b7:65:dd:e9:3c",
+        "image": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/firmware/pair-a-50.bin",
+        "mode": "pair",
+        "requested_tx_hz": 50.0,
+        "source": "desk-a"
+      },
+      {
+        "build_manifest": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/firmware/flash-manifest.json",
+        "channel": 6,
+        "id": "b0:b2:1c:0b:07:1c",
+        "image": "/Users/notzree/code/capstone/sensing/bench/2026-10-21/mode-comparison/firmware/pair-b-50.bin",
+        "mode": "pair",
+        "requested_tx_hz": 50.0,
+        "source": "desk-b"
+      }
+    ],
+    "notes": "Automated transport test markers, not physical activity labels. Geometry is unsurveyed placeholder data; do not use for tomography or model training. Firmware image files are preserved expected pair-50 artifacts; running Hello identities/roles/config are checked, not a flash readback.",
+    "participant_id": null,
+    "positions": [],
+    "room": "unsurveyed-transport-bench",
+    "schema": "csi-trial-plan/1",
+    "split_group": "hardware-pipeline-test-exclude-training",
+    "trial_id": "r04-flush-100"
+  },
+  "raw_session": "raw",
+  "schema": "csi-trial/1",
+  "session_id": "01a16732-b3b9-711c-a7c6-13c7f1d9b7b3",
+  "stop_reason": "operator_stop",
+  "stopped_mono_ns": 15170458125
+}

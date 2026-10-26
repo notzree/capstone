@@ -1,0 +1,492 @@
+{
+  "name": "r05-flush-20-stalled-reader",
+  "started_utc": "2026-10-23T05:19:29.645220+00:00",
+  "flush_ms": 20,
+  "requested_duration_s": 15,
+  "stalled_secondary_client": true,
+  "raw_complete": true,
+  "trial_complete": true,
+  "sources": [
+    {
+      "name": "desk-a",
+      "state": "active",
+      "records": 739,
+      "valid_frames": 738,
+      "decode_errors": 0,
+      "framing_errors": 1,
+      "foreign_datagrams": 0,
+      "probe_write_errors": 0,
+      "unmatched_echoes": 0,
+      "connects": 1,
+      "disconnects": 0,
+      "stale_transitions": 0,
+      "node": "a0:b7:65:dd:e9:3c",
+      "epoch": 511482621,
+      "epoch_changes": 0,
+      "last_valid_mono_ns": 15169734416,
+      "last_error": null,
+      "connected_at_ns": 128474041
+    },
+    {
+      "name": "desk-b",
+      "state": "active",
+      "records": 759,
+      "valid_frames": 759,
+      "decode_errors": 0,
+      "framing_errors": 0,
+      "foreign_datagrams": 0,
+      "probe_write_errors": 0,
+      "unmatched_echoes": 0,
+      "connects": 1,
+      "disconnects": 0,
+      "stale_transitions": 0,
+      "node": "b0:b2:1c:0b:07:1c",
+      "epoch": 2627803139,
+      "epoch_changes": 0,
+      "last_valid_mono_ns": 15163743583,
+      "last_error": null,
+      "connected_at_ns": 128473416
+    }
+  ],
+  "subscriber_drops": [
+    0
+  ],
+  "live_rows": 1406,
+  "offline_rows": 1406,
+  "live_batches": 1107,
+  "live_decoded_rows": 1333,
+  "consumer_error": null,
+  "decode_errors": [],
+  "host_arrival_to_python_yield_ms": {
+    "count": 1406,
+    "min": 1.404,
+    "p50": 16.965,
+    "p95": 28.867,
+    "p99": 31.888,
+    "max": 40.009,
+    "mean": 17.09623257467994
+  },
+  "after_2s_host_arrival_to_python_yield_ms": {
+    "count": 1229,
+    "min": 1.404,
+    "p50": 16.99,
+    "p95": 28.905,
+    "p99": 31.836,
+    "max": 37.284,
+    "mean": 17.17253376729048
+  },
+  "batch_rows": {
+    "count": 1107,
+    "min": 1.0,
+    "p50": 1.0,
+    "p95": 2.0,
+    "p99": 2.0,
+    "max": 2.0,
+    "mean": 1.2700993676603434
+  },
+  "wall_minus_monotonic_range_us": 86.209,
+  "live_offline_core_mismatch_count": 0,
+  "missing_live_core_after_2s_count": 0,
+  "quality_links": [
+    {
+      "decoded_records": 659,
+      "first_host_mono_ns": 141841375,
+      "gain_records": 0,
+      "last_host_mono_ns": 15169734416,
+      "mapped_records": 237,
+      "receiver": "a0:b7:65:dd:e9:3c",
+      "receiver_epoch": 511482621,
+      "records": 693,
+      "schedule": 1,
+      "stored_samples": 84352,
+      "transmitter": "b0:b2:1c:0b:07:1c",
+      "transmitter_epoch": 2627803139,
+      "valid_samples": 70513,
+      "decoded_fraction": 0.950937950937951,
+      "gain_fraction": 0.0,
+      "mapped_fraction": 0.341991341991342,
+      "valid_fraction_of_decoded_bins": 0.8359375,
+      "host_arrival_rate_hz": 46.0477059633073
+    },
+    {
+      "decoded_records": 674,
+      "first_host_mono_ns": 137675666,
+      "gain_records": 0,
+      "last_host_mono_ns": 15163743583,
+      "mapped_records": 0,
+      "receiver": "b0:b2:1c:0b:07:1c",
+      "receiver_epoch": 2627803139,
+      "records": 713,
+      "schedule": 1,
+      "stored_samples": 86272,
+      "transmitter": "a0:b7:65:dd:e9:3c",
+      "transmitter_epoch": 511482621,
+      "valid_samples": 72118,
+      "decoded_fraction": 0.9453015427769986,
+      "gain_fraction": 0.0,
+      "mapped_fraction": 0.0,
+      "valid_fraction_of_decoded_bins": 0.8359375,
+      "host_arrival_rate_hz": 47.38431929982604
+    }
+  ],
+  "missing_links": [],
+  "source_identity_checks": [
+    {
+      "expected_node": "a0:b7:65:dd:e9:3c",
+      "matches": true,
+      "observed_node": "a0:b7:65:dd:e9:3c",
+      "source": "desk-a"
+    },
+    {
+      "expected_node": "b0:b2:1c:0b:07:1c",
+      "matches": true,
+      "observed_node": "b0:b2:1c:0b:07:1c",
+      "source": "desk-b"
+    }
+  ],
+  "health": [
+    {
+      "node": "a0:b7:65:dd:e9:3c",
+      "epoch": 511482621,
+      "hello": {
+        "channel": 6,
+        "chip": "Esp32",
+        "csi_config": "lltf+htltf shift 0",
+        "firmware_commit": "0000000000000000",
+        "firmware_version": "0.2.2",
+        "pool_capacity": 32,
+        "rx": true,
+        "secondary_channel": 0,
+        "tx": true
+      },
+      "frames_missing": 0,
+      "captures_missing": 0,
+      "links": [
+        {
+          "gain_steps": 0,
+          "gain_steps_per_minute": 0.0,
+          "gain_valid": 0,
+          "gain_valid_fraction": 0.0,
+          "gap_threshold_ms": 100.0,
+          "gaps_over_threshold": 2,
+          "interval_us": {
+            "max": 140694,
+            "p50": 20543,
+            "p95": 34943,
+            "p99": 55679
+          },
+          "last_host_mono_ns": 15169734416,
+          "layouts": [
+            {
+              "cwb": 0,
+              "first_word_invalid": true,
+              "len": 256,
+              "records": 693,
+              "secondary_channel": 0,
+              "sig_mode": 1,
+              "stbc": 0
+            }
+          ],
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_missing": 20,
+          "radio_restarts": 0,
+          "rate_hz": 46.04996447764301,
+          "records": 693,
+          "stale": false,
+          "tx": "b0:b2:1c:0b:07:1c",
+          "tx_epochs": 1
+        }
+      ]
+    },
+    {
+      "node": "b0:b2:1c:0b:07:1c",
+      "epoch": 2627803139,
+      "hello": {
+        "channel": 6,
+        "chip": "Esp32",
+        "csi_config": "lltf+htltf shift 0",
+        "firmware_commit": "0000000000000000",
+        "firmware_version": "0.2.2",
+        "pool_capacity": 32,
+        "rx": true,
+        "secondary_channel": 0,
+        "tx": true
+      },
+      "frames_missing": 0,
+      "captures_missing": 0,
+      "links": [
+        {
+          "gain_steps": 0,
+          "gain_steps_per_minute": 0.0,
+          "gain_valid": 0,
+          "gain_valid_fraction": 0.0,
+          "gap_threshold_ms": 100.0,
+          "gaps_over_threshold": 1,
+          "interval_us": {
+            "max": 144384,
+            "p50": 20287,
+            "p95": 28863,
+            "p99": 50047
+          },
+          "last_host_mono_ns": 15163743583,
+          "layouts": [
+            {
+              "cwb": 0,
+              "first_word_invalid": true,
+              "len": 256,
+              "records": 713,
+              "secondary_channel": 0,
+              "sig_mode": 1,
+              "stbc": 0
+            }
+          ],
+          "probes_duplicate": 0,
+          "probes_late": 0,
+          "probes_missing": 11,
+          "radio_restarts": 0,
+          "rate_hz": 47.385611997823986,
+          "records": 713,
+          "stale": false,
+          "tx": "a0:b7:65:dd:e9:3c",
+          "tx_epochs": 1
+        }
+      ]
+    }
+  ],
+  "counter_windows": {
+    "a0:b7:65:dd:e9:3c/511482621": {
+      "counter_rollback": false,
+      "delta": {
+        "csi_callbacks": 1128,
+        "csi_captured": 646,
+        "csi_filtered": 482,
+        "export_bytes": 220966,
+        "export_drops": 0,
+        "pool_drops": 0,
+        "tx_accepted": 674,
+        "tx_requested": 674
+      },
+      "epoch": 511482621,
+      "first": {
+        "csi_callbacks": 539572,
+        "csi_captured": 285190,
+        "csi_filtered": 254382,
+        "export_bytes": 97280241,
+        "export_drops": 0,
+        "pool_drops": 0,
+        "tx_accepted": 305447,
+        "tx_requested": 305447
+      },
+      "first_host_mono_ns": 873789291,
+      "first_node_time_us": 6441711519,
+      "last": {
+        "csi_callbacks": 540700,
+        "csi_captured": 285836,
+        "csi_filtered": 254864,
+        "export_bytes": 97501207,
+        "export_drops": 0,
+        "pool_drops": 0,
+        "tx_accepted": 306121,
+        "tx_requested": 306121
+      },
+      "last_host_mono_ns": 14877827791,
+      "last_node_time_us": 6455714723,
+      "node": "a0:b7:65:dd:e9:3c",
+      "snapshots": 15
+    },
+    "b0:b2:1c:0b:07:1c/2627803139": {
+      "counter_rollback": false,
+      "delta": {
+        "csi_callbacks": 1138,
+        "csi_captured": 664,
+        "csi_filtered": 474,
+        "export_bytes": 227050,
+        "export_drops": 0,
+        "pool_drops": 0,
+        "tx_accepted": 664,
+        "tx_requested": 664
+      },
+      "epoch": 2627803139,
+      "first": {
+        "csi_callbacks": 545519,
+        "csi_captured": 295433,
+        "csi_filtered": 250086,
+        "export_bytes": 100742375,
+        "export_drops": 0,
+        "pool_drops": 0,
+        "tx_accepted": 295431,
+        "tx_requested": 295431
+      },
+      "first_host_mono_ns": 928790041,
+      "first_node_time_us": 6441805367,
+      "last": {
+        "csi_callbacks": 546657,
+        "csi_captured": 296097,
+        "csi_filtered": 250560,
+        "export_bytes": 100969425,
+        "export_drops": 0,
+        "pool_drops": 0,
+        "tx_accepted": 296095,
+        "tx_requested": 296095
+      },
+      "last_host_mono_ns": 14934690791,
+      "last_node_time_us": 6455809092,
+      "node": "b0:b2:1c:0b:07:1c",
+      "snapshots": 15
+    }
+  },
+  "arrow_status": {
+    "active_clients": 0,
+    "batches": 1107,
+    "cache_evictions": 0,
+    "client_batch_capacity": 8,
+    "client_batch_drops": 10,
+    "client_write_failures": 1,
+    "clock_capacity_rejects": 0,
+    "complete": true,
+    "connections": 2,
+    "flush_interval_ms": 20,
+    "input_closed": true,
+    "input_record_drops": 0,
+    "rejected_connections": 0,
+    "schema": "csi-arrow-status/1",
+    "session_id": "01a16732-f0a6-7102-b050-e4cf88a639aa",
+    "socket": "/private/tmp/csi-hw-051450-5.sock",
+    "summary": {
+      "counter_windows": {
+        "a0:b7:65:dd:e9:3c/511482621": {
+          "counter_rollback": false,
+          "delta": {
+            "csi_callbacks": 1128,
+            "csi_captured": 646,
+            "csi_filtered": 482,
+            "export_bytes": 220966,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 674,
+            "tx_requested": 674
+          },
+          "epoch": 511482621,
+          "first": {
+            "csi_callbacks": 539572,
+            "csi_captured": 285190,
+            "csi_filtered": 254382,
+            "export_bytes": 97280241,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 305447,
+            "tx_requested": 305447
+          },
+          "first_host_mono_ns": 873789291,
+          "first_node_time_us": 6441711519,
+          "last": {
+            "csi_callbacks": 540700,
+            "csi_captured": 285836,
+            "csi_filtered": 254864,
+            "export_bytes": 97501207,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 306121,
+            "tx_requested": 306121
+          },
+          "last_host_mono_ns": 14877827791,
+          "last_node_time_us": 6455714723,
+          "node": "a0:b7:65:dd:e9:3c",
+          "snapshots": 15
+        },
+        "b0:b2:1c:0b:07:1c/2627803139": {
+          "counter_rollback": false,
+          "delta": {
+            "csi_callbacks": 1138,
+            "csi_captured": 664,
+            "csi_filtered": 474,
+            "export_bytes": 227050,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 664,
+            "tx_requested": 664
+          },
+          "epoch": 2627803139,
+          "first": {
+            "csi_callbacks": 545519,
+            "csi_captured": 295433,
+            "csi_filtered": 250086,
+            "export_bytes": 100742375,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 295431,
+            "tx_requested": 295431
+          },
+          "first_host_mono_ns": 928790041,
+          "first_node_time_us": 6441805367,
+          "last": {
+            "csi_callbacks": 546657,
+            "csi_captured": 296097,
+            "csi_filtered": 250560,
+            "export_bytes": 100969425,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 296095,
+            "tx_requested": 296095
+          },
+          "last_host_mono_ns": 14934690791,
+          "last_node_time_us": 6455809092,
+          "node": "b0:b2:1c:0b:07:1c",
+          "snapshots": 15
+        }
+      },
+      "csi_rows": 1406,
+      "decoded_rows": 1333,
+      "invalid_frames": 0,
+      "layouts": {
+        "decoded": 1333,
+        "missing_hello": 73
+      },
+      "links": {
+        "a0:b7:65:dd:e9:3c/511482621/Some(\"b0:b2:1c:0b:07:1c\")/Some(2627803139)/Some(1)": {
+          "decoded_records": 659,
+          "first_host_mono_ns": 141841375,
+          "gain_records": 0,
+          "last_host_mono_ns": 15169734416,
+          "mapped_records": 237,
+          "receiver": "a0:b7:65:dd:e9:3c",
+          "receiver_epoch": 511482621,
+          "records": 693,
+          "schedule": 1,
+          "stored_samples": 84352,
+          "transmitter": "b0:b2:1c:0b:07:1c",
+          "transmitter_epoch": 2627803139,
+          "valid_samples": 70513
+        },
+        "b0:b2:1c:0b:07:1c/2627803139/Some(\"a0:b7:65:dd:e9:3c\")/Some(511482621)/Some(1)": {
+          "decoded_records": 674,
+          "first_host_mono_ns": 137675666,
+          "gain_records": 0,
+          "last_host_mono_ns": 15163743583,
+          "mapped_records": 0,
+          "receiver": "b0:b2:1c:0b:07:1c",
+          "receiver_epoch": 2627803139,
+          "records": 713,
+          "schedule": 1,
+          "stored_samples": 86272,
+          "transmitter": "a0:b7:65:dd:e9:3c",
+          "transmitter_epoch": 511482621,
+          "valid_samples": 72118
+        }
+      },
+      "non_frame_records": 1,
+      "records": 1498
+    }
+  },
+  "intervals": [
+    {
+      "activity": "transport_test",
+      "start_ns": 140325166,
+      "end_ns": 15172656791,
+      "truncated": false
+    }
+  ],
+  "latency_scope": "Same-host wall-clock delta: complete raw frame arrival at hub to CsiBatch yielded in Python, before complex()/model. Excludes radio capture-to-host/UART latency before frame arrival. Clock offset range monitored; no capture-to-host calibration implied.",
+  "checks_passed": true
+}

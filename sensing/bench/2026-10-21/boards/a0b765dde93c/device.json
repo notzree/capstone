@@ -9,12 +9,12 @@
   "revision": "3.1",
   "flash_bytes": 4194304,
   "crystal_mhz": 40,
-  "identity_verified": "2026-10-21",
+  "identity_verified": "2026-10-26",
   "backup_status": "verified",
   "backup_sha256": "3eb17c4366e51d3e793fbe260a9a447991441b664e6e01edd0ca0d16cc844019",
   "backup_verification": "esptool full-flash device digest matched",
   "firmware_status": "flashed_and_verified",
-  "firmware_role": "pair-50-a",
-  "firmware_manifest_sha256": "8075ec431786706cbfdebf62485c0f68aef06c3165c2c75442a816d9a47988c7",
-  "flashed_at_utc": "2026-10-22T03:28:11.240207+00:00"
+  "firmware_role": "star-rx",
+  "firmware_manifest_sha256": "b28f4996d73cc21e4eb7117b8d280bc175dd8fb6bce52f17295870c8bcad2efc",
+  "flashed_at_utc": "2026-10-26T16:50:34.532392+00:00"
 }

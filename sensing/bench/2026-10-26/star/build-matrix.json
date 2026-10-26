@@ -1,0 +1,11 @@
+{
+  "tx": 0,
+  "rx": 0,
+  "pair": 0,
+  "pair,wireless": 0,
+  "pair,gateway": 0,
+  "reject star-rx,star-tx": true,
+  "reject star-rx,pair": true,
+  "reject star-tx,rx": true,
+  "reject star-rx,wireless": true
+}

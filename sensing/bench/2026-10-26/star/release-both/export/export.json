@@ -1,0 +1,738 @@
+{
+  "clock_provenance": "causal_recomputed_default_fit; no backfill; stored live host-clock mappings are not applied",
+  "complete": true,
+  "data_file": "csi.arrow",
+  "decoder": "esp32-ht20/1",
+  "geometry": null,
+  "health": {
+    "clock": {
+      "handovers": 0,
+      "radio_restarts": 0,
+      "receivers": [
+        {
+          "clock": "a0:b7:65:dd:e9:3c epoch 8ac0fc07",
+          "drift_ppm_range": [
+            0.0,
+            0.0
+          ],
+          "fits": 2,
+          "latest": {
+            "drift_ppm": 0.0,
+            "fitted_at_mono_ns": 17557659875,
+            "hops": 0,
+            "map": {
+              "mapped_pivot_us": 96868204.0,
+              "pivot_us": 96868204,
+              "slope": 1.0
+            },
+            "offset_us": 0.0,
+            "outliers": 0,
+            "pairs": 0,
+            "parent": null,
+            "receiver": {
+              "epoch": 2327903239,
+              "node": "a0:b7:65:dd:e9:3c",
+              "radio": 0
+            },
+            "residual_us": null,
+            "timeline": 0,
+            "version": 2,
+            "window_mono_ns": [
+              0,
+              17557659875
+            ]
+          },
+          "worst_p99_us": null
+        }
+      ],
+      "reference": "a0:b7:65:dd:e9:3c epoch 8ac0fc07",
+      "step_s": 10.0,
+      "timeline_restarts": 0,
+      "unwrap_rejects": 0,
+      "window_s": 60.0
+    },
+    "event_counts": {
+      "frames_missing": 1,
+      "node_epoch": 1,
+      "silence": 65
+    },
+    "events": [
+      {
+        "epoch": 2327903239,
+        "mono_ns": 1992187500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "previous": null,
+        "type": "node_epoch"
+      },
+      {
+        "mono_ns": 2841534500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 849.347,
+        "type": "silence"
+      },
+      {
+        "count": 2,
+        "epoch": 2327903239,
+        "first_seq": 194,
+        "mono_ns": 2841534500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "type": "frames_missing"
+      },
+      {
+        "mono_ns": 3236684083,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.056625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3342655208,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.971125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3636619000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.02725,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3934603750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 198.934083,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4138745375,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.010417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4343478625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.799667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4542579750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.86225,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4644600958,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.021208,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4846639167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.092125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5445706083,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.170083,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5643632125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.994,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5743753042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.120917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5844747958,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.994916,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 6148540708,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.010375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 6445535250,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.016958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 6648609167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.035375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 6946626250,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.068417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 7146672292,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.078125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 7344699625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.113417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 7449730542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.030917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 7649592583,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.002375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 7848621000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.994958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 8204584042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 157.957292,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 8444774458,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.143166,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 8549614417,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.839959,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 8753655458,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.046291,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 8946595167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.040542,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 9354862917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 106.243875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 9651615708,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.882583,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 9849680417,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.079167,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 9951605250,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.924833,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 10151628792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.991375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 10549667917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.06075,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 10850715458,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.958583,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 10954631792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.916334,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 11151851167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.155125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 11452642458,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.021791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 11554685375,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.042917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 11754608042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.975875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 11949778667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.219334,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 12151672333,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.040666,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 12252699000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.026667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 12454647583,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.904416,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 12558659792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.012209,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 12759623667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.98625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 12950651542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 191.027875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 13156623792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.021709,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 13256686083,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.062291,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 13461678125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 107.140833,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 13854645167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.096917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 14554655583,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.986291,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 14756589792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.00875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 14956635042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.795167,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 15255702333,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.042875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 15454730667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.029709,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 15558699667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.969,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 15954250375,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.565292,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 16354644042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.004084,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 16753602042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.9555,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 16957677833,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.032916,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 17252757333,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.976541,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 17355745750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.988417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 17557659875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.027958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 17994646458,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 436.986583,
+        "type": "silence"
+      }
+    ],
+    "events_omitted": 0,
+    "nodes": [
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 2328,
+              "csi_captured": 145,
+              "csi_filtered": 2183,
+              "export_bytes": 91913,
+              "export_drops": 0,
+              "node_time_us": 112105101,
+              "pool_drops": 0,
+              "pool_high_water": 1,
+              "tx_accepted": 246,
+              "tx_requested": 246
+            },
+            "epoch": 2327903239,
+            "first_s": 0.0,
+            "frames": 193,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 2,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "d15564318c5dcab4",
+              "firmware_version": "0.4.0",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": false
+            },
+            "kinds": {
+              "counters": 16,
+              "csi": 145,
+              "hello": 17,
+              "time_echo": 15
+            },
+            "last_s": 16.003494083,
+            "links": [
+              {
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gap_threshold_ms": 100.0,
+                "gaps_over_threshold": 74,
+                "interval_us": {
+                  "max": 205053,
+                  "p50": 100095,
+                  "p95": 105727,
+                  "p99": 199167
+                },
+                "last_host_mono_ns": 17557659875,
+                "layouts": [
+                  {
+                    "cwb": 0,
+                    "first_word_invalid": true,
+                    "len": 256,
+                    "records": 145,
+                    "secondary_channel": 0,
+                    "sig_mode": 1,
+                    "stbc": 0
+                  }
+                ],
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "probes_missing": 1,
+                "radio_restarts": 0,
+                "rate_hz": 9.784725174249647,
+                "records": 145,
+                "stale": true,
+                "tx": "b0:b2:1c:0b:07:1c",
+                "tx_epochs": 1
+              }
+            ],
+            "min_rtt_us": 1731.583,
+            "time_echoes": 15,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "a0:b7:65:dd:e9:3c"
+      }
+    ],
+    "records": 366,
+    "sources": [
+      {
+        "decode_errors": {},
+        "export_only_batches": 0,
+        "frames": 193,
+        "index": 0,
+        "last_relay_drops": 0,
+        "piggyback_batches": 0,
+        "records": 366,
+        "stream_errors": {},
+        "unknown_records": 173,
+        "versions": {
+          "2": 193
+        },
+        "wireless_batches": 0
+      }
+    ],
+    "span_s": 16.126493333
+  },
+  "manifest": {
+    "closed_wall_ns": 1793032686748919000,
+    "complete": true,
+    "created_wall_ns": 1793032671121145000,
+    "derived_from": null,
+    "format": "csi-session/1",
+    "geometry": null,
+    "protocol_version": 2,
+    "recorder": "csi-host 0.1.0",
+    "rotation": {
+      "max_bytes": 268435456,
+      "max_duration_ns": 600000000000
+    },
+    "segments": [
+      {
+        "bytes": 72896,
+        "file": "segment-000000.bin",
+        "first_mono_ns": 1992187500,
+        "last_mono_ns": 18118680833,
+        "records": 366,
+        "sha256": "734d75435800b350db5e0fb32971308a1447c6078930c78123c5aee272a231a6"
+      }
+    ],
+    "session_id": "01a17913-4f91-7679-8d1b-d94e7587bfcd",
+    "sources": [
+      {
+        "details": {
+          "receiver": {
+            "build_id": "d15564318c5dcab4",
+            "capabilities": 2,
+            "channel": 6,
+            "epoch": 2327903239,
+            "id": "a0:b7:65:dd:e9:3c",
+            "owner": "00:00:00:00:00:00",
+            "owner_epoch": 0,
+            "protocol": 1,
+            "run": 0,
+            "state": "Ready"
+          },
+          "star": {
+            "duration_seconds": 15,
+            "file_mode": true,
+            "frozen_roster": [
+              {
+                "build_id": "fff31fa4e501394e",
+                "capabilities": 1,
+                "channel": 6,
+                "epoch": 3836724122,
+                "id": "b0:b2:1c:0b:07:1c",
+                "owner": "00:00:00:00:00:00",
+                "owner_epoch": 0,
+                "protocol": 1,
+                "run": 0,
+                "state": "Idle"
+              }
+            ],
+            "host_run_uuid": "01a17913-4f8e-71aa-914f-2c3c3d77eaf7",
+            "kit_id": 1,
+            "label_time_basis": "host_arrival_proxy",
+            "receiver": {
+              "build_id": "d15564318c5dcab4",
+              "capabilities": 2,
+              "channel": 6,
+              "epoch": 2327903239,
+              "id": "a0:b7:65:dd:e9:3c",
+              "owner": "00:00:00:00:00:00",
+              "owner_epoch": 0,
+              "protocol": 1,
+              "run": 0,
+              "state": "Ready"
+            },
+            "requested_per_tx_hz": 10,
+            "schema": "csi-star-run/1",
+            "stop_confirmed": false,
+            "stream_mode": true
+          }
+        },
+        "kind": "serial",
+        "name": "star-rx"
+      }
+    ]
+  },
+  "schema": "csi-export/1",
+  "segments": [
+    {
+      "bytes": 72896,
+      "file": "segment-000000.bin",
+      "integrity": {
+        "status": "verified"
+      },
+      "records": 366,
+      "sealed": true
+    }
+  ],
+  "summary": {
+    "counter_windows": {
+      "a0:b7:65:dd:e9:3c/2327903239": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 409,
+          "csi_captured": 143,
+          "csi_filtered": 266,
+          "export_bytes": 63366,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 178,
+          "tx_requested": 178
+        },
+        "epoch": 2327903239,
+        "first": {
+          "csi_callbacks": 1919,
+          "csi_captured": 2,
+          "csi_filtered": 1917,
+          "export_bytes": 28547,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 68,
+          "tx_requested": 68
+        },
+        "first_host_mono_ns": 2993586708,
+        "first_node_time_us": 97102882,
+        "last": {
+          "csi_callbacks": 2328,
+          "csi_captured": 145,
+          "csi_filtered": 2183,
+          "export_bytes": 91913,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 246,
+          "tx_requested": 246
+        },
+        "last_host_mono_ns": 17995681583,
+        "last_node_time_us": 112105101,
+        "node": "a0:b7:65:dd:e9:3c",
+        "snapshots": 16
+      }
+    },
+    "csi_rows": 145,
+    "decoded_rows": 145,
+    "invalid_frames": 0,
+    "layouts": {
+      "decoded": 145
+    },
+    "links": {
+      "a0:b7:65:dd:e9:3c/2327903239/Some(\"b0:b2:1c:0b:07:1c\")/Some(3836724122)/Some(1)": {
+        "decoded_records": 145,
+        "first_host_mono_ns": 2841534500,
+        "gain_records": 0,
+        "last_host_mono_ns": 17557659875,
+        "mapped_records": 47,
+        "receiver": "a0:b7:65:dd:e9:3c",
+        "receiver_epoch": 2327903239,
+        "records": 145,
+        "schedule": 1,
+        "stored_samples": 18560,
+        "transmitter": "b0:b2:1c:0b:07:1c",
+        "transmitter_epoch": 3836724122,
+        "valid_samples": 15515
+      }
+    },
+    "non_frame_records": 173,
+    "records": 366
+  }
+}

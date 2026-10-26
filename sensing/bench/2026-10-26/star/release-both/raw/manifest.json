@@ -1,0 +1,82 @@
+{
+  "format": "csi-session/1",
+  "session_id": "01a17913-4f91-7679-8d1b-d94e7587bfcd",
+  "created_wall_ns": 1793032671121145000,
+  "closed_wall_ns": 1793032686748919000,
+  "complete": true,
+  "recorder": "csi-host 0.1.0",
+  "protocol_version": 2,
+  "derived_from": null,
+  "geometry": null,
+  "rotation": {
+    "max_bytes": 268435456,
+    "max_duration_ns": 600000000000
+  },
+  "sources": [
+    {
+      "name": "star-rx",
+      "kind": "serial",
+      "details": {
+        "receiver": {
+          "build_id": "d15564318c5dcab4",
+          "capabilities": 2,
+          "channel": 6,
+          "epoch": 2327903239,
+          "id": "a0:b7:65:dd:e9:3c",
+          "owner": "00:00:00:00:00:00",
+          "owner_epoch": 0,
+          "protocol": 1,
+          "run": 0,
+          "state": "Ready"
+        },
+        "star": {
+          "duration_seconds": 15,
+          "file_mode": true,
+          "frozen_roster": [
+            {
+              "build_id": "fff31fa4e501394e",
+              "capabilities": 1,
+              "channel": 6,
+              "epoch": 3836724122,
+              "id": "b0:b2:1c:0b:07:1c",
+              "owner": "00:00:00:00:00:00",
+              "owner_epoch": 0,
+              "protocol": 1,
+              "run": 0,
+              "state": "Idle"
+            }
+          ],
+          "host_run_uuid": "01a17913-4f8e-71aa-914f-2c3c3d77eaf7",
+          "kit_id": 1,
+          "label_time_basis": "host_arrival_proxy",
+          "receiver": {
+            "build_id": "d15564318c5dcab4",
+            "capabilities": 2,
+            "channel": 6,
+            "epoch": 2327903239,
+            "id": "a0:b7:65:dd:e9:3c",
+            "owner": "00:00:00:00:00:00",
+            "owner_epoch": 0,
+            "protocol": 1,
+            "run": 0,
+            "state": "Ready"
+          },
+          "requested_per_tx_hz": 10,
+          "schema": "csi-star-run/1",
+          "stop_confirmed": false,
+          "stream_mode": true
+        }
+      }
+    }
+  ],
+  "segments": [
+    {
+      "file": "segment-000000.bin",
+      "records": 366,
+      "bytes": 72896,
+      "sha256": "734d75435800b350db5e0fb32971308a1447c6078930c78123c5aee272a231a6",
+      "first_mono_ns": 1992187500,
+      "last_mono_ns": 18118680833
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "cycle": 0,
+    "order": "TX first",
+    "late_host_attach": false,
+    "receiver_epoch": 747270804,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 224118258,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 1,
+    "order": "RX first",
+    "late_host_attach": false,
+    "receiver_epoch": 2080710185,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 815766858,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 2,
+    "order": "TX first",
+    "late_host_attach": true,
+    "receiver_epoch": 3095578714,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 3056164925,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 3,
+    "order": "RX first",
+    "late_host_attach": false,
+    "receiver_epoch": 2307443026,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 3342537640,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 4,
+    "order": "TX first",
+    "late_host_attach": false,
+    "receiver_epoch": 3271540428,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 355406962,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 5,
+    "order": "RX first",
+    "late_host_attach": false,
+    "receiver_epoch": 652684407,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 3854207324,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 6,
+    "order": "TX first",
+    "late_host_attach": false,
+    "receiver_epoch": 3124814837,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 607965000,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 7,
+    "order": "RX first",
+    "late_host_attach": false,
+    "receiver_epoch": 551355797,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 3906089548,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 8,
+    "order": "TX first",
+    "late_host_attach": false,
+    "receiver_epoch": 3932234126,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 3652582793,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  },
+  {
+    "cycle": 9,
+    "order": "RX first",
+    "late_host_attach": false,
+    "receiver_epoch": 3074313390,
+    "nodes": [
+      {
+        "build_id": "fff31fa4e501394e",
+        "capabilities": 1,
+        "channel": 6,
+        "csi_observed": false,
+        "epoch": 3962306201,
+        "id": "b0:b2:1c:0b:07:1c",
+        "owner": "00:00:00:00:00:00",
+        "owner_epoch": 0,
+        "protocol": 1,
+        "ready": true,
+        "run": 0,
+        "stale": false,
+        "state": "Idle"
+      }
+    ],
+    "measurement_started": false
+  }
+]

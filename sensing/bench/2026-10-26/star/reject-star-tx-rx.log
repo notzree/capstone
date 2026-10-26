@@ -1,0 +1,24 @@
+
+
+WARNING: use --release
+  We *strongly* recommend using release profile when building esp-hal.
+  The dev profile can potentially be one or more orders of magnitude
+  slower than release, and may cause issues with timing-sensitive
+  peripherals or devices.
+
+    Checking esp-storage v0.10.0
+    Checking esp-phy v0.3.0
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Checking esp-rtos v0.4.0
+    Checking esp-radio v1.0.0-beta.1
+    Checking esp-bootloader-esp-idf v0.6.0
+error: failed to run custom build command for `csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)`
+
+Caused by:
+  process didn't exit successfully: `/Users/notzree/code/capstone/sensing/firmware/target/debug/build/csi-esp-83d6ecf6fbfe0784/build-script-build` (exit status: 101)
+  --- stderr
+
+  thread 'main' (8991095) panicked at csi-esp/build.rs:23:9:
+  star TX cannot capture CSI
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...

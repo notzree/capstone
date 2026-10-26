@@ -1,4 +1,7 @@
 /target
 
 /firmware/target
+/firmware/.wifi.env
+/firmware/.wifi-*.env
 /bench/**/original-flash.bin
+/bench/**/wireless-private/

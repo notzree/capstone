@@ -1,0 +1,20 @@
+{
+  "schema": "csi-geometry/1",
+  "room": "example-desk",
+  "revision": "example-only-resurvey-before-collection",
+  "units": "m",
+  "origin": "ILLUSTRATIVE ONLY: floor below node A; x toward B; z up. Replace with a measured survey.",
+  "notes": "Example coordinates and orientations, not a verified installation survey.",
+  "nodes": [
+    {
+      "id": "a0:b7:65:dd:e9:3c",
+      "x": 0.0, "y": 0.0, "z": 0.75, "tier": "upper",
+      "antenna": { "azimuth_deg": 0.0, "elevation_deg": 0.0 }
+    },
+    {
+      "id": "b0:b2:1c:0b:07:1c",
+      "x": 0.7, "y": 0.0, "z": 0.75, "tier": "upper",
+      "antenna": { "azimuth_deg": 0.0, "elevation_deg": 0.0 }
+    }
+  ]
+}

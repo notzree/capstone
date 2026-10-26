@@ -1,0 +1,11 @@
+[[sources]]
+name="wireless-a"
+kind="wireless"
+bind="0.0.0.0:9001"
+node="a0:b7:65:dd:e9:3c"
+
+[[sources]]
+name="wireless-b"
+kind="wireless"
+bind="0.0.0.0:9002"
+node="b0:b2:1c:0b:07:1c"

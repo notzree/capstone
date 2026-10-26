@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "delivery": null,
+  "drain": null,
+  "duration_seconds": 60,
+  "file_mode": true,
+  "frozen_roster": [
+    {
+      "build_id": "fff31fa4e501394e",
+      "capabilities": 1,
+      "channel": 6,
+      "epoch": 3962306201,
+      "id": "b0:b2:1c:0b:07:1c",
+      "owner": "00:00:00:00:00:00",
+      "owner_epoch": 0,
+      "protocol": 1,
+      "run": 0,
+      "state": "Idle"
+    }
+  ],
+  "host_run_uuid": "01a17919-8548-736a-890d-42e3b6587e8a",
+  "kit_id": 1,
+  "label_time_basis": "host_arrival_proxy",
+  "receiver": {
+    "build_id": "d15564318c5dcab4",
+    "capabilities": 2,
+    "channel": 6,
+    "epoch": 3074313390,
+    "id": "a0:b7:65:dd:e9:3c",
+    "owner": "00:00:00:00:00:00",
+    "owner_epoch": 0,
+    "protocol": 1,
+    "run": 0,
+    "state": "Ready"
+  },
+  "requested_per_tx_hz": 10,
+  "schema": "csi-star-run/1",
+  "session_id": "01a17919-8549-77d7-97b7-5adff4dfe439",
+  "sink_input_drops": 0,
+  "stop_confirmed": false,
+  "stop_reason": "start_rejected",
+  "stream_mode": false
+}

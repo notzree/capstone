@@ -1,5 +1,9 @@
 //! `csi`: record, replay and inspect CSI sessions.
 
+mod collect;
+#[cfg(unix)]
+mod star;
+
 use std::collections::BTreeSet;
 use std::fmt::Write as _;
 use std::fs;
@@ -29,6 +33,9 @@ struct Cli {
 enum Command {
     /// Run live serial/UDP ingest until Ctrl-C, SIGTERM or --seconds elapses
     Hub(HubArgs),
+    /// Discover and start/stop a USB ESP32 star kit
+    #[cfg(unix)]
+    Star(star::StarArgs),
     /// Record a session from a source
     Record(RecordArgs),
     /// Replay a session, optionally re-recording it
@@ -37,6 +44,26 @@ enum Command {
     Inspect(InspectArgs),
     /// Fit receiver clocks from shared probes and store clock-fit.jsonl in the session
     FitClocks(FitClocksArgs),
+    /// Export a sealed session to Arrow/Parquet for Python
+    Export(ExportArgs),
+    /// Collect a trial with provenance, operator labels, quality and Python export
+    Collect(collect::Args),
+}
+
+#[derive(Args)]
+struct ExportArgs {
+    session: PathBuf,
+    /// New directory for data, provenance and quality summary
+    #[arg(long)]
+    out: PathBuf,
+    #[arg(long, value_enum, default_value_t = ExportFormat::Arrow)]
+    format: ExportFormat,
+}
+
+#[derive(Clone, Copy, ValueEnum)]
+enum ExportFormat {
+    Arrow,
+    Parquet,
 }
 
 #[derive(Args)]
@@ -52,6 +79,14 @@ struct HubArgs {
     /// Stop and seal after this many seconds (otherwise wait for a signal)
     #[arg(long)]
     seconds: Option<f64>,
+    /// Publish lossy live CSI batches as Arrow IPC on this new Unix socket
+    #[cfg(unix)]
+    #[arg(long)]
+    arrow_socket: Option<PathBuf>,
+    /// Live Arrow batch flush interval; 5..=1000 ms (smaller batches cost more overhead)
+    #[cfg(unix)]
+    #[arg(long, default_value_t = 100, value_parser = clap::value_parser!(u64).range(5..=1000))]
+    arrow_flush_ms: u64,
 }
 
 #[derive(Args)]
@@ -250,6 +285,23 @@ fn main() -> Result<()> {
         Command::Replay(args) => replay(args),
         Command::Inspect(args) => inspect(args),
         Command::FitClocks(args) => fit_clocks(args),
+        Command::Collect(args) => collect::run(args),
+        #[cfg(unix)]
+        Command::Star(args) => star::run(args),
+        Command::Export(args) => {
+            let format = match args.format {
+                ExportFormat::Arrow => csi_host::export::Format::Arrow,
+                ExportFormat::Parquet => csi_host::export::Format::Parquet,
+            };
+            let summary = csi_host::export::session(&args.session, &args.out, format)?;
+            println!(
+                "exported {} CSI rows ({} decoded) to {}",
+                summary.csi_rows,
+                summary.decoded_rows,
+                args.out.display()
+            );
+            Ok(())
+        }
     }
 }
 
@@ -271,6 +323,24 @@ fn hub(args: HubArgs) -> Result<()> {
         // Install signal handlers before opening transports or starting the recorder.
         #[cfg(unix)]
         let mut term = tokio::signal::unix::signal(tokio::signal::unix::SignalKind::terminate())?;
+        #[cfg(unix)]
+        let publisher = args
+            .arrow_socket
+            .as_deref()
+            .map(|path| {
+                csi_host::delivery::Publisher::bind(path)?
+                    .with_flush_interval_ms(args.arrow_flush_ms)
+            })
+            .transpose()?;
+        let mut subscribers = Vec::new();
+        #[cfg(unix)]
+        let arrow_input = if publisher.is_some() {
+            let (subscriber, rx, drops) = csi_host::live::subscription(8192)?;
+            subscribers.push(subscriber);
+            Some((rx, drops))
+        } else {
+            None
+        };
         let hub = csi_host::live::start(
             config,
             &args.out,
@@ -278,9 +348,23 @@ fn hub(args: HubArgs) -> Result<()> {
                 geometry: args.geometry,
                 ..WriterOptions::default()
             },
-            Vec::new(),
+            subscribers,
         )
         .await?;
+        #[cfg(unix)]
+        let arrow_worker = if let (Some(publisher), Some((input, drops))) = (publisher, arrow_input)
+        {
+            let session = SessionReader::open(&args.out)?;
+            Some(publisher.spawn(
+                input,
+                drops,
+                session.manifest().clone(),
+                session.geometry()?,
+                args.out.clone(),
+            )?)
+        } else {
+            None
+        };
         println!("hub recording to {}", args.out.display());
         for (i, addr) in hub.addresses.iter().enumerate() {
             if let Some(addr) = addr {
@@ -309,7 +393,14 @@ fn hub(args: HubArgs) -> Result<()> {
             Ok::<(), io::Error>(())
         };
         let mut completed = Box::pin(hub.wait_for_shutdown(shutdown));
-        let status = (&mut completed).await?;
+        let status = (&mut completed).await;
+        #[cfg(unix)]
+        if let Some(worker) = arrow_worker {
+            tokio::task::spawn_blocking(move || worker.join())
+                .await?
+                .map_err(|_| anyhow::anyhow!("Arrow publisher thread panicked"))??;
+        }
+        let status = status?;
         println!(
             "recorded {} records; session sealed; status: {}",
             status.records,
@@ -489,6 +580,17 @@ fn describe_record(record: &Record) -> String {
                 .first()
                 .and_then(|&code| StreamError::from_code(code))
                 .map_or("unknown", StreamError::name)
+        ),
+        RecordKind::WirelessBatch => match csi_protocol::wireless::Batch::decode(&record.payload) {
+            Ok(batch) => format!(
+                "wireless batch {}: {} original frames",
+                batch.carrier.batch_seq, batch.count
+            ),
+            Err(error) => format!("invalid wireless batch: {error}"),
+        },
+        RecordKind::StarControl => format!(
+            "star {:?}",
+            csi_protocol::star::Packet::decode(&record.payload)
         ),
         RecordKind::Unknown(kind) => format!("unknown record kind {kind}"),
     };

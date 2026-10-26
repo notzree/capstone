@@ -35,8 +35,10 @@ mod error;
 pub mod frame;
 pub mod message;
 pub mod probe;
+pub mod star;
 pub mod stream;
 mod wire;
+pub mod wireless;
 
 pub use error::{DecodeError, EncodeError};
 pub use message::{

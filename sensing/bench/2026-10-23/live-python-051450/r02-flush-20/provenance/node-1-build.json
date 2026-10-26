@@ -1,0 +1,449 @@
+{
+  "bootloader_provenance": {
+    "repository": "https://github.com/espressif/esp-csi.git",
+    "revision": "8633d67152db2808f141cc1595970aa9cf406045",
+    "idf_image_digest": "espressif/idf@sha256:05cbfc42ed2e987b8026722c15bf1d8523d3e4fd1b4ac04d2e4056f5e0918b99",
+    "generated_offsets_from": "demo/vendor/esp-csi/examples/get-started/csi_recv/build/flasher_args.json"
+  },
+  "settings": {
+    "flash_mode": "dio",
+    "flash_freq": "40m",
+    "flash_size": "4MB"
+  },
+  "roles": {
+    "star-a-10-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "tx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "tx-10.bin",
+          "bytes": 551344,
+          "sha256": "42d31893fb02d3203cb43c93270389f4123b80b98c679f499f59ed2d21d1a4fc"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-a-10-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "rx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "rx.bin",
+          "bytes": 538688,
+          "sha256": "e4d49b8884005a2b5169a9c054340c58ae0c10666ce8ee686da5d14a2d8e0da9"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-b-10-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "rx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "rx.bin",
+          "bytes": 538688,
+          "sha256": "e4d49b8884005a2b5169a9c054340c58ae0c10666ce8ee686da5d14a2d8e0da9"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-b-10-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "tx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "tx-10.bin",
+          "bytes": 551344,
+          "sha256": "42d31893fb02d3203cb43c93270389f4123b80b98c679f499f59ed2d21d1a4fc"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "independent-10-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "tx,rx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "independent-10.bin",
+          "bytes": 557392,
+          "sha256": "0cddee35e4641caa7d3b20601b753008fd71a8ac3f8916576e83340f4a13fe0c"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "independent-10-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "tx,rx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "independent-10.bin",
+          "bytes": 557392,
+          "sha256": "0cddee35e4641caa7d3b20601b753008fd71a8ac3f8916576e83340f4a13fe0c"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "pair-10-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "pair",
+      "probe_interval_us": 100000,
+      "peer_mac": "b0:b2:1c:0b:07:1c",
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "pair-a-10.bin",
+          "bytes": 563120,
+          "sha256": "11ee2ff42335682ccdacf2f551d6fe0dc0caec1e68e1ed4cb97c5b10b3388d22"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "pair-10-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "pair",
+      "probe_interval_us": 100000,
+      "peer_mac": "a0:b7:65:dd:e9:3c",
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "pair-b-10.bin",
+          "bytes": 563120,
+          "sha256": "da566543bdb6fa4f012407111d21ea32eab32d6607a5030cf192896c2c020def"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-a-50-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "tx",
+      "probe_interval_us": 20000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "tx-50.bin",
+          "bytes": 551344,
+          "sha256": "ca250f5e9a9d61944238c106b1f8647ad94d73feca97f59d591a261a50c23c61"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-a-50-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "rx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "rx.bin",
+          "bytes": 538688,
+          "sha256": "e4d49b8884005a2b5169a9c054340c58ae0c10666ce8ee686da5d14a2d8e0da9"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-b-50-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "rx",
+      "probe_interval_us": 100000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "rx.bin",
+          "bytes": 538688,
+          "sha256": "e4d49b8884005a2b5169a9c054340c58ae0c10666ce8ee686da5d14a2d8e0da9"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "star-b-50-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "tx",
+      "probe_interval_us": 20000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "tx-50.bin",
+          "bytes": 551344,
+          "sha256": "ca250f5e9a9d61944238c106b1f8647ad94d73feca97f59d591a261a50c23c61"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "independent-50-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "tx,rx",
+      "probe_interval_us": 20000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "independent-50.bin",
+          "bytes": 557392,
+          "sha256": "a5b60ce5e35b01ff5fc325ae37c36fdc644afb936f6f2951fd12a2632e973b0e"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "independent-50-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "tx,rx",
+      "probe_interval_us": 20000,
+      "peer_mac": null,
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "independent-50.bin",
+          "bytes": 557392,
+          "sha256": "a5b60ce5e35b01ff5fc325ae37c36fdc644afb936f6f2951fd12a2632e973b0e"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "pair-50-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "pair",
+      "probe_interval_us": 20000,
+      "peer_mac": "b0:b2:1c:0b:07:1c",
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "pair-a-50.bin",
+          "bytes": 563120,
+          "sha256": "1a0bac5d319248e59006000ecbcfc4c8f04a6a07e335b307e3b8823f7331b6e7"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "pair-50-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "pair",
+      "probe_interval_us": 20000,
+      "peer_mac": "a0:b7:65:dd:e9:3c",
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "pair-b-50.bin",
+          "bytes": 563120,
+          "sha256": "749cb0c4478cf6616ab37ddf5172d1f30b3a62e313d50b6d7cd5805143b6e89f"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    }
+  },
+  "protocol_version": 2,
+  "source_sha256": "7025410d4bc417565312639399f5a9a97f943034f0e59a0ae9d87ee9bc069ef3",
+  "channel": 6,
+  "uart_baud": 921600,
+  "phy": "HT20/MCS0 long GI",
+  "gain": "absent; extraction not yet verified",
+  "source_files_sha256": {
+    "sensing/firmware/csi-esp/src/main.rs": "7025410d4bc417565312639399f5a9a97f943034f0e59a0ae9d87ee9bc069ef3",
+    "sensing/firmware/csi-esp/build.rs": "eedd16c1f8c2044452f3045f723e51890d39c4dde1c2bca2ba5743ed2f4b7133",
+    "sensing/firmware/csi-esp/Cargo.toml": "3fe3b5e10a5b8accb4b30a5d4c84908efac5eac16f24b450228e902139aab935",
+    "sensing/crates/csi-node/src/lib.rs": "db85822494b69cbb213a44bd88387f7a6a72b3b966ad8a226eb50dd719f0f8cc",
+    "sensing/firmware/Cargo.lock": "66504f11b6870598f2b212f2ee1cb0304989dd8c659c715ead6463c282a00473",
+    "sensing/firmware/.cargo/config.toml": "5da9e0ac6b67ce3db0b2264d570d091a2ded2c1a412a5f046d50fb6344b6a3b3",
+    "sensing/firmware/rust-toolchain.toml": "02d91698a926086c773c0289928b499fdd1b6dc2235a385b17458fa85c0496c4"
+  },
+  "build_command": "CSI_PROBE_INTERVAL_US=<interval> CSI_PEER_MAC=<peer for pair> cargo +esp build --offline --release --features <features>",
+  "send_completion_watchdog_us": 2000000,
+  "firmware_version": "0.2.2"
+}

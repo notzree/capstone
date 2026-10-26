@@ -1,0 +1,311 @@
+{
+  "schema": "csi-live-hardware-summary/1",
+  "physical_trial_count": 5,
+  "requested_acquisition_s": 75,
+  "raw_and_healthy_live_csi_rows": 7127,
+  "normal_settings": {
+    "100": {
+      "p50_range_ms": [
+        58.326,
+        58.706
+      ],
+      "p95_range_ms": [
+        105.562,
+        105.744
+      ],
+      "p99_range_ms": [
+        111.077,
+        111.122
+      ],
+      "max_range_ms": [
+        119.624,
+        123.81
+      ],
+      "capture_rate_hz_range": [
+        46.60021246245015,
+        48.04160269714341
+      ]
+    },
+    "20": {
+      "p50_range_ms": [
+        17.021,
+        17.024
+      ],
+      "p95_range_ms": [
+        29.328,
+        29.363
+      ],
+      "p99_range_ms": [
+        32.089,
+        32.091
+      ],
+      "max_range_ms": [
+        42.312,
+        44.004
+      ],
+      "capture_rate_hz_range": [
+        47.050440538073104,
+        48.29958231159011
+      ]
+    }
+  },
+  "stalled_secondary_client": {
+    "active_clients": 0,
+    "batches": 1107,
+    "cache_evictions": 0,
+    "client_batch_capacity": 8,
+    "client_batch_drops": 10,
+    "client_write_failures": 1,
+    "clock_capacity_rejects": 0,
+    "complete": true,
+    "connections": 2,
+    "flush_interval_ms": 20,
+    "input_closed": true,
+    "input_record_drops": 0,
+    "rejected_connections": 0,
+    "schema": "csi-arrow-status/1",
+    "session_id": "01a16732-f0a6-7102-b050-e4cf88a639aa",
+    "socket": "/private/tmp/csi-hw-051450-5.sock",
+    "summary": {
+      "counter_windows": {
+        "a0:b7:65:dd:e9:3c/511482621": {
+          "counter_rollback": false,
+          "delta": {
+            "csi_callbacks": 1128,
+            "csi_captured": 646,
+            "csi_filtered": 482,
+            "export_bytes": 220966,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 674,
+            "tx_requested": 674
+          },
+          "epoch": 511482621,
+          "first": {
+            "csi_callbacks": 539572,
+            "csi_captured": 285190,
+            "csi_filtered": 254382,
+            "export_bytes": 97280241,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 305447,
+            "tx_requested": 305447
+          },
+          "first_host_mono_ns": 873789291,
+          "first_node_time_us": 6441711519,
+          "last": {
+            "csi_callbacks": 540700,
+            "csi_captured": 285836,
+            "csi_filtered": 254864,
+            "export_bytes": 97501207,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 306121,
+            "tx_requested": 306121
+          },
+          "last_host_mono_ns": 14877827791,
+          "last_node_time_us": 6455714723,
+          "node": "a0:b7:65:dd:e9:3c",
+          "snapshots": 15
+        },
+        "b0:b2:1c:0b:07:1c/2627803139": {
+          "counter_rollback": false,
+          "delta": {
+            "csi_callbacks": 1138,
+            "csi_captured": 664,
+            "csi_filtered": 474,
+            "export_bytes": 227050,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 664,
+            "tx_requested": 664
+          },
+          "epoch": 2627803139,
+          "first": {
+            "csi_callbacks": 545519,
+            "csi_captured": 295433,
+            "csi_filtered": 250086,
+            "export_bytes": 100742375,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 295431,
+            "tx_requested": 295431
+          },
+          "first_host_mono_ns": 928790041,
+          "first_node_time_us": 6441805367,
+          "last": {
+            "csi_callbacks": 546657,
+            "csi_captured": 296097,
+            "csi_filtered": 250560,
+            "export_bytes": 100969425,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 296095,
+            "tx_requested": 296095
+          },
+          "last_host_mono_ns": 14934690791,
+          "last_node_time_us": 6455809092,
+          "node": "b0:b2:1c:0b:07:1c",
+          "snapshots": 15
+        }
+      },
+      "csi_rows": 1406,
+      "decoded_rows": 1333,
+      "invalid_frames": 0,
+      "layouts": {
+        "decoded": 1333,
+        "missing_hello": 73
+      },
+      "links": {
+        "a0:b7:65:dd:e9:3c/511482621/Some(\"b0:b2:1c:0b:07:1c\")/Some(2627803139)/Some(1)": {
+          "decoded_records": 659,
+          "first_host_mono_ns": 141841375,
+          "gain_records": 0,
+          "last_host_mono_ns": 15169734416,
+          "mapped_records": 237,
+          "receiver": "a0:b7:65:dd:e9:3c",
+          "receiver_epoch": 511482621,
+          "records": 693,
+          "schedule": 1,
+          "stored_samples": 84352,
+          "transmitter": "b0:b2:1c:0b:07:1c",
+          "transmitter_epoch": 2627803139,
+          "valid_samples": 70513
+        },
+        "b0:b2:1c:0b:07:1c/2627803139/Some(\"a0:b7:65:dd:e9:3c\")/Some(511482621)/Some(1)": {
+          "decoded_records": 674,
+          "first_host_mono_ns": 137675666,
+          "gain_records": 0,
+          "last_host_mono_ns": 15163743583,
+          "mapped_records": 0,
+          "receiver": "b0:b2:1c:0b:07:1c",
+          "receiver_epoch": 2627803139,
+          "records": 713,
+          "schedule": 1,
+          "stored_samples": 86272,
+          "transmitter": "a0:b7:65:dd:e9:3c",
+          "transmitter_epoch": 511482621,
+          "valid_samples": 72118
+        }
+      },
+      "non_frame_records": 1,
+      "records": 1498
+    }
+  },
+  "postflight": [
+    {
+      "name": "r01-flush-100",
+      "activity_proxy_selected_rows": 1322,
+      "decoded_bin_masks_checked": 1401,
+      "protocol_versions": [
+        2
+      ],
+      "native_lengths": [
+        256
+      ],
+      "unwrapped_ticks_beyond_u32": 1425,
+      "startup_rejects": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 129811500,
+          "source": 1
+        },
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 132827458,
+          "source": 0
+        }
+      ],
+      "rejects_after_first_second": 0,
+      "scope": "Software transport_test phase marker only; no physical activity ground truth inferred."
+    },
+    {
+      "name": "r02-flush-20",
+      "activity_proxy_selected_rows": 1327,
+      "decoded_bin_masks_checked": 1368,
+      "protocol_versions": [
+        2
+      ],
+      "native_lengths": [
+        256
+      ],
+      "unwrapped_ticks_beyond_u32": 1424,
+      "startup_rejects": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 130088625,
+          "source": 0
+        },
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 132088125,
+          "source": 1
+        }
+      ],
+      "rejects_after_first_second": 0,
+      "scope": "Software transport_test phase marker only; no physical activity ground truth inferred."
+    },
+    {
+      "name": "r03-flush-20",
+      "activity_proxy_selected_rows": 1346,
+      "decoded_bin_masks_checked": 1391,
+      "protocol_versions": [
+        2
+      ],
+      "native_lengths": [
+        256
+      ],
+      "unwrapped_ticks_beyond_u32": 1439,
+      "startup_rejects": [],
+      "rejects_after_first_second": 0,
+      "scope": "Software transport_test phase marker only; no physical activity ground truth inferred."
+    },
+    {
+      "name": "r04-flush-100",
+      "activity_proxy_selected_rows": 1333,
+      "decoded_bin_masks_checked": 1397,
+      "protocol_versions": [
+        2
+      ],
+      "native_lengths": [
+        256
+      ],
+      "unwrapped_ticks_beyond_u32": 1433,
+      "startup_rejects": [],
+      "rejects_after_first_second": 0,
+      "scope": "Software transport_test phase marker only; no physical activity ground truth inferred."
+    },
+    {
+      "name": "r05-flush-20-stalled-reader",
+      "activity_proxy_selected_rows": 1313,
+      "decoded_bin_masks_checked": 1333,
+      "protocol_versions": [
+        2
+      ],
+      "native_lengths": [
+        256
+      ],
+      "unwrapped_ticks_beyond_u32": 1406,
+      "startup_rejects": [
+        {
+          "error": "StreamError:[2]",
+          "host_mono_ns": 130827666,
+          "source": 0
+        }
+      ],
+      "rejects_after_first_second": 0,
+      "scope": "Software transport_test phase marker only; no physical activity ground truth inferred."
+    }
+  ],
+  "total_probe_sequence_gaps": 131,
+  "maximum_wall_minus_monotonic_range_us": 94.583,
+  "caveats": [
+    "Latency is hub complete-frame arrival to Python batch yield, not radio-capture to Python.",
+    "Two repetitions at each normal setting in 100/20/20/100 order; a separate 20 ms stalled-reader run.",
+    "Per-frame temporal statistics use the existing callback-time inspector; native timestamp auditing remains planned.",
+    "Probe sequence gaps remain possible over air/callback before capture. No frame/capture sequence or observed pool/export counter drops occurred in these runs.",
+    "Five COBS framing rejects occurred while attaching at 129.8-132.8 ms; none after the first second. Initial captures before Hello stayed raw-only.",
+    "No firmware flashing, board resets, surveyed geometry or physical activity labels.",
+    "Shared-probe multi-receiver synchronization still needs a third board."
+  ]
+}

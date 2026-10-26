@@ -32,6 +32,10 @@ tokio-serial = { version = "5", default-features = false }
 toml = "0.9"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+arrow-array = "60"
+arrow-schema = "60"
+arrow-ipc = { version = "60", default-features = false }
+parquet = { version = "60", default-features = false, features = ["arrow"] }
 
 [workspace.lints.rust]
 unsafe_code = "deny"

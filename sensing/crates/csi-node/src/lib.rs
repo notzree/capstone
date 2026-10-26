@@ -1,6 +1,8 @@
 //! Hardware-independent node policies. Relative receive times never imply synchronized clocks.
 #![no_std]
 
+pub mod star;
+
 use csi_protocol::{NodeId, Probe};
 
 const RETIRED_EPOCHS: usize = 4;

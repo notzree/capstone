@@ -1,0 +1,4 @@
+hub recording to bench/2026-10-24/wireless/wireless-private/smoke-01
+source 0: UDP listening on 0.0.0.0:9001
+source 1: UDP listening on 0.0.0.0:9002
+recorded 0 records; session sealed; status: bench/2026-10-24/wireless/wireless-private/smoke-01/hub-status.json

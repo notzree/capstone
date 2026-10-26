@@ -1,0 +1,143 @@
+{
+  "active_clients": 0,
+  "batches": 291,
+  "cache_evictions": 0,
+  "client_batch_capacity": 8,
+  "client_batch_drops": 0,
+  "client_write_failures": 0,
+  "clock_capacity_rejects": 0,
+  "complete": true,
+  "connections": 1,
+  "flush_interval_ms": 100,
+  "input_closed": true,
+  "input_record_drops": 0,
+  "rejected_connections": 0,
+  "schema": "csi-arrow-status/1",
+  "session_id": "01a16731-fc5a-72c1-b27a-a10eb9ab0558",
+  "socket": "/private/tmp/csi-hw-051450-1.sock",
+  "summary": {
+    "counter_windows": {
+      "a0:b7:65:dd:e9:3c/511482621": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 1294,
+          "csi_captured": 654,
+          "csi_filtered": 640,
+          "export_bytes": 223670,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 680,
+          "tx_requested": 680
+        },
+        "epoch": 511482621,
+        "first": {
+          "csi_callbacks": 534227,
+          "csi_captured": 282238,
+          "csi_filtered": 251989,
+          "export_bytes": 96270634,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 302386,
+          "tx_requested": 302386
+        },
+        "first_host_mono_ns": 388761250,
+        "first_node_time_us": 6378692881,
+        "last": {
+          "csi_callbacks": 535521,
+          "csi_captured": 282892,
+          "csi_filtered": 252629,
+          "export_bytes": 96494304,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 303066,
+          "tx_requested": 303066
+        },
+        "last_host_mono_ns": 14393829000,
+        "last_node_time_us": 6392696921,
+        "node": "a0:b7:65:dd:e9:3c",
+        "snapshots": 15
+      },
+      "b0:b2:1c:0b:07:1c/2627803139": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 1252,
+          "csi_captured": 670,
+          "csi_filtered": 582,
+          "export_bytes": 229078,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 670,
+          "tx_requested": 670
+        },
+        "epoch": 2627803139,
+        "first": {
+          "csi_callbacks": 540293,
+          "csi_captured": 292417,
+          "csi_filtered": 247876,
+          "export_bytes": 99711136,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 292415,
+          "tx_requested": 292415
+        },
+        "first_host_mono_ns": 443826208,
+        "first_node_time_us": 6378787003,
+        "last": {
+          "csi_callbacks": 541545,
+          "csi_captured": 293087,
+          "csi_filtered": 248458,
+          "export_bytes": 99940214,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 293085,
+          "tx_requested": 293085
+        },
+        "last_host_mono_ns": 14447023708,
+        "last_node_time_us": 6392790137,
+        "node": "b0:b2:1c:0b:07:1c",
+        "snapshots": 15
+      }
+    },
+    "csi_rows": 1425,
+    "decoded_rows": 1401,
+    "invalid_frames": 0,
+    "layouts": {
+      "decoded": 1401,
+      "missing_hello": 24
+    },
+    "links": {
+      "a0:b7:65:dd:e9:3c/511482621/Some(\"b0:b2:1c:0b:07:1c\")/Some(2627803139)/Some(1)": {
+        "decoded_records": 693,
+        "first_host_mono_ns": 159804208,
+        "gain_records": 0,
+        "last_host_mono_ns": 15224890708,
+        "mapped_records": 242,
+        "receiver": "a0:b7:65:dd:e9:3c",
+        "receiver_epoch": 511482621,
+        "records": 703,
+        "schedule": 1,
+        "stored_samples": 88704,
+        "transmitter": "b0:b2:1c:0b:07:1c",
+        "transmitter_epoch": 2627803139,
+        "valid_samples": 74151
+      },
+      "b0:b2:1c:0b:07:1c/2627803139/Some(\"a0:b7:65:dd:e9:3c\")/Some(511482621)/Some(1)": {
+        "decoded_records": 708,
+        "first_host_mono_ns": 153757917,
+        "gain_records": 0,
+        "last_host_mono_ns": 15219904208,
+        "mapped_records": 0,
+        "receiver": "b0:b2:1c:0b:07:1c",
+        "receiver_epoch": 2627803139,
+        "records": 722,
+        "schedule": 1,
+        "stored_samples": 90624,
+        "transmitter": "a0:b7:65:dd:e9:3c",
+        "transmitter_epoch": 511482621,
+        "valid_samples": 75756
+      }
+    },
+    "non_frame_records": 2,
+    "records": 1519
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "artifacts": [],
+  "complete": false,
+  "export_dir": "export",
+  "label_timebase": "host_mono_ns",
+  "labels_file": "labels.jsonl",
+  "plan": null,
+  "raw_session": "raw",
+  "schema": "csi-trial/2",
+  "session_id": "01a1791f-e787-7249-bff1-bec3ef7bc1af"
+}

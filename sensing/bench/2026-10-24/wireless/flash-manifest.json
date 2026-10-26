@@ -1,0 +1,69 @@
+{
+  "schema": "csi-flash/1",
+  "settings": {
+    "flash_mode": "dio",
+    "flash_freq": "40m",
+    "flash_size": "4MB"
+  },
+  "roles": {
+    "gateway-a": {
+      "node_mac": "a0:b7:65:dd:e9:3c",
+      "features": "pair,gateway",
+      "probe_interval_us": 20000,
+      "peer_mac": "b0:b2:1c:0b:07:1c",
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "wireless-private/gateway-a.bin",
+          "bytes": 642128,
+          "sha256": "159f7ec6d7b66fb2ca0cb8e73a6226d061ad80481b53ac3f0a7a51d4ae998cdf"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    },
+    "node-b": {
+      "node_mac": "b0:b2:1c:0b:07:1c",
+      "features": "pair,wireless",
+      "probe_interval_us": 20000,
+      "peer_mac": "a0:b7:65:dd:e9:3c",
+      "files": [
+        {
+          "offset": "0x1000",
+          "file": "bootloader.bin",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "offset": "0x20000",
+          "file": "wireless-private/node-b.bin",
+          "bytes": 585520,
+          "sha256": "6912d187f529ed5650496fd12cf43d16b2f619740b8b4ec2bfff6685ba0dcd07"
+        },
+        {
+          "offset": "0xa000",
+          "file": "partition-table.bin",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        }
+      ]
+    }
+  },
+  "build": {
+    "firmware_version": "0.3.0",
+    "probe_interval_us": 20000,
+    "batch_ms": 50,
+    "hub_addr": "10.120.1.57",
+    "transport": "ESP-NOW v2 piggyback + Wi-Fi UDP gateway; no UART CSI"
+  }
+}

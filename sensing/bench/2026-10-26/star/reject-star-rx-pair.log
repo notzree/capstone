@@ -1,0 +1,22 @@
+    Checking esp-hal v1.2.2
+    Checking esp-alloc v0.11.0
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+    Checking esp-backtrace v0.20.0
+error: failed to run custom build command for `csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)`
+
+Caused by:
+  process didn't exit successfully: `/Users/notzree/code/capstone/sensing/firmware/target/debug/build/csi-esp-fb53e3e671273e40/build-script-build` (exit status: 101)
+  --- stderr
+
+  thread 'main' (8990753) panicked at csi-esp/build.rs:14:13:
+  star roles cannot use legacy pair/wireless features
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+
+
+WARNING: use --release
+  We *strongly* recommend using release profile when building esp-hal.
+  The dev profile can potentially be one or more orders of magnitude
+  slower than release, and may cause issues with timing-sensitive
+  peripherals or devices.
+

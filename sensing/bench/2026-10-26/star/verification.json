@@ -1,0 +1,12 @@
+{
+  "rust_tests_passed": 151,
+  "rust_test_groups": 26,
+  "host_build": true,
+  "clippy_warnings_denied": true,
+  "no_std": true,
+  "format": true,
+  "diff_check": true,
+  "python_integration_tests_passed": 7,
+  "prepared_firmware_sources_match": true,
+  "full_kit_and_90_minute_acceptance": "pending"
+}

@@ -1,0 +1,153 @@
+{
+  "captured": 92,
+  "complete": true,
+  "delivery": {
+    "active_clients": 0,
+    "batches": 92,
+    "cache_evictions": 0,
+    "client_batch_capacity": 8,
+    "client_batch_drops": 0,
+    "client_write_failures": 0,
+    "clock_capacity_rejects": 0,
+    "complete": true,
+    "connections": 1,
+    "flush_interval_ms": 20,
+    "input_closed": true,
+    "input_record_drops": 0,
+    "rejected_connections": 0,
+    "schema": "csi-arrow-status/1",
+    "session_id": "01a17913-95da-776d-9b79-d6c6dee97abf",
+    "socket": "/tmp/csi-star-release-stream.sock",
+    "summary": {
+      "counter_windows": {
+        "a0:b7:65:dd:e9:3c/2327903239": {
+          "counter_rollback": false,
+          "delta": {
+            "csi_callbacks": 249,
+            "csi_captured": 85,
+            "csi_filtered": 164,
+            "export_bytes": 37893,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 108,
+            "tx_requested": 108
+          },
+          "epoch": 2327903239,
+          "first": {
+            "csi_callbacks": 2391,
+            "csi_captured": 148,
+            "csi_filtered": 2243,
+            "export_bytes": 94762,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 253,
+            "tx_requested": 253
+          },
+          "first_host_mono_ns": 1995219208,
+          "first_node_time_us": 115105581,
+          "last": {
+            "csi_callbacks": 2640,
+            "csi_captured": 233,
+            "csi_filtered": 2407,
+            "export_bytes": 132655,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 361,
+            "tx_requested": 361
+          },
+          "last_host_mono_ns": 11005190958,
+          "last_node_time_us": 124114750,
+          "node": "a0:b7:65:dd:e9:3c",
+          "snapshots": 10
+        }
+      },
+      "csi_rows": 92,
+      "decoded_rows": 92,
+      "invalid_frames": 0,
+      "layouts": {
+        "decoded": 92
+      },
+      "links": {
+        "a0:b7:65:dd:e9:3c/2327903239/Some(\"b0:b2:1c:0b:07:1c\")/Some(3836724122)/Some(2)": {
+          "decoded_records": 92,
+          "first_host_mono_ns": 1793211250,
+          "gain_records": 0,
+          "last_host_mono_ns": 11505187625,
+          "mapped_records": 0,
+          "receiver": "a0:b7:65:dd:e9:3c",
+          "receiver_epoch": 2327903239,
+          "records": 92,
+          "schedule": 2,
+          "stored_samples": 11776,
+          "transmitter": "b0:b2:1c:0b:07:1c",
+          "transmitter_epoch": 3836724122,
+          "valid_samples": 9844
+        }
+      },
+      "non_frame_records": 117,
+      "records": 240
+    }
+  },
+  "device_drops": 0,
+  "drain": {
+    "body": "DrainComplete { run: 9998268279757471746, capture: 237, export: 514, captured: 92, exported: 92, dropped: 0, selected: 1, confirmed: 1 }",
+    "correlation": 0,
+    "fields": {
+      "capture_boundary_exclusive": 237,
+      "captured": 92,
+      "confirmed_mask": 1,
+      "dropped": 0,
+      "exported": 92,
+      "last_export_seq": 514,
+      "run": 9998268279757471746,
+      "selected_mask": 1
+    },
+    "kind": "DrainComplete",
+    "sender": "a0:b7:65:dd:e9:3c",
+    "sender_epoch": 2327903239
+  },
+  "duration_seconds": 10,
+  "exported": 92,
+  "file_mode": false,
+  "frozen_roster": [
+    {
+      "build_id": "fff31fa4e501394e",
+      "capabilities": 1,
+      "channel": 6,
+      "epoch": 3836724122,
+      "id": "b0:b2:1c:0b:07:1c",
+      "owner": "00:00:00:00:00:00",
+      "owner_epoch": 0,
+      "protocol": 1,
+      "run": 0,
+      "state": "Idle"
+    }
+  ],
+  "host_run_uuid": "01a17913-95d9-7036-bfec-55a74e6c76ea",
+  "kit_id": 1,
+  "label_time_basis": "host_arrival_proxy",
+  "radio_stop_reason": "Duration",
+  "receiver": {
+    "build_id": "d15564318c5dcab4",
+    "capabilities": 2,
+    "channel": 6,
+    "epoch": 2327903239,
+    "id": "a0:b7:65:dd:e9:3c",
+    "owner": "00:00:00:00:00:00",
+    "owner_epoch": 0,
+    "protocol": 1,
+    "run": 0,
+    "state": "Ready"
+  },
+  "requested_per_tx_hz": 10,
+  "rf_run_token": 9998268279757471746,
+  "schedule_generation": 2,
+  "schema": "csi-star-run/1",
+  "session_id": "01a17913-95da-776d-9b79-d6c6dee97abf",
+  "sink_input_drops": 0,
+  "stop_confirmed": true,
+  "stop_reason": "drained",
+  "stream_mode": true,
+  "live_rows": 92,
+  "consumer_errors": []
+}

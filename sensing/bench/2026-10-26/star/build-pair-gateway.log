@@ -1,0 +1,11 @@
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+warning: function `uart_write` is never used
+   --> csi-esp/src/main.rs:359:10
+    |
+359 | async fn uart_write(uart: &mut UartTx<'static, Async>, bytes: &[u8]) -> bool {
+    |          ^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `csi-esp` (bin "csi-esp") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 2.17s

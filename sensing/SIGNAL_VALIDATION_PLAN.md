@@ -4,6 +4,8 @@ Date: 2026-10-22. **Plan only; tests below are not implemented or passed.**
 
 This turns [SIGNAL_VALIDATION.md](SIGNAL_VALIDATION.md) into implementation tasks. The intended result is a reproducible comparison showing where each design preserves brief channel changes, loses information, introduces artifacts or becomes too stale under load. It does not rank fall classifiers or establish physical room coverage.
 
+Overall delivery priorities live in [PLAN.md](PLAN.md#next-steps-unblock-data-collection-and-tomography): the Python handoff and labelled collection workflow come first, with this validation work supporting them in parallel. The phases below order the validation tasks, not all project work.
+
 ## Designs and comparison rules
 
 | Candidate | Available evidence | Planned use |

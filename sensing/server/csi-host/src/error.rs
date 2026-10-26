@@ -3,6 +3,10 @@ use std::path::{Path, PathBuf};
 
 #[derive(Debug, thiserror::Error)]
 pub enum Error {
+    #[error("Arrow export: {0}")]
+    Arrow(#[from] arrow_schema::ArrowError),
+    #[error("Parquet export: {0}")]
+    Parquet(#[from] parquet::errors::ParquetError),
     #[error("{}: {source}", path.display())]
     Io { path: PathBuf, source: io::Error },
     #[error("{}: invalid manifest: {source}", path.display())]

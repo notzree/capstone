@@ -1,0 +1,476 @@
+{
+  "complete": true,
+  "counter_scope": "summary.counter_windows deltas cover their first/last observed counter instants; health counters remain cumulative since boot",
+  "expected_links": [
+    {
+      "receiver": "a0:b7:65:dd:e9:3c",
+      "transmitter": "b0:b2:1c:0b:07:1c"
+    },
+    {
+      "receiver": "b0:b2:1c:0b:07:1c",
+      "transmitter": "a0:b7:65:dd:e9:3c"
+    }
+  ],
+  "health": {
+    "clock": {
+      "handovers": 0,
+      "radio_restarts": 0,
+      "receivers": [
+        {
+          "clock": "a0:b7:65:dd:e9:3c epoch 1e7c9afd",
+          "drift_ppm_range": [
+            0.0,
+            0.0
+          ],
+          "fits": 2,
+          "latest": {
+            "drift_ppm": 0.0,
+            "fitted_at_mono_ns": 15187418333,
+            "hops": 0,
+            "map": {
+              "mapped_pivot_us": 6409660349.0,
+              "pivot_us": 6409660349,
+              "slope": 1.0
+            },
+            "offset_us": 0.0,
+            "outliers": 0,
+            "pairs": 0,
+            "parent": null,
+            "receiver": {
+              "epoch": 511482621,
+              "node": "a0:b7:65:dd:e9:3c",
+              "radio": 0
+            },
+            "residual_us": null,
+            "timeline": 0,
+            "version": 2,
+            "window_mono_ns": [
+              0,
+              15187418333
+            ]
+          },
+          "worst_p99_us": null
+        },
+        {
+          "clock": "b0:b2:1c:0b:07:1c epoch 9ca11803",
+          "drift_ppm_range": null,
+          "fits": 0,
+          "latest": null,
+          "worst_p99_us": null
+        }
+      ],
+      "reference": "a0:b7:65:dd:e9:3c epoch 1e7c9afd",
+      "step_s": 10.0,
+      "timeline_restarts": 0,
+      "unwrap_rejects": 0,
+      "window_s": 60.0
+    },
+    "event_counts": {
+      "node_epoch": 2
+    },
+    "events": [
+      {
+        "epoch": 2627803139,
+        "mono_ns": 132001917,
+        "node": "b0:b2:1c:0b:07:1c",
+        "previous": null,
+        "type": "node_epoch"
+      },
+      {
+        "epoch": 511482621,
+        "mono_ns": 132229833,
+        "node": "a0:b7:65:dd:e9:3c",
+        "previous": null,
+        "type": "node_epoch"
+      }
+    ],
+    "events_omitted": 0,
+    "nodes": [
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 538213,
+              "csi_captured": 284398,
+              "csi_filtered": 253815,
+              "export_bytes": 97009366,
+              "export_drops": 0,
+              "node_time_us": 6424704484,
+              "pool_drops": 0,
+              "pool_high_water": 1,
+              "tx_accepted": 304625,
+              "tx_requested": 304625
+            },
+            "epoch": 511482621,
+            "first_s": 0.000227916,
+            "frames": 757,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 0,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "0000000000000000",
+              "firmware_version": "0.2.2",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": true
+            },
+            "kinds": {
+              "counters": 15,
+              "csi": 711,
+              "hello": 15,
+              "time_echo": 16
+            },
+            "last_s": 15.014464708,
+            "links": [
+              {
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gap_threshold_ms": 100.0,
+                "gaps_over_threshold": 1,
+                "interval_us": {
+                  "max": 114801,
+                  "p50": 20287,
+                  "p95": 30399,
+                  "p99": 50303
+                },
+                "last_host_mono_ns": 15146466625,
+                "layouts": [
+                  {
+                    "cwb": 0,
+                    "first_word_invalid": true,
+                    "len": 256,
+                    "records": 711,
+                    "secondary_channel": 0,
+                    "sig_mode": 1,
+                    "stbc": 0
+                  }
+                ],
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "probes_missing": 16,
+                "radio_restarts": 0,
+                "rate_hz": 47.32946809343903,
+                "records": 711,
+                "stale": false,
+                "tx": "b0:b2:1c:0b:07:1c",
+                "tx_epochs": 1
+              }
+            ],
+            "min_rtt_us": 1737.0,
+            "time_echoes": 16,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "a0:b7:65:dd:e9:3c"
+      },
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 544196,
+              "csi_captured": 294622,
+              "csi_filtered": 249574,
+              "export_bytes": 100465078,
+              "export_drops": 0,
+              "node_time_us": 6424802395,
+              "pool_drops": 0,
+              "pool_high_water": 1,
+              "tx_accepted": 294620,
+              "tx_requested": 294620
+            },
+            "epoch": 2627803139,
+            "first_s": 0.0,
+            "frames": 776,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 0,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "0000000000000000",
+              "firmware_version": "0.2.2",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": true
+            },
+            "kinds": {
+              "counters": 16,
+              "csi": 728,
+              "hello": 16,
+              "time_echo": 16
+            },
+            "last_s": 15.055416416,
+            "links": [
+              {
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gap_threshold_ms": 100.0,
+                "gaps_over_threshold": 0,
+                "interval_us": {
+                  "max": 96175,
+                  "p50": 20159,
+                  "p95": 27327,
+                  "p99": 34175
+                },
+                "last_host_mono_ns": 15187418333,
+                "layouts": [
+                  {
+                    "cwb": 0,
+                    "first_word_invalid": true,
+                    "len": 256,
+                    "records": 728,
+                    "secondary_channel": 0,
+                    "sig_mode": 1,
+                    "stbc": 0
+                  }
+                ],
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "probes_missing": 7,
+                "radio_restarts": 0,
+                "rate_hz": 48.29958231159011,
+                "records": 728,
+                "stale": false,
+                "tx": "a0:b7:65:dd:e9:3c",
+                "tx_epochs": 1
+              }
+            ],
+            "min_rtt_us": 1950.375,
+            "time_echoes": 16,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "b0:b2:1c:0b:07:1c"
+      }
+    ],
+    "records": 1533,
+    "sources": [
+      {
+        "decode_errors": {},
+        "frames": 757,
+        "index": 0,
+        "records": 757,
+        "stream_errors": {},
+        "unknown_records": 0,
+        "versions": {
+          "2": 757
+        }
+      },
+      {
+        "decode_errors": {},
+        "frames": 776,
+        "index": 1,
+        "records": 776,
+        "stream_errors": {},
+        "unknown_records": 0,
+        "versions": {
+          "2": 776
+        }
+      }
+    ],
+    "span_s": 15.055416416
+  },
+  "missing_links": [],
+  "node_configuration_checks": [
+    {
+      "declared_channel": 6,
+      "declared_mode": "pair",
+      "mode_and_rate_provenance": "declared; collector does not reconfigure firmware",
+      "node": "a0:b7:65:dd:e9:3c",
+      "observed": [
+        {
+          "channel": 6,
+          "chip": "Esp32",
+          "csi_config": "lltf+htltf shift 0",
+          "firmware_commit": "0000000000000000",
+          "firmware_version": "0.2.2",
+          "pool_capacity": 32,
+          "rx": true,
+          "secondary_channel": 0,
+          "tx": true
+        }
+      ],
+      "requested_tx_hz": 50.0,
+      "roles_and_channel_match": true
+    },
+    {
+      "declared_channel": 6,
+      "declared_mode": "pair",
+      "mode_and_rate_provenance": "declared; collector does not reconfigure firmware",
+      "node": "b0:b2:1c:0b:07:1c",
+      "observed": [
+        {
+          "channel": 6,
+          "chip": "Esp32",
+          "csi_config": "lltf+htltf shift 0",
+          "firmware_commit": "0000000000000000",
+          "firmware_version": "0.2.2",
+          "pool_capacity": 32,
+          "rx": true,
+          "secondary_channel": 0,
+          "tx": true
+        }
+      ],
+      "requested_tx_hz": 50.0,
+      "roles_and_channel_match": true
+    }
+  ],
+  "schema": "csi-trial-quality/1",
+  "session_id": "01a16732-769b-774e-8adc-94129efd26c6",
+  "source_identity_checks": [
+    {
+      "expected_node": "a0:b7:65:dd:e9:3c",
+      "matches": true,
+      "observed_node": "a0:b7:65:dd:e9:3c",
+      "source": "desk-a"
+    },
+    {
+      "expected_node": "b0:b2:1c:0b:07:1c",
+      "matches": true,
+      "observed_node": "b0:b2:1c:0b:07:1c",
+      "source": "desk-b"
+    }
+  ],
+  "summary": {
+    "counter_windows": {
+      "a0:b7:65:dd:e9:3c/511482621": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 1152,
+          "csi_captured": 663,
+          "csi_filtered": 489,
+          "export_bytes": 226712,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 683,
+          "tx_requested": 683
+        },
+        "epoch": 511482621,
+        "first": {
+          "csi_callbacks": 537061,
+          "csi_captured": 283735,
+          "csi_filtered": 253326,
+          "export_bytes": 96782654,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 303942,
+          "tx_requested": 303942
+        },
+        "first_host_mono_ns": 1107303167,
+        "first_node_time_us": 6410701335,
+        "last": {
+          "csi_callbacks": 538213,
+          "csi_captured": 284398,
+          "csi_filtered": 253815,
+          "export_bytes": 97009366,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 304625,
+          "tx_requested": 304625
+        },
+        "last_host_mono_ns": 15111143500,
+        "last_node_time_us": 6424704484,
+        "node": "a0:b7:65:dd:e9:3c",
+        "snapshots": 15
+      },
+      "b0:b2:1c:0b:07:1c/2627803139": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 1235,
+          "csi_captured": 725,
+          "csi_filtered": 510,
+          "export_bytes": 247855,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 725,
+          "tx_requested": 725
+        },
+        "epoch": 2627803139,
+        "first": {
+          "csi_callbacks": 542961,
+          "csi_captured": 293897,
+          "csi_filtered": 249064,
+          "export_bytes": 100217223,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 293895,
+          "tx_requested": 293895
+        },
+        "first_host_mono_ns": 161255208,
+        "first_node_time_us": 6409795313,
+        "last": {
+          "csi_callbacks": 544196,
+          "csi_captured": 294622,
+          "csi_filtered": 249574,
+          "export_bytes": 100465078,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 294620,
+          "tx_requested": 294620
+        },
+        "last_host_mono_ns": 15168401708,
+        "last_node_time_us": 6424802395,
+        "node": "b0:b2:1c:0b:07:1c",
+        "snapshots": 16
+      }
+    },
+    "csi_rows": 1439,
+    "decoded_rows": 1391,
+    "invalid_frames": 0,
+    "layouts": {
+      "decoded": 1391,
+      "missing_hello": 48
+    },
+    "links": {
+      "a0:b7:65:dd:e9:3c/511482621/Some(\"b0:b2:1c:0b:07:1c\")/Some(2627803139)/Some(1)": {
+        "decoded_records": 665,
+        "first_host_mono_ns": 145328917,
+        "gain_records": 0,
+        "last_host_mono_ns": 15146466625,
+        "mapped_records": 230,
+        "receiver": "a0:b7:65:dd:e9:3c",
+        "receiver_epoch": 511482621,
+        "records": 711,
+        "schedule": 1,
+        "stored_samples": 85120,
+        "transmitter": "b0:b2:1c:0b:07:1c",
+        "transmitter_epoch": 2627803139,
+        "valid_samples": 71155
+      },
+      "b0:b2:1c:0b:07:1c/2627803139/Some(\"a0:b7:65:dd:e9:3c\")/Some(511482621)/Some(1)": {
+        "decoded_records": 726,
+        "first_host_mono_ns": 135363083,
+        "gain_records": 0,
+        "last_host_mono_ns": 15187418333,
+        "mapped_records": 0,
+        "receiver": "b0:b2:1c:0b:07:1c",
+        "receiver_epoch": 2627803139,
+        "records": 728,
+        "schedule": 1,
+        "stored_samples": 92928,
+        "transmitter": "a0:b7:65:dd:e9:3c",
+        "transmitter_epoch": 511482621,
+        "valid_samples": 77682
+      }
+    },
+    "non_frame_records": 0,
+    "records": 1533
+  },
+  "timing": "labels use host monotonic; capture-to-host mapping is not applied; arrival matching is a proxy"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "csi-trial-plan/1",
+  "trial_id": "example-ordinary-activities-01",
+  "day_id": "example-day-01",
+  "participant_id": "example-p01",
+  "split_group": "example-p01-day-01",
+  "room": "example-desk",
+  "geometry_revision": "example-only-resurvey-before-collection",
+  "label_uncertainty_ms": 500,
+  "activities": ["empty", "walking", "standing", "sitting"],
+  "positions": [
+    { "id": "example-centre", "x": 0.35, "y": 0.0, "z": 0.0, "azimuth_deg": 90.0 }
+  ],
+  "nodes": [
+    {
+      "id": "a0:b7:65:dd:e9:3c", "source": "desk-a", "mode": "pair",
+      "requested_tx_hz": 50.0, "channel": 6,
+      "image": "../bench/2026-10-21/mode-comparison/firmware/pair-a-50.bin",
+      "build_manifest": "../bench/2026-10-21/mode-comparison/firmware/flash-manifest.json"
+    },
+    {
+      "id": "b0:b2:1c:0b:07:1c", "source": "desk-b", "mode": "pair",
+      "requested_tx_hz": 50.0, "channel": 6,
+      "image": "../bench/2026-10-21/mode-comparison/firmware/pair-b-50.bin",
+      "build_manifest": "../bench/2026-10-21/mode-comparison/firmware/flash-manifest.json"
+    }
+  ],
+  "notes": "Template only. Survey geometry, set trial/day/participant IDs and confirm flashed images/configuration before real collection. Image paths refer to preserved bench artifacts, not proof of current board state."
+}

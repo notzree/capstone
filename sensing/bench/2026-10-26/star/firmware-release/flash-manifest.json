@@ -1,0 +1,85 @@
+{
+  "schema": "csi-flash/1",
+  "settings": {
+    "flash_mode": "dio",
+    "flash_freq": "40m",
+    "flash_size": "4MB"
+  },
+  "kit_id": 1,
+  "channel": 6,
+  "roles": {
+    "star-tx": {
+      "features": "star-tx",
+      "kit_id": 1,
+      "channel": 6,
+      "files": [
+        {
+          "file": "bootloader.bin",
+          "offset": "0x1000",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "file": "partition-table.bin",
+          "offset": "0xa000",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        },
+        {
+          "file": "star-tx.bin",
+          "offset": "0x20000",
+          "bytes": 548464,
+          "sha256": "70a5faa84ea3ee3448762b1db0ce3c02751d0e1aa8840ff9bfe982174fe612d8"
+        }
+      ]
+    },
+    "star-rx": {
+      "features": "star-rx",
+      "kit_id": 1,
+      "channel": 6,
+      "files": [
+        {
+          "file": "bootloader.bin",
+          "offset": "0x1000",
+          "bytes": 26320,
+          "sha256": "6a8bc4b32d83a667d8ef3cee2519a10feabab68d7f43d951ccf754026de68730"
+        },
+        {
+          "file": "partition-table.bin",
+          "offset": "0xa000",
+          "bytes": 3072,
+          "sha256": "778084aacb955a254212861831cf3a038f8d589ae8c27e041fcd362a96e7abc5"
+        },
+        {
+          "file": "star-rx.bin",
+          "offset": "0x20000",
+          "bytes": 599696,
+          "sha256": "0cf0ed5d5b7c1dd5dece25950c94ecdf582fb079d2b1e6b262bda10b5695ed66"
+        }
+      ]
+    }
+  },
+  "provenance": "source/build fingerprint and image SHA256; factory MAC/boot observed separately",
+  "sources_sha256": {
+    "firmware/csi-esp/src/main.rs": "1fafd7dcd86c973e447608d5312fc5f87330f7fd62e72fc0ae8a60656351c684",
+    "firmware/csi-esp/src/star.rs": "ccd8868284f2c05594b3aa732627ab924669b5a28ab7b17098a5f9deda2dbf32",
+    "firmware/csi-esp/src/wireless.rs": "3a9d0a13aeb6824ef1da9d0752ec44244750fad1f979fd251529460abf8e0536",
+    "crates/csi-node/src/lib.rs": "f45155dded694d50a1b4ee6fa83e535cd6be5731781e11b2387265cd6bb652a5",
+    "crates/csi-node/src/star.rs": "e18eda0e29a8d608217156e4164b009c379729a4b24c6e8c3e5fd305dd9edfb1",
+    "crates/csi-protocol/src/cobs.rs": "c35b3752936ba001da525c061415e7057f690f2befd908e4eebdd6b2857d6dd6",
+    "crates/csi-protocol/src/crc.rs": "acea29e4c21198b51c217be2f0198d1bdea5a3447850a5cea608bb066e2c0315",
+    "crates/csi-protocol/src/error.rs": "cf488d1324e57ef528504be225d7747487e2b1ede15ba4c990b6280a7a3481ad",
+    "crates/csi-protocol/src/frame.rs": "1c0e6ccaa26be89ec75ed78448719c31f0d153b66d13b7eed5089caa735b0267",
+    "crates/csi-protocol/src/lib.rs": "2afa89e17a47ae5253952c128ce2c40932340ea92ebe1ee312fd8ba6b715efe0",
+    "crates/csi-protocol/src/message.rs": "9f83648a6640bcf5e2b6074bb98508b99e756951f037a5c03ad8296e00115483",
+    "crates/csi-protocol/src/probe.rs": "461afcbda1c22a16a261e9a2a4ba2a569ea11e404c39ccca5ce5bf49c1137c01",
+    "crates/csi-protocol/src/star.rs": "b354838950e82d49d5e3dabcc644bfd5d0c8867ef567460d78fc6a47b7da79ec",
+    "crates/csi-protocol/src/stream.rs": "47e1778664d199b37b7ac76520e5273eea9cccde7d10241160fdd2888be9662f",
+    "crates/csi-protocol/src/wire.rs": "0e848b7441b2021a2f40f6e0caf44961cab04a46a44b2322956b703b6a37e836",
+    "crates/csi-protocol/src/wireless.rs": "dc6fc7fdd053f168d2b1dbcff286cddd5b1d578fb7ed4e173e29b187cd7fa025",
+    "firmware/Cargo.lock": "dfc643f71837f2ceb20e4425b322e122d28a0e9df6702e98e424a297dd476989",
+    "firmware/csi-esp/Cargo.toml": "50f1214651d5722d6b2576be708f6023528d8916347d6d88a6a61b6b17e04843",
+    "firmware/csi-esp/build.rs": "adc34d221cefb4479428819e4bf18c39243628c2dcdab87ddb7004e1d8e0e3eb"
+  },
+  "compiler": "rustc 1.97.0-nightly (8ea53bcd7 2026-07-08) (1.97.0.0)\nbinary: rustc\ncommit-hash: 8ea53bcd7257011cbf96f6398551bdc650b04334\ncommit-date: 2026-07-08\nhost: aarch64-apple-darwin\nrelease: 1.97.0-nightly\nLLVM version: 21.1.3\n"
+}

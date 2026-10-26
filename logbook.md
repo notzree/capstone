@@ -270,3 +270,126 @@ Implementation-planning follow-up: [sensing/SIGNAL_VALIDATION_PLAN.md](sensing/S
 | RZ | Document lower-level validation metrics and test plan | 2026-10-22 | 100% | Success | Metrics, timing correction, six-node UART estimate and proposed order recorded. |
 | RZ | Implement native-timestamp audit and structured signal replay | — | 0% | Pending | Existing generator uses noise; known-signal preservation tests are not implemented. |
 | RZ | Run byte-limited load, artifact and alignment sweeps | — | 0% | Pending | Proposed experiments; no results or acceptance thresholds claimed. |
+
+# 15: 2026-10-23 : Initial Python CSI handoff
+## content
+
+Implemented the first data-handoff task from [sensing/PLAN.md](sensing/PLAN.md): `csi export` writes sealed sessions to Arrow IPC or Parquet, and the new `python/` package exposes the same batch API for those files and the hub's optional `--arrow-socket` stream. [sensing/EXPORT.md](sensing/EXPORT.md) documents installation, commands, schema, quality counters and limitations.
+
+The versioned `csi-export/1` schema preserves native CSI, TX/RX/boot/schedule identities, sequences, radio/callback/arrival times, nullable relative clock mappings, radio configuration, nullable gain and geometry provenance. The initial original-ESP32 HT20 decoder exports signed real/imaginary values in separate indexed LTF blocks, retaining and masking null bins and the hardware-invalid first word. Unsupported layouts and captures before the first observed receiver configuration remain raw-only with an explicit reason. No gain compensation, normalization, phase correction, DSP or classification is applied.
+
+Live delivery runs downstream of raw recording, with bounded input and per-client queues, whole-batch drop counters, stalled-client disconnects and `arrow-status.json`. Raw recording continues when consumers stall. Offline export validates original segment hashes/counts and geometry, refuses incomplete/damaged sessions and existing output directories, and produces a finalized health report. It recomputes causal receiver mappings without changing raw recordings or applying stored host-clock mappings.
+
+Validation includes golden signed-I/Q/LTF/index/mask checks; damaged/incomplete export rejection; radio-reset and clock-capacity separation; both output formats; real-recording Python byte/mask/link checks; equality after re-recorded replay; local Arrow socket delivery agreement; a stalled reader while raw recording seals; and a Python-to-CLI socket startup/shutdown check. Workspace tests, `cargo check-nostd` and strict Clippy passed. Python integration checks used existing one-way and two-way desk recordings. Live transport tests used synthetic or silent loopback inputs; no new firmware flashing or RF trial was performed.
+
+Next is the labelled collection workflow so teammates can attach trial/activity intervals and configuration provenance. Broader CSI layouts, applying host-time fits with uncertainty, gain extraction and physical one-TX/two-RX timing acceptance remain open. This handoff is not evidence of fall-detection or tomography accuracy.
+
+### Table 15: This Weeks Update
+
+| Responsible Student Initial | Task Item | Expected Date | Current % | Status (Success or Roadblock) | Comment |
+| --- | --- | --- | --- | --- | --- |
+| RZ | Initial Arrow/Parquet export, Python reader and live socket | 2026-10-23 | 100% | Success | Original ESP32 HT20 decoder; raw fallback, explicit validity/timing and stalled-reader isolation verified. |
+| RZ | Reproducible labelled-trial workflow | — | 0% | Pending | Next task in the sensing roadmap. |
+| RZ | Wider layouts, host capture-time mapping and gain extraction | — | 0% | Pending | Initial handoff retains unknowns rather than inventing calibrated values. |
+
+# 16: 2026-10-23 : Labelled collection and configurable live Python delivery
+## content
+
+Implemented `csi collect` and the Python `Trial` reader to unblock ordinary-activity collection. A new bundle separates the raw session, snapshotted source config/geometry/application images/build manifests, session-bound labels, split assignment, Arrow export and quality report. The collector records declared mode/rate and observed firmware/configuration separately; it does not configure or flash nodes. [sensing/COLLECTION.md](sensing/COLLECTION.md) includes editable two-board templates and an empty/walking/standing/sitting walkthrough.
+
+Operator `begin`, `end`, position and note commands are stamped on the hub's exact host monotonic source clock before entering the command queue. Activity switches share one boundary; EOF/stop/signals/deadline mark any still-open activity truncated. Python preserves half-open intervals, trims declared uncertainty, excludes truncated intervals by default, and requires explicit `host_arrival_proxy` matching. Capture-to-host alignment and physical operator/video timing remain unvalidated, so these annotations do not yet establish precise fall-event capture times.
+
+Both `hub` and `collect` expose `--arrow-socket` with the existing `csi-export/1` Arrow IPC format; `--arrow-flush-ms` now accepts 5–1000 ms, default 100. A 20 ms setting supports smaller live batches at higher processing overhead; it is not an end-to-end latency guarantee. Python uses `live_batches()` during collection. Operator labels remain in the separate timestamped event log. Raw recording remains ahead of bounded lossy delivery.
+
+Quality summaries now include per-link decoder/bin validity, mapped-clock and gain coverage, missing expected links, source identity and role/channel checks, plus first/last observed node counter windows. Deltas exclude pre-trial totals, ignore late snapshots and become unavailable after counter rollback; uncovered start/end intervals remain explicit. The health inspector's latest node counters are still cumulative since boot.
+
+Validation covers source/survey/rate mismatches, non-overwrite behavior, interval switching and truncated closure, deadline shutdown while stdin stays open, labelled simulated binary CSI through UDP→record→export→quality, counter-window semantics, Python provenance/session rejection, uncertainty boundaries, commands after stop and collection with a 20 ms live UDS. No new ESP32 RF collection, flashing, timing calibration, classifier or tomography result was produced.
+
+### Table 16: This Weeks Update
+
+| Responsible Student Initial | Task Item | Expected Date | Current % | Status (Success or Roadblock) | Comment |
+| --- | --- | --- | --- | --- | --- |
+| RZ | Initial reproducible labelled-trial workflow | 2026-10-23 | 100% | Success | Collector, provenance, labels, quality, Python reader and ordinary-activity guide implemented. |
+| RZ | Configurable live Arrow delivery during collection | 2026-10-23 | 100% | Success | Same UDS schema/API; 20 ms configuration tested locally; bounded queues remain. |
+| RZ | Physical operator walkthrough and capture-to-host label alignment | — | 0% | Pending | Host-arrival proxy only; transport latency and operator timing still need validation. |
+
+# 17: 2026-10-23 : Physical ESP32 live Python and collection trials
+## content
+
+Verified the two connected boards from fresh binary serial traffic: `a0:b7:65:dd:e9:3c` on `/dev/cu.usbserial-3` and `b0:b2:1c:0b:07:1c` on `/dev/cu.usbserial-0001`. Both reported original ESP32 firmware `0.2.2`, TX/RX enabled, channel 6 and 256-byte HT20 LLTF+HT-LTF CSI using protocol v2. The sandbox initially blocked serial access; the authorized serial run succeeded. No firmware flash or reset was needed.
+
+Ran four 15-second normal acquisitions in 100/20/20/100 ms Arrow flush order, followed by a 15-second 20 ms run with a deliberately stalled second client. All **7,127 real CSI captures** reached the healthy Python reader and matched offline core identity/timestamp/native-byte hashes. Raw sessions and trial bundles sealed; the `Trial` reader reopened provenance, labels and quality and selected the software test interval. Capture rates in normal runs were 46.6–48.3 Hz per direction against the declared 50 Hz target.
+
+After excluding each run's first two seconds, complete-frame hub-arrival-to-Python-yield delay was 58.3–58.7 ms median / 105.6–105.7 ms p95 with 100 ms flushing, versus 17.0 ms median / 29.3–29.4 ms p95 with 20 ms flushing. This measures the host pipeline before complex/model processing; it excludes radio capture/callback/UART delay before hub arrival. It does not calibrate physical event labels.
+
+The stalled client's queue dropped 10 batches before disconnecting; the healthy reader received all 1,406 captures in that run and recording sealed. Recorder/publisher input drops, frame/capture sequence gaps and observed pool/export counter-drop deltas were zero. Five framing rejects occurred during initial mid-stream attachment at 129.8–132.8 ms, with no stream/decode errors after one second. The runs still contained 131 probe-sequence gaps before the delivery stage; acquisition rate and radio/callback loss remain separate from delivery integrity.
+
+Evidence and reproducible harness: [sensing/bench/2026-10-23/live-python-051450/README.md](sensing/bench/2026-10-23/live-python-051450/README.md). Geometry is explicitly unsurveyed and `transport_test` labels are automated phase markers, not human activity ground truth; these recordings are excluded from training. Physical ordinary-activity labels, capture-to-host timing, native timestamp auditing and third-board shared-probe validation remain open.
+
+### Table 17: This Weeks Update
+
+| Responsible Student Initial | Task Item | Expected Date | Current % | Status (Success or Roadblock) | Comment |
+| --- | --- | --- | --- | --- | --- |
+| RZ | Verify real two-board CSI through collection/live Python/export | 2026-10-23 | 100% | Success | 7,127 captures matched; both directions active; raw/trial sealing and mask/provenance checks passed. |
+| RZ | Compare live batch delay and stalled-reader isolation | 2026-10-23 | 100% | Success | 20 ms setting reduced observed host-pipeline median to 17 ms; stalled client did not lose healthy-reader captures. |
+| RZ | Surveyed/person-labelled collection and capture-time calibration | — | 0% | Pending | Transport-only test; no physical activity or tomography claim. |
+
+
+# 18: 2026-10-24 : Wireless batching and piggyback transport
+## content
+
+Implemented an initial two-node wireless export path. Direct ESP-NOW sensing packets can carry batches of the receiver's original binary protocol-v2 records; a configured gateway forwards peer batches and its own collected readings through Wi-Fi/UDP to the Linux/macOS Rust hub. Python consumes the existing UDS Arrow stream. Wireless builds do not run UART CSI export or UART requests. Direct action-frame/source-MAC and sensing-flag checks keep AP-forwarded traffic and export-only packets from becoming attributed sensing observations. DSP remains entirely on the host.
+
+The separate `csi-wireless/1` carrier has a complete-batch CRC, original frame CRC/identity validation, probe/turn metadata, batch sequence, destination and relay-loss telemetry. Batches are bounded at 1,200 bytes/16 records, with a default 50 ms construction deadline and bounded capture/ready/relay queues. This deadline does not bound capture-to-Python latency. Local send/queue failures are counted; broadcast/UDP delivery is not acknowledged or retried. Raw record kind 3 preserves the entire datagram. Inspector, clock fitter, audit and live/offline export expand validated original observations, preserving native bytes and shared host arrival stamps. Health reports expose piggyback/export-only batches and the latest relay-drop count. Host timing requests target and route to the original receiver through the gateway.
+
+Built gateway, peer and legacy firmware and flashed both freshly MAC-identified ESP32s with verified original backups and image digest checks. USB port names had swapped; the flash guard rejected the initial mismatches before writing. Test credentials and embedded-credential images are ignored/private, including any collection bundle that copies those images.
+
+Software validation: 134 Rust workspace tests, no_std, clippy with warnings denied, formatting and six Python tests passed. Carrier tests exercise limits, truncation/mutation, inner CRC/identity and arbitrary input. Local UDP/UDS integration validates raw preservation, finalized gaps, node-targeted probes, corrupt endpoint rejection, single-use timing-echo correlation and native-byte/index/host-time equality between live Arrow and offline export. These checks validate software, not RF delivery.
+
+Physical wireless acceptance is **pending**: the UDP-only 25-second session sealed with zero records. The gateway's active scan found 18 APs and zero exact configured-SSID matches; association returned `NoAccessPointFound`. The computer is connected on 5 GHz; the boards need an accessible 2.4 GHz SSID. No wireless rate, loss, freshness, fall or tomography result is claimed. Next: establish association, verify both directed links/piggyback forwarding and targeted echoes, compare live Python against offline recordings, then compare 20/50/100 ms node batching at fixed host flushing. General N-node scheduling, shared-probe timing with a third board, OTA/configuration management and capture-time label calibration remain open.
+
+Implementation and setup: [sensing/WIRELESS.md](sensing/WIRELESS.md). Evidence and resume checklist: [wireless bench](sensing/bench/2026-10-24/wireless/README.md).
+
+### Table 18: This Weeks Update
+
+| Responsible Student Initial | Task Item | Expected Date | Current % | Status (Success or Roadblock) | Comment |
+| --- | --- | --- | --- | --- | --- |
+| RZ | Initial wireless carrier, batching, gateway and uniform Python handoff | 2026-10-24 | 100% | Success | Implemented and host-tested; both firmware variants built/flashed. |
+| RZ | Physical wireless CSI acceptance | — | 0% | Roadblock | Configured SSID absent from ESP32 2.4 GHz scan; no UDP data received. |
+| RZ | Wireless batch-age comparison and larger mesh validation | — | 0% | Pending | Requires working association, followed by measured RF/transport trials. |
+
+
+# 19: 2026-10-26 : ESP-NOW remote nodes without Wi-Fi association
+## content
+
+Separated the wireless gateway and remote roles in firmware 0.3.1. Remote builds no longer read the ignored Wi-Fi credentials file, require a SSID/password/host IP, spawn the association task or wait for AP connectivity. They configure a required `CSI_RADIO_CHANNEL` (supported range 1–11), then start batching and direct ESP-NOW communication immediately. The radio controller is retained for the lifetime of the remote tasks. Only the gateway joins Wi-Fi, follows the AP channel, and forwards batches to Rust over UDP; the existing binary carrier and Python Arrow handoff remain unchanged.
+
+The remote channel must match the gateway AP's actual channel. Automatic discovery/channel migration is not implemented; use a fixed AP channel for physical tests. This removes the remote credential/association dependency but does not solve the gateway's earlier missing-AP problem. A separate Linux-integrated ESP-NOW adapter with SPI/UART is an architectural option, not part of this change.
+
+Validation: role-specific host tests cover no remote credential/host-address requests, explicit channel requirements, invalid channel rejection, and retained gateway network requirements. The actual build script was executed beside a credentials file and confirmed to ignore it in remote mode; a remote release ELF was checked to exclude the actual local gateway SSID/password. Remote, gateway and legacy pair release builds plus carrier/host integration checks pass. No ESP32 serial devices were visible, so no new flash or RF trial was performed. The earlier 0.3.0 on-device images remain the last verified flash state.
+
+Build/configuration instructions and pending RF gates are updated in [sensing/WIRELESS.md](sensing/WIRELESS.md) and the firmware README.
+
+
+# 20: 2026-10-26 : Narrow delivery scope to star-first collection
+## content
+
+Revised the active roadmap around multiple pre-flashed ESP32 transmitters and one central CSI receiver at the laptop/Linux hub. Retain the existing mesh/pair/piggyback and clock-fit code for later experiments. A single receiver removes the immediate distributed receiver-clock alignment and remote CSI forwarding work; transmitter scheduling, timestamp continuity, loss and label timing still need validation. Star is a delivery choice, not a claim of better fall or tomography accuracy.
+
+The first gate is the receiver: a generic Wi-Fi interface or UDP socket does not provide CSI. This machine currently runs macOS with Wi-Fi identifier 0x14E4/0x4388; no native CSI backend for it is implemented/validated here. FeitCSI's primary documentation describes Linux AX200/AX210 capture with a customized driver; Nexmon CSI lists exact supported chip/firmware combinations. Neither establishes an already working ESP32-to-this-laptop link. A native receiver also needs a layout/precision-aware adapter rather than treating non-ESP32 samples as the existing original-ESP32 int8 layout.
+
+Planned following gates: a bounded ten-second discovery roster, one reusable transmitter image without compiled peer pairs, hub-owned start/stop with command acknowledgements/retries/run identities and probe leases, integration with existing collection/provenance/labels/Arrow output, then a teammate kit walkthrough and multi-transmitter acceptance. Discovery is limited to reachable nodes on the configured channel/control network. Existing begin/end label commands do not control node transmission. Tomography and ML are Python-side modes over the same acquisition data, not separate embedded implementations.
+
+Updated [sensing/PLAN.md](sensing/PLAN.md) with the active S0–S4 sequence and acceptance gates. No new discovery, node-control or native laptop-capture code is claimed; no driver installation, firmware flash or RF trial was performed for this decision. Receiver hardware/OS selection is pending. A common-endpoint star has fewer spatially diverse links than distributed receivers; tomography remains an experiment requiring surveyed geometry and measured coverage.
+
+
+# 21: 2026-10-26 : Full implementation plan for the USB ESP32 star kit
+## content
+
+Selected option 2: one central ESP32 receiver attached by USB to the MacBook, with the remaining ESP32s powered as wireless transmitters. Rust owns acquisition/control/recording and Python owns processing. This removes native laptop/Pi CSI-driver selection and existing Wi-Fi-network provisioning from the first-release path. Existing mesh/pair/piggyback implementations are retained for later.
+
+Expanded the existing [sensing/PLAN.md](sensing/PLAN.md) into a complete proposed boot-to-record design. RX boot starts a ten-second ESP-NOW broadcast discovery window; idle TXs ACK with randomized response slots, identities, boot epochs and capabilities. Repeated windows handle collisions and late power-on. The RX retains a bounded inventory/snapshot for a Mac client attaching after boot. START/STOP use application ACKs, retries and run ownership. A central one-outstanding-grant scheduler coordinates sensing without shared TX clocks; host/TX leases stop transmission after failures. Discovery/control traffic is excluded from CSI observations.
+
+The plan includes file-only, genuine stream-only and file+UDS output, explicit Arrow framing/session identity, consumer readiness, bounded backpressure and stream-only stop-on-primary-failure. A file descriptor abstraction does not erase the difference between a raw archive and decoded Arrow, or between file durability and socket loss. Current host code always creates a recorder directory and writes publisher status there; stream-only needs a refactor. Current trial validation also assumes one physical input source per node; the kit instead needs one RX input source and separate remote TX participants.
+
+Specified proposed CLI/REPL/JSON control, raw star-control journaling, firmware feature boundaries, conservative rates and serial admission, physical placement/label limitations, staged P0–P6 implementation and deterministic/integration/physical acceptance tests. Defaults are five TXs at 10 requested probes/s each, pending RF validation; five × 50 Hz would approach the current 921600-baud serial limit. No new firmware/control/output feature is claimed as implemented by this planning task. Updated roadmap links and collection guidance; retained older evidence and mesh acceptance backlog.

@@ -1,5 +1,7 @@
 # ESP-WROOM-32 bench firmware
 
+USB star discovery, radio start/stop and file/stream/both output: [star kit guide](../STAR.md).
+
 Initial original-ESP32 adapter for the first one-TX/one-RX bench. This is the start of M5, not completion of its sustained-run, callback-timing or gain-extraction gates. It uses the same `csi-protocol` crate as the host. No external access point is required.
 
 Select capabilities: `--features tx`, `--features rx`, or `--features tx,rx`. `--features pair` enables both with the packet-driven pair policy described below. Both use channel 6, 921600-baud UART0 (GPIO1 TX/GPIO3 RX), modem sleep disabled, and a random boot epoch initialized after Wi-Fi starts. No automatic light-sleep policy is enabled.
@@ -7,6 +9,10 @@ Select capabilities: `--features tx`, `--features rx`, or `--features tx,rx`. `-
 - TX broadcasts a padded `CSIp` probe with a target interval of 10 ms in periodic mode, forcing HT20/MCS0 long GI. Each probe carries the transmitter MAC, boot epoch, sequence and unscheduled schedule id zero. Sends are awaited to completion; actual rate may be lower due to driver latency. `tx_accepted` counts pending/ready-success submissions and is a lower bound if a very fast failure completes during the first poll; verify peer reception separately. A 2 s missing-completion watchdog resets the node while retaining the pending future until reset.
 - RX enables CSI and filters for a valid probe whose transmitter matches the received source MAC. Native CSI bytes and RX metadata are copied in the callback into a bounded 32-slot queue. UART framing/writes happen in an async exporter, outside the callback. LLTF/HT-LTF are enabled; STBC second LTF, merging and channel smoothing are disabled. Gain is absent until extraction is verified.
 - Both export periodic `Hello`/`Counters` and answer `TimeProbe` with `TimeEcho`. Bootloader console output may precede binary data; the initial delimiter and host deframer permit resynchronization. UART writes and incoming host commands have bounded buffers. This adapter has no UDP export, geometry, host schedule updates, DSP or ML.
+
+## Wireless gateway and credential-free remote nodes
+
+Optional `pair,gateway` and `pair,wireless` builds use batched direct ESP-NOW and a UDP gateway rather than UART CSI. In wireless firmware 0.3.1, only the gateway joins Wi-Fi and reads the ignored network credentials. A remote requires `CSI_RADIO_CHANNEL=1..11`, starts immediately without association and does not embed network credentials. Its channel must match the gateway's AP; discovery/channel migration remain pending. `CSI_HUB_PORT` identifies the original receiver's source at the hub, rather than giving the remote a network connection. See [WIRELESS.md](../WIRELESS.md) for build commands, limits, configuration tests and current hardware acceptance status.
 
 ## Build
 

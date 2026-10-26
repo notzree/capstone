@@ -1,0 +1,7 @@
+Collecting trial r05-flush-20-stalled-reader into /Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/r05-flush-20-stalled-reader
+Activities: transport_test
+Commands: begin ACTIVITY [POSITION], end, note TEXT, help, stop.
+End each activity explicitly. EOF, Ctrl-C and stop close an open activity as truncated.
+Activity: transport_test
+Activity ended
+Trial sealed: 1406 CSI rows, 1333 decoded; labels and quality: /Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/r05-flush-20-stalled-reader

@@ -1,0 +1,11 @@
+test_hub_socket_python_schema_shutdown_and_cleanup (test_reader.ReaderTests.test_hub_socket_python_schema_shutdown_and_cleanup) ... ok
+test_real_session_arrow_parquet_complex_and_metadata_agree (test_reader.ReaderTests.test_real_session_arrow_parquet_complex_and_metadata_agree) ... ok
+test_refuses_unversioned_stream (test_reader.ReaderTests.test_refuses_unversioned_stream) ... ok
+test_bundle_labels_missing_link_quality_and_live_config (test_trial.TrialTests.test_bundle_labels_missing_link_quality_and_live_config) ... ok
+test_provenance_label_session_and_partial_trial_rejections (test_trial.TrialTests.test_provenance_label_session_and_partial_trial_rejections) ... ok
+test_uncertainty_half_open_intervals_foreign_clocks_and_truncated_exclusion (test_trial.TrialTests.test_uncertainty_half_open_intervals_foreign_clocks_and_truncated_exclusion) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.293s
+
+OK

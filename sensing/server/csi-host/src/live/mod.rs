@@ -35,9 +35,10 @@ use time_sync::{HostClock, HostMapping};
 pub const STATUS_FILE: &str = "hub-status.json";
 
 #[derive(Clone)]
-struct ArrivalClock(Instant);
+pub struct ArrivalClock(Instant);
 impl ArrivalClock {
-    fn mono_ns(&self) -> u64 {
+    /// Host monotonic ns since this session's source clock started.
+    pub fn mono_ns(&self) -> u64 {
         self.0.elapsed().as_nanos().min(u128::from(u64::MAX)) as u64
     }
 }
@@ -45,7 +46,7 @@ impl ArrivalClock {
 enum Input {
     Record {
         record: Record,
-        correlated_echo: bool,
+        correlated_echoes: Vec<(u32, u64)>,
     },
     Connection {
         source: u16,
@@ -132,6 +133,7 @@ pub struct HubStatus {
 }
 
 pub struct RunningHub {
+    clock: ArrivalClock,
     stop: watch::Sender<bool>,
     done: Option<oneshot::Receiver<Result<HubStatus, Error>>>,
     /// Actual bound UDP addresses (including dynamically assigned ports); None for serial.
@@ -139,6 +141,10 @@ pub struct RunningHub {
 }
 
 impl RunningHub {
+    /// Share the exact source-arrival timebase with operator annotations.
+    pub fn clock(&self) -> ArrivalClock {
+        self.clock.clone()
+    }
     pub fn request_shutdown(&self) {
         let _ = self.stop.send(true);
     }
@@ -238,7 +244,9 @@ pub async fn start(
             source,
         })?;
     let supervisor_stop = stop.clone();
+    let supervisor_clock = clock.clone();
     tokio::spawn(async move {
+        let clock = supervisor_clock;
         let mut tasks = JoinSet::new();
         for (i, source) in sources.into_iter().enumerate() {
             tasks.spawn(source::run(
@@ -303,6 +311,7 @@ pub async fn start(
         let _ = done_tx.send(result);
     });
     Ok(RunningHub {
+        clock,
         stop,
         done: Some(done),
         addresses,
@@ -518,7 +527,7 @@ impl Recorder {
             match input {
                 Input::Record {
                     record,
-                    correlated_echo,
+                    mut correlated_echoes,
                 } => {
                     self.writer.as_mut().unwrap().write(&record)?;
                     self.status.records += 1;
@@ -529,46 +538,66 @@ impl Recorder {
                         .max_clock_samples
                         .max(self.fitter.buffered_samples());
                     self.persist_clock()?;
+                    let mut source_events = Vec::new();
                     let source = &mut self.status.sources[usize::from(record.source)];
                     source.records += 1;
                     if record.kind == RecordKind::StreamError {
                         source.framing_errors += 1;
                     }
-                    if record.kind == RecordKind::Frame {
-                        match frame::decode(&record.payload) {
-                            Ok((header, message)) => {
-                                source.valid_frames += 1;
-                                source.last_valid_mono_ns = Some(record.mono_ns);
-                                let prior_state = source.state;
-                                source.state = "active";
-                                let node = header.node.to_string();
-                                let new_epoch = source.node.as_ref().is_some_and(|n| n != &node)
-                                    || source.epoch.is_some_and(|e| e != header.epoch);
-                                if new_epoch {
-                                    source.epoch_changes += 1;
+                    match record.observations() {
+                        Err(_) => source.decode_errors += 1,
+                        Ok(observations) => {
+                            for observation in observations {
+                                if observation.kind != RecordKind::Frame {
+                                    continue;
                                 }
-                                source.node = Some(node);
-                                source.epoch = Some(header.epoch);
-                                if let Message::TimeEcho(echo) = message {
-                                    if correlated_echo {
-                                        self.host.push(
-                                            &header,
-                                            echo,
-                                            record.mono_ns,
-                                            record.wall_ns,
-                                            &self.fitter,
-                                        );
-                                    } else {
-                                        source.unmatched_echoes += 1;
+                                match frame::decode(&observation.payload) {
+                                    Ok((header, message)) => {
+                                        source.valid_frames += 1;
+                                        source.last_valid_mono_ns = Some(record.mono_ns);
+                                        let prior_state = source.state;
+                                        source.state = "active";
+                                        let node = header.node.to_string();
+                                        let new_epoch =
+                                            source.node.as_ref().is_some_and(|n| n != &node)
+                                                || source.epoch.is_some_and(|e| e != header.epoch);
+                                        if new_epoch {
+                                            source.epoch_changes += 1;
+                                        }
+                                        source.node = Some(node);
+                                        source.epoch = Some(header.epoch);
+                                        if let Message::TimeEcho(echo) = message {
+                                            if let Some(index) =
+                                                correlated_echoes.iter().position(|key| {
+                                                    *key == (echo.probe_id, echo.host_time)
+                                                })
+                                            {
+                                                // One request supplies at most one clock sample,
+                                                // even if a batch repeats its original echo frame.
+                                                correlated_echoes.swap_remove(index);
+                                                self.host.push(
+                                                    &header,
+                                                    echo,
+                                                    record.mono_ns,
+                                                    record.wall_ns,
+                                                    &self.fitter,
+                                                );
+                                            } else {
+                                                source.unmatched_echoes += 1;
+                                            }
+                                        }
+                                        if prior_state != "active" || new_epoch {
+                                            let value = serde_json::json!({"type":"source_active", "mono_ns":record.mono_ns, "source":record.source, "node":source.node, "epoch":source.epoch, "new_epoch":new_epoch});
+                                            source_events.push(value);
+                                        }
                                     }
-                                }
-                                if prior_state != "active" || new_epoch {
-                                    let value = serde_json::json!({"type":"source_active", "mono_ns":record.mono_ns, "source":record.source, "node":source.node, "epoch":source.epoch, "new_epoch":new_epoch});
-                                    self.event(value)?;
+                                    Err(_) => source.decode_errors += 1,
                                 }
                             }
-                            Err(_) => source.decode_errors += 1,
                         }
+                    }
+                    for value in source_events {
+                        self.event(value)?;
                     }
                     let record = Arc::new(record);
                     for subscriber in &self.subscribers {
@@ -713,7 +742,7 @@ mod regression_tests {
                     kind: RecordKind::Frame,
                     payload,
                 },
-                correlated_echo: false,
+                correlated_echoes: Vec::new(),
             })
             .unwrap();
         }

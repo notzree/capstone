@@ -1,0 +1,4 @@
+{"schema":"csi-labels/1","session_id":"01a16732-b3b9-711c-a7c6-13c7f1d9b7b3","timebase":"host_mono_ns","type":"header","uncertainty_ns":500000000}
+{"activity":"transport_test","id":0,"mono_ns":140241125,"position":null,"type":"begin","wall_ns":1792732738643544000}
+{"id":0,"mono_ns":15170442208,"reason":"operator","truncated":false,"type":"end","wall_ns":1792732753673715000}
+{"mono_ns":15170458125,"reason":"operator_stop","type":"stop","wall_ns":1792732753673730000}

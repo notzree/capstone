@@ -8,8 +8,12 @@ publish = false
 default = []
 tx = []
 rx = []
+star-rx = ["rx"]
+star-tx = ["tx"]
 # Both capabilities with a known-peer leader/responder policy.
 pair = ["tx", "rx"]
+wireless = []
+gateway = ["wireless", "dep:embassy-net", "dep:static_cell"]
 
 [dependencies]
 csi-node = { path = "../../crates/csi-node" }
@@ -26,3 +30,5 @@ embassy-time = "=0.5.1"
 embassy-sync = "=0.8.0"
 embassy-futures = "=0.1.2"
 portable-atomic = { version = "1.13.0", default-features = false, features = ["critical-section"] }
+embassy-net = { version = "0.9", optional = true, default-features = false, features = ["dhcpv4", "udp", "medium-ethernet", "proto-ipv4"] }
+static_cell = { version = "2.1", optional = true }

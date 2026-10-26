@@ -1,0 +1,1 @@
+{"type":"header","schema":"csi-clock-fit/1","session_id":"01a17919-8549-77d7-97b7-5adff4dfe439","fitter":"csi-host 0.1.0","options":{"window_ns":60000000000,"step_ns":10000000000,"min_pairs":20,"radio_reset_us":250000,"outlier_sigmas":5.0},"clocks":[],"unwrap_rejects":0,"radio_restarts":0}

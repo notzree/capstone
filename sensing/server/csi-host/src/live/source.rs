@@ -3,7 +3,7 @@ use std::io;
 use std::sync::Arc;
 use std::time::Duration;
 
-use csi_protocol::{Header, Message, NodeId, TimeProbe, frame, stream};
+use csi_protocol::{Header, Message, NodeId, TimeProbe, frame, stream, wireless};
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::UdpSocket;
 use tokio::sync::{mpsc, watch};
@@ -21,7 +21,9 @@ pub(super) struct Source {
 
 pub(super) async fn prepare(config: SourceConfig) -> io::Result<Source> {
     let socket = match config.transport {
-        Transport::Udp { bind, .. } => Some(UdpSocket::bind(bind).await?),
+        Transport::Udp { bind, .. } | Transport::Wireless { bind, .. } => {
+            Some(UdpSocket::bind(bind).await?)
+        }
         Transport::Serial { .. } => None,
     };
     Ok(Source { config, socket })
@@ -40,12 +42,17 @@ impl Probes {
         }
     }
 
-    fn request(&mut self, clock: &ArrivalClock, serial: bool) -> (u32, u64, Vec<u8>) {
+    fn request(
+        &mut self,
+        clock: &ArrivalClock,
+        serial: bool,
+        target: NodeId,
+    ) -> (u32, u64, Vec<u8>) {
         let id = self.seq;
         self.seq = self.seq.wrapping_add(1);
         let sent = clock.mono_ns();
         let header = Header {
-            node: NodeId([0; 6]),
+            node: target,
             epoch: 0,
             seq: id,
         };
@@ -108,10 +115,19 @@ async fn emit(
         kind,
         payload,
     };
-    let correlated_echo = probes.correlate(&record.payload, mono_ns);
+    let mut correlated_echoes = Vec::new();
+    if let Ok(observations) = record.observations() {
+        for observation in observations {
+            if probes.correlate(&observation.payload, mono_ns)
+                && let Ok((_, Message::TimeEcho(e))) = frame::decode(&observation.payload)
+            {
+                correlated_echoes.push((e.probe_id, e.host_time));
+            }
+        }
+    }
     tx.send(Input::Record {
         record,
-        correlated_echo,
+        correlated_echoes,
     })
     .await
     .map_err(|_| io::Error::new(io::ErrorKind::BrokenPipe, "recorder stopped"))
@@ -146,27 +162,52 @@ pub(super) async fn run(
     let mut ticker = interval(Duration::from_millis(config.echo_interval_ms));
     ticker.set_missed_tick_behavior(MissedTickBehavior::Skip);
     if let Some(socket) = source.socket.take() {
-        let Transport::Udp { peer, .. } = source.config.transport else {
-            unreachable!()
+        let (mut peer, expected) = match &source.config.transport {
+            Transport::Udp { peer, .. } => (Some(*peer), None),
+            Transport::Wireless { node, .. } => (
+                None,
+                Some(
+                    node.parse::<NodeId>()
+                        .map_err(|_| io::ErrorKind::InvalidInput)?,
+                ),
+            ),
+            _ => unreachable!(),
         };
         state(&tx, index, &clock, true, None).await?;
         // An extra byte ensures an oversized datagram cannot be truncated to a valid frame.
-        let mut buf = vec![0; csi_protocol::MAX_FRAME_LEN + 1];
+        let maximum = if expected.is_some() {
+            wireless::MAX_LEN
+        } else {
+            csi_protocol::MAX_FRAME_LEN
+        };
+        let mut buf = vec![0; maximum + 1];
         loop {
             tokio::select! {
                 _ = stop.changed() => return Ok(()),
                 result = socket.recv_from(&mut buf) => {
                     let (n, from) = result?;
-                    if from != peer {
+                    if let Some(expected) = expected {
+                        if wireless::peek(&buf[..n]).map_or(true,|h| h.probe.tx != expected || h.hub_port != socket.local_addr().map(|a|a.port()).unwrap_or(0)) {
+                            tx.send(Input::Foreign(index)).await.map_err(|_|io::Error::from(io::ErrorKind::BrokenPipe))?;
+                            continue;
+                        }
+                        if n > maximum {
+                            emit(&tx,index,&clock,vec![StreamError::Oversized as u8],RecordKind::StreamError,&mut probes).await?;
+                        } else {
+                            if wireless::Batch::decode(&buf[..n]).is_ok() { peer=Some(from); }
+                            emit(&tx,index,&clock,buf[..n].to_vec(),RecordKind::WirelessBatch,&mut probes).await?;
+                        }
+                    } else if Some(from) != peer {
                         tx.send(Input::Foreign(index)).await.map_err(|_| io::Error::from(io::ErrorKind::BrokenPipe))?;
-                    } else if n > csi_protocol::MAX_FRAME_LEN {
+                    } else if n > maximum {
                         emit(&tx, index, &clock, vec![StreamError::Oversized as u8], RecordKind::StreamError, &mut probes).await?;
                     } else {
                         emit(&tx, index, &clock, buf[..n].to_vec(), RecordKind::Frame, &mut probes).await?;
                     }
                 }
                 _ = ticker.tick() => {
-                    let (id, sent, bytes) = probes.request(&clock, false);
+                    let Some(peer) = peer else { continue; };
+                    let (id, sent, bytes) = probes.request(&clock, false, expected.unwrap_or_default());
                     match timeout(Duration::from_millis(500), socket.send_to(&bytes, peer)).await {
                         Ok(Ok(_)) => probes.sent(id, sent),
                         _ => { tx.send(Input::ProbeWriteError(index)).await.map_err(|_| io::Error::from(io::ErrorKind::BrokenPipe))?; }
@@ -207,7 +248,7 @@ pub(super) async fn run(
                                     let mut input = &bytes[..n];
                                     while let Some(result) = deframer.push(&mut input) {
                                         let (payload, kind) = match result {
-                                            Ok(frame) => (frame.to_vec(), RecordKind::Frame),
+                                            Ok(frame) => (frame.to_vec(), if frame.starts_with(csi_protocol::star::MAGIC) { RecordKind::StarControl } else { RecordKind::Frame }),
                                             Err(error) => (vec![StreamError::from_decode_error(error).unwrap_or(StreamError::BadCobs) as u8], RecordKind::StreamError),
                                         };
                                         emit(&tx, index, &clock, payload, kind, &mut probes).await?;
@@ -216,7 +257,7 @@ pub(super) async fn run(
                             }
                         }
                         _ = ticker.tick() => {
-                            let (id, sent, bytes) = probes.request(&clock, true);
+                            let (id, sent, bytes) = probes.request(&clock, true, NodeId::default());
                             match timeout(Duration::from_millis(500), serial.write_all(&bytes)).await {
                                 Ok(Ok(())) => probes.sent(id, sent),
                                 Ok(Err(error)) => break error.to_string(),

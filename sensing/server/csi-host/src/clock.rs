@@ -368,6 +368,20 @@ impl ClockFitter {
         &self.current
     }
 
+    /// Identity of an admitted capture. A rejected capture with a different
+    /// radio origin must not inherit an older run's mapping.
+    pub fn capture_clock(&self, header: &Header, csi: &Csi<'_>) -> Option<ClockKey> {
+        let (_, offset) = unwrap_radio_us(csi.rx_timestamp_us, csi.node_time_us)?;
+        self.runs
+            .get(&(header.node, header.epoch))
+            .filter(|run| run.last_offset_us == offset)
+            .map(|run| ClockKey {
+                node: header.node,
+                epoch: header.epoch,
+                radio: run.radio,
+            })
+    }
+
     /// Map the node clock used by TimeEcho through its radio origin onto the fitted timeline.
     pub fn map_node_time(&self, node: NodeId, epoch: u32, node_us: u64) -> Option<(u32, f64)> {
         let run = self.runs.get(&(node, epoch))?;
@@ -403,10 +417,16 @@ impl ClockFitter {
 
     /// Feeds a recorded record; frames that are not decodable CSI with a probe are ignored.
     pub fn push(&mut self, record: &Record) {
-        if record.kind == RecordKind::Frame
-            && let Ok((header, csi_protocol::Message::Csi(csi))) = frame::decode(&record.payload)
-        {
-            self.push_csi(record.mono_ns, &header, &csi);
+        let Ok(observations) = record.observations() else {
+            return;
+        };
+        for record in observations {
+            if record.kind == RecordKind::Frame
+                && let Ok((header, csi_protocol::Message::Csi(csi))) =
+                    frame::decode(&record.payload)
+            {
+                self.push_csi(record.mono_ns, &header, &csi);
+            }
         }
     }
 
@@ -993,6 +1013,41 @@ mod tests {
 mod regression_tests {
     use super::*;
     use csi_protocol::{Probe, RxMeta};
+
+    #[test]
+    fn rejected_capture_cannot_inherit_an_old_radio_run_for_export() {
+        let mut fitter = ClockFitter::live(FitOptions::default(), 1);
+        let header = Header {
+            node: NodeId([2; 6]),
+            epoch: 1,
+            seq: 0,
+        };
+        let before = Csi {
+            capture_seq: 0,
+            node_time_us: 1_000_000,
+            rx_timestamp_us: 900_000,
+            source_mac: [3; 6],
+            probe: Some(Probe {
+                tx: NodeId([3; 6]),
+                epoch: 1,
+                schedule: 0,
+                seq: 0,
+            }),
+            first_word_invalid: false,
+            rx: RxMeta::default(),
+            data: &[],
+        };
+        fitter.push_csi(0, &header, &before);
+        assert!(fitter.capture_clock(&header, &before).is_some());
+        let after = Csi {
+            node_time_us: 2_000_000,
+            rx_timestamp_us: 10_000,
+            ..before
+        };
+        fitter.push_csi(1, &header, &after);
+        assert_eq!(fitter.capacity_rejects, 1);
+        assert!(fitter.capture_clock(&header, &after).is_none());
+    }
 
     #[test]
     fn regression_idle_eviction_never_reuses_reference_clock_identity() {

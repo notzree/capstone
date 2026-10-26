@@ -1,0 +1,1001 @@
+{
+  "clock_provenance": "causal_recomputed_default_fit; no backfill; stored live host-clock mappings are not applied",
+  "complete": true,
+  "data_file": "csi.arrow",
+  "decoder": "esp32-ht20/1",
+  "geometry": null,
+  "health": {
+    "clock": {
+      "handovers": 0,
+      "radio_restarts": 0,
+      "receivers": [],
+      "reference": null,
+      "step_s": 10.0,
+      "timeline_restarts": 0,
+      "unwrap_rejects": 0,
+      "window_s": 60.0
+    },
+    "event_counts": {
+      "frames_missing": 1,
+      "node_epoch": 1,
+      "silence": 124
+    },
+    "events": [
+      {
+        "epoch": 3662842339,
+        "mono_ns": 43001948000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "previous": null,
+        "type": "node_epoch"
+      },
+      {
+        "mono_ns": 44001921584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 999.973584,
+        "type": "silence"
+      },
+      {
+        "count": 2,
+        "epoch": 3662842339,
+        "first_seq": 346,
+        "mono_ns": 44001921584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "type": "frames_missing"
+      },
+      {
+        "mono_ns": 44254927167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 252.025458,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 45002598750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 747.671583,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 45304877875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 301.23875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 46002745667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 697.867792,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 46354895334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 351.151542,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 47002673542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 647.778208,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 47403973459,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 400.386042,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 48003646167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 599.672708,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 48454892959,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 450.023459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 49003682917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 548.789958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 49503892542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 499.069917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 50003706917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 499.814375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 50504852292,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 499.965542,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 51004964584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 500.112292,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 51505918167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 500.053417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 52004938417,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 499.02025,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 52554027625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 548.158083,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 53004963917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 450.936292,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 53555033000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 549.068958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 54005635459,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 450.602459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 54604978334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 598.040875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 55005628625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 400.650291,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 55604988750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 598.074666,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 56005589125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 400.600375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 56604916875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 597.903458,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 57005673709,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 400.756834,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 57654968209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 648.038,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 58005777000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 350.808791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 58704029417,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 697.042083,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 59006003625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 301.974208,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 59704974625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 697.960833,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 60005996000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 301.021375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 60705007542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 698.10925,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 61006004000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 300.996458,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 61754903625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 747.85975,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 62006706125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 251.8025,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 62805051750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 797.067916,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 63006728584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 201.676834,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 63854989375,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 847.023541,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 64006595250,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 151.605875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 64855044375,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 847.070375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 65006853375,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 151.809,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 65855089792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 847.060125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 66006968667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 151.878875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 66904961500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 896.929208,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 67007000834,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.039334,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 67955063167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 947.054458,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 69006285125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 998.2425,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 70007774500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 998.80125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 71007599334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 952.509459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 72007791500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 903.761375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 73008004792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 903.000875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 73154009084,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 144.93975,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 74008078709,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 854.069625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 74155072834,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 145.972125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 75008094000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 853.021166,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 75155058584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 146.006125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 76008096584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 853.038,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 76205070750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 195.939375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 77008731542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 803.660792,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 77255127209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 245.064,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 78008807834,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 753.680625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 78305084500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 294.971416,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 79008676209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 703.591709,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 79354099709,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 343.973667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 80008860209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 654.7605,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 80404096750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 394.070541,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 81009926792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 605.830042,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 81455138125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 444.057041,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 82009110500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 553.972375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 82456139500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 446.063166,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 83009133625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 552.994125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 83505063084,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 494.907375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 84009797875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 504.734791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 84504089875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 493.06125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 85009831334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 505.741459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 85555154500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 544.039666,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 86009697209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 454.542709,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 86605138625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 594.107541,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 87009853292,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 404.714667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 87655134584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 644.032625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 88010019750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 354.885166,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 88655194209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 644.124084,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 89010147000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 354.952791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 89705123417,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 693.990125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 90010179792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 305.056375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 90754168250,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 742.986958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 91010128875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 255.960625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 91755136334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 743.929,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 92010781542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 255.645208,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 92804162667,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 791.97725,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 93010862709,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 206.700042,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 93805216167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 793.017667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 94010844084,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 205.627917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 94804237292,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 792.050208,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 95011192709,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 206.955417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 95805196584,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 792.991667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 96011205292,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 206.008708,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 96805153542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 792.919458,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 97011223917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 206.070375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 97805135750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 792.942166,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 98011194792,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 206.059042,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 98855136334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 841.975084,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 99011885209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 156.748875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 99904128167,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 890.992667,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 100011824000,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 107.695833,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 100905182625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 892.088041,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 101011892250,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 106.709625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 101905140750,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 891.969791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 102011962209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 106.821459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 102954167959,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 940.954625,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 103955227334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 942.068792,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 105004222334,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 991.11225,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 106005146209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 991.882459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 107012920834,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 998.808167,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 108012825875,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 957.623291,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 109012889459,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 908.5805,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 110013189209,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 906.824,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 110154202542,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 139.908083,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 111013266917,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 859.064375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 111155307459,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 141.116042,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 112013270834,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 857.963375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 112155309042,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 141.033667,
+        "type": "silence"
+      }
+    ],
+    "events_omitted": 0,
+    "nodes": [
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 5031,
+              "csi_captured": 0,
+              "csi_filtered": 5031,
+              "export_bytes": 66187,
+              "export_drops": 0,
+              "node_time_us": 221114538,
+              "pool_drops": 0,
+              "pool_high_water": 0,
+              "tx_accepted": 126,
+              "tx_requested": 126
+            },
+            "epoch": 3662842339,
+            "first_s": 0.0,
+            "frames": 206,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 2,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "93547dee451a93dc",
+              "firmware_version": "0.4.0",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": false
+            },
+            "kinds": {
+              "counters": 69,
+              "hello": 70,
+              "time_echo": 67
+            },
+            "last_s": 69.153361042,
+            "links": [],
+            "min_rtt_us": 1904.25,
+            "time_echoes": 67,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "a0:b7:65:dd:e9:3c"
+      }
+    ],
+    "records": 310,
+    "sources": [
+      {
+        "decode_errors": {},
+        "export_only_batches": 0,
+        "frames": 206,
+        "index": 0,
+        "last_relay_drops": 0,
+        "piggyback_batches": 0,
+        "records": 310,
+        "stream_errors": {},
+        "unknown_records": 104,
+        "versions": {
+          "2": 206
+        },
+        "wireless_batches": 0
+      }
+    ],
+    "span_s": 69.153361042
+  },
+  "manifest": {
+    "closed_wall_ns": 1793031782323541000,
+    "complete": true,
+    "created_wall_ns": 1793031713284978000,
+    "derived_from": null,
+    "format": "csi-session/1",
+    "geometry": null,
+    "protocol_version": 2,
+    "recorder": "csi-host 0.1.0",
+    "rotation": {
+      "max_bytes": 268435456,
+      "max_duration_ns": 600000000000
+    },
+    "segments": [
+      {
+        "bytes": 28818,
+        "file": "segment-000000.bin",
+        "first_mono_ns": 43001948000,
+        "last_mono_ns": 112155309042,
+        "records": 310,
+        "sha256": "89b27ea29adf17e480f5ca0468074e2f8310a416393818d14cb8fa072e04c757"
+      }
+    ],
+    "session_id": "01a17904-b204-72e7-8e07-54cbc5f7eea3",
+    "sources": [
+      {
+        "details": {
+          "receiver": {
+            "build_id": "93547dee451a93dc",
+            "capabilities": 2,
+            "channel": 6,
+            "epoch": 3662842339,
+            "id": "a0:b7:65:dd:e9:3c",
+            "owner": "00:00:00:00:00:00",
+            "owner_epoch": 0,
+            "protocol": 1,
+            "run": 0,
+            "state": "Ready"
+          },
+          "star": {
+            "duration_seconds": 5,
+            "file_mode": true,
+            "frozen_roster": [
+              {
+                "build_id": "0bb666e32a1018b5",
+                "capabilities": 1,
+                "channel": 6,
+                "epoch": 3015166811,
+                "id": "b0:b2:1c:0b:07:1c",
+                "owner": "00:00:00:00:00:00",
+                "owner_epoch": 0,
+                "protocol": 1,
+                "run": 0,
+                "state": "Idle"
+              }
+            ],
+            "host_run_uuid": "01a17904-b204-72e7-8e07-54caf4cee5ab",
+            "kit_id": 1,
+            "label_time_basis": "host_arrival_proxy",
+            "receiver": {
+              "build_id": "93547dee451a93dc",
+              "capabilities": 2,
+              "channel": 6,
+              "epoch": 3662842339,
+              "id": "a0:b7:65:dd:e9:3c",
+              "owner": "00:00:00:00:00:00",
+              "owner_epoch": 0,
+              "protocol": 1,
+              "run": 0,
+              "state": "Ready"
+            },
+            "requested_per_tx_hz": 10,
+            "schema": "csi-star-run/1",
+            "stop_confirmed": false,
+            "stream_mode": false
+          }
+        },
+        "kind": "serial",
+        "name": "star-rx"
+      }
+    ]
+  },
+  "schema": "csi-export/1",
+  "segments": [
+    {
+      "bytes": 28818,
+      "file": "segment-000000.bin",
+      "integrity": {
+        "status": "verified"
+      },
+      "records": 310,
+      "sealed": true
+    }
+  ],
+  "summary": {
+    "counter_windows": {
+      "a0:b7:65:dd:e9:3c/3662842339": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 1342,
+          "csi_captured": 0,
+          "csi_filtered": 1342,
+          "export_bytes": 21762,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 34,
+          "tx_requested": 34
+        },
+        "epoch": 3662842339,
+        "first": {
+          "csi_callbacks": 3689,
+          "csi_captured": 0,
+          "csi_filtered": 3689,
+          "export_bytes": 44425,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 92,
+          "tx_requested": 92
+        },
+        "first_host_mono_ns": 44002901709,
+        "first_node_time_us": 153104233,
+        "last": {
+          "csi_callbacks": 5031,
+          "csi_captured": 0,
+          "csi_filtered": 5031,
+          "export_bytes": 66187,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 126,
+          "tx_requested": 126
+        },
+        "last_host_mono_ns": 112014275375,
+        "last_node_time_us": 221114538,
+        "node": "a0:b7:65:dd:e9:3c",
+        "snapshots": 69
+      }
+    },
+    "csi_rows": 0,
+    "decoded_rows": 0,
+    "invalid_frames": 0,
+    "layouts": {},
+    "links": {},
+    "non_frame_records": 104,
+    "records": 310
+  }
+}

@@ -1,0 +1,7 @@
+Collecting trial r04-flush-100 into /Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/r04-flush-100
+Activities: transport_test
+Commands: begin ACTIVITY [POSITION], end, note TEXT, help, stop.
+End each activity explicitly. EOF, Ctrl-C and stop close an open activity as truncated.
+Activity: transport_test
+Activity ended
+Trial sealed: 1433 CSI rows, 1397 decoded; labels and quality: /Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/r04-flush-100

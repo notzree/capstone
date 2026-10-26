@@ -1,0 +1,65 @@
+{
+  "captured": 5,
+  "complete": true,
+  "delivery": null,
+  "device_drops": 0,
+  "drain": {
+    "body": "DrainComplete { run: 13204075467704893441, capture: 5, export: 444, captured: 5, exported: 5, dropped: 0, selected: 1, confirmed: 1 }",
+    "correlation": 0,
+    "fields": {
+      "capture_boundary_exclusive": 5,
+      "captured": 5,
+      "confirmed_mask": 1,
+      "dropped": 0,
+      "exported": 5,
+      "last_export_seq": 444,
+      "run": 13204075467704893441,
+      "selected_mask": 1
+    },
+    "kind": "DrainComplete",
+    "sender": "a0:b7:65:dd:e9:3c",
+    "sender_epoch": 3074313390
+  },
+  "duration_seconds": 60,
+  "exported": 5,
+  "file_mode": true,
+  "frozen_roster": [
+    {
+      "build_id": "fff31fa4e501394e",
+      "capabilities": 1,
+      "channel": 6,
+      "epoch": 3962306201,
+      "id": "b0:b2:1c:0b:07:1c",
+      "owner": "00:00:00:00:00:00",
+      "owner_epoch": 0,
+      "protocol": 1,
+      "run": 0,
+      "state": "Idle"
+    }
+  ],
+  "host_run_uuid": "01a17919-803a-74cc-9770-60a9f334a85a",
+  "kit_id": 1,
+  "label_time_basis": "host_arrival_proxy",
+  "radio_stop_reason": "Ok",
+  "receiver": {
+    "build_id": "d15564318c5dcab4",
+    "capabilities": 2,
+    "channel": 6,
+    "epoch": 3074313390,
+    "id": "a0:b7:65:dd:e9:3c",
+    "owner": "00:00:00:00:00:00",
+    "owner_epoch": 0,
+    "protocol": 1,
+    "run": 0,
+    "state": "Discovering"
+  },
+  "requested_per_tx_hz": 10,
+  "rf_run_token": 13204075467704893441,
+  "schedule_generation": 1,
+  "schema": "csi-star-run/1",
+  "session_id": "01a17919-803b-732d-9d75-4adfcdafd513",
+  "sink_input_drops": 0,
+  "stop_confirmed": true,
+  "stop_reason": "operator",
+  "stream_mode": false
+}

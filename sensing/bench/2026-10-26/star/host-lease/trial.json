@@ -1,0 +1,19 @@
+{
+  "artifacts": [
+    {
+      "file": "star-run.json",
+      "sha256": "6d9a08a1c235d79136b0eb86c23ffa6fb702283452b88a655981de4aea655734"
+    }
+  ],
+  "complete": true,
+  "export_dir": "export",
+  "geometry": null,
+  "label_timebase": "host_mono_ns",
+  "labels_file": "labels.jsonl",
+  "labels_sha256": "7e4b321d889c343a01d0259cf08fecbfa01055f3003ed946644bd5b92551b7d0",
+  "plan": null,
+  "purpose": "transport; no activity/participant ground truth",
+  "raw_session": "raw",
+  "schema": "csi-trial/2",
+  "session_id": "01a17923-59a0-70f1-9f93-2bb7926880c6"
+}

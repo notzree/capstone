@@ -1,0 +1,50 @@
+{
+  "format": "csi-session/1",
+  "session_id": "01a16732-f0a6-7102-b050-e4cf88a639aa",
+  "created_wall_ns": 1792732754086765000,
+  "closed_wall_ns": 1792732769420248000,
+  "complete": true,
+  "recorder": "csi-host 0.1.0",
+  "protocol_version": 2,
+  "derived_from": null,
+  "geometry": {
+    "file": "geometry.json",
+    "room": "unsurveyed-transport-bench",
+    "revision": "unsurveyed-transport-20261023",
+    "sha256": "c49ee1d25ec8cd74dfaf9b10bd1c65d7de17cbc5c8233ab77bc4ca96b9a2a9fc"
+  },
+  "rotation": {
+    "max_bytes": 268435456,
+    "max_duration_ns": 600000000000
+  },
+  "sources": [
+    {
+      "name": "desk-a",
+      "kind": "serial",
+      "details": {
+        "baud": 921600,
+        "kind": "serial",
+        "path": "/dev/cu.usbserial-3"
+      }
+    },
+    {
+      "name": "desk-b",
+      "kind": "serial",
+      "details": {
+        "baud": 921600,
+        "kind": "serial",
+        "path": "/dev/cu.usbserial-0001"
+      }
+    }
+  ],
+  "segments": [
+    {
+      "file": "segment-000000.bin",
+      "records": 1498,
+      "bytes": 513855,
+      "sha256": "221019e6f09fd67af10ed33ef0fd9f488c3884a345dd0483300e076a99bc0955",
+      "first_mono_ns": 130806000,
+      "last_mono_ns": 15169734416
+    }
+  ]
+}

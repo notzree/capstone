@@ -1,0 +1,498 @@
+{
+  "clock_provenance": "causal_recomputed_default_fit; no backfill; stored live host-clock mappings are not applied",
+  "complete": true,
+  "data_file": "csi.arrow",
+  "decoder": "esp32-ht20/1",
+  "geometry": null,
+  "health": {
+    "clock": {
+      "handovers": 0,
+      "radio_restarts": 0,
+      "receivers": [
+        {
+          "clock": "a0:b7:65:dd:e9:3c epoch da5289e3",
+          "drift_ppm_range": [
+            0.0,
+            0.0
+          ],
+          "fits": 1,
+          "latest": {
+            "drift_ppm": 0.0,
+            "fitted_at_mono_ns": 5971825000,
+            "hops": 0,
+            "map": {
+              "mapped_pivot_us": 300307229.0,
+              "pivot_us": 300307229,
+              "slope": 1.0
+            },
+            "offset_us": 0.0,
+            "outliers": 0,
+            "pairs": 0,
+            "parent": null,
+            "receiver": {
+              "epoch": 3662842339,
+              "node": "a0:b7:65:dd:e9:3c",
+              "radio": 0
+            },
+            "residual_us": null,
+            "timeline": 0,
+            "version": 1,
+            "window_mono_ns": [
+              0,
+              5971825000
+            ]
+          },
+          "worst_p99_us": null
+        }
+      ],
+      "reference": "a0:b7:65:dd:e9:3c epoch da5289e3",
+      "step_s": 10.0,
+      "timeline_restarts": 0,
+      "unwrap_rejects": 0,
+      "window_s": 60.0
+    },
+    "event_counts": {
+      "frames_missing": 1,
+      "node_epoch": 1,
+      "silence": 25
+    },
+    "events": [
+      {
+        "epoch": 3662842339,
+        "mono_ns": 1008793666,
+        "node": "a0:b7:65:dd:e9:3c",
+        "previous": null,
+        "type": "node_epoch"
+      },
+      {
+        "mono_ns": 1269814208,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 261.020542,
+        "type": "silence"
+      },
+      {
+        "count": 1,
+        "epoch": 3662842339,
+        "first_seq": 711,
+        "mono_ns": 1269814208,
+        "node": "a0:b7:65:dd:e9:3c",
+        "type": "frames_missing"
+      },
+      {
+        "mono_ns": 1565743625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 197.973167,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 1668687416,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.943791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 1869767083,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 103.029417,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 2167879125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.0595,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 2366760500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 198.881375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 2569763625,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 203.003125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 2769546500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.779917,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 2869807291,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 100.260791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 2971809041,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.00175,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3172799125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 162.050542,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3370516333,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 102.627292,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3566760208,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 196.243875,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3671805333,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.045125,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 3874812541,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 105.056666,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4172763666,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.879958,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4373721333,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.827458,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4669867708,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 296.146375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4771865291,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.997583,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 4873828041,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.96275,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5172816500,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 117.942292,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5273819291,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.002791,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5475765291,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 104.90375,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 5673979125,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 101.143459,
+        "type": "silence"
+      },
+      {
+        "mono_ns": 7009857916,
+        "node": "a0:b7:65:dd:e9:3c",
+        "silent_ms": 953.002083,
+        "type": "silence"
+      }
+    ],
+    "events_omitted": 0,
+    "nodes": [
+      {
+        "epochs": [
+          {
+            "captures_missing": 0,
+            "clock_backwards": 0,
+            "counters": {
+              "csi_callbacks": 6661,
+              "csi_captured": 40,
+              "csi_filtered": 6621,
+              "export_bytes": 106925,
+              "export_drops": 0,
+              "node_time_us": 306126808,
+              "pool_drops": 0,
+              "pool_high_water": 1,
+              "tx_accepted": 229,
+              "tx_requested": 229
+            },
+            "epoch": 3662842339,
+            "first_s": 0.0,
+            "frames": 59,
+            "frames_duplicate": 0,
+            "frames_late": 0,
+            "frames_missing": 1,
+            "frames_stale": 0,
+            "hello": {
+              "channel": 6,
+              "chip": "Esp32",
+              "csi_config": "lltf+htltf shift 0",
+              "firmware_commit": "93547dee451a93dc",
+              "firmware_version": "0.4.0",
+              "pool_capacity": 32,
+              "rx": true,
+              "secondary_channel": 0,
+              "tx": false
+            },
+            "kinds": {
+              "counters": 6,
+              "csi": 40,
+              "hello": 7,
+              "time_echo": 6
+            },
+            "last_s": 6.095066542,
+            "links": [
+              {
+                "gain_steps": 0,
+                "gain_steps_per_minute": 0.0,
+                "gain_valid": 0,
+                "gain_valid_fraction": 0.0,
+                "gap_threshold_ms": 100.0,
+                "gaps_over_threshold": 23,
+                "interval_us": {
+                  "max": 295563,
+                  "p50": 100607,
+                  "p95": 202239,
+                  "p99": 295563
+                },
+                "last_host_mono_ns": 5971825000,
+                "layouts": [
+                  {
+                    "cwb": 0,
+                    "first_word_invalid": true,
+                    "len": 256,
+                    "records": 40,
+                    "secondary_channel": 0,
+                    "sig_mode": 1,
+                    "stbc": 0
+                  }
+                ],
+                "probes_duplicate": 0,
+                "probes_late": 0,
+                "probes_missing": 5,
+                "radio_restarts": 0,
+                "rate_hz": 8.294755630118555,
+                "records": 40,
+                "stale": true,
+                "tx": "b0:b2:1c:0b:07:1c",
+                "tx_epochs": 1
+              }
+            ],
+            "min_rtt_us": 1935.25,
+            "time_echoes": 6,
+            "unattributed_csi": 0
+          }
+        ],
+        "node": "a0:b7:65:dd:e9:3c"
+      }
+    ],
+    "records": 121,
+    "sources": [
+      {
+        "decode_errors": {},
+        "export_only_batches": 0,
+        "frames": 59,
+        "index": 0,
+        "last_relay_drops": 0,
+        "piggyback_batches": 0,
+        "records": 121,
+        "stream_errors": {},
+        "unknown_records": 62,
+        "versions": {
+          "2": 59
+        },
+        "wireless_batches": 0
+      }
+    ],
+    "span_s": 6.7438675
+  },
+  "manifest": {
+    "closed_wall_ns": 1793031867541529000,
+    "complete": true,
+    "created_wall_ns": 1793031860781827000,
+    "derived_from": null,
+    "format": "csi-session/1",
+    "geometry": null,
+    "protocol_version": 2,
+    "recorder": "csi-host 0.1.0",
+    "rotation": {
+      "max_bytes": 268435456,
+      "max_duration_ns": 600000000000
+    },
+    "segments": [
+      {
+        "bytes": 21921,
+        "file": "segment-000000.bin",
+        "first_mono_ns": 1008793666,
+        "last_mono_ns": 7752661166,
+        "records": 121,
+        "sha256": "ee7e30884ee69983054c360cf324aea827f3e6276420aab780f534b840c90f9a"
+      }
+    ],
+    "session_id": "01a17906-f22d-7001-9075-fe57dc29b522",
+    "sources": [
+      {
+        "details": {
+          "receiver": {
+            "build_id": "93547dee451a93dc",
+            "capabilities": 2,
+            "channel": 6,
+            "epoch": 3662842339,
+            "id": "a0:b7:65:dd:e9:3c",
+            "owner": "00:00:00:00:00:00",
+            "owner_epoch": 0,
+            "protocol": 1,
+            "run": 0,
+            "state": "Ready"
+          },
+          "star": {
+            "duration_seconds": 5,
+            "file_mode": true,
+            "frozen_roster": [
+              {
+                "build_id": "0bb666e32a1018b5",
+                "capabilities": 1,
+                "channel": 6,
+                "epoch": 3015166811,
+                "id": "b0:b2:1c:0b:07:1c",
+                "owner": "00:00:00:00:00:00",
+                "owner_epoch": 0,
+                "protocol": 1,
+                "run": 0,
+                "state": "Idle"
+              }
+            ],
+            "host_run_uuid": "01a17906-f22c-723c-82e0-e0281a8878ff",
+            "kit_id": 1,
+            "label_time_basis": "host_arrival_proxy",
+            "receiver": {
+              "build_id": "93547dee451a93dc",
+              "capabilities": 2,
+              "channel": 6,
+              "epoch": 3662842339,
+              "id": "a0:b7:65:dd:e9:3c",
+              "owner": "00:00:00:00:00:00",
+              "owner_epoch": 0,
+              "protocol": 1,
+              "run": 0,
+              "state": "Ready"
+            },
+            "requested_per_tx_hz": 10,
+            "schema": "csi-star-run/1",
+            "stop_confirmed": false,
+            "stream_mode": false
+          }
+        },
+        "kind": "serial",
+        "name": "star-rx"
+      }
+    ]
+  },
+  "schema": "csi-export/1",
+  "segments": [
+    {
+      "bytes": 21921,
+      "file": "segment-000000.bin",
+      "integrity": {
+        "status": "verified"
+      },
+      "records": 121,
+      "sealed": true
+    }
+  ],
+  "summary": {
+    "counter_windows": {
+      "a0:b7:65:dd:e9:3c/3662842339": {
+        "counter_rollback": false,
+        "delta": {
+          "csi_callbacks": 134,
+          "csi_captured": 33,
+          "csi_filtered": 101,
+          "export_bytes": 15618,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 52,
+          "tx_requested": 52
+        },
+        "epoch": 3662842339,
+        "first": {
+          "csi_callbacks": 6527,
+          "csi_captured": 7,
+          "csi_filtered": 6520,
+          "export_bytes": 91307,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 177,
+          "tx_requested": 177
+        },
+        "first_host_mono_ns": 2009788500,
+        "first_node_time_us": 301125830,
+        "last": {
+          "csi_callbacks": 6661,
+          "csi_captured": 40,
+          "csi_filtered": 6621,
+          "export_bytes": 106925,
+          "export_drops": 0,
+          "pool_drops": 0,
+          "tx_accepted": 229,
+          "tx_requested": 229
+        },
+        "last_host_mono_ns": 7010925833,
+        "last_node_time_us": 306126808,
+        "node": "a0:b7:65:dd:e9:3c",
+        "snapshots": 6
+      }
+    },
+    "csi_rows": 40,
+    "decoded_rows": 40,
+    "invalid_frames": 0,
+    "layouts": {
+      "decoded": 40
+    },
+    "links": {
+      "a0:b7:65:dd:e9:3c/3662842339/Some(\"b0:b2:1c:0b:07:1c\")/Some(3015166811)/Some(1)": {
+        "decoded_records": 40,
+        "first_host_mono_ns": 1269814208,
+        "gain_records": 0,
+        "last_host_mono_ns": 5971825000,
+        "mapped_records": 0,
+        "receiver": "a0:b7:65:dd:e9:3c",
+        "receiver_epoch": 3662842339,
+        "records": 40,
+        "schedule": 1,
+        "stored_samples": 5120,
+        "transmitter": "b0:b2:1c:0b:07:1c",
+        "transmitter_epoch": 3015166811,
+        "valid_samples": 4280
+      }
+    },
+    "non_frame_records": 62,
+    "records": 121
+  }
+}

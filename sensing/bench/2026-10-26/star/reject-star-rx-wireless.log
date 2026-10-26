@@ -1,0 +1,18 @@
+
+
+WARNING: use --release
+  We *strongly* recommend using release profile when building esp-hal.
+  The dev profile can potentially be one or more orders of magnitude
+  slower than release, and may cause issues with timing-sensitive
+  peripherals or devices.
+
+   Compiling csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)
+error: failed to run custom build command for `csi-esp v0.1.0 (/Users/notzree/code/capstone/sensing/firmware/csi-esp)`
+
+Caused by:
+  process didn't exit successfully: `/Users/notzree/code/capstone/sensing/firmware/target/debug/build/csi-esp-ddc56b5888099b13/build-script-build` (exit status: 101)
+  --- stderr
+
+  thread 'main' (8991360) panicked at csi-esp/build.rs:14:13:
+  star roles cannot use legacy pair/wireless features
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace

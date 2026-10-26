@@ -1,0 +1,111 @@
+esptool v5.6.0
+Serial port /dev/cu.usbserial-0001:
+Connecting....
+Connected to ESP32 on /dev/cu.usbserial-0001:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                b0:b2:1c:0b:07:1c
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+MAC:                b0:b2:1c:0b:07:1c
+
+Hard resetting via RTS pin...
+
+esptool v5.6.0
+Serial port /dev/cu.usbserial-0001:
+Connecting....
+Connected to ESP32 on /dev/cu.usbserial-0001:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                b0:b2:1c:0b:07:1c
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+
+Writing '/Users/notzree/code/capstone/sensing/bench/2026-10-26/star/firmware-final/bootloader.bin' at 0x00001000...
+Flash parameters set to 0x0220.
+SHA digest in image updated.
+Flash will be erased from 0x00001000 to 0x00007fff...
+Compressed 26320 bytes to 16553...
+Writing at 0x000075ed ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸  99.0% 16.00kB/16.17kB [0s] 
+Writing at 0x000076d0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% 16.17kB/16.17kB [0s] 
+Wrote 26320 bytes (16553 compressed) at 0x00001000 in 0.9 seconds (240.5 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing '/Users/notzree/code/capstone/sensing/bench/2026-10-26/star/firmware-final/partition-table.bin' at 0x0000a000...
+Flash will be erased from 0x0000a000 to 0x0000afff...
+Compressed 3072 bytes to 105...
+Writing at 0x0000ac00 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% 105B/105B [0s] 
+Wrote 3072 bytes (105 compressed) at 0x0000a000 in 0.1 seconds (354.0 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing '/Users/notzree/code/capstone/sensing/bench/2026-10-26/star/firmware-final/star-tx.bin' at 0x00020000...
+Flash will be erased from 0x00020000 to 0x000a5fff...
+Compressed 548464 bytes to 355399...
+Writing at 0x00028675 ━                                4.6% 16.00kB/347.07kB [0s] 
+Writing at 0x00035a35 ━━╸                              9.2% 32.00kB/347.07kB [0s] 
+Writing at 0x0003ae45 ━━━━                            13.8% 48.00kB/347.07kB [1s] 
+Writing at 0x000405b2 ━━━━━╸                          18.4% 64.00kB/347.07kB [1s] 
+Writing at 0x000460e6 ━━━━━━╸                         23.1% 80.00kB/347.07kB [2s] 
+Writing at 0x0004bd97 ━━━━━━━━                        27.7% 96.00kB/347.07kB [2s] 
+Writing at 0x00051321 ━━━━━━━━━╸                      32.3% 112.00kB/347.07kB [2s] 
+Writing at 0x00056820 ━━━━━━━━━━━                     36.9% 128.00kB/347.07kB [3s] 
+Writing at 0x0005bebf ━━━━━━━━━━━━                    41.5% 144.00kB/347.07kB [3s] 
+Writing at 0x000614a3 ━━━━━━━━━━━━━╸                  46.1% 160.00kB/347.07kB [4s] 
+Writing at 0x000672e5 ━━━━━━━━━━━━━━━                 50.7% 176.00kB/347.07kB [4s] 
+Writing at 0x0006ce94 ━━━━━━━━━━━━━━━━╸               55.3% 192.00kB/347.07kB [4s] 
+Writing at 0x00072538 ━━━━━━━━━━━━━━━━━╸              59.9% 208.00kB/347.07kB [5s] 
+Writing at 0x00077bb8 ━━━━━━━━━━━━━━━━━━━             64.5% 224.00kB/347.07kB [5s] 
+Writing at 0x0007cbd5 ━━━━━━━━━━━━━━━━━━━━╸           69.2% 240.00kB/347.07kB [6s] 
+Writing at 0x00082431 ━━━━━━━━━━━━━━━━━━━━━━          73.8% 256.00kB/347.07kB [6s] 
+Writing at 0x00087fe8 ━━━━━━━━━━━━━━━━━━━━━━━╸        78.4% 272.00kB/347.07kB [6s] 
+Writing at 0x0008e27b ━━━━━━━━━━━━━━━━━━━━━━━━╸       83.0% 288.00kB/347.07kB [7s] 
+Writing at 0x000946ec ━━━━━━━━━━━━━━━━━━━━━━━━━━      87.6% 304.00kB/347.07kB [7s] 
+Writing at 0x0009bbb6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸    92.2% 320.00kB/347.07kB [8s] 
+Writing at 0x000a2562 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   96.8% 336.00kB/347.07kB [8s] 
+Writing at 0x000a5e70 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% 347.07kB/347.07kB [8s] 
+Wrote 548464 bytes (355399 compressed) at 0x00020000 in 9.0 seconds (489.9 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Hard resetting via RTS pin...
+esptool v5.6.0
+Serial port /dev/cu.usbserial-0001:
+Connecting.....
+Connected to ESP32 on /dev/cu.usbserial-0001:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                b0:b2:1c:0b:07:1c
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 460800...
+Changed.
+
+Configuring flash size...
+Flash parameters set to 0x0220.
+SHA digest in image updated.
+Verifying 0x66d0 (26320) bytes at 0x00001000 in flash against '/Users/notzree/code/capstone/sensing/bench/2026-10-26/star/firmware-final/bootloader.bin'...
+Verification successful (digest matched).
+Verifying 0xc00 (3072) bytes at 0x0000a000 in flash against '/Users/notzree/code/capstone/sensing/bench/2026-10-26/star/firmware-final/partition-table.bin'...
+Verification successful (digest matched).
+Verifying 0x85e70 (548464) bytes at 0x00020000 in flash against '/Users/notzree/code/capstone/sensing/bench/2026-10-26/star/firmware-final/star-tx.bin'...
+Verification successful (digest matched).
+
+Hard resetting via RTS pin...

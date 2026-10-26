@@ -8,6 +8,7 @@ publish.workspace = true
 
 [dependencies]
 csi-protocol.workspace = true
+csi-node = { path = "../../crates/csi-node" }
 serde.workspace = true
 serde_json.workspace = true
 sha2.workspace = true
@@ -17,6 +18,10 @@ tokio.workspace = true
 tokio-serial.workspace = true
 toml.workspace = true
 tracing.workspace = true
+arrow-array.workspace = true
+arrow-schema.workspace = true
+arrow-ipc.workspace = true
+parquet.workspace = true
 
 [dev-dependencies]
 tempfile.workspace = true

@@ -1,0 +1,155 @@
+{
+  "captured": 144,
+  "complete": true,
+  "delivery": {
+    "active_clients": 0,
+    "batches": 144,
+    "cache_evictions": 0,
+    "client_batch_capacity": 8,
+    "client_batch_drops": 0,
+    "client_write_failures": 0,
+    "clock_capacity_rejects": 0,
+    "complete": true,
+    "connections": 1,
+    "flush_interval_ms": 20,
+    "input_closed": true,
+    "input_record_drops": 0,
+    "rejected_connections": 0,
+    "schema": "csi-arrow-status/1",
+    "session_id": "01a1790d-f5fa-7271-b275-0750cefc60ec",
+    "socket": "/tmp/csi-star-final-both.sock",
+    "summary": {
+      "counter_windows": {
+        "a0:b7:65:dd:e9:3c/2327668672": {
+          "counter_rollback": false,
+          "delta": {
+            "csi_callbacks": 408,
+            "csi_captured": 134,
+            "csi_filtered": 274,
+            "export_bytes": 59331,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 167,
+            "tx_requested": 167
+          },
+          "epoch": 2327668672,
+          "first": {
+            "csi_callbacks": 742,
+            "csi_captured": 4,
+            "csi_filtered": 738,
+            "export_bytes": 12436,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 38,
+            "tx_requested": 38
+          },
+          "first_host_mono_ns": 989468334,
+          "first_node_time_us": 33092587,
+          "last": {
+            "csi_callbacks": 1150,
+            "csi_captured": 138,
+            "csi_filtered": 1012,
+            "export_bytes": 71767,
+            "export_drops": 0,
+            "pool_drops": 0,
+            "tx_accepted": 205,
+            "tx_requested": 205
+          },
+          "last_host_mono_ns": 14994449417,
+          "last_node_time_us": 47097321,
+          "node": "a0:b7:65:dd:e9:3c",
+          "snapshots": 15
+        }
+      },
+      "csi_rows": 144,
+      "decoded_rows": 140,
+      "invalid_frames": 0,
+      "layouts": {
+        "decoded": 140,
+        "missing_hello": 4
+      },
+      "links": {
+        "a0:b7:65:dd:e9:3c/2327668672/Some(\"b0:b2:1c:0b:07:1c\")/Some(403658789)/Some(1)": {
+          "decoded_records": 140,
+          "first_host_mono_ns": 691512292,
+          "gain_records": 0,
+          "last_host_mono_ns": 15516540167,
+          "mapped_records": 46,
+          "receiver": "a0:b7:65:dd:e9:3c",
+          "receiver_epoch": 2327668672,
+          "records": 144,
+          "schedule": 1,
+          "stored_samples": 17920,
+          "transmitter": "b0:b2:1c:0b:07:1c",
+          "transmitter_epoch": 403658789,
+          "valid_samples": 14980
+        }
+      },
+      "non_frame_records": 172,
+      "records": 361
+    }
+  },
+  "device_drops": 0,
+  "drain": {
+    "body": "DrainComplete { run: 9997260822163750913, capture: 144, export: 254, captured: 144, exported: 144, dropped: 0, selected: 1, confirmed: 1 }",
+    "correlation": 0,
+    "fields": {
+      "capture_boundary_exclusive": 144,
+      "captured": 144,
+      "confirmed_mask": 1,
+      "dropped": 0,
+      "exported": 144,
+      "last_export_seq": 254,
+      "run": 9997260822163750913,
+      "selected_mask": 1
+    },
+    "kind": "DrainComplete",
+    "sender": "a0:b7:65:dd:e9:3c",
+    "sender_epoch": 2327668672
+  },
+  "duration_seconds": 15,
+  "exported": 144,
+  "file_mode": true,
+  "frozen_roster": [
+    {
+      "build_id": "38170d326bc15d40",
+      "capabilities": 1,
+      "channel": 6,
+      "epoch": 403658789,
+      "id": "b0:b2:1c:0b:07:1c",
+      "owner": "00:00:00:00:00:00",
+      "owner_epoch": 0,
+      "protocol": 1,
+      "run": 0,
+      "state": "Idle"
+    }
+  ],
+  "host_run_uuid": "01a1790d-f5f8-73a4-8385-7421c3cdb0dd",
+  "kit_id": 1,
+  "label_time_basis": "host_arrival_proxy",
+  "radio_stop_reason": "Duration",
+  "receiver": {
+    "build_id": "38170d326bc15d40",
+    "capabilities": 2,
+    "channel": 6,
+    "epoch": 2327668672,
+    "id": "a0:b7:65:dd:e9:3c",
+    "owner": "00:00:00:00:00:00",
+    "owner_epoch": 0,
+    "protocol": 1,
+    "run": 0,
+    "state": "Ready"
+  },
+  "requested_per_tx_hz": 10,
+  "rf_run_token": 9997260822163750913,
+  "schedule_generation": 1,
+  "schema": "csi-star-run/1",
+  "session_id": "01a1790d-f5fa-7271-b275-0750cefc60ec",
+  "sink_input_drops": 0,
+  "stop_confirmed": true,
+  "stop_reason": "drained",
+  "stream_mode": true,
+  "offline_rows": 144,
+  "live_rows": 144,
+  "consumer_errors": []
+}

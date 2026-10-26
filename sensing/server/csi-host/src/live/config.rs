@@ -50,8 +50,19 @@ pub struct SourceConfig {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Transport {
-    Udp { bind: SocketAddr, peer: SocketAddr },
-    Serial { path: PathBuf, baud: u32 },
+    Udp {
+        bind: SocketAddr,
+        peer: SocketAddr,
+    },
+    /// Learn a DHCP endpoint only from valid batches carrying this configured factory MAC.
+    Wireless {
+        bind: SocketAddr,
+        node: String,
+    },
+    Serial {
+        path: PathBuf,
+        baud: u32,
+    },
 }
 
 impl HubConfig {
@@ -115,6 +126,13 @@ impl HubConfig {
                         );
                     }
                 }
+                Transport::Wireless { bind, node } => {
+                    if !bind.is_ipv4() || node.parse::<csi_protocol::NodeId>().is_err() {
+                        return invalid(
+                            "wireless sources require an IPv4 bind and expected node MAC",
+                        );
+                    }
+                }
             }
         }
         Ok(())
@@ -135,6 +153,7 @@ impl HubConfig {
                 name: s.name.clone(),
                 kind: match s.transport {
                     Transport::Udp { .. } => "udp",
+                    Transport::Wireless { .. } => "wireless",
                     Transport::Serial { .. } => "serial",
                 }
                 .into(),

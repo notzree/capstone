@@ -1,0 +1,18 @@
+[
+  "/Users/notzree/code/capstone/sensing/target/debug/csi",
+  "collect",
+  "--config",
+  "/Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/hub.toml",
+  "--plan",
+  "/Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/r04-flush-100-plan.json",
+  "--geometry",
+  "/Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/geometry.json",
+  "--out",
+  "/Users/notzree/code/capstone/sensing/bench/2026-10-23/live-python-051450/r04-flush-100",
+  "--seconds",
+  "30",
+  "--arrow-socket",
+  "/private/tmp/csi-hw-051450-4.sock",
+  "--arrow-flush-ms",
+  "100"
+]

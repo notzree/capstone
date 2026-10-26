@@ -1,0 +1,24 @@
+   Compiling csi-host v0.1.0 (/Users/notzree/code/capstone/sensing/server/csi-host)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.66s
+     Running tests/wireless.rs (sensing/target/debug/deps/wireless-4af3b62948b01314)
+
+running 1 test
+test wireless_datagram_is_raw_preserved_expanded_and_echo_targets_expected_node ... FAILED
+
+failures:
+
+---- wireless_datagram_is_raw_preserved_expanded_and_echo_targets_expected_node stdout ----
+
+thread 'wireless_datagram_is_raw_preserved_expanded_and_echo_targets_expected_node' (6714237) panicked at server/csi-host/tests/wireless.rs:169:5:
+assertion `left == right` failed: one correlated request must not supply multiple clock samples from duplicate batch echoes
+  left: 2
+ right: 1
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    wireless_datagram_is_raw_preserved_expanded_and_echo_targets_expected_node
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.25s
+
+error: test failed, to rerun pass `-p csi-host --test wireless`
